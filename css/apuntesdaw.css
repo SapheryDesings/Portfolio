@@ -1,0 +1,172 @@
+/* ----------------------------- */
+/* RESET Y VARIABLES */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --morado: #6c3483;
+  --rojo: #e74c3c;
+  --violeta: #8e44ad;
+  --aguamar: #3498db;
+  --verdemar: #1abc9c;
+  --verde: #2ecc71;
+}
+
+/* ----------------------------- */
+/* PRINCIPAL */
+body {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+}
+.principal {
+  background-color: var(--morado);
+  color: white;
+}
+.principal a {
+  color: white;
+}
+/* ----------------------------- */
+/* CABECERAS Y MENÚS */
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 200px;
+  margin: 1rem auto 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin: 1rem auto;
+}
+
+.contenedorMenuAsignaturas {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.asignaturas {
+  min-height: 100px;
+  max-width: 320px;
+  padding: .5rem;
+  border: 5px solid rgba(255, 255, 255, 0.1); 
+  text-align: center;
+}
+
+.asignaturasBaja {
+  min-height: 100px;
+  max-width: 320px;
+  padding: .5rem;
+  border: 5px solid rgba(255, 255, 255, 0.1); 
+  text-align: center;
+  color: rgba(253, 254, 254, .1);
+}
+
+.asignaturas:hover {
+  border: 5px solid #ff6f00; 
+}
+
+.menuPrincipalAsignatura {
+  margin: 1rem auto;
+  padding: .5rem 1rem; 
+  text-align: start;
+}
+.menuPrincipalAsignatura a {
+  padding: .5rem 1rem;
+}
+/* ----------------------------- */
+/* SECTIONS */
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3rem;
+}
+
+.indice {
+  width: 70%;
+  margin: 1rem auto;
+}
+/* ----------------------------- */
+/* ARTICLES */
+article {
+  margin: 1rem 15% 2rem;
+  padding: 1rem .5rem;
+}
+
+.btnArriba {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .5rem 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.btnArriba:hover {
+  border-color: var(--rojo);
+}
+
+/* ----------------------------- */
+/* TEXTO */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
+}
+
+h1, h2 {margin-bottom: 2rem;}
+h3, h4 {margin-bottom: 1rem;}
+h5, h6 {margin-bottom: .5rem;}
+
+.tituloPrincipal {
+  width: 80%;
+  margin: 1rem auto 3rem;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 5px solid black;
+}
+
+p {
+  margin-bottom: 1rem;
+  padding: 1rem auto;
+}
+
+a {color: black;}
+
+ul, ol {
+  margin: 1rem 0 2rem;
+  list-style-position: inside;
+}
+
+li {margin: .5rem 0;}
+
+table {
+  margin: 1rem 2rem;
+  border-collapse: collapse;
+}
+  caption {
+    text-align: center;
+    font-weight: bold;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+  }
+  tr {
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    padding: .5rem 1.5rem;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    
+  }
+

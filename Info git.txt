@@ -1,2 +1,11 @@
 https://github.com/SapheryDesings/ApuntesDaw.git
 https://github.com/SapheryDesings/Portfolio.git
+
+Para abrir un nuevo repo en vsCode, ctrl+shift+p y hacemos un 
+git clone, nos pedirá la url del repo de github, y seleccionamos
+la dirección local donde queremos guardarlo.
+
+Para añadir todos los archivos al repo
+git add .
+git commit -m "comentario"
+git push
