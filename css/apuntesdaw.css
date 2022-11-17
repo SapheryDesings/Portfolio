@@ -10,12 +10,10 @@
 :root {
   --fondoGris: #212121;
   --tipografiaClara: #E5E7E9;
-  --morado: #6c3483;
-  --rojo: #e74c3c;
-  --violeta: #8e44ad;
   --aguamar: #3498db;
-  --verdemar: #1abc9c;
-  --verde: #2ecc71;
+  --azulGrisaceo: #2980B9;
+  --morado: #8E44AD;
+  --mostaza: #F1C40F;
 }
 
 /* ----------------------------- */
@@ -28,14 +26,8 @@ body {
   font-size: 1.5rem;
   background-color: var(--fondoGris);
   color: var(--tipografiaClara);
-}/*
-.principal {
-  background-color: var(--morado);
-  color: white;
 }
-.principal a {
-  color: white;
-}*/
+
 /* ----------------------------- */
 /* CABECERAS Y MENÚS */
 header {
@@ -77,28 +69,16 @@ header {
       align-self: center;
       padding: 2rem;
     }
-/*
-.asignaturas {
-  min-height: 100px;
-  max-width: 320px;
-  padding: .5rem;
-  border: 5px solid rgba(255, 255, 255, 0.1); 
-  text-align: center;
-}
 
-.asignaturasBaja {
-  min-height: 100px;
-  max-width: 320px;
-  padding: .5rem;
-  border: 5px solid rgba(255, 255, 255, 0.1); 
-  text-align: center;
-  color: rgba(253, 254, 254, .1);
-}
+    .subTitulo {
+      color: var(--morado);
+    }
 
-.asignaturas:hover {
-  border: 5px solid #ff6f00; 
-}
-*/
+    .apartado {
+      margin-top: 3rem;
+      color: var(--mostaza);
+    }
+
 /* ----------------------------- */
 /* SECTIONS */
 section {
@@ -148,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {margin-bottom: 2rem;}
 h3, h4 {margin-bottom: 1rem;}
 h5, h6 {margin-bottom: .5rem;}
-
+/*
 .tituloPrincipal {
   width: 80%;
   margin: 1rem auto 3rem;
@@ -156,7 +136,7 @@ h5, h6 {margin-bottom: .5rem;}
   text-align: center;
   border-bottom: 5px solid var(--tipografiaClara);
 }
-
+*/
 p {
   margin-bottom: 1rem;
   padding: 1rem auto;
@@ -174,7 +154,7 @@ ul { list-style-type: square;}
 li {margin: .5rem 0;}
 
 table {
-  margin: 1rem 2rem;
+  margin: 2rem auto;
   border-collapse: collapse;
 }
   caption {
@@ -190,6 +170,5 @@ table {
   th, td {
     padding: .5rem 1.5rem;
     border: 2px dashed var(--aguamar);
-    
   }
 

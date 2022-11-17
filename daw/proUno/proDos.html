@@ -47,7 +47,7 @@
   <section>
     <a name="2.0"></a>
     <article>
-      <h3>Tema 2.- Estructura de un programa informático</h3>
+      <h3 class="subTitulo">Introducción</h3>
       <p>Para desarrollar nuestros programas utilizaremos el lenguaje de programación C# es un lenguaje de alto nivel que pertenece al conjunto de lenguajes de .NET. Para ello utilizaremos un IDE, un entorno de desarrollo integrado diseñado para el desarrollo de aplicaciones con un conjunto de herramientas integradas en una interfaz gráfica de usuario (GUI). Sus características son:</p>
       <ul>
         <li><b>Editor de código fuente:</b> Ayuda a escribir el código resaltando la sintaxis de forma visual y rellenando de forma automática las distintas opciones que nos proporciona el lenguaje.</li>
@@ -59,12 +59,12 @@
     <!--*************************************************************-->
     <a name="2.1"></a>
     <article>
-      <h3>2.1.- Bloques de un programa informático</h3>
+      <h3 class="subTitulo">Bloques de un programa informático</h3>
       <p>Un programa es una secuencia de intrucciones separadas por un punto y coma que se van a ir agrupando en diferentes bloques mediante llaves.</p>
       <p>Cuando creamos un nuevo proyecto, se crea la siguiente estructura.</p>
       <p>Primero nos crea la clase <b>program</b>. Una <b>clase</b> es una estructura de datos que está compuesta por atributos o variables y métodos o funciones.</p>
       <p>El método principal se denomina <b>Main</b>. Será el primero en ejecutarse en nuestro programa. Este tiene una serie de argumentos, que son cadenas de caracteres que podemos pasar línea de comandos.</p>
-      <h4>Entrada y salida por pantalla</h4>
+      <h4 class="apartado">Entrada y salida por pantalla</h4>
       <p>Emplearemos la clase <b>Console</b> para establecer la comunicación entre usuario y el programa.</p>
       <p>Para la salida por pantalla, vamos utilizar los métodos de esta clase, <b>Write</b> y <b>Writeline:</b></p>
       <ul>
@@ -79,10 +79,10 @@
     <!--*************************************************************-->
     <a name="2.2"></a>
     <article>
-      <h3>2.2.- Variables. Usos y Tipos</h3>
+      <h3 class="subTitulo">Variables. Usos y Tipos</h3>
       <p>Una <b>variable</b> es una estructura de datos que ocupan un espacio en memoria y pueden variar a lo largo de un programa.</p>
       <p>Cuando <b>declaramos una variable</b> establecemos el tipo de dato (entero, cadena, carácter, etc) y su identificador.</p>
-      <h4>Tipos de datos en C#:</h4>
+      <h4 class="apartado">Tipos de datos en C#:</h4>
       <ul>
         <li><b>Enteros con signo:</b> Sbyte, short, int, long.</li>
         <li><b>Enteros sin signo:</b> Byte, unshort, unit, ulong.</li>
@@ -117,8 +117,8 @@
     <!--*************************************************************-->
     <a name="2.3"></a>
     <article>
-      <h3>2.3.- Constantes y Literales. Tipos y utilidades</h3>
-      <h4>Constantes</h4>
+      <h3 class="subTitulo">Constantes y Literales. Tipos y utilidades</h3>
+      <h4 class="apartado">Constantes</h4>
       <p>Son aquellas cuyo contenido no se puede alterar a lo largo del programa. La palabra reservada es <b>const</b>, y se definen fuera del cuerpo de cualquier función, normalmente al principio del programa.</p>
       <p><b>Literales:</b> Así podemos representar de forma explícita todos los valores que pueden tomar los tipos básicos del lenguaje.</p>
       <p><b>Literales enteros:</b>
@@ -147,8 +147,8 @@
     <!--*************************************************************-->
     <a name="2.4"></a>
     <article>
-      <h3>2.4.- Operadores del lenguaje de programación</h3>
-      <h4>Operadores aritméticos</h4>
+      <h3 class="subTitulo">Operadores del lenguaje de programación</h3>
+      <h4 class="apartado">Operadores aritméticos</h4>
       <ul>
         <li>+ Suma aritmética de dos valores.</li>
         <li>++ Incremento en 1 del operando.</li>
@@ -166,7 +166,7 @@
         <li>De multiplicación, divsión, resta y %.</li>
         <li>De suma y resta.</li>
       </ol>
-      <h4>Operadores booleanos</h4>
+      <h4 class="apartado">Operadores booleanos</h4>
       <ul>
         <li>& AND lógico. Evalúa ambos operandos.</li>
         <li>&& AND lógico. Evalúa el operando derecho solo si es necesario.</li>
@@ -181,6 +181,7 @@
       <p>|| también evalúa sus operandos pero no evalúa el operando derecho si el izquierdo se evalúa como true.</p>
       <p>^ es el operador exclusivo o XOR. La tabla de la verdad es:</p>
       <table>
+        <caption>Tabla de verdad XOR</caption>
         <tr>
           <th>a</th>
           <th>b</th>
@@ -208,7 +209,7 @@
         </tr>
       </table>
       <p><b>El operador !</b> calcula la negación de su operando, si el operando es true, devolverá el valor false y viceversa.</p>
-      <h4>Operadores de comparación e igualdad</h4>
+      <h4 class="apartado">Operadores de comparación e igualdad</h4>
       <table>
         <caption>Operadores de comparación</caption>
         <tr>
@@ -249,18 +250,19 @@
     <!--*************************************************************-->
     <a name="2.5"></a>
     <article>
-      <h3>2.5.- Conversiones de tipos de clase</h3>
+      <h3 class="subTitulo">Conversiones de tipos de clase</h3>
       <p>Cuando declaramos una variable, no se puede volver a declarar, ni asignar un valor de otro tipo. En ocasiones, podemos convertir el valor de una variable de un tipo a otro. Podemos tener diferentes clases de conversiones:</p>
       <ul>
         <li><b>Conversiones implícitas:</b> son aquellas que se producen cuadno el valor que se va a almacenar se puede almacenar en una variable sin truncarse ni redondearse. Por ejemplo almacenar una variable int dentro de una variable long.</li>
         <li><b>Conversiones explícitas: cuando no hay posibilidad de realizar una conversión implícita debemos indicar al compilador que se pretende realizar una conversión que pueda producir una pérdida de datos.</b></li>
       </ul>
-      <h4>Parse y TryParse</h4>
+      <h4 class="apartado">Parse y TryParse</h4>
       <p>Con estos métodos podemos convertir una cadena en varios tipos numéricos: int, decimal, double...</p>
       <p>El método Parse devuelve el número convertido. TryParse devuelve un valor booleano indicado si la conversión se realizó correctamente o no, y devuelve el número convertido.</p>
-      <h4>Convert</h4>
+      <h4 class="apartado">Convert</h4>
       <p>Es una clase que convierte un tipo de datos en otro. Algunos métodos son:</p>
       <table>
+        <caption>Métodos de Conversión</caption>
         <tr>
           <th>Método</th>
           <th>Descripción</th>
@@ -303,7 +305,7 @@
     <!--*************************************************************-->
     <a name="2.6"></a>
     <article>
-      <h3>2.6.- Comentario al código</h3>
+      <h3 class="subTitulo">Comentario al código</h3>
       <p>No debemos pasar por alto que, además de realizar programas, lo debemos hacer de la forma más optimizada y ordenada posible. Los <b>comentarios</b> son una herramienta disponible en el compilador para que se puedan hacer anotaciones en el código sin que sea procesado por el compilador. Está permitido hacer dos tipos de comentarios:</p>
       <ul>
         <li><b>Comentarios de una línea:</b> son frases cortas, solo pueden ocupar una línea del código. Para comenzar escribir // antes de comenzar con dichas anotaciones.</li>
