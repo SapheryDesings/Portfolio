@@ -12,10 +12,13 @@
 </head>
 <body>
   <header>
-    <h1>Apuntes</h1>
-    <h2>Sistemas Informáticos</h2>
+    <a name="top"></a>
+    <div class="navtop">
+      <span>Apuntes</span>
+      <span>Sistemas Informáticos</span>
+      <span><a href="../../index.html">Principal</a></span>
+    </div>
     <div class="menuPrincipalAsignatura">
-      <a href="../../index.html">Principal</a>
       <a href="./sistemInfor.html">Tema 1</a>
       <a href="./temaDos.html">Tema 2</a>
       <a href="./temaTres.html">Tema 3</a>
@@ -23,13 +26,15 @@
       <a href="./temaCinco.html">Tema 5</a>
       <a href="./temaSeis.html">Tema 6</a>
     </div>
+    <div class="tituloTema">
+      <h1>Tema 2.- Administración de software base</h1>
+    </div>
   </header>
   <!--*************************************************************-->
   <section>
     <div class="indice">
-      <a name="indice"><h3>Índice</h3></a>
+      <h3>Índice</h3>
       <ol>
-        <h3>Tema 2.- Administración de software base</h3>
         <li><a href="#2.1">Administración de usuarios y grupos locales</a></li>
         <li><a href="#2.2">Seguridad de cuentas de usuario</a></li>
         <li><a href="#2.3">Seguridad de contraseñas</a></li>
@@ -106,7 +111,7 @@
         <li><b>Creación de grupos para la asignación de recursos:</b> Cuando hemos instalado un nuevo recurso y queremos asignarlo a varios usuarios.</li>
         <li><b>Gestión simplificada de usuarios:</b> Podemos crear grupos que reúnan una serie de características en lo referente a privilegios de acceso.</li>
       </ul>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.2"></a>
@@ -120,7 +125,7 @@
       </ul>
       <p><b>El uso de la cuenta de administrador se debe limitar a aquellas situaciones en las que necesitamos disponer de privilegios:</b> Cambios de configuración, instalar una nueva aplicación, dar alta a un nuevo usuario, etc..</p>
       <p>Si un virus infecta cuando utilizamos la cuenta administrador, resulta más difícil de eliminar, al tener control total del equipo. En una cuenta estándar la limitación de permisos reducirá sus efectos nocivos.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.3"></a>
@@ -143,7 +148,7 @@
         <li>Accesos a carpetas, impresoras en red, etc.</li>
       </ul>
       <p>El perfil se crea automaticacmente al darlos de alta o cuando inician sesión por primera vez. No obstante, el administrador podrá crear perfiles idóneos y asignarlos las cuentas.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.4"></a>
@@ -189,7 +194,7 @@
         <li><b>Dinámicas:</b> La más habitual, nos la asigna de forma aleatoria cada vez que nos conectarmos a la red.</li>
       </ul>
       <p>Señalar que la versión 4 del protocolo IP (IPv4) permite algo más de 4000 millones de direcciones distintas. Los S.O. más recientes incorporan el IPv6 que admite muchas más direcciones.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.5"></a>
@@ -200,7 +205,7 @@
       <p>Utilizaremos el comando (ipconfig) en el caso de windows y (ifconfig) en sistemas linux, con la sentencia (/all) para mostrar toda la información.</p>
       <p>Con la instrucción (ping) comprobaremos si el servidor está funcionando de la forma correcta.</p>
       <p>No solo basta con escoger los servidores más rápidos, sino que además es necesario configurar nuestro S.O. correctamente.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.6"></a>
@@ -214,7 +219,7 @@
         <li><b>Propiedades del adaptador:</b> Elegimos Protocolo de internet TCP/IPv4.</li>
       </ol>
       <p>Una vez configurada la dirección IP, máscara de subred y servidores DNS, aceptar. La información se guarda en los archivos de configuración del sistema. La configuración de linux se almacena en /etc/network/interfaces.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.7"></a>
@@ -239,7 +244,7 @@
         <li>Desactivar los programas que se cargan en el inicio</li>
       </ul>
       <p>También es importante tener encuenta que si abandonamos el lugar desde el que nos conectarmos a la red, los archivos que se encuentren accesibles a través de ella dejarán de estar disponibles. Para solucionarlo tendremos que pulsar sobre el archivo o carpeta con el botón secundario del ratón y elegir <b>Siempre disponible sin conexión</b>.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   <!--*************************************************************-->
   <a name="2.8"></a>
@@ -296,7 +301,7 @@
         </tr>
       </table>
       <p>Para mayor información consultaremos las páginas oficiales donde encontraremos información más detallada. Además de comandos más complejos, tenemos más opciones que disponen o el formato que tienen que cumplir pueden variar.</p>
-      <a class="btnArriba" href="#indice">Arriba</a>
+      <a class="btnArriba" href="#top">Arriba</a>
     </article>
   </section>
 </body>
