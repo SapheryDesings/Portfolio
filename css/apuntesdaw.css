@@ -171,4 +171,7 @@ table {
     padding: .5rem 1.5rem;
     border: 2px dashed var(--aguamar);
   }
-
+/* MEDIA QUERIES */
+@media screen and (min-width: 393px){
+  
+}
