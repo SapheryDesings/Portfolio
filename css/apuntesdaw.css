@@ -173,7 +173,7 @@ table {
   }
   
 /* MEDIA QUERIES */
-@media screen and (min-width: 393px){
+@media screen and (max-width: 393px){
   body {
     width: 393px;
     font-size: 1rem;
