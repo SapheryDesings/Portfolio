@@ -1,7 +1,7 @@
 /* ----------------------------- */
 /* RESET Y VARIABLES */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* REVISAR */
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -171,7 +171,15 @@ table {
     padding: .5rem 1.5rem;
     border: 2px dashed var(--aguamar);
   }
+  
 /* MEDIA QUERIES */
 @media screen and (min-width: 393px){
-  
+  body {
+    width: 393px;
+    font-size: 1rem;
+  }
+  .menuPrincipalAsignatura {
+    flex-flow: column nowrap;
+  } 
+
 }
