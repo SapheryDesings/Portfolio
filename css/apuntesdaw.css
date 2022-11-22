@@ -175,15 +175,24 @@ table {
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px){
   body {
-    width: 393px;
+    width: 100%;
     font-size: 1rem;
-    background-color: green;
+  }
+
+  header {
+    /*align-items: flex-start;*/
+  }
+
+  .navtop {
+    justify-content: space-between;
   }
 
   #apuntes { display: none;}
 
   .menuPrincipalAsignatura {
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 1rem 0;
     padding: .2rem 0;
   } 
 
