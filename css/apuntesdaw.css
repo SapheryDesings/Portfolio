@@ -128,15 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {margin-bottom: 2rem;}
 h3, h4 {margin-bottom: 1rem;}
 h5, h6 {margin-bottom: .5rem;}
-/*
-.tituloPrincipal {
-  width: 80%;
-  margin: 1rem auto 3rem;
-  font-size: 2rem;
-  text-align: center;
-  border-bottom: 5px solid var(--tipografiaClara);
-}
-*/
+
 p {
   margin-bottom: 1rem;
   padding: 1rem auto;
