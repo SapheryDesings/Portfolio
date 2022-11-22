@@ -177,7 +177,7 @@ table {
   body {
     width: 393px;
     font-size: 1rem;
-    background-color: grey;
+    background-color: green;
   }
 
   #apuntes { display: none;}
