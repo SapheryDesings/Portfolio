@@ -108,7 +108,7 @@ article {
 }
 
 .btnArriba {
-  display: inline-block;
+  width: max-content;
   margin: 1rem 0;
   padding: .3rem 1.5rem;
   border: 3px solid var(--aguamar);
@@ -179,10 +179,6 @@ table {
     font-size: 1rem;
   }
 
-  header {
-    /*align-items: flex-start;*/
-  }
-
   .navtop {
     justify-content: space-between;
   }
@@ -196,11 +192,11 @@ table {
     padding: .2rem 0;
   } 
 
-  .menuPrincipalAsignatura a { padding: .2rem .2rem;}
+  .menuPrincipalAsignatura a { padding: .2rem auto;}
 
   .tituloTema {
     font-size: 1.2rem;
-    padding: .8rem 0;
+    padding: .8rem 1rem;
   }
 
   .apartado { margin-top: 1rem;}
