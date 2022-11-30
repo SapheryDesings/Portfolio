@@ -1,7 +1,7 @@
 /* ----------------------------- */
 /* RESET Y VARIABLES */
 * {
-  box-sizing: border-box; /* REVISAR */
+  box-sizing: border-box; 
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -45,20 +45,18 @@ header {
       flex-direction: row;
       justify-content: space-around;
       width: 100%;
-      margin: 0 auto;
-      padding: .8rem;
+      padding: .8rem 10%;
       background-color: var(--aguamar);
     }
 
     .menuPrincipalAsignatura {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: center;
       padding: .5rem 1rem; 
     }
         .menuPrincipalAsignatura a {
           padding: .5rem 1rem;
-          
         } 
             .menuPrincipalAsignatura a:hover {
               background-color: var(--aguamar);
@@ -84,27 +82,25 @@ header {
 section {
   display: flex;
   flex-flow: column nowrap;
-  padding: 3rem;
+  width: 80%;
+  margin: 2rem auto;
 }
 
 .indice {
-  width: 70%;
+  width: 80%;
   margin: 1rem auto;
 }
 
-    .indice li { 
-      margin-left: 2rem;
-      padding: .5rem;
-    }
+    .indice li { padding: .5rem;}
 
     .indice li:hover {
       background-image: linear-gradient(to right, rgb(52, 152, 219) 20%,  rgb(33, 33, 33) 80%); 
     }
 /* ----------------------------- */
 /* ARTICLES */
-article {
-  margin: 1rem 15% 2rem;
-  padding: 1rem .5rem;
+article { 
+  width: 100%;
+  margin: 1rem auto;
 }
 
 .btnArriba {
@@ -134,8 +130,14 @@ p {
   padding: 1rem auto;
 }
 
+/* ----------------------------- */
+/* ENLACES */
+
 a {color: var(--tipografiaClara);}
 
+
+/* ----------------------------- */
+/* LISTAS */
 ul, ol {
   margin: 1rem 0 2rem;
   list-style-position: inside;
@@ -143,8 +145,15 @@ ul, ol {
 
 ul { list-style-type: square;}
 
+li ul {
+  margin-left: 5%;
+}
+
 li {margin: .5rem 0;}
 
+
+/* ----------------------------- */
+/* TABLAS */
 table {
   margin: 2rem auto;
   border-collapse: collapse;
@@ -164,6 +173,7 @@ table {
     border: 2px dashed var(--aguamar);
   }
   
+/* ----------------------------- */
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px){
   body {
