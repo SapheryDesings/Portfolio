@@ -49,71 +49,306 @@
   </section>
   <!--*************************************************************-->
   <section>
-    <a name="4.0"></a>
-    <article>
-      <h3 class="subTitulo">Introducción</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
     <a name="4.1"></a>
+    <h3 class="subTitulo">Concepto</h3>
     <article>
-      <h3 class="subTitulo">Concepto</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Consiste en dividir el problema original en diversos subproblemas, que se pueden resolver por separado, para después, recomponer los resultados y obtener la solución al problema.
+      </p>
+      <p>
+        Un subproblema se denomina módulo, y es una parte del problema que se puede resolver de manera independiente.
+      </p>
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.2"></a>
+    <h3 class="subTitulo">Ventajas e inconvenientes</h3>
     <article>
-      <h3 class="subTitulo">Ventajas e inconvenientes</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <h4>Ventajas:</h4>
+      <ul>
+        <li>Facilita el mantenimiento, la modificación y la documentación</li>
+        <li>Escritura y testing</li>
+        <li>Reutilización de módulos</li>
+        <li>Independencia de fallos</li>
+      </ul>
     </article>
+    <article>
+      <h4>Inconvenientes:</h4>
+      <ul>
+        <li>¿Cuánto hay que dividir nuestro problema?</li>
+        <li>Aumenta el uso de memoria y el tiempo de ejecución</li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>  
     <!--*************************************************************-->
+  <section>  
     <a name="4.3"></a>
+    <h3 class="subTitulo">Análisis descendente (top down)</h3>
     <article>
-      <h3 class="subTitulo">Análisis descendente (top down)</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Es una técnica que permite diseñar la solución de un problema con base en la modularización o segmentación, dándole un enfoque de arriba hacia abajo (top down). Se divide en módulos que se estructuran e integran jerárquicamente.
+      </p>
     </article>
+    <article>
+      <h4>Divide y vencerás:</h4>
+      <ul>
+        <ul>
+          <li>Va de lo más general a lo más específico</li>
+          <li>Se basa en una representación por niveles: primer nivel resuelve el problema, y los sucesivos van depurando el primero</li>
+          <li>El programa tendrá una estructura de árbol</li>
+        </ul>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.4"></a>
+    <h3 class="subTitulo">Modulación de programas. Subprogramas</h3>
     <article>
-      <h3 class="subTitulo">Modulación de programas. Subprogramas</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Denominamos módulos como subprogramas, las diferentes partes del problema que puede resolverse de forma independiente. Al ser independientes permiten que podamos centrarnos en una de sus partes. Ofrecen la posibilidad de que se puedan utilizar las soluciones obtenidas en otras partes del programa.
+      </p>
+      <p>
+        Cada módulo dentro del programa se puede definir como una parte del código independiente, que realiza una tarea asignada.
+      </p>
     </article>
+    <article>
+      <h4>Función Main</h4>
+      <p>
+        Todos los programas en C# tienen una función principal llamada main() que se ejecuta al iniciar el programa. Esta se encarga de gestionar el flujo de ejecución, llamando a los diferentes módulos si es necesario.
+      </p>
+    </article>
+    <article>
+      <p>
+        Los programas se dividen en subprogramas, denominados funciones o métodos. Estas funcionan deforma similar a una caja negra, el programa principal solo debe conocerlas para llamarlas por su nombre, los parámetros que reciben y lo que devuelven como resultado.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.5"></a>
+    <h3 class="subTitulo">Llamadas a funciones (métodos). Tipos y funcionamiento</h3>
     <article>
-      <h3 class="subTitulo">Llamadas a funciones (métodos). Tipos y funcionamiento</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <h4>Funciones</h4>
+      <p>
+        Los métodos con los que trabajamos se denominan funciones. Cuando nos referimos a una función, un método o un subprograma, nos estamos refiriendo al mismo concepto.
+      </p>
+      <p>
+        Las funciones se definen como un conjunto de instrucciones, delimitadas por llaves, que tienen un nombre y son de un tipo específico.
+      </p>
+      <p class="codigo">
+        Modificadores Tipo NombreFunción (Parámetros de entrada) {
+          Código de la función
+          Return expresión;
+          }
+      </p>
     </article>
+    <article>
+      <h4>Vemos el significado de cada parte:</h4>
+      <ul>
+        <li>
+          <b>Modificadores:</b> conjunto de palabras reservadas que modifican o aplican propiedades a la función.
+          <ul>
+            <li><b>Public:</b> el acceso no está restringido</li>
+            <li><b>Private:</b> el acceso está limitado a la misma clase</li>
+            <li><b>Protected:</b> el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.</li>
+            <li><b>Internal:</b> el acceso no está restringido, siempre y cuando sea dentro del mismo ensamblado. Un ensamblado es un conjunto de tipos que se compilan para obtener la misma solución. Si no indicamos un modificador, por defecto tendrán un nivel de accesibilidad internal.</li>
+          </ul>
+        </li>
+        <li><b>Tipo:</b> al igual que las variables poseen un tipo, el dato que devuelven es de un tipo determinado.</li>
+        <li><b>Nombre de la función:</b> es el identificador de la función, lo usaremos para referenciarla.</li>
+        <li><b>Parámetros de entrada:</b> una lista de variables que recibirá la función en el momento de su llamada. Es posible que no requiera parámetros.</li>
+        <li><b>Return:</b> si nuestro método está tipado, es obligatorio que devuelva un valor del tipo adecuado. Utiliza la palabra reservada return.</li>
+      </ul>
+    </article>
+    <article>
+      <p>
+        Mediante el uso de parámetros, se premite la comunicación de las diferentes funciones con el código.
+      </p>
+    </article>
+    <article>
+      <h4>Métodos no tipados (Void)</h4>
+      <p>
+        Son aquellos que realizan una tarea específica y que pueden recibir parámetros, pero no necesitan devolver un valor. 
+      </p>
+      <p>
+        Para referenciar que ese método no nos devuelve un valor, utilizaremos la sentencia void.
+      </p>
+      <p class="codigo">
+        Modificadores void NombreProcedimiento (Parámetros de entrada ){
+          //Código del procedimiento
+          }
+      </p>
+    </article>
+    <h4>Paso de parámetros. Paso por valor y paso por referencia</h4>
+    <article>
+      <h4>Por valor</h4>
+      <p>
+        Cuando ejecutamos una función que tiene parámetros pasados por valor, se realiza una copia del parámetro que se ha pasado, que todas las modificaciones y cambios que se realicen se están haciendo en esta copia que ha creado. El original no se modifica.
+      </p>
+    </article>
+    <article>
+      <h4>Por referencia</h4>
+      <p>
+        Cuando los párametros son pasados por referencia todas aquellas modificaciones que se realicen en la función van a afectar a sus parámetros, ya que se trabaja con los originales.
+      </p>
+    </article>
+    <article>
+      <h4>params, in y out</h4>
+      <p>
+        La palabra clave 'params' especifica un paso por valor. No se permiten pasar más parámetros después de la palabra clave 'params' en una declaración de método. Si el tipo declarado del parametro no es el mismo, se producirá un error.
+      </p>
+      <p>
+        La palabra 'in' sirve para pasar parámetros por referencia. Estas variables han de inicializarse antes de pasarse en una llamada de método o función. Este no puede ser modificado dentro del método.
+      </p>
+      <p>
+        La palabra 'out' también sirve para pasar por referencia. No es necesario iniciar la variable antes de pasarla al método.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.6"></a>
+    <h3 class="subTitulo">Ámbito de las llamadas a funciones</h3>
     <article>
-      <h3 class="subTitulo">Ámbito de las llamadas a funciones</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <h4>Variables globales</h4>
+      <p>
+        Una variable global es creada fuera de nuestro Main y fuera de cualquier método. Podemos acceder a ella en cualquier momento de nuestro programa.
+      </p>
+      <p>
+        Debemos intentar construir nuestros programas con variables locales. Así cada parte del programa trabaja con sus propios datos y evitamos que un error en un trozo de programa puede afectar al resto. Si modificamos una variable global en cualquier punto del programa, podemos perdernos en su flujo.
+      </p>
+      <p>
+        La forma correcta de pasar datos entre distintos métodos es usando los parámetros de cada función y los valores devueltos.
+      </p>
     </article>
+    <article>
+      <h4>Variables locales</h4>
+      <p>
+        Se declaran dentro de un método, y solo este fragmento de código las conocerá. No se podrán usar desde ningún otro método del programa.
+      </p>
+    </article>
+    <article>
+      <h4>Conflictos de nombres en las variables</h4>
+      <p>
+        ¿Que ocurre si trabajamos con la misma variable global en dos métodos diferentes?
+      </p>
+      <p>
+        Se recomienda trabajar con variables locales y paso de parámetros entre métodos.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.7"></a>
+    <h3 class="subTitulo">Prueba, depuración y comentarios de programas</h3>
     <article>
-      <h3 class="subTitulo">Prueba, depuración y comentarios de programas</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Una vez terminado el programa es momento de probarlo para comprobar que no tiene fallos y su funcionamiento es correcto. En muchos casos no existen errores, pero el programa no realiza la tarea que debería.
+      </p>
+      <p>
+        Es recomendable que nuestro programa tenga comentarios, en todo lo importante que realiza.
+      </p>
     </article>
+    <article>
+      <p>
+        Podemos encontrarnos errores en nuestro código, tanto sintácticos como semánticos, que pueden ir apareciendo sin esperalo. La mayoría de lenguajes disponen de herramientas que nos van a servir para tratar estos errores y conseguir solucionarlos.
+      </p>
+      <p>
+        En VS cuando ponermos una aplicación en modo depuración, tiene la posibilidad de visualizar línea a línea (F11), nuestro código para analizarlo de forma más detallada.
+      </p>
+    </article>
+    <article>
+      <h4>Cuando ejecutamos un programa, podemos dividir el proceso en varias partes:</h4>
+      <ul>
+        <li>Compilación</li>
+        <li>Vinculación</li>
+        <li>Ejecución</li>
+      </ul>
+    </article>
+    <article>
+      <h4>Veamos cómo funcionan cada una de estas etapas:</h4>
+      <ul>
+        <li>
+          <b>Compilación</b>
+          <p>
+            Mientras vamos escribiendo el entorno de desarrollo va haciendo comprobaciones para exponer los errores que podrían persistir en el código. Son denominados errores de compilación. 
+          </p>
+        </li>
+        <li>
+          <b>Vinculación</b>
+          <p>Todos los programas hacen uso de bibliotecas y algunos utilizan clases diseñadas por el programador. Las clases se vinculan cuando el programa empieza a ejecutarse, son los IDE los que comprueban que los métodos que se invoquen existan, y que coincidan con su tipo y parámetros.</p>
+        </li>
+        <li>
+          <b>Ejecución</b>
+          <p>
+            Si se llega a la fase de ejecución significa que nuestro porgrama no contiene errores, pero todavía no sabemos si el resultado es el correcto. Los errores lógicos son los más complicados de detectar. Estos pueden producir cambios inesperados, por lo que debemos comenzar con un proceso de depuración en el que vamos a ir comprobando, paso a paso cómo va a funcionar nuestro programa.
+          </p>
+        </li>
+        
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.8"></a>
+    <h3 class="subTitulo">Concepto de librerías</h3>
     <article>
-      <h3 class="subTitulo">Concepto de librerías</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Librerías son archivos que nos permiten llevar a cabo diferentes acciones y tareas sin necesidad de que el programador se preocupe de cómo están desarrolladas, solo entender cómo utilizarlas. Nos permiten hacer nuestros programas más modulares y reutilizables, facilitando crear programas con funcionalidades bastante complejas.
+      </p>
+      <p>
+        Cuando compilamos se comprueba que se ha llamado de manera correcta a las funciones que pertenecen a las diferentes librerías que nos ofrece el compilador, aunque el código de estas funciones no se ha insertado en el programa. El enlazador o linkador es el que realiza esta inserción y será el encargado de completar el código.
+      </p>
     </article>
+    <article>
+      <p>
+        Una vez hemos obtenido el código, debemos comprobar que no se producen errores en tiempo de ejecución. Si los hubiera, debemos depurar el programa.
+      </p>
+      <p>
+        El leguaje C# permite la interoperación con otros lenguajes, siempre que estos tengan:
+      </p>
+      <ul>
+        <li>Acceso a las diferentes librerías a través de COM+ y servicios .NET</li>
+        <li>Soporte XML (a nivel de documentación)</li>
+        <li>Simplificación en administración y componentes gracias a un mecanismo muy cuidado de versiones.</li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.9"></a>
+    <h3 class="subTitulo">Uso de librerías</h3>
     <article>
-      <h3 class="subTitulo">Uso de librerías</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Una librería es un conjunto de métodos relacionados con el mismo objetivo para poder ser reutilizado cada vez que el programador lo desee. Ejemplo Math.
+      </p>
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="4.10"></a>
+    <h3 class="subTitulo">Introducción al concepto de recursividad</h3>
     <article>
-      <h3 class="subTitulo">Introducción al concepto de recursividad</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Es la llamada de una función a sí misma hasta que se cumpla una determinada condición de salida.
+      </p>
+      <ul>
+        <li>Un caso base que permita la finalización del programa (sería nuestra condición de salida)</li>
+        <li>Casos recursivos, que son los que se van a encargar de que la función vuelva a ejecutarse, pero acerándose cada vez más al caso base.</li>
+      </ul>
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
   </section>
 </body>
 </html>
