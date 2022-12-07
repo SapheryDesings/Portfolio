@@ -190,23 +190,178 @@
       <a class="btnArriba" href="#top">Arriba</a>
     </section>
     <!--*************************************************************-->
-    <a name="3.5"></a>
-    <article>
+    <section>
+      <a name="3.5"></a>
       <h3 class="subTitulo">Tipos de datos: simples y compuestos</h3>
+      <article>
+        <h4>Tipos simples</h4>
+        <p>
+          Debemos considerar el rango de valores que puede tomar, las operaciones a realizar y el espacion necesario para almacenar datos.
+        </p>
+        <p>
+          El tipo de datos simple no está compuesto por otros tipos, y que contiene un valor único.
+        </p>
+        <ul>
+          <li>
+            <b>Simples predefinidos:</b>
+            <p>
+              Entre sus propiedades podemos destacar que son indivisibles, tienen existencia propia y permiten operadores relacionales. Se utilizan sin necesidad de ser definidos previamente:
+            </p>
+            <ul>
+              <li><b>Natural:</b> números naturales (N) -> byte, uint, ushort, ulong.</li>
+              <li><b>Entero:</b> números enteros (Z) -> sbyte, int, long, short.</li>
+              <li><b>Real:</b> números reales (R) -> decimal, float, double.</li>
+              <li><b>Carácter:</b> caracteres (C) -> char.</li>
+              <li><b>Lógico:</b> booleanos (B) -> bool.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Simples definidos por el usuario:</b>
+            <b>Enumerados:</b>
+            <p>
+              Es definido por el usuario, así como un conjunto de constantes. Se utiliza la palabra enum y especificamos los nombres de los componentes de la enumeración.
+            </p>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h4>Tipos compuestos o estructurados</h4>
+        <p>Se crean mediante la unión de varios tipos.</p>
+        <ul>
+          <li>
+            <b>Vectores:</b>
+            <p>
+              Estructura donde almacenamos varias variables del mismo tipo. Se puede declarar una matriz si se especifica el tipo de sus elementos (Arrays). Precisa indicador  de posición para acceder a un elemento de la tabla.
+            </p>
+          </li>
+          <li>
+            <b>Matrices:</b>
+            <p>
+              Unión de varios vectores de cualquier tipo simple (enteros, reales, etc.). Son arrays bidimensionales, necesitan dos indicadores de posición para acceder al elemento.
+            </p>
+          </li>
+        </ul>
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
-    <a name="3.6"></a>
-    <article>
+    <section>
+      <a name="3.6"></a>
       <h3 class="subTitulo">Estructuras de selección (Condicionales)</h3>
+      <article>
+        <p>
+          Las estructuras de selección son aquellas que permiten ejecutar una parte del código dependiendo de si cumple o no una condición.
+        </p>
+        <h4>Instrucción simple (IF)</h4>
+        <p class="codigo">
+          SI CONDICIÓN ENTONCES:
+            INSTRUCCIONES_1
+          FIN SI;
+        </p>
+        <h4>Instrucción doble (IF-ELSE)</h4>
+        <p class="codigo">
+          SI CONDICIÓN ENTONCES:
+            INSTRUCCIONES_1;
+          SI NO:
+            INSTRUCCIONES_2;
+          FIN SI;
+        </p>
+        <p>
+          Si condición es cierta, ejecutaremos lo que hay en instrucciones1 y saltaremos hasta el fin si.
+        </p>
+        <p>
+          Si condición es falsa, ejecutaremos lo que hay en instrucciones2
+        </p>
+        <p>
+          En las estructuras dobles, por cada IF, debe haber un ELSE.
+        </p>
+      </article>
+      <article>
+        <h4>Operadores lógicos</h4>
+        <ul>
+          <li>
+            <b>&&</b>
+            <p>
+              <b>AND:</b> ambas condiciones deben cumplirse para entrar en el bloque IF. No evalúa el operando derecho si el izquierdo es false.
+            </p>
+          </li>
+          <li>
+            <b>||</b>
+            <p>
+              <b>OR:</b> es suficiente con que una de las condiciones se cumpla para entrar en el bloque IF. El resultado de x || y es true si x o y es true.
+            </p>
+          </li>
+          <li>
+            <b>^</b>
+            <p>
+              <b>XOR:</b> el resultado se evalúa como true si una condición se evalúa como false y otra como true. Si ambas condiciones se evalúan como false o como true, el resultado será false.
+            </p>
+          </li>
+        </ul>
+        <p class="codigo">
+          SI CONDICION_1 && CONDICION_2 ENTONCES:
+          FIN SI;
+        </p>
+        <p>
+          Si condición_1 y condición_2 son true, el resultado se evalúa como true. Si alguna es false, el resultado se evalúa como false.
+        </p>
+        <p class="codigo">
+          SI CONDICION_1 || CONDICION_2 ENTONCES:
+          FIN SI;
+        </p>
+        <p>
+          Si condición_1 es true o condición_2 es true, el resultado se evalúa como true.
+        </p>
+        <p class="codigo">
+          SI CONDICION_1 ^ CONDICION_2 ENTONCES:
+          FIN SI;
+        </p>
+        <table>
+          <tr>
+            <td>Condición_1</td>
+            <td>Condición_2</td>
+            <td>Resultado</td>
+          </tr>
+          <tr>
+            <th>false</th>
+            <th>false</th>
+            <th>False</th>
+          </tr>
+          <tr>
+            <th>false</th>
+            <th>true</th>
+            <th>True</th>
+          </tr>
+          <tr>
+            <th>true</th>
+            <th>false</th>
+            <th>true</th>
+          </tr>
+          <tr>
+            <th>true</th>
+            <th>true</th>
+            <th>false</th>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h4>Sentencia Switch (o de selección múltiple)</h4>
+        <p>
+          Es una instrucción de selección que elige una sola acción de una lista de opciones en función de una coincidencia de distintos patrones de expresión. La cláusula default es optativa.
+        </p>
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
-    <a name="3.7"></a>
-    <article>
+    <section>
+      <a name="3.7"></a>
       <h3 class="subTitulo">Estructuras de repetición</h3>
+      <article>
+        
+        
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
     <a name="3.8"></a>
     <article>
