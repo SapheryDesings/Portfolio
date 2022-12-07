@@ -52,34 +52,143 @@
   <!--*************************************************************-->
   <section>
     <a name="3.0"></a>
+    <h3 class="subTitulo">Introducción</h3>
     <article>
-      <h3 class="subTitulo">Introducción</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        La programación estructurada es un procedimiento que consiste en diseñar e inplementar programas de forma clara y sencilla para que puedan se mantenidos con facilidad.
+      </p>
+      
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
-    <a name="3.1"></a>
-    <article>
+    <section>
+      <a name="3.1"></a>
       <h3 class="subTitulo">Fundamentos de programación</h3>
+      <article>
+        <p>
+          Los fundamentos de la programación son un conjunto de técnicas que persiguen desarrollar algoritmos que sean sencillos de escribir, leer, modificar y testear.
+        </p>
+        <p>
+          El orden en que se ejecutan las sentencias de un programa es secuencial, una detrás de otra, y en el orden en que se encuentran dentro del programa.
+        </p>
+      </article>
+      <article>
+        <h4>Teorema de Böhm y Jacopini</h4>
+        <p>Debe de cumplir las siguientes características:</p>
+        <ul>
+          <li>Debe tener un único punto de entrada y uno de salida.</li>
+          <li>Toda acción del algoritmo debe ser accesible. Tiene que haber al menos un camino que va desde el inicio hasta el fin del algoritmo.</li>
+          <li>No deben existir, bucles infinitos.</li>
+        </ul>
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
-    <a name="3.2"></a>
-    <article>
+    <section>
+      <a name="3.2"></a>
       <h3 class="subTitulo">Introducción a la algoritmia y herramientas de diseño</h3>
+      <article>
+        <p>
+          Un algoritmo es una secuencia de los pasos de las distintas operaciones que debe realizar el programa para conseguir resolver un problema planteado.
+        </p>
+        <p>
+          La algoritmia es un conjunto ordenado y finito de operaciones que permite encontrar la solución a un problema cualquiera.
+        </p>
+        <p>
+          La algoritmia utiliza un conjunto de herramientas lógicas, matemáticas e informáticas con el objetivo de diseñar y presentar un algoritmo. Ej: El pseudocódigo y los diagramas de flujo.
+        </p>
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
-    <a name="3.3"></a>
-    <article>
+    <section>
+      <a name="3.3"></a>
       <h3 class="subTitulo">Ciclo de vida de un proyecto software</h3>
+      <article>
+        <p>Ciclo de vida de un programa informático:</p>
+        <ul>
+          <li>
+            <b>Análisis de requisitos:</b>
+            <p>
+              Apartir de las necesidades del usuario o programa, se decide qué hay que hacer para llegar a la solución óptima, y se genera un documento de requisitos. Es la etapa más importante. Existen varias técnicas:
+            </p>
+            <ul>
+              <li>Entrevistas</li>
+              <li>Brainstorming</li>
+              <li>Prototipos</li>
+              <li>Casos de uso</li>
+              <li>JAD (entrevistas en grupos o talleres)</li>
+            </ul>
+          </li>
+          <li>
+            <b>Diseño de la arquitectura:</b>
+            <p>
+              Estudio para ver los distintos componentes que van a formar el programa (módulos, subsistemas, etc.). Esta fase se revisará cuantas veces sean necesarias hasta estar seguro que es la mejor solución.
+            </p>
+            <ul>
+              <li>Diseño estructurado: Tenemos notaciones como los diagramas de flujo o psuedocódigo.</li>
+              <li>Diseño orientado a objetos: Trabajamos con representaciones UML (diagramas de clases, diagramas de secuencia, etc.).</li>
+            </ul>
+          </li>
+          <li>
+            <b>Etapa de implementación o codificación:</b>
+            <p>
+              Pasamos a codificar las aplicaciones que hemos elegido en la etapa anterior, empleando el lenguaje de programación con el que estemos trabajando. Vamos a obtener el código fuente.
+            </p>
+          </li>
+          <li>
+            <b>Pruebas de integración:</b>
+            <p>
+              Hay que realizar ensayos del funcionamiento, combinando todos los módulos de la aplicación. Haciendo funcionar la aplicación completa, comprobamos que cumple con lo establecido.
+            </p>
+          </li>
+          <li>
+            <b>Pruebas de validación:</b>
+            <p>
+              Último paso de la integración, realizamos nuevas pruebas en su conjunto. El objetivo es asegurar que cumple con el diseño y cubre las necesidades de los usuarios.
+            </p>
+          </li>
+          <li>
+            <b>Fase de mantenimiento:</b>
+            <p>
+              Revisar todo lo anterior e ir actualizando o modificando los cambios oportunos.
+            </p>
+          </li>
+        </ul>
+        
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
-    <a name="3.4"></a>
-    <article>
+    <section>
+      <a name="3.4"></a>
       <h3 class="subTitulo">Prueba de programas</h3>
+      <article>
+        <p>
+          Una vez implementado y compilado el código debemos comenzar la estapa de testing.
+        </p>
+        <p>
+          Se prueba el programa para demostrar la existencia de defectos: algorítmicos, de sintaxis, de documentación, de sobrecarga, de capacidad, de rendimiento, de sincronización, de recuperación, de hardware y software y de estándares.
+        </p>
+        <p>
+          Se lleva a cabo de manera automática o manual y persigue los siguientes objetivos:
+        </p>
+        <ul>
+          <li>Comprobar los requisitos funcionales y no funcionales del programa.</li>
+          <li>Probar todo tipo de casos para detectar alguna anomalía en su ejecución.</li>
+        </ul>
+        <p>Tenemos dos tipos de técnicas de pruebas:</p>
+        <ul>
+          <li><b>De caja blanca:</b> donde se valida la estructura del sistema.</li>
+          <li><b>De caja negra:</b> Se analizan las entradas y salidas del sistema sin tener en cuenta el funcionamiento interno.</li>
+        </ul>
+        <p>
+          El plan de prueba consta de varias etapas, si extiste algún tipo de fallo, tendremos que volver a empezar con el nuevo código modificado.
+        </p>
+      </article>
       <a class="btnArriba" href="#top">Arriba</a>
-    </article>
+    </section>
     <!--*************************************************************-->
     <a name="3.5"></a>
     <article>
