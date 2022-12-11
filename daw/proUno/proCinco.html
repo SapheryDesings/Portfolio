@@ -44,35 +44,265 @@
   <!--*************************************************************-->
   <section>
     <a name="5.0"></a>
+    <h3 class="subTitulo">Introducción</h3>
     <article>
-      <h3 class="subTitulo">Introducción</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Hasta ahora hemos trabajado con información que una vez que finaliza la ejecución del programa, desaparece de la memoria, ya que ha estado almacenada en la memoria principal en el tiempo que dura la ejecución del software.
+      </p>
+      <p>
+        La solución para que los datos persistan es almacenarlos en un fichero. Cada vez que ejecutemos una aplicación que trabaja con esos datos podrá leer del fichero aquellos que sean necesarios.
+      </p>
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>  
     <a name="5.1"></a>
+    <h3 class="subTitulo">Concepto y tipos de ficheros</h3>
     <article>
-      <h3 class="subTitulo">Concepto y tipos de ficheros</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <p>
+        Un fichero es una parte de un dispositivo no volátil a la que se le asigna un nombre y que puede contener una cantidad de datos que va a estar limitada, o por la cantidad de espacio del que disponga el dispositivo, o por las características del SO. Los dispositivos no volátiles son aquellos que no pierden la información cuando apagamos nuestro ordenador.
+      </p>
+      <p>
+        Debido a la importancia que tiene la BCL (Base Class Library) reserva un espacio de nombres denominados System.IO, destinado a trabajar con ellos.
+      </p>
+      <p>
+        El espacio de nombres System.IO contiene tipos que permiten leer y escribir en los archivos. Ese espacio de nombres nos proporciona compatibilidad entre archivos y directorios. <br>
+        Algunas de las clases que nos proporcionan son:
+      </p>
+      <table>
+        <tr>
+          <th>Clase</th>
+          <th>Descripción</th>
+        </tr>
+        <tr>
+          <td>BinaryReader</td>
+          <td>Lee tipos de datos primitivos como valores binarios</td>
+        </tr>
+        <tr>
+          <td>BinaryWriter</td>
+          <td>Escribe tipos primitivos en formato binario en una secuencia y admite la escritura de cadenas</td>
+        </tr>
+        <tr>
+          <td>File</td>
+          <td>Proporciona métodos estáticos para crear, copiar, eliminar, mover y abrir un solo archivo. Contribuye a la creación de objetos FileSream</td>
+        </tr>
+        <tr>
+          <td>BufferedSream</td>
+          <td>Almacena en un búfer los datos necesarios para las operaciones de lectura y escritura en otra secuencia. No se puede heredar esta clase</td>
+        </tr>
+        <tr>
+          <td>FileStream</td>
+          <td>Proporciona un Sream para un archivo, lo que permite operaciones de lectura y escritura sincrónica y asincrónica</td>
+        </tr>
+        <tr>
+          <td>StreamReader</td>
+          <td>Implementa un TextReader que lee los caracteres de una secuencia de bytes</td>
+        </tr>
+        <tr>
+          <td>SteamWriter</td>
+          <td>Implementa TextWriter para escribir los caracteres de una secuencia</td>
+        </tr>
+        <tr>
+          <td>TextReader</td>
+          <td>Representa un lector que puede leer una serie secuencial de caracteres</td>
+        </tr>
+        <tr>
+          <td>TextWriter</td>
+          <td>Representa un escritor que puede escribir una serie secuencial de caracteres</td>
+        </tr>
+      </table>
+      <p>
+        Los ficheros se almacenan en directorios o carpetas. Esto se hace creando una estructura jerárquica, para que esta sea finita, debe existir un directorio raíz, que contenga a todos los demás y no tenga dependencia de ningún otro.
+      </p>
+      <h4>En resumen</h4>
+      <p>
+        Los ficheros o archivos son una secuencia de bits, bytes, líneas o registros que se almacenan en un dispositivo de almacenamiento secundario, por lo que la información va a permanecer a pesar de que se cierre la aplicación que los utilice.
+      </p>
+      <p>
+        Esto permite más independencia sobre la información, ya que no necesita que el programa se esté ejecutando para que la información exista.
+      </p>
+      <p>
+        Para manipular un fichero, realizamos tres operaciones:
+      </p>
+      <ul>
+        <li>Abrir el fichero</li>
+        <li>Escribir o leer registros del fichero</li>
+        <li>Cerrar el fichero</li>
+      </ul>
+      <p>
+        Cuando trabajamos con ficheros, debemos tener en cuenta:
+      </p>
+      <ul>
+        <li>La información es binaria</li>
+        <li>Al agrupar los bits, se forman bytes o palabras</li>
+        <li>Los tipos de datos van a estar formados por un conjunto de bytes o palabras</li>
+        <li>Al agrupar los campos, se crean los registros de información</li>
+        <li>Un fichero es un conjunto de bytes con una misma estructura</li>
+        <li>Los directorios tienen la función de agrupar distintos ficheros siguiendo unas condiciones determinadas dadas por el SO o por el programador</li>
+      </ul>
+      <h4>Utilidades de los ficheros</h4>
+      <ul>
+        <li>Permiten organizar más fácilmente el sistema de archivos</li>
+        <li>Evitan conflictos con sus nombres, ya que cada programa instala sus ficheros en directorios diferentes.Pueden tener el mismo nombre pero tendrán distinta ruta</li>
+        <li>La relación entre ficheros y directorio es muy cercana, se establece entre tipos y espacio de nombres</li>
+      </ul>
+      <h4>Rutas de fichero y directorios</h4>
+      <p>
+        Para la identificación de este fichero, habrá que nombrar el camino que nos lleva hasta él. Este camino se denomina ruta. <br>
+        Dependiendo de cómo empecemos la ruta de directorio para nombrar el archivo:
+      </p>
+      <ul>
+        <li><b>Ruta absoluta o completa:</b> se indica el camino desde el comienzo. En linux se empieza por "/", Windows cada partición posee un directorio raíz, no existe un directorio ráiz común que los contenga a todos ellos.</li>
+        <li><b>Ruta relativa:</b> se le indica el camino del directorio desde la posición actual.</li>
+      </ul>
+      <h4>Tipos de fichero</h4>
+      <ul>
+        <li>
+          <b>Según su acceso:</b> según la forma de organizar la información:
+          <ul>
+            <li><b>Secuencial:</b> los registros se van almacenando en posiciones consecutivas de manera que cada vez que queramos acceder a ellos tendremos que empezar desde el primero e ir recorriéndolos de uno en uno</li>
+            <li><b>Aleatorio o directo:</b> podemos acceder a un registro concreto indicando una posición perteneciente a un conjunto de posiciones posibles. Los registros están organizados y pueden ser léidos o escritos en cualquier orden, ya que se accede a cada uno da través de su posición. Cuando queremos realizar una operación, basta con colocar el puntero que maneja el fichero justo antes de este</li>
+            <li>
+              <b>Secuencial indexado:</b> poseen un campo clave (índice) para ser identificados. Permiten el acceso secuencial y aleatorio a un fichero de la siguiente forma: <br>
+              <ol>
+                <li>Primero busca de forma secuencial el campo clave o índice</li>
+                <li>Una vez que lo encuentra, el acceso al fichero es directo, ya que solo tenemos que acceder a la posición indicada por el campo clave</li>
+              </ol><br>
+              Para que este proceso funcione, los índices se encuentran ordenados, para un acceso más rápido
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Según su estructura:</b>
+          <ul>
+            <li><b>Ficheros de texto:</b> formados por texto plano sin formato legible por el usuario</li>
+            <li><b>Ficheros binarios:</b> los datos se almacenan de forma binaria y de se guardan de la misma forma. Los datos se encriptan en ceros y unos, así se hace mucho más eficiente su almacenamiento.</li>
+          </ul> 
+        </li>
+      </ul>
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="5.2"></a>
+    <h3 class="subTitulo">Diseño y modulación de las operaciones sobre ficheros</h3>
     <article>
-      <h3 class="subTitulo">Diseño y modulación de las operaciones sobre ficheros</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      <h4>Fundamentos de los flujos</h4>
+      <p>
+        Los flujos (steam) de datos son las estructuras o pasarelas que tenemos para acceder a los datos de un fichero, de una forma consistente y fiable, desde un código fuente en cualquier lenguaje de programación.
+      </p>
+      <p>
+        La clase Steam nos permite abstraer de una secuencia de bytes como, un archivo, un dispositivo de entrada/salida, una canalización de comunicación entre procesos o un socket.
+      </p>
+      <p>
+        La clase FileStream deriva de la clase Steam y nos proporciona los siguientes métodos:
+        <ul>
+          <li>FileSteam (string nombre, FileMode modo)</li>
+          <li>FileStream (string nombre, FileMode modo, FileAccess acceso)</li>
+        </ul>
+      </p>
+      <p>
+        El primer método abre un flujo de entrada y salida que se vincula al fichero especificado en el nombre, mientras que el segundo método realiza lo mismo y añade el tipo de acceso: lectura, escritura o lectura/escritura.
+      </p>
+      <p>
+        El parámetro nombre es una cadena de caracteres que indica la ruta donde está guardado o donde se guardará el fichero. <br>
+        Puede escribirse:
+        <ul>
+          <li>c:\\users\\AppData\\file.txt</li>
+          <li>@c:\users\AppData\file.txt</li>
+        </ul>
+      </p>
+      <p>
+        La ventaja de utilizar la @ es que las secuencias de escape no se procesan. 
+      </p>
+      <p>
+        FileMode nos indica cómo se debe abrir un archivo. Los campos toman los siguientes valores:
+      </p>
+      <table>
+        <tr>
+          <td>CreateNew</td>
+          <td>Crea un nuevo fichero. Si existe, lanzará un error</td>
+        </tr>
+        <tr>
+          <td>Truncate</td>
+          <td>Abre un fichero existente. El fichero será truncado a cero bytes de longitud</td>
+        </tr>
+        <tr>
+          <td>Create</td>
+          <td>Crea un nuevo fichero. Si el fichero existe, será sobreescrito</td>
+        </tr>
+        <tr>
+          <td>Open</td>
+          <td>Abre un fichero existente. Si no existe, lanzará un error</td>
+        </tr>
+        <tr>
+          <td>OpenOrCreate</td>
+          <td>Abre un fichero si existe; si no, crea un fichero nuevo</td>
+        </tr>
+        <tr>
+          <td>Append</td>
+          <td>Abre un fichero para añadir datos al final del mismo si existe o crea un fichero nuevo si no existe</td>
+        </tr>
+      </table>
+      <p>El parámetro acceso puede tomar los siguientes valores:</p>
+      <table>
+        <tr>
+          <td>Read</td>
+          <td>Permite acceder al fichero para realizar operaciones de lectura</td>
+        </tr>
+        <tr>
+          <td>ReadWrite</td>
+          <td>Permite acceder al fichero para realizar operaciones de lectura y escritura</td>
+        </tr>
+        <tr>
+          <td>Write</td>
+          <td>Permite acceder al fichero para realizar operaciones de escritura</td>
+        </tr>
+      </table>
+      <p>
+        En el flujo de entrada de datos (lectura), solo podemos realizar la operación de lectura, existe una comunicación unilateral desde el fichero al programa.
+      </p>
+      <p>
+        En el flujo de salida (escritura) también es unidireccional.
+      </p>
+      <p>
+        El el flujo o stream de entrada/salida es cuando podemos tanto leer como escribir. Este tipo lo vamos a definir al iniciar el trabajo con ficheros, y no se podrá cambiar una vez abierto.
+      </p>
     </article>
+    <article>
+      <h4>Clases de flujos</h4>
+      <p>
+        Utilizaremos las clases pertenecientes a los dos tipos de ficheros: binarios y de texto. Se pueden distinguir dos tipos de flujos:
+      </p>
+      <ul>
+        <li><b>Flujos base:</b> Son aquellos que operan más a nivel máquina, como, porción de memoria, espacio de disco o conexión de red</li>
+        <li><b>Flujos intermedios:</b> Trabajan por encima de los anteriores. Se pueden combinar con el flujo base de manera que este pueda verse beneficiado por todas las funcionalidades que ofrezca el flujo base</li>
+        <li>El <b>flujo intermedio</b> procesa la información, mientras que la base realiza la función de envío de bytes de un lugar a otro</li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="5.3"></a>
+    <h3 class="subTitulo">Operaciones sobre ficheros secuenciales</h3>
     <article>
-      <h3 class="subTitulo">Operaciones sobre ficheros secuenciales</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      
+      
     </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
     <!--*************************************************************-->
+  <section>
     <a name="5.4"></a>
+    <h3 class="subTitulo">Control de excepciones</h3>
     <article>
-      <h3 class="subTitulo">Control de excepciones</h3>
-      <a class="btnArriba" href="#top">Arriba</a>
+      
+      
     </article>
-    <!--*************************************************************-->
+    <a class="btnArriba" href="#top">Arriba</a>
   </section>
 </body>
 </html>
