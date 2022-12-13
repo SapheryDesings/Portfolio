@@ -68,15 +68,6 @@ header {
       padding: 2rem;
     }
 
-    .subTitulo {
-      color: var(--morado);
-    }
-
-    .apartado {
-      margin-top: 3rem;
-      color: var(--mostaza);
-    }
-
 /* ----------------------------- */
 /* SECTIONS */
 section {
