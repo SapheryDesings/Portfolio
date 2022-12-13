@@ -111,6 +111,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Titan One', cursive;
   font-weight: 100;
 }
+/*
+h4 { 
+  border-left: 10px solid var(--aguamar); 
+  padding-left: 10px;
+}*/
 
 h1, h2 {margin-bottom: 2rem;}
 h3, h4 {margin-bottom: 1rem;}
@@ -119,6 +124,16 @@ h5, h6 {margin-bottom: .5rem;}
 p {
   margin-bottom: 1rem;
   padding: 1rem auto;
+}
+
+.subTitulo_3 {
+  border-bottom: 2px dashed var(--aguamar); 
+  padding-bottom: 10px;
+}
+
+.subTitulo_4 {
+  border-left: 10px solid var(--aguamar); 
+  padding-left: 10px;
 }
 
 /* ----------------------------- */

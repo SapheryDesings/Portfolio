@@ -32,7 +32,7 @@
   <!--*************************************************************--> 
   <section>
     <div class="indice">
-      <h3>Índice</h3>
+      
       <ol>
         <li><a href="#5.1">Concepto y tipos de ficheros</a></li>
         <li><a href="#5.2">Diseño y modulación de las operaciones sobre ficheros</a></li>
@@ -44,7 +44,7 @@
   <!--*************************************************************-->
   <section>
     <a name="5.0"></a>
-    <h3 >Introducción</h3>
+    <h3 class="subTitulo_3">Introducción</h3>
     <article>
       <p>
         Hasta ahora hemos trabajado con información que una vez que finaliza la ejecución del programa, desaparece de la memoria, ya que ha estado almacenada en la memoria principal en el tiempo que dura la ejecución del software.
@@ -58,7 +58,7 @@
     <!--*************************************************************-->
   <section>  
     <a name="5.1"></a>
-    <h3 >Concepto y tipos de ficheros</h3>
+    <h3 class="subTitulo_3">Concepto y tipos de ficheros</h3>
     <article>
       <p>
         Un fichero es una parte de un dispositivo no volátil a la que se le asigna un nombre y que puede contener una cantidad de datos que va a estar limitada, o por la cantidad de espacio del que disponga el dispositivo, o por las características del SO. Los dispositivos no volátiles son aquellos que no pierden la información cuando apagamos nuestro ordenador.
@@ -115,7 +115,7 @@
       <p>
         Los ficheros se almacenan en directorios o carpetas. Esto se hace creando una estructura jerárquica, para que esta sea finita, debe existir un directorio raíz, que contenga a todos los demás y no tenga dependencia de ningún otro.
       </p>
-      <h4>En resumen</h4>
+      <h4 class="subTitulo_4">En resumen</h4>
       <p>
         Los ficheros o archivos son una secuencia de bits, bytes, líneas o registros que se almacenan en un dispositivo de almacenamiento secundario, por lo que la información va a permanecer a pesar de que se cierre la aplicación que los utilice.
       </p>
@@ -141,13 +141,13 @@
         <li>Un fichero es un conjunto de bytes con una misma estructura</li>
         <li>Los directorios tienen la función de agrupar distintos ficheros siguiendo unas condiciones determinadas dadas por el SO o por el programador</li>
       </ul>
-      <h4>Utilidades de los ficheros</h4>
+      <h4 class="subTitulo_4">Utilidades de los ficheros</h4>
       <ul>
         <li>Permiten organizar más fácilmente el sistema de archivos</li>
         <li>Evitan conflictos con sus nombres, ya que cada programa instala sus ficheros en directorios diferentes.Pueden tener el mismo nombre pero tendrán distinta ruta</li>
         <li>La relación entre ficheros y directorio es muy cercana, se establece entre tipos y espacio de nombres</li>
       </ul>
-      <h4>Rutas de fichero y directorios</h4>
+      <h4 class="subTitulo_4">Rutas de fichero y directorios</h4>
       <p>
         Para la identificación de este fichero, habrá que nombrar el camino que nos lleva hasta él. Este camino se denomina ruta. <br>
         Dependiendo de cómo empecemos la ruta de directorio para nombrar el archivo:
@@ -156,7 +156,7 @@
         <li><b>Ruta absoluta o completa:</b> se indica el camino desde el comienzo. En linux se empieza por "/", Windows cada partición posee un directorio raíz, no existe un directorio ráiz común que los contenga a todos ellos.</li>
         <li><b>Ruta relativa:</b> se le indica el camino del directorio desde la posición actual.</li>
       </ul>
-      <h4>Tipos de fichero</h4>
+      <h4 class="subTitulo_4">Tipos de fichero</h4>
       <ul>
         <li>
           <b>Según su acceso:</b> según la forma de organizar la información:
@@ -187,9 +187,9 @@
     <!--*************************************************************-->
   <section>
     <a name="5.2"></a>
-    <h3 >Diseño y modulación de las operaciones sobre ficheros</h3>
+    <h3 class="subTitulo_3">Diseño y modulación de las operaciones sobre ficheros</h3>
     <article>
-      <h4>Fundamentos de los flujos</h4>
+      <h4 class="subTitulo_4">Fundamentos de los flujos</h4>
       <p>
         Los flujos (steam) de datos son las estructuras o pasarelas que tenemos para acceder a los datos de un fichero, de una forma consistente y fiable, desde un código fuente en cualquier lenguaje de programación.
       </p>
@@ -272,7 +272,7 @@
       </p>
     </article>
     <article>
-      <h4>Clases de flujos</h4>
+      <h4 class="subTitulo_4">Clases de flujos</h4>
       <p>
         Utilizaremos las clases pertenecientes a los dos tipos de ficheros: binarios y de texto. Se pueden distinguir dos tipos de flujos:
       </p>
@@ -287,10 +287,10 @@
     <!--*************************************************************-->
   <section>
     <a name="5.3"></a>
-    <h3 >Operaciones sobre ficheros secuenciales</h3>
+    <h3 class="subTitulo_3">Operaciones sobre ficheros secuenciales</h3>
     <article>
       <article>
-        <h4>Apertura</h4>
+        <h4 class="subTitulo_4">Apertura</h4>
         <p>
           Lo primero siempre es abrir el fichero para que la operación que vayamos a realizar sobre él. Estamos relacionando un objeto de nuestro programa con un archivo. <br>
           Modos en los que se puede abrir un fichero:
@@ -305,14 +305,14 @@
         </ul>
       </article>
       <article>
-        <h4>Lectura/escritura</h4>
+        <h4 class="subTitulo_4">Lectura/escritura</h4>
         <p>
           Al leer o escribir tenemos que prestar atención tanto al fin de fichero en ficheros secuenciales como a la posición del puntero en ficheros aleatorios.
         </p>
         <p>
           Las operaciones E/S se pueden hacer para ficheros secuenciales o para ficheros aleatorios.
         </p>
-        <h4>Lectura secuencial</h4>
+        <h4 class="subTitulo_4">Lectura secuencial</h4>
         <p>
           // PSEUDOCÓDIGO <br>
           // Declaración de la variable del fichero <br>
@@ -326,7 +326,7 @@
           // Cerramos el fichero <br>
           f1.cerrar(); <br>
         </p>
-        <h4>Escritura secuencial</h4>
+        <h4 class="subTitulo_4">Escritura secuencial</h4>
         <p>
           // PSEUDOCÓDIGO <br>
           // Declaración de la variable del fichero <br>
@@ -339,7 +339,7 @@
           // Cerramos el fichero <br>
           f1.cerrar(); <br>
         </p>
-        <h4>Lectura aleatoria</h4>
+        <h4 class="subTitulo_4">Lectura aleatoria</h4>
         <p>
           // PSEUDOCÓDIGO <br>
           // Declaración de la variable del fichero <br>
@@ -353,7 +353,7 @@
           // Cerramos el fichero <br>
           f1.cerrar(); <br>
         </p>
-        <h4>Escritura aleatoria</h4>
+        <h4 class="subTitulo_4">Escritura aleatoria</h4>
         <p>
           // Declaración de la variable del fichero <br>
           fichero f1; <br>
@@ -369,15 +369,15 @@
         </p>
       </article>
       <article>
-        <h4>Cierre</h4>
+        <h4 class="subTitulo_4">Cierre</h4>
         <p>
           Cuando cerramos el fichero, este queda liberado y termina el proceso de almacenamiento de información.
         </p>
       </article>
     </article>
     <article>
-      <h4>Clase FileSteam</h4>
-        <h4>Ficheros de texto</h4>
+      <h4 class="subTitulo_4">Clase FileSteam</h4>
+        <h4 class="subTitulo_4">Ficheros de texto</h4>
         <p>
           Los datos pueden ser escritos o leídos de un fichero utilizando los flujos de las clases StreamWriter y SteamReader:
         </p>
@@ -385,7 +385,7 @@
           <li>StreamReader implementa un TextReader que lee los caracteres de una secuencia de bytes</li>
           <li>StreamWriter implementa un TextWriter para escribir los caracteres de una secuencia</li>
         </ul>
-        <h4>Lectura de un fichero de texto</h4>
+        <h4 class="subTitulo_4">Lectura de un fichero de texto</h4>
         <p>
           using System.IO; // Importación de la clase System.IO <br>
           // Creamos la variable fichero con la clase FileStream pasando la ruta <br>
@@ -406,7 +406,7 @@
           } <br>
           } <br>
         </p>
-        <h4>Escritura de un fichero</h4>
+        <h4 class="subTitulo_4">Escritura de un fichero</h4>
         <p>
           using System.IO; // Importación de la clase System.IO <br>
           // Creamos la variable fichero con la clase FileStream pasando la ruta <br>
@@ -424,7 +424,7 @@
           fs.Close(); <br>
           fichero.Close(); <br>
         </p>
-        <h4>Ficheros binarios</h4>
+        <h4 class="subTitulo_4">Ficheros binarios</h4>
         <p>
           Normalmente trabjamos con ficheros de texto, pero también nos encontramos con información organizada como una secuencia de bytes, como ficheros de imágenes, de sonido, de video, etc...
         </p>
@@ -448,7 +448,7 @@
           // Vamos a leer el buffer donde todavía no hemos consumido ningún byte <br>
           y el número máximo que vamos a leer es lo que contiene el buffer <br>
         </p>
-        <h4>Ejemplo de lectura en ficheros binarios</h4>
+        <h4 class="subTitulo_4">Ejemplo de lectura en ficheros binarios</h4>
         <p>
           using System.IO; <br>
           // Vamos a trabajar con un fichero imagen, de tal forma que lo abriremos <br>
@@ -468,7 +468,7 @@
           } <br>
           //fichero.Close(); <br>
         </p>
-        <h4>Ejemplo de escritura en ficheros binarios</h4>
+        <h4 class="subTitulo_4">Ejemplo de escritura en ficheros binarios</h4>
         <p>
           using System.IO; <br>
           // Vamos a trabajar con un fichero imagen, de tal forma que lo abriremos <br>
@@ -494,7 +494,7 @@
     <!--*************************************************************-->
   <section>
     <a name="5.4"></a>
-    <h3 >Control de excepciones</h3>
+    <h3 class="subTitulo_3">Control de excepciones</h3>
     <article>
       <p>
         Hasta ahora, el problema es que no hemos comprobado si ese fichero realmente existe o no, lo que puede suponer que nuestro programa falle en caso de que el fichero no se encuentre donde esperamos. <br>
