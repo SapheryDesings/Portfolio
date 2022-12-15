@@ -82,11 +82,19 @@ section {
   margin: 1rem auto;
 }
 
-    .indice li { padding: .5rem;}
+    .indice li { 
+      padding: .5rem;
+      list-style-type: none;
+    }
 
     .indice li:hover {
       background-image: linear-gradient(to right, rgb(52, 152, 219) 20%,  rgb(33, 33, 33) 80%); 
     }
+
+.dosColum {
+  display: flex;
+  flex-direction: row;
+}
 /* ----------------------------- */
 /* ARTICLES */
 article { 
@@ -156,7 +164,7 @@ li ul {
 }
 
 li {margin: .5rem 0;}
-
+ul li::marker {color: var(--morado);}
 
 /* ----------------------------- */
 /* TABLAS */
@@ -210,13 +218,6 @@ table {
   .apartado { margin-top: 1rem;}
 
   section { padding: 1.5rem;}
-
-  .indice {
-    width: 100%;
-    margin: .5rem auto;
-  }
-  
-    .indice li { padding: .5rem 0;}
 
   article {
     margin: .5rem 0;
