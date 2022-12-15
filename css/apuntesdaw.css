@@ -9,6 +9,7 @@
 
 :root {
   --fondoGris: #212121;
+  --fondoOscuro: #151515;
   --tipografiaClara: #E5E7E9;
   --aguamar: #3498db;
   --azulGrisaceo: #2980B9;
@@ -91,10 +92,6 @@ section {
       background-image: linear-gradient(to right, rgb(52, 152, 219) 20%,  rgb(33, 33, 33) 80%); 
     }
 
-.dosColum {
-  display: flex;
-  flex-direction: row;
-}
 /* ----------------------------- */
 /* ARTICLES */
 article { 
@@ -132,6 +129,11 @@ h5, h6 {margin-bottom: .5rem;}
 p {
   margin-bottom: 1rem;
   padding: 1rem auto;
+}
+
+pre {
+  background-color: var(--fondoOscuro);
+  border-radius: 2rem;
 }
 
 .subTitulo_3 {
