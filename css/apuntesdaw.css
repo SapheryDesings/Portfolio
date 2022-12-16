@@ -74,7 +74,7 @@ header {
 section {
   display: flex;
   flex-flow: column nowrap;
-  width: 80%;
+  width: 70%;
   margin: 2rem auto;
 }
 
@@ -116,11 +116,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Titan One', cursive;
   font-weight: 100;
 }
-/*
-h4 { 
-  border-left: 10px solid var(--aguamar); 
-  padding-left: 10px;
-}*/
 
 h1, h2 {margin-bottom: 2rem;}
 h3, h4 {margin-bottom: 1rem;}
@@ -134,6 +129,7 @@ p {
 pre {
   background-color: var(--fondoOscuro);
   border-radius: 2rem;
+  white-space: pre-wrap;
 }
 
 .subTitulo_3 {
@@ -191,6 +187,24 @@ table {
   
 /* ----------------------------- */
 /* MEDIA QUERIES */
+
+
+@media screen and (max-width: 1280px){
+  body { 
+    font-size: 1.3rem; 
+  }
+  .tituloTema {font-size: 1.4rem;}
+  section {width: 80%;}
+}
+
+@media screen and (max-width: 1024px){
+  body { 
+    font-size: 1.1rem; 
+  }
+  .tituloTema {font-size: 1.2rem;}
+  section {width: 90%;}
+  
+}
 @media screen and (max-width: 600px){
   body {
     width: 100%;
@@ -213,13 +227,14 @@ table {
   .menuPrincipalAsignatura a { padding: .2rem auto;}
 
   .tituloTema {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: .8rem 1rem;
   }
 
   .apartado { margin-top: 1rem;}
 
-  section { padding: 1.5rem;}
+  section { width: 100%; padding: 1.5rem;}
+  .indice {width: 100%;}
 
   article {
     margin: .5rem 0;
