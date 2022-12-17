@@ -71,10 +71,17 @@ header {
 
 /* ----------------------------- */
 /* SECTIONS */
-section {
+.contenedor {
   display: flex;
   flex-flow: column nowrap;
   width: 70%;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
   margin: 2rem auto;
 }
 
@@ -194,7 +201,7 @@ table {
     font-size: 1.3rem; 
   }
   .tituloTema {font-size: 1.4rem;}
-  section {width: 80%;}
+  .contenedor {width: 80%;}
 }
 
 @media screen and (max-width: 1024px){
@@ -202,7 +209,7 @@ table {
     font-size: 1.1rem; 
   }
   .tituloTema {font-size: 1.2rem;}
-  section {width: 90%;}
+  .contenedor {width: 90%;}
   
 }
 @media screen and (max-width: 600px){
@@ -232,7 +239,7 @@ table {
   }
 
   .apartado { margin-top: 1rem;}
-
+  .contenedor {width: 100%;}
   section { width: 100%; padding: 1.5rem;}
   .indice {width: 100%;}
 
