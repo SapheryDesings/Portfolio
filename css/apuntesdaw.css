@@ -222,9 +222,7 @@ table {
     font-size: 1rem;
   }
 
-  .navtop {
-    justify-content: space-between;
-  }
+  .navtop {justify-content: space-between;}
 
   #apuntes { display: none;}
 
@@ -244,8 +242,16 @@ table {
 
   .apartado { margin-top: 1rem;}
   .contenedor {width: 100%;}
-  section { width: 100%; padding: 1.5rem;}
-  .indice {width: 100%;}
+  section { 
+    width: 100%; 
+    padding: 1.5rem;
+  }
+  .indice {
+    width: 100%;
+    font-size: 1rem;
+    margin: .5rem auto;
+    padding: 0 .2rem;
+  }
 
   article {
     margin: .5rem 0;
@@ -264,9 +270,7 @@ table {
 
   ul, ol { margin: 1rem 0;}
 
-  table {
-    margin: 1rem auto;
-  }
+  table { margin: 1rem auto;}
 
   th, td { padding: .3rem 1rem;}
 
