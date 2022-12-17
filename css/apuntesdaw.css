@@ -91,12 +91,16 @@ section {
 }
 
     .indice li { 
-      padding: .5rem;
+      padding: .2rem;
       list-style-type: none;
     }
 
     .indice li:hover {
-      background-image: linear-gradient(to right, rgb(52, 152, 219) 20%,  rgb(33, 33, 33) 80%); 
+      background-color: rgba(33, 33, 33, .1);
+    }
+    .indice li:active {
+      border: 1px solid aqua;
+      background-color: rgba(0, 255, 255, .3);
     }
 
 /* ----------------------------- */
