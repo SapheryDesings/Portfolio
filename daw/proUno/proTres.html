@@ -29,9 +29,7 @@
       <h1>Tema 3.- Programación Estructurada</h1>
     </div>
   </header>
-  <!--*************************************************************--> 
   <div class="contenedor">
-  <section>
     <div class="indice">     
       <ul>
         <li><a href="#3.1">Fundamentos de programación</a></li>
@@ -48,8 +46,6 @@
         <li><a href="#3.12">Entornos de desarrollo de programas</a></li>
       </ul>
     </div>
-  </section>
-  <!--*************************************************************-->
   <section>
     <a name="3.0"></a>
     <h3 class="subTitulo_3">Introducción</h3>
@@ -57,513 +53,531 @@
       <p>
         La programación estructurada es un procedimiento que consiste en diseñar e inplementar programas de forma clara y sencilla para que puedan se mantenidos con facilidad.
       </p>
-      
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.1"></a>
-      <h3 class="subTitulo_3">Fundamentos de programación</h3>
-      <article>
-        <p>
-          Los fundamentos de la programación son un conjunto de técnicas que persiguen desarrollar algoritmos que sean sencillos de escribir, leer, modificar y testear.
-        </p>
-        <p>
-          El orden en que se ejecutan las sentencias de un programa es secuencial, una detrás de otra, y en el orden en que se encuentran dentro del programa.
-        </p>
-      </article>
-      <article>
-        <h4 class="subTitulo_4">Teorema de Böhm y Jacopini</h4>
-        <p>Debe de cumplir las siguientes características:</p>
-        <ul>
-          <li>Debe tener un único punto de entrada y uno de salida.</li>
-          <li>Toda acción del algoritmo debe ser accesible. Tiene que haber al menos un camino que va desde el inicio hasta el fin del algoritmo.</li>
-          <li>No deben existir, bucles infinitos.</li>
-        </ul>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.2"></a>
-      <h3 class="subTitulo_3">Introducción a la algoritmia y herramientas de diseño</h3>
-      <article>
-        <p>
-          Un algoritmo es una secuencia de los pasos de las distintas operaciones que debe realizar el programa para conseguir resolver un problema planteado.
-        </p>
-        <p>
-          La algoritmia es un conjunto ordenado y finito de operaciones que permite encontrar la solución a un problema cualquiera.
-        </p>
-        <p>
-          La algoritmia utiliza un conjunto de herramientas lógicas, matemáticas e informáticas con el objetivo de diseñar y presentar un algoritmo. Ej: El pseudocódigo y los diagramas de flujo.
-        </p>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.3"></a>
-      <h3 class="subTitulo_3">Ciclo de vida de un proyecto software</h3>
-      <article>
-        <p>Ciclo de vida de un programa informático:</p>
-        <ul>
-          <li>
-            <b>Análisis de requisitos:</b>
-            <p>
-              Apartir de las necesidades del usuario o programa, se decide qué hay que hacer para llegar a la solución óptima, y se genera un documento de requisitos. Es la etapa más importante. Existen varias técnicas:
-            </p>
-            <ul>
-              <li>Entrevistas</li>
-              <li>Brainstorming</li>
-              <li>Prototipos</li>
-              <li>Casos de uso</li>
-              <li>JAD (entrevistas en grupos o talleres)</li>
-            </ul>
-          </li>
-          <li>
-            <b>Diseño de la arquitectura:</b>
-            <p>
-              Estudio para ver los distintos componentes que van a formar el programa (módulos, subsistemas, etc.). Esta fase se revisará cuantas veces sean necesarias hasta estar seguro que es la mejor solución.
-            </p>
-            <ul>
-              <li>Diseño estructurado: Tenemos notaciones como los diagramas de flujo o psuedocódigo.</li>
-              <li>Diseño orientado a objetos: Trabajamos con representaciones UML (diagramas de clases, diagramas de secuencia, etc.).</li>
-            </ul>
-          </li>
-          <li>
-            <b>Etapa de implementación o codificación:</b>
-            <p>
-              Pasamos a codificar las aplicaciones que hemos elegido en la etapa anterior, empleando el lenguaje de programación con el que estemos trabajando. Vamos a obtener el código fuente.
-            </p>
-          </li>
-          <li>
-            <b>Pruebas de integración:</b>
-            <p>
-              Hay que realizar ensayos del funcionamiento, combinando todos los módulos de la aplicación. Haciendo funcionar la aplicación completa, comprobamos que cumple con lo establecido.
-            </p>
-          </li>
-          <li>
-            <b>Pruebas de validación:</b>
-            <p>
-              Último paso de la integración, realizamos nuevas pruebas en su conjunto. El objetivo es asegurar que cumple con el diseño y cubre las necesidades de los usuarios.
-            </p>
-          </li>
-          <li>
-            <b>Fase de mantenimiento:</b>
-            <p>
-              Revisar todo lo anterior e ir actualizando o modificando los cambios oportunos.
-            </p>
-          </li>
-        </ul>
-        
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.4"></a>
-      <h3 class="subTitulo_3">Prueba de programas</h3>
-      <article>
-        <p>
-          Una vez implementado y compilado el código debemos comenzar la estapa de testing.
-        </p>
-        <p>
-          Se prueba el programa para demostrar la existencia de defectos: algorítmicos, de sintaxis, de documentación, de sobrecarga, de capacidad, de rendimiento, de sincronización, de recuperación, de hardware y software y de estándares.
-        </p>
-        <p>
-          Se lleva a cabo de manera automática o manual y persigue los siguientes objetivos:
-        </p>
-        <ul>
-          <li>Comprobar los requisitos funcionales y no funcionales del programa.</li>
-          <li>Probar todo tipo de casos para detectar alguna anomalía en su ejecución.</li>
-        </ul>
-        <p>Tenemos dos tipos de técnicas de pruebas:</p>
-        <ul>
-          <li><b>De caja blanca:</b> donde se valida la estructura del sistema.</li>
-          <li><b>De caja negra:</b> Se analizan las entradas y salidas del sistema sin tener en cuenta el funcionamiento interno.</li>
-        </ul>
-        <p>
-          El plan de prueba consta de varias etapas, si extiste algún tipo de fallo, tendremos que volver a empezar con el nuevo código modificado.
-        </p>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.5"></a>
-      <h3 class="subTitulo_3">Tipos de datos: simples y compuestos</h3>
-      <article>
-        <h4 class="subTitulo_4">Tipos simples</h4>
-        <p>
-          Debemos considerar el rango de valores que puede tomar, las operaciones a realizar y el espacion necesario para almacenar datos.
-        </p>
-        <p>
-          El tipo de datos simple no está compuesto por otros tipos, y que contiene un valor único.
-        </p>
-        <ul>
-          <li>
-            <b>Simples predefinidos:</b>
-            <p>
-              Entre sus propiedades podemos destacar que son indivisibles, tienen existencia propia y permiten operadores relacionales. Se utilizan sin necesidad de ser definidos previamente:
-            </p>
-            <ul>
-              <li><b>Natural:</b> números naturales (N) -> byte, uint, ushort, ulong.</li>
-              <li><b>Entero:</b> números enteros (Z) -> sbyte, int, long, short.</li>
-              <li><b>Real:</b> números reales (R) -> decimal, float, double.</li>
-              <li><b>Carácter:</b> caracteres (C) -> char.</li>
-              <li><b>Lógico:</b> booleanos (B) -> bool.</li>
-            </ul>
-          </li>
-          <li>
-            <b>Simples definidos por el usuario:</b>
-            <b>Enumerados:</b>
-            <p>
-              Es definido por el usuario, así como un conjunto de constantes. Se utiliza la palabra enum y especificamos los nombres de los componentes de la enumeración.
-            </p>
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h4 class="subTitulo_4">Tipos compuestos o estructurados</h4>
-        <p>Se crean mediante la unión de varios tipos.</p>
-        <ul>
-          <li>
-            <b>Vectores:</b>
-            <p>
-              Estructura donde almacenamos varias variables del mismo tipo. Se puede declarar una matriz si se especifica el tipo de sus elementos (Arrays). Precisa indicador  de posición para acceder a un elemento de la tabla.
-            </p>
-          </li>
-          <li>
-            <b>Matrices:</b>
-            <p>
-              Unión de varios vectores de cualquier tipo simple (enteros, reales, etc.). Son arrays bidimensionales, necesitan dos indicadores de posición para acceder al elemento.
-            </p>
-          </li>
-        </ul>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.6"></a>
-      <h3 class="subTitulo_3">Estructuras de selección (Condicionales)</h3>
-      <article>
-        <p>
-          Las estructuras de selección son aquellas que permiten ejecutar una parte del código dependiendo de si cumple o no una condición.
-        </p>
-        <h4 class="subTitulo_4">Instrucción simple (IF)</h4>
-        <p class="codigo">
-          SI CONDICIÓN ENTONCES:
-            INSTRUCCIONES_1
-          FIN SI;
-        </p>
-        <h4 class="subTitulo_4">Instrucción doble (IF-ELSE)</h4>
-        <p class="codigo">
-          SI CONDICIÓN ENTONCES:
-            INSTRUCCIONES_1;
-          SI NO:
-            INSTRUCCIONES_2;
-          FIN SI;
-        </p>
-        <p>
-          Si condición es cierta, ejecutaremos lo que hay en instrucciones1 y saltaremos hasta el fin si.
-        </p>
-        <p>
-          Si condición es falsa, ejecutaremos lo que hay en instrucciones2
-        </p>
-        <p>
-          En las estructuras dobles, por cada IF, debe haber un ELSE.
-        </p>
-      </article>
-      <article>
-        <h4 class="subTitulo_4">Operadores lógicos</h4>
-        <ul>
-          <li>
-            <b>&&</b>
-            <p>
-              <b>AND:</b> ambas condiciones deben cumplirse para entrar en el bloque IF. No evalúa el operando derecho si el izquierdo es false.
-            </p>
-          </li>
-          <li>
-            <b>||</b>
-            <p>
-              <b>OR:</b> es suficiente con que una de las condiciones se cumpla para entrar en el bloque IF. El resultado de x || y es true si x o y es true.
-            </p>
-          </li>
-          <li>
-            <b>^</b>
-            <p>
-              <b>XOR:</b> el resultado se evalúa como true si una condición se evalúa como false y otra como true. Si ambas condiciones se evalúan como false o como true, el resultado será false.
-            </p>
-          </li>
-        </ul>
-        <p class="codigo">
-          SI CONDICION_1 && CONDICION_2 ENTONCES:
-          FIN SI;
-        </p>
-        <p>
-          Si condición_1 y condición_2 son true, el resultado se evalúa como true. Si alguna es false, el resultado se evalúa como false.
-        </p>
-        <p class="codigo">
-          SI CONDICION_1 || CONDICION_2 ENTONCES:
-          FIN SI;
-        </p>
-        <p>
-          Si condición_1 es true o condición_2 es true, el resultado se evalúa como true.
-        </p>
-        <p class="codigo">
-          SI CONDICION_1 ^ CONDICION_2 ENTONCES:
-          FIN SI;
-        </p>
-        <table>
-          <tr>
-            <td>Condición_1</td>
-            <td>Condición_2</td>
-            <td>Resultado</td>
-          </tr>
-          <tr>
-            <th>false</th>
-            <th>false</th>
-            <th>False</th>
-          </tr>
-          <tr>
-            <th>false</th>
-            <th>true</th>
-            <th>True</th>
-          </tr>
-          <tr>
-            <th>true</th>
-            <th>false</th>
-            <th>true</th>
-          </tr>
-          <tr>
-            <th>true</th>
-            <th>true</th>
-            <th>false</th>
-          </tr>
-        </table>
-      </article>
-      <article>
-        <h4 class="subTitulo_4">Sentencia Switch (o de selección múltiple)</h4>
-        <p>
-          Es una instrucción de selección que elige una sola acción de una lista de opciones en función de una coincidencia de distintos patrones de expresión. La cláusula default es optativa.
-        </p>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.7"></a>
-      <h3 class="subTitulo_3">Estructuras de repetición</h3>
-      <article>
-        <p>
-          Las estructuras de repetición siempre se ejecutan mediante el uso de bucles. Estos permiten que una o varias líneas se ejecuten de forma repetida. Y se repiten mientras que se cumpla la condición de salida.
-        </p>
-        <h4 class="subTitulo_4">Mientras (While)</h4>
-        <p>
-          Mientras CONDICION hacer <br>
-            Instrucción_1; <br>
-            Instrucción_2; <br>
-            ModificarCondición; <br>
-          FinMientras; <br>
-        </p>
-        <h4 class="subTitulo_4">Hacer... mientras (Do... while)</h4>
-        <p>
-          Hacer <br>
-            Instrucción_1; <br>
-            Instrucción_2; <br>
-            ModificarCondición; <br>
-          Mientras CONDICION; <br>
-        </p>
-        <h4 class="subTitulo_4">Para</h4>
-        <p>
-          Para CONDICION <br>
-          Instrucción_1; <br>
-          Instrucción_2; <br>
-          ModificarCondición; <br>
-        </p>
-        <h4 class="subTitulo_4">Foreach</h4>
-        <p>
-          Ejecuta una instrucción o bloque de intrucciones para cada elemento de cientas estructuras de datos como arrays o listas.
-        </p>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.8"></a>
-      <h3 class="subTitulo_3">Estructuras de salto</h3>
-      <article>
-        <p>
-          Son aquellas que detienen la ejecución de alguna de las sentencias de control de nuestro programa.
-        </p>
-        <h4 class="subTitulo_4">break</h4>
-        <p>
-          Interrumpe el bucle indicando que debe continuar a partir de la siguiente sentencia después del bloque del ciclo. <br>
-          El control se devuelve a la instrucción que haya a continuación de la intrucción finalizada.
-        </p>
-      </article>
-      <h4 class="subTitulo_4">continue</h4>
+  <section>
+    <a name="3.1"></a>
+    <h3 class="subTitulo_3">Fundamentos de programación</h3>
+    <article>
       <p>
-        Se utiliza en sentencias repetitivas con bucles for, foreach, while y do...while. Transfiere el control a la siguiente iteración.
+        Los fundamentos de la programación son un conjunto de técnicas que persiguen desarrollar algoritmos que sean sencillos de escribir, leer, modificar y testear.
       </p>
-      <h4 class="subTitulo_4">return</h4>
       <p>
-        Esta estructura de salto obliga a que finalice la ejecución de una determinada función. Se utiliza para devolver el control a la función de llamada.
+        El orden en que se ejecutan las sentencias de un programa es secuencial, una detrás de otra, y en el orden en que se encuentran dentro del programa.
       </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.9"></a>
-      <h3 class="subTitulo_3">Tratamiento de cadenas</h3>
-      <article>
-        <p>
-          Una cadena es un objeto de tipo string. Se utiliza la palabra reservada string. Siempre que queramos escribir combinaciones alfanuméricas, irán entre comillas dobles, ya que el compilador las tomará como un tipo string.
-        </p>
-        <h4 class="subTitulo_4">new</h4>
-        <p>
-          El operador new crea una nueva instancia de un tipo. <br>
-          La palabra new crea un objeto tipo string al que pasamos el parámetro letras como una tabla de caracteres. <br>
-        </p>
-        <table>
-          <tr>
-            <td>Método</td>
-            <td>Descripción</td>
-          </tr>
-          <tr>
-            <th>Length</th>
-            <th>Devuelve el número de caracteres</th>
-          </tr>
-          <tr>
-            <th>ToCharArray()</th>
-            <th>Convierte un string en array de caracteres</th>
-          </tr>
-          <tr>
-            <th>SubString()</th>
-            <th>Extrae parte de una cadena. Puede ser sobrecargado indicando su inicio y su fin: SubString(int inicio) o SubString (int inicio, int tamaño)</th>
-          </tr>
-          <tr>
-            <th>CopyTo()</th>
-            <th>Copia un número de caracteres especificados a una determinada posición del SubString</th>
-          </tr>
-          <tr>
-            <th>CompareTo()</th>
-            <th>Compara la cadena que contiene el string con otra pasada por parámetro. <br> Devuelve un entero que indica se la posición de esta instancia es anterior, posterior o igual que la posición del string</th>
-          </tr>
-          <tr>
-            <th>Contains()</th>
-            <th>Si la cadena que se le pasa por parámetro forma parte del string, devuelve un booleano</th>
-          </tr>
-          <tr>
-            <th>IndexOf()</th>
-            <th>Si aparece un carácter especificado en el string, devuelve el índice de la posición de la primera vez que aparece. Devuelve -1 si el carácter no se encuentra en la cadena.</th>
-          </tr>
-          <tr>
-            <th>Insert()</th>
-            <th>Inserta una cadena de caracteres en una posición concreta del string.</th>
-          </tr>
-          <tr>
-            <th>Trim()</th>
-            <th>Quita todos los espacios en blanco del principio y el final de la cadena de caracteres</th>
-          </tr>
-          <tr>
-            <th>Replace()</th>
-            <th>Devuelve una cadena, donde se ha sustituido un carácter por otros</th>
-          </tr>
-          <tr>
-            <th>Remove()</th>
-            <th>Devuelve una cadena donde se ha eliminado un número de caracteres especificado</th>
-          </tr>
-          <tr>
-            <th>Split()</th>
-            <th>Ofrece la posibilidad de separar en varias partes una cadena de caracteres</th>
-          </tr>
-          <tr>
-            <th>ToLower()</th>
-            <th>Devuelve una cadena convertida en minúsculas</th>
-          </tr>
-          <tr>
-            <th>ToUpper()</th>
-            <th>Devuelve una cadena convertida en mayúsculas</th>
-          </tr>
-        </table>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>  
-      <a name="3.10"></a>
-      <h3 class="subTitulo_3">Depuración de errores</h3>
-      <article>
-        <p>
-          Llegados a esta etapa, nuestro objetivo será descubrir todos los errores que existan e intentar solucionarlos de la mejor forma posible. <br>
-          Hay tres tipos de errores diferentes:
-        </p>
-        <ul>
-          <li><b>Compilación o sintaxis:</b> errores en el código</li>
-          <li><b>Tiempo de ejecución:</b> los que producen un fallo a la hora de ejecutar el programa. Son fragmentos de código que parecen estar correctos y que no tienen ningún error de sintaxis, pero que no se ejecutarán.</li>
-          <li><b>Lógicos:</b> aquellos que dan resultados erróneos, diferentes a los esperados o no deseados, en respuesta a las acciones del usuario. Los más difíciles de corregir, ya que no siempre está claro dónde se originan.</li>
-        </ul>
-        <p>
-          Para depurar errores, tenemos la opción de poner un punto de interrupción en una determinada línea de código, presionando F9. Para ejecutar la aplicación debemos presionar F5, se detiene en la línea y podremos examinar cuánto valen las variables para ir realizando su seguimiento, o podemos comprobar cuándo finalizan los bucles. Para depurar el código paso a paso F10.
-        </p>
-        <ul>
-          <li><b>Errores de compilación:</b> Impiden la ejecución. Inicialmente se compila el programa y si el compilador encuentra cualquier cosa que no entiende, lanza un error. Casi todos se producen mientras escribimos en código.</li>
-          <li><b>Errores en tiempo de ejecución:</b> Aparecen mientras se ejecuta el programa, cuando se pretende realizar una operación que no lleva a ninguna solución.</li>
-          <li><b>Errores lógicos:</b> El código se puede compilar y ejecutar sin problema, pero, en el caso de que compile, devuelve algo que no era la solución que se esperaba. Su corrección es más difícil, tenemos que encontrar el error en un programa que sí funciona, pero que funciona de forma diferente a la que debería.</li>
-        </ul>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.11"></a>
-      <h3 class="subTitulo_3">Documentación de programas</h3>
-      <article>
-        <p>
-          Debemos elaborar una memoria para que quede registrado todo el desarrollo que hemos llevado a cabo, los fallos que ha presentado y cómo hemos conseguido solventarlos. <br>
-          Los ficheros deben estar testeados y funcionar correctamente.
-        </p>
-        <h4 class="subTitulo_4">summary</h4>
-        <p>
-          La etiqueta summary debe usarse para describir un tipo y para agregar información adicional dentro de nuestro código.
-        </p>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    <!--*************************************************************-->
-    <section>
-      <a name="3.12"></a>
-      <h3 class="subTitulo_3">Entornos de desarrollo de programas</h3>
-      <article>
-        <p>
-          Podemos denominar entorno de desarrollo integrado (IDE), al entorno de programación que hemos utilizado para su realización: editor de código, compilador, depurador e interfaz gráfica. <br>
-          Deben cumplir una serie de características:
-        </p>
-        <ul>
-          <li>Son multiplataforma</li>
-          <li>Actúan como soporte para diferentes lenguales de programación</li>
-          <li>Reconocen sintaxis</li>
-          <li>Están integrados con sistemas de control de diferentes versiones</li>
-          <li>Tienen un depurados</li>
-          <li>Permiten importar y exportar proyectos</li>
-          <li>Manejan diferentes idiomas</li>
-          <li>Facilitan un manual de ayuda para el usuario</li>
-        </ul>
-        <p>Las diferentes ventajas:</p>
-        <ul>
-          <li>Presentan una baja curava de aprendizaje</li>
-          <li>Son de uso óptimo para usuarios que son expertos</li>
-          <li>Formatean el código</li>
-          <li>Usan funciones para renombrar funciones y variables</li>
-          <li>Permiten crear proyectos</li>
-          <li>Muestran en pantalla errores y warnings</li>
-        </ul>
-      </article>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </section>
-    </div>
+    </article>
+    <article>
+      <h4 class="subTitulo_4">Teorema de Böhm y Jacopini</h4>
+      <p>Debe de cumplir las siguientes características:</p>
+      <ul>
+        <li>Debe tener un único punto de entrada y uno de salida.</li>
+        <li>Toda acción del algoritmo debe ser accesible. Tiene que haber al menos un camino que va desde el inicio hasta el fin del algoritmo.</li>
+        <li>No deben existir, bucles infinitos.</li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.2"></a>
+    <h3 class="subTitulo_3">Introducción a la algoritmia y herramientas de diseño</h3>
+    <article>
+      <p>
+        Un algoritmo es una secuencia de los pasos de las distintas operaciones que debe realizar el programa para conseguir resolver un problema planteado.
+      </p>
+      <p>
+        La algoritmia es un conjunto ordenado y finito de operaciones que permite encontrar la solución a un problema cualquiera.
+      </p>
+      <p>
+        La algoritmia utiliza un conjunto de herramientas lógicas, matemáticas e informáticas con el objetivo de diseñar y presentar un algoritmo. Ej: El pseudocódigo y los diagramas de flujo.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.3"></a>
+    <h3 class="subTitulo_3">Ciclo de vida de un proyecto software</h3>
+    <article>
+      <p>Ciclo de vida de un programa informático:</p>
+      <ul>
+        <li>
+          <b>Análisis de requisitos:</b>
+          <p>
+            Apartir de las necesidades del usuario o programa, se decide qué hay que hacer para llegar a la solución óptima, y se genera un documento de requisitos. Es la etapa más importante. Existen varias técnicas:
+          </p>
+          <ul>
+            <li>Entrevistas</li>
+            <li>Brainstorming</li>
+            <li>Prototipos</li>
+            <li>Casos de uso</li>
+            <li>JAD (entrevistas en grupos o talleres)</li>
+          </ul>
+        </li>
+        <li>
+          <b>Diseño de la arquitectura:</b>
+          <p>
+            Estudio para ver los distintos componentes que van a formar el programa (módulos, subsistemas, etc.). Esta fase se revisará cuantas veces sean necesarias hasta estar seguro que es la mejor solución.
+          </p>
+          <ul>
+            <li>Diseño estructurado: Tenemos notaciones como los diagramas de flujo o psuedocódigo.</li>
+            <li>Diseño orientado a objetos: Trabajamos con representaciones UML (diagramas de clases, diagramas de secuencia, etc.).</li>
+          </ul>
+        </li>
+        <li>
+          <b>Etapa de implementación o codificación:</b>
+          <p>
+            Pasamos a codificar las aplicaciones que hemos elegido en la etapa anterior, empleando el lenguaje de programación con el que estemos trabajando. Vamos a obtener el código fuente.
+          </p>
+        </li>
+        <li>
+          <b>Pruebas de integración:</b>
+          <p>
+            Hay que realizar ensayos del funcionamiento, combinando todos los módulos de la aplicación. Haciendo funcionar la aplicación completa, comprobamos que cumple con lo establecido.
+          </p>
+        </li>
+        <li>
+          <b>Pruebas de validación:</b>
+          <p>
+            Último paso de la integración, realizamos nuevas pruebas en su conjunto. El objetivo es asegurar que cumple con el diseño y cubre las necesidades de los usuarios.
+          </p>
+        </li>
+        <li>
+          <b>Fase de mantenimiento:</b>
+          <p>
+            Revisar todo lo anterior e ir actualizando o modificando los cambios oportunos.
+          </p>
+        </li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.4"></a>
+    <h3 class="subTitulo_3">Prueba de programas</h3>
+    <article>
+      <p>
+        Una vez implementado y compilado el código debemos comenzar la estapa de testing.
+      </p>
+      <p>
+        Se prueba el programa para demostrar la existencia de defectos: algorítmicos, de sintaxis, de documentación, de sobrecarga, de capacidad, de rendimiento, de sincronización, de recuperación, de hardware y software y de estándares.
+      </p>
+      <p>
+        Se lleva a cabo de manera automática o manual y persigue los siguientes objetivos:
+      </p>
+      <ul>
+        <li>Comprobar los requisitos funcionales y no funcionales del programa.</li>
+        <li>Probar todo tipo de casos para detectar alguna anomalía en su ejecución.</li>
+      </ul>
+      <p>Tenemos dos tipos de técnicas de pruebas:</p>
+      <ul>
+        <li><b>De caja blanca:</b> donde se valida la estructura del sistema.</li>
+        <li><b>De caja negra:</b> Se analizan las entradas y salidas del sistema sin tener en cuenta el funcionamiento interno.</li>
+      </ul>
+      <p>
+        El plan de prueba consta de varias etapas, si extiste algún tipo de fallo, tendremos que volver a empezar con el nuevo código modificado.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.5"></a>
+    <h3 class="subTitulo_3">Tipos de datos: simples y compuestos</h3>
+    <article>
+      <h4 class="subTitulo_4">Tipos simples</h4>
+      <p>
+        Debemos considerar el rango de valores que puede tomar, las operaciones a realizar y el espacion necesario para almacenar datos.
+      </p>
+      <p>
+        El tipo de datos simple no está compuesto por otros tipos, y que contiene un valor único.
+      </p>
+      <ul>
+        <li>
+          <b>Simples predefinidos:</b>
+          <p>
+            Entre sus propiedades podemos destacar que son indivisibles, tienen existencia propia y permiten operadores relacionales. Se utilizan sin necesidad de ser definidos previamente:
+          </p>
+          <ul>
+            <li><b>Natural:</b> números naturales (N) -> byte, uint, ushort, ulong.</li>
+            <li><b>Entero:</b> números enteros (Z) -> sbyte, int, long, short.</li>
+            <li><b>Real:</b> números reales (R) -> decimal, float, double.</li>
+            <li><b>Carácter:</b> caracteres (C) -> char.</li>
+            <li><b>Lógico:</b> booleanos (B) -> bool.</li>
+          </ul>
+        </li>
+        <li>
+          <b>Simples definidos por el usuario:</b>
+          <b>Enumerados:</b>
+          <p>
+            Es definido por el usuario, así como un conjunto de constantes. Se utiliza la palabra enum y especificamos los nombres de los componentes de la enumeración.
+          </p>
+        </li>
+      </ul>
+    </article>
+    <article>
+      <h4 class="subTitulo_4">Tipos compuestos o estructurados</h4>
+      <p>Se crean mediante la unión de varios tipos.</p>
+      <ul>
+        <li>
+          <b>Vectores:</b>
+          <p>
+            Estructura donde almacenamos varias variables del mismo tipo. Se puede declarar una matriz si se especifica el tipo de sus elementos (Arrays). Precisa indicador  de posición para acceder a un elemento de la tabla.
+          </p>
+        </li>
+        <li>
+          <b>Matrices:</b>
+          <p>
+            Unión de varios vectores de cualquier tipo simple (enteros, reales, etc.). Son arrays bidimensionales, necesitan dos indicadores de posición para acceder al elemento.
+          </p>
+        </li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.6"></a>
+    <h3 class="subTitulo_3">Estructuras de selección (Condicionales)</h3>
+    <article>
+      <p>
+        Las estructuras de selección son aquellas que permiten ejecutar una parte del código dependiendo de si cumple o no una condición.
+      </p>
+      <h4 class="subTitulo_4">Instrucción simple (IF)</h4>
+      <p>
+        <pre>
+          <code>
+            SI CONDICIÓN ENTONCES:
+              INSTRUCCIONES_1
+            FIN SI;
+          </code>
+        </pre>
+      </p>
+      <h4 class="subTitulo_4">Instrucción doble (IF-ELSE)</h4>
+      <p>
+        <pre>
+          <code>
+            SI CONDICIÓN ENTONCES:
+              INSTRUCCIONES_1;
+            SI NO:
+              INSTRUCCIONES_2;
+            FIN SI;
+          </code>
+        </pre>
+      </p>
+      <p>
+        Si condición es cierta, ejecutaremos lo que hay en instrucciones1 y saltaremos hasta el fin si.
+      </p>
+      <p>
+        Si condición es falsa, ejecutaremos lo que hay en instrucciones2
+      </p>
+      <p>
+        En las estructuras dobles, por cada IF, debe haber un ELSE.
+      </p>
+    </article>
+    <article>
+      <h4 class="subTitulo_4">Operadores lógicos</h4>
+      <ul>
+        <li>
+          <b>&&</b>
+          <p>
+            <b>AND:</b> ambas condiciones deben cumplirse para entrar en el bloque IF. No evalúa el operando derecho si el izquierdo es false.
+          </p>
+        </li>
+        <li>
+          <b>||</b>
+          <p>
+            <b>OR:</b> es suficiente con que una de las condiciones se cumpla para entrar en el bloque IF. El resultado de x || y es true si x o y es true.
+          </p>
+        </li>
+        <li>
+          <b>^</b>
+          <p>
+            <b>XOR:</b> el resultado se evalúa como true si una condición se evalúa como false y otra como true. Si ambas condiciones se evalúan como false o como true, el resultado será false.
+          </p>
+        </li>
+      </ul>
+      <p>
+        <pre>
+          <code>
+            SI CONDICION_1 && CONDICION_2 ENTONCES:
+            FIN SI;
+          </code>
+        </pre>
+      </p>
+      <p>
+        Si condición_1 y condición_2 son true, el resultado se evalúa como true. Si alguna es false, el resultado se evalúa como false.
+      </p>
+      <p>
+        <pre>
+          <code>
+            SI CONDICION_1 || CONDICION_2 ENTONCES:
+            FIN SI;
+          </code>
+        </pre>
+      </p>
+      <p>
+        Si condición_1 es true o condición_2 es true, el resultado se evalúa como true.
+      </p>
+      <p>
+        <pre>
+          <code>
+            SI CONDICION_1 ^ CONDICION_2 ENTONCES:
+            FIN SI;
+          </code>
+        </pre>
+      </p>
+      <table>
+        <tr>
+          <td>Condición_1</td>
+          <td>Condición_2</td>
+          <td>Resultado</td>
+        </tr>
+        <tr>
+          <th>false</th>
+          <th>false</th>
+          <th>False</th>
+        </tr>
+        <tr>
+          <th>false</th>
+          <th>true</th>
+          <th>True</th>
+        </tr>
+        <tr>
+          <th>true</th>
+          <th>false</th>
+          <th>true</th>
+        </tr>
+        <tr>
+          <th>true</th>
+          <th>true</th>
+          <th>false</th>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <h4 class="subTitulo_4">Sentencia Switch (o de selección múltiple)</h4>
+      <p>
+        Es una instrucción de selección que elige una sola acción de una lista de opciones en función de una coincidencia de distintos patrones de expresión. La cláusula default es optativa.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.7"></a>
+    <h3 class="subTitulo_3">Estructuras de repetición</h3>
+    <article>
+      <p>
+        Las estructuras de repetición siempre se ejecutan mediante el uso de bucles. Estos permiten que una o varias líneas se ejecuten de forma repetida. Y se repiten mientras que se cumpla la condición de salida.
+      </p>
+      <h4 class="subTitulo_4">Mientras (While)</h4>
+      <p>
+        <pre>
+          <code>
+            Mientras CONDICION hacer 
+              Instrucción_1; 
+              Instrucción_2; 
+              ModificarCondición; 
+            FinMientras; 
+          </code>
+        </pre>
+      </p>
+      <h4 class="subTitulo_4">Hacer... mientras (Do... while)</h4>
+      <p>
+        <pre>
+          <code>
+            Hacer 
+              Instrucción_1; 
+              Instrucción_2; 
+              ModificarCondición; 
+            Mientras CONDICION; 
+          </code>
+        </pre>
+      </p>
+      <h4 class="subTitulo_4">Para</h4>
+      <p>
+        <pre>
+          <code>
+            Para CONDICION 
+              Instrucción_1; 
+              Instrucción_2; 
+              ModificarCondición; 
+          </code>
+        </pre>
+      </p>
+      <h4 class="subTitulo_4">Foreach</h4>
+      <p>
+        Ejecuta una instrucción o bloque de intrucciones para cada elemento de cientas estructuras de datos como arrays o listas.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.8"></a>
+    <h3 class="subTitulo_3">Estructuras de salto</h3>
+    <article>
+      <p>
+        Son aquellas que detienen la ejecución de alguna de las sentencias de control de nuestro programa.
+      </p>
+      <h4 class="subTitulo_4">break</h4>
+      <p>
+        Interrumpe el bucle indicando que debe continuar a partir de la siguiente sentencia después del bloque del ciclo. <br>
+        El control se devuelve a la instrucción que haya a continuación de la intrucción finalizada.
+      </p>
+    </article>
+    <h4 class="subTitulo_4">continue</h4>
+    <p>
+      Se utiliza en sentencias repetitivas con bucles for, foreach, while y do...while. Transfiere el control a la siguiente iteración.
+    </p>
+    <h4 class="subTitulo_4">return</h4>
+    <p>
+      Esta estructura de salto obliga a que finalice la ejecución de una determinada función. Se utiliza para devolver el control a la función de llamada.
+    </p>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.9"></a>
+    <h3 class="subTitulo_3">Tratamiento de cadenas</h3>
+    <article>
+      <p>
+        Una cadena es un objeto de tipo string. Se utiliza la palabra reservada string. Siempre que queramos escribir combinaciones alfanuméricas, irán entre comillas dobles, ya que el compilador las tomará como un tipo string.
+      </p>
+      <h4 class="subTitulo_4">new</h4>
+      <p>
+        El operador new crea una nueva instancia de un tipo. <br>
+        La palabra new crea un objeto tipo string al que pasamos el parámetro letras como una tabla de caracteres. <br>
+      </p>
+      <table>
+        <tr>
+          <td>Método</td>
+          <td>Descripción</td>
+        </tr>
+        <tr>
+          <th>Length</th>
+          <th>Devuelve el número de caracteres</th>
+        </tr>
+        <tr>
+          <th>ToCharArray()</th>
+          <th>Convierte un string en array de caracteres</th>
+        </tr>
+        <tr>
+          <th>SubString()</th>
+          <th>Extrae parte de una cadena. Puede ser sobrecargado indicando su inicio y su fin: SubString(int inicio) o SubString (int inicio, int tamaño)</th>
+        </tr>
+        <tr>
+          <th>CopyTo()</th>
+          <th>Copia un número de caracteres especificados a una determinada posición del SubString</th>
+        </tr>
+        <tr>
+          <th>CompareTo()</th>
+          <th>Compara la cadena que contiene el string con otra pasada por parámetro. <br> Devuelve un entero que indica se la posición de esta instancia es anterior, posterior o igual que la posición del string</th>
+        </tr>
+        <tr>
+          <th>Contains()</th>
+          <th>Si la cadena que se le pasa por parámetro forma parte del string, devuelve un booleano</th>
+        </tr>
+        <tr>
+          <th>IndexOf()</th>
+          <th>Si aparece un carácter especificado en el string, devuelve el índice de la posición de la primera vez que aparece. Devuelve -1 si el carácter no se encuentra en la cadena.</th>
+        </tr>
+        <tr>
+          <th>Insert()</th>
+          <th>Inserta una cadena de caracteres en una posición concreta del string.</th>
+        </tr>
+        <tr>
+          <th>Trim()</th>
+          <th>Quita todos los espacios en blanco del principio y el final de la cadena de caracteres</th>
+        </tr>
+        <tr>
+          <th>Replace()</th>
+          <th>Devuelve una cadena, donde se ha sustituido un carácter por otros</th>
+        </tr>
+        <tr>
+          <th>Remove()</th>
+          <th>Devuelve una cadena donde se ha eliminado un número de caracteres especificado</th>
+        </tr>
+        <tr>
+          <th>Split()</th>
+          <th>Ofrece la posibilidad de separar en varias partes una cadena de caracteres</th>
+        </tr>
+        <tr>
+          <th>ToLower()</th>
+          <th>Devuelve una cadena convertida en minúsculas</th>
+        </tr>
+        <tr>
+          <th>ToUpper()</th>
+          <th>Devuelve una cadena convertida en mayúsculas</th>
+        </tr>
+      </table>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>  
+    <a name="3.10"></a>
+    <h3 class="subTitulo_3">Depuración de errores</h3>
+    <article>
+      <p>
+        Llegados a esta etapa, nuestro objetivo será descubrir todos los errores que existan e intentar solucionarlos de la mejor forma posible. <br>
+        Hay tres tipos de errores diferentes:
+      </p>
+      <ul>
+        <li><b>Compilación o sintaxis:</b> errores en el código</li>
+        <li><b>Tiempo de ejecución:</b> los que producen un fallo a la hora de ejecutar el programa. Son fragmentos de código que parecen estar correctos y que no tienen ningún error de sintaxis, pero que no se ejecutarán.</li>
+        <li><b>Lógicos:</b> aquellos que dan resultados erróneos, diferentes a los esperados o no deseados, en respuesta a las acciones del usuario. Los más difíciles de corregir, ya que no siempre está claro dónde se originan.</li>
+      </ul>
+      <p>
+        Para depurar errores, tenemos la opción de poner un punto de interrupción en una determinada línea de código, presionando F9. Para ejecutar la aplicación debemos presionar F5, se detiene en la línea y podremos examinar cuánto valen las variables para ir realizando su seguimiento, o podemos comprobar cuándo finalizan los bucles. Para depurar el código paso a paso F10.
+      </p>
+      <ul>
+        <li><b>Errores de compilación:</b> Impiden la ejecución. Inicialmente se compila el programa y si el compilador encuentra cualquier cosa que no entiende, lanza un error. Casi todos se producen mientras escribimos en código.</li>
+        <li><b>Errores en tiempo de ejecución:</b> Aparecen mientras se ejecuta el programa, cuando se pretende realizar una operación que no lleva a ninguna solución.</li>
+        <li><b>Errores lógicos:</b> El código se puede compilar y ejecutar sin problema, pero, en el caso de que compile, devuelve algo que no era la solución que se esperaba. Su corrección es más difícil, tenemos que encontrar el error en un programa que sí funciona, pero que funciona de forma diferente a la que debería.</li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.11"></a>
+    <h3 class="subTitulo_3">Documentación de programas</h3>
+    <article>
+      <p>
+        Debemos elaborar una memoria para que quede registrado todo el desarrollo que hemos llevado a cabo, los fallos que ha presentado y cómo hemos conseguido solventarlos. <br>
+        Los ficheros deben estar testeados y funcionar correctamente.
+      </p>
+      <h4 class="subTitulo_4">summary</h4>
+      <p>
+        La etiqueta summary debe usarse para describir un tipo y para agregar información adicional dentro de nuestro código.
+      </p>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  <section>
+    <a name="3.12"></a>
+    <h3 class="subTitulo_3">Entornos de desarrollo de programas</h3>
+    <article>
+      <p>
+        Podemos denominar entorno de desarrollo integrado (IDE), al entorno de programación que hemos utilizado para su realización: editor de código, compilador, depurador e interfaz gráfica. <br>
+        Deben cumplir una serie de características:
+      </p>
+      <ul>
+        <li>Son multiplataforma</li>
+        <li>Actúan como soporte para diferentes lenguales de programación</li>
+        <li>Reconocen sintaxis</li>
+        <li>Están integrados con sistemas de control de diferentes versiones</li>
+        <li>Tienen un depurados</li>
+        <li>Permiten importar y exportar proyectos</li>
+        <li>Manejan diferentes idiomas</li>
+        <li>Facilitan un manual de ayuda para el usuario</li>
+      </ul>
+      <p>Las diferentes ventajas:</p>
+      <ul>
+        <li>Presentan una baja curava de aprendizaje</li>
+        <li>Son de uso óptimo para usuarios que son expertos</li>
+        <li>Formatean el código</li>
+        <li>Usan funciones para renombrar funciones y variables</li>
+        <li>Permiten crear proyectos</li>
+        <li>Muestran en pantalla errores y warnings</li>
+      </ul>
+    </article>
+    <a class="btnArriba" href="#top">Arriba</a>
+  </section>
+  </div>
 </body>
 </html>
