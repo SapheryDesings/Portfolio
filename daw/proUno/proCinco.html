@@ -29,9 +29,7 @@
       <h1>Tema 5.- Gestión de ficheros</h1>
     </div>
   </header>
-  <!--*************************************************************--> 
   <div class="contenedor">
-  <section>
     <div class="indice">
       <ol>
         <li><a href="#5.1">Concepto y tipos de ficheros</a></li>
@@ -40,8 +38,6 @@
         <li><a href="#5.4">Control de excepciones</a></li>
       </ol>
     </div>
-  </section>
-  <!--*************************************************************-->
   <section>
     <a name="5.0"></a>
     <h3 class="subTitulo_3">Introducción</h3>
@@ -55,7 +51,6 @@
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
-    <!--*************************************************************-->
   <section>  
     <a name="5.1"></a>
     <h3 class="subTitulo_3">Concepto y tipos de ficheros</h3>
@@ -184,7 +179,6 @@
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
-    <!--*************************************************************-->
   <section>
     <a name="5.2"></a>
     <h3 class="subTitulo_3">Diseño y modulación de las operaciones sobre ficheros</h3>
@@ -284,7 +278,6 @@
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
-    <!--*************************************************************-->
   <section>
     <a name="5.3"></a>
     <h3 class="subTitulo_3">Operaciones sobre ficheros secuenciales</h3>
@@ -314,58 +307,74 @@
         </p>
         <h4 class="subTitulo_4">Lectura secuencial</h4>
         <p>
-          // PSEUDOCÓDIGO <br>
-          // Declaración de la variable del fichero <br>
-          fichero f1; <br>
-          // Abrimos el fichero para leerlo <br>
-          f1.abrir(lectura); <br>
-          Mientras no final de fichero Hacer <br>
-          f1.leer(registro); <br>
-          operaciones con registro leído; <br>
-          FinMientras <br>
-          // Cerramos el fichero <br>
-          f1.cerrar(); <br>
+          <pre>
+            <code>
+              // PSEUDOCÓDIGO 
+              // Declaración de la variable del fichero 
+                fichero f1; 
+              // Abrimos el fichero para leerlo 
+                f1.abrir(lectura); 
+                Mientras no final de fichero Hacer 
+                  f1.leer(registro); 
+                  operaciones con registro leído; 
+                FinMientras 
+              // Cerramos el fichero 
+                f1.cerrar(); 
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Escritura secuencial</h4>
         <p>
-          // PSEUDOCÓDIGO <br>
-          // Declaración de la variable del fichero <br>
-          fichero f1; <br>
-          // Abrimos el fichero para leerlo <br>
-          f1.abrir(escritura); <br>
-          Mientras existan datos a escribir <br>
-          f1.escribir(registro); <br>
-          FinMientras <br>
-          // Cerramos el fichero <br>
-          f1.cerrar(); <br>
+          <pre>
+            <code>
+              // PSEUDOCÓDIGO 
+              // Declaración de la variable del fichero 
+                fichero f1; 
+              // Abrimos el fichero para leerlo 
+                f1.abrir(escritura); 
+                Mientras existan datos a escribir 
+                  f1.escribir(registro); 
+                FinMientras 
+              // Cerramos el fichero 
+                f1.cerrar();
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Lectura aleatoria</h4>
         <p>
-          // PSEUDOCÓDIGO <br>
-          // Declaración de la variable del fichero <br>
-          fichero f1; <br>
-          // Abrimos el fichero para leerlo <br>
-          f1.abrir(lectura); <br>
-          Situar el puntero del fichero justo antes del <br>
-          registro requerido <br>
-          f1.leer(registro); <br>
-          Otras operaciones con registro leído; <br>
-          // Cerramos el fichero <br>
-          f1.cerrar(); <br>
+          <pre>
+            <code>
+              // PSEUDOCÓDIGO 
+              // Declaración de la variable del fichero 
+                fichero f1; 
+              // Abrimos el fichero para leerlo
+                f1.abrir(lectura); 
+                Situar el puntero del fichero justo antes del 
+                registro requerido 
+                  f1.leer(registro); 
+                Otras operaciones con registro leído; 
+              // Cerramos el fichero 
+                f1.cerrar(); 
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Escritura aleatoria</h4>
         <p>
-          // Declaración de la variable del fichero <br>
-          fichero f1; <br>
-          // Abrimos el fichero para leerlo <br>
-          f1.abrir(escritura); <br>
-          Mientras se deseen escribir datos Hacer <br>
-          Posicionar el puntero del fichero en la posición deseada <br>
-          f1.escribir(registro); <br>
-          otras operaciones con registro leído; <br>
-          finMientras <br>
-          //Cerramos el fichero <br>
-          f1.cerrar(); <br>
+          <pre>
+            <code>
+              // Declaración de la variable del fichero 
+                fichero f1; 
+              // Abrimos el fichero para leerlo 
+                f1.abrir(escritura); 
+                Mientras se deseen escribir datos Hacer 
+                  Posicionar el puntero del fichero en la posición deseada 
+                    f1.escribir(registro); 
+                  otras operaciones con registro leído; 
+                finMientras 
+              //Cerramos el fichero 
+                f1.cerrar(); 
+            </code>
+          </pre>
         </p>
       </article>
       <article>
@@ -387,42 +396,50 @@
         </ul>
         <h4 class="subTitulo_4">Lectura de un fichero de texto</h4>
         <p>
-          using System.IO; // Importación de la clase System.IO <br>
-          // Creamos la variable fichero con la clase FileStream pasando la ruta <br>
-          del fichero, el modo de apertura (Open) y cómo vamos a acceder a él <br>
-          (lectura) <br>
-          FileStream fichero = new FileStream(“C:/fichero/ejercicio1.txt”, File- <br>
-          Mode.Open, FileAccess.Read); <br>
-          // Abrimos el flujo de lectura <br>
-          // Proporciona una vista genérica de una secuencia de bytes <br>
-          StreamReader fs = new StreamReader(fichero); <br>
-          string linea = “”; <br>
-          while ((linea = fs.ReadLine()) != null) // Mientras no lleguemos a final <br>
-          de fichero <br>
-          Console.WriteLine(linea); //sacamos por pantalla lo <br>
-          que contenga el fichero <br>
-          fs.Close(); // cerramos el flujo <br>
-          fichero.Close(); // cerramos el fichero <br>
-          } <br>
-          } <br>
+          <pre>
+            <code>
+              using System.IO; // Importación de la clase System.IO 
+              // Creamos la variable fichero con la clase FileStream pasando la ruta 
+              del fichero, el modo de apertura (Open) y cómo vamos a acceder a él 
+              (lectura) 
+                FileStream fichero = new FileStream(“C:/fichero/ejercicio1.txt”, File- 
+                Mode.Open, FileAccess.Read); 
+              // Abrimos el flujo de lectura 
+              // Proporciona una vista genérica de una secuencia de bytes 
+                StreamReader fs = new StreamReader(fichero); 
+                string linea = “”; 
+                while ((linea = fs.ReadLine()) != null) // Mientras no lleguemos a final 
+                de fichero 
+                  Console.WriteLine(linea); //sacamos por pantalla lo 
+                  que contenga el fichero 
+                fs.Close(); // cerramos el flujo 
+                fichero.Close(); // cerramos el fichero 
+                } 
+              } 
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Escritura de un fichero</h4>
         <p>
-          using System.IO; // Importación de la clase System.IO <br>
-          // Creamos la variable fichero con la clase FileStream pasando la ruta <br>
-          del fichero, el modo de apertura (en este caso, vamos a añadir datos al <br>
-          final del fichero -> Append) y cómo vamos a acceder a él (escritura) <br>
-          FileStream fichero = new FileStream(“C:/fichero/ejercicio1.txt”, File- <br>
-          Mode.Append, FileAccess.Write); <br>
-          // abrimos el flujo de escritura <br>
-          StreamWriter fs = new StreamWriter(fichero); <br>
-          //pedimos al usuario una cadena de texto la escribiremos en el fichero <br>
-          Console.WriteLine(“Introduce una frase: “); <br>
-          string frase = Console.ReadLine(); <br>
-          fs.WriteLine(frase); <br>
-          // cerramos el flujo y el fichero <br>
-          fs.Close(); <br>
-          fichero.Close(); <br>
+          <pre>
+            <code>
+              using System.IO; // Importación de la clase System.IO 
+              // Creamos la variable fichero con la clase FileStream pasando la ruta 
+              del fichero, el modo de apertura (en este caso, vamos a añadir datos al 
+              final del fichero -> Append) y cómo vamos a acceder a él (escritura) 
+                FileStream fichero = new FileStream(“C:/fichero/ejercicio1.txt”, File- 
+                Mode.Append, FileAccess.Write); 
+              // abrimos el flujo de escritura 
+                StreamWriter fs = new StreamWriter(fichero); >
+              //pedimos al usuario una cadena de texto la escribiremos en el fichero 
+                Console.WriteLine(“Introduce una frase: “); 
+                string frase = Console.ReadLine(); 
+                fs.WriteLine(frase); 
+              // cerramos el flujo y el fichero 
+                fs.Close(); 
+                fichero.Close(); 
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Ficheros binarios</h4>
         <p>
@@ -441,57 +458,68 @@
           <li><b>count:</b> el número máximo de bytes que se deben leer</li>
         </ul>
         <p>
-          byte[] buffer = new byte[fichero.Length]; <br>
-          // creamos un array unidimensional con la cantidad de bytes que se <br>
-          compone el fichero <br>
-          fichero.Read(buffer, 0, buffer.Length); <br>
-          // Vamos a leer el buffer donde todavía no hemos consumido ningún byte <br>
-          y el número máximo que vamos a leer es lo que contiene el buffer <br>
+          <pre>
+            <code>
+                byte[] buffer = new byte[fichero.Length]; 
+              // creamos un array unidimensional con la cantidad de bytes que se 
+              compone el fichero 
+                fichero.Read(buffer, 0, buffer.Length); 
+              // Vamos a leer el buffer donde todavía no hemos consumido ningún byte 
+              y el número máximo que vamos a leer es lo que contiene el buffer 
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Ejemplo de lectura en ficheros binarios</h4>
         <p>
-          using System.IO; <br>
-          // Vamos a trabajar con un fichero imagen, de tal forma que lo abriremos <br>
-          de modo lectura <br>
-          FileStream fichero = new FileStream(“C:/fichero/pelota.jpg”, FileMode. <br>
-          Open, FileAccess.Read); <br>
-          // Creamos un buffer de tipo byte para poder trabajar con los datos del <br>
-          fichero <br>
-          Byte [] buffer = new byte[fichero.Length]; //un entero de 8 bits sin <br>
-          signo. <br>
-          // Abrimos el fichero para la lectura y vamos a ir consumiendo todos <br>
-          los bytes del fichero y mostrándolos por pantalla <br>
-          fichero.Read(buffer, 0, buffer.Length); <br>
-          for (int i = 0; i < buffer.Length; i++) <br>
-          { <br>
-          Console.WriteLine(buffer[i]); <br>
-          } <br>
-          //fichero.Close(); <br>
+          <pre>
+            <code>
+                using System.IO; 
+              // Vamos a trabajar con un fichero imagen, de tal forma que lo abriremos 
+              de modo lectura 
+                FileStream fichero = new FileStream(“C:/fichero/pelota.jpg”, FileMode. 
+                Open, FileAccess.Read); 
+              // Creamos un buffer de tipo byte para poder trabajar con los datos del 
+              fichero 
+                Byte [] buffer = new byte[fichero.Length]; //un entero de 8 bits sin 
+              signo. 
+              // Abrimos el fichero para la lectura y vamos a ir consumiendo todos 
+              los bytes del fichero y mostrándolos por pantalla 
+                fichero.Read(buffer, 0, buffer.Length); 
+                for (int i = 0; i < buffer.Length; i++) 
+                  { 
+                    Console.WriteLine(buffer[i]); 
+                  } 
+              //fichero.Close(); 
+            </code>
+          </pre>
         </p>
         <h4 class="subTitulo_4">Ejemplo de escritura en ficheros binarios</h4>
         <p>
-          using System.IO; <br>
-          // Vamos a trabajar con un fichero imagen, de tal forma que lo abriremos <br>
-          de modo lectura <br>
-          FileStream fichero = new FileStream(“C:/fichero/pelota.jpg”, FileMode. <br>
-          Open, FileAccess.Read); <br>
-          // Creamos un buffer de tipo byte para poder trabajar con los datos del <br>
-          fichero <br>
-          Byte [] buffer = new byte[fichero.Length]; //un entero de 8 bits sin <br>
-          signo. <br>
-          // Abrimos el fichero para la lectura y vamos a ir consumiendo todos <br>
-          los bytes del fichero y mostrándolos por pantalla <br>
-          fichero.Read(buffer, 0, buffer.Length); <br>
-          for (int i = 0; i < buffer.Length; i++) <br>
-          { <br>
-          Console.WriteLine(buffer[i]); <br>
-          } <br>
-          //fichero.Close(); <br>
+          <pre>
+            <code>
+                using System.IO; 
+              // Vamos a trabajar con un fichero imagen, de tal forma que lo abriremos 
+              de modo lectura 
+                FileStream fichero = new FileStream(“C:/fichero/pelota.jpg”, FileMode. 
+                Open, FileAccess.Read); 
+              // Creamos un buffer de tipo byte para poder trabajar con los datos del 
+              fichero 
+                Byte [] buffer = new byte[fichero.Length]; //un entero de 8 bits sin 
+                signo. 
+              // Abrimos el fichero para la lectura y vamos a ir consumiendo todos 
+              los bytes del fichero y mostrándolos por pantalla 
+                fichero.Read(buffer, 0, buffer.Length); 
+                for (int i = 0; i < buffer.Length; i++) 
+                  { 
+                    Console.WriteLine(buffer[i]);
+                  } 
+              //fichero.Close(); 
+            </code>
+          </pre>
         </p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
-    <!--*************************************************************-->
   <section>
     <a name="5.4"></a>
     <h3 class="subTitulo_3">Control de excepciones</h3>
@@ -504,12 +532,16 @@
         <li>
           <b>Exists(string path):</b> le pasamos la ruta del fichero y devolverá un booleano. Si no existe, devolverá un false. Si la ruta no existe o es incorrecta, también devolverá un false.
           <p>
-            using System.IO; <br>
-            if (File.Exists(@”D:\myfile.txt”)) { <br>
-            Console.WriteLine(“El fichero existe...”); <br>
-            } else { <br>
-            Console.WriteLine(“El fichero no existe en el directorio D…”); <br>
-            } <br>
+            <pre>
+              <code>
+                using System.IO; 
+                  if (File.Exists(@”D:\myfile.txt”)) { 
+                    Console.WriteLine(“El fichero existe...”); 
+                  } else { 
+                    Console.WriteLine(“El fichero no existe en el directorio D…”); 
+                  } 
+              </code>
+            </pre>
           </p>
         </li>
         <li>
