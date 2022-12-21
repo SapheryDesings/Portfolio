@@ -1,0 +1,79 @@
+/*************************************************************************************/
+/* MEDIA QUERIES                                                                     */
+/*************************************************************************************/
+
+@media screen and (max-width: 1280px){
+  body { 
+    font-size: 1.3rem; 
+  }
+  .tituloTema {font-size: 1.4rem;}
+  .contenedor {width: 80%;}
+}
+
+@media screen and (max-width: 1024px){
+  body { 
+    font-size: 1.1rem; 
+  }
+  .tituloTema {font-size: 1.2rem;}
+  .contenedor {width: 90%;}
+  
+}
+@media screen and (max-width: 600px){
+  body {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .navtop {justify-content: space-between;}
+
+  #apuntes { display: none;}
+
+  .menuPrincipalAsignatura {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: .2rem 0;
+  } 
+
+  .menuPrincipalAsignatura a { padding: .2rem auto;}
+
+  .tituloTema {
+    font-size: 1rem;
+    padding: .8rem 1rem;
+  }
+
+  .apartado { margin-top: 1rem;}
+  .contenedor {width: 100%;}
+  section { 
+    width: 100%; 
+    padding: 1rem .5rem;
+  }
+  .indice {
+    width: 100%;
+    font-size: .8rem;
+    margin: .5rem auto;
+    padding: 0 .2rem;
+  }
+
+  article {
+    margin: .5rem 0;
+    padding: .5rem 0;
+  }
+
+  .btnArriba {
+    margin: .5rem 0;
+    padding: .2rem 1rem;
+  }
+
+  p {
+    margin-bottom: .5rem;
+    padding: .5rem auto;
+  }
+
+  ul, ol { margin: 1rem 0;}
+
+  table { margin: 1rem auto;}
+
+  th, td { padding: .3rem 1rem;}
+
+}

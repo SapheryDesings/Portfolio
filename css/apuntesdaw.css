@@ -1,12 +1,15 @@
-/* ----------------------------- */
-/* RESET Y VARIABLES */
+/*************************************************************************************/
+/* RESET                                                                             */
+/*************************************************************************************/
 * {
   box-sizing: border-box; 
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
-
+/*************************************************************************************/
+/* SEMANTICAS                                                                        */
+/*************************************************************************************/
 :root {
   --fondoGris: #212121;
   --fondoOscuro: #151515;
@@ -17,8 +20,6 @@
   --mostaza: #F1C40F;
 }
 
-/* ----------------------------- */
-/* PRINCIPAL */
 body {
   width: 100%;
   margin: 0 auto;
@@ -28,9 +29,10 @@ body {
   background-color: var(--fondoGris);
   color: var(--tipografiaClara);
 }
-
-/* ----------------------------- */
-/* CABECERAS Y MENÚS */
+/*****************************************/
+/* CABECERA */
+/* Contenedor para navtop, menuPrincipalAsignatura y el titúlo del tema */
+/*****************************************/
 header {
   display: flex;
   flex-flow: column nowrap;
@@ -41,43 +43,6 @@ header {
   font-family: 'Titan One', cursive;
   font-weight: 100;
 }
-    .navtop {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-      padding: .8rem 10%;
-      background-color: var(--aguamar);
-    }
-
-    .menuPrincipalAsignatura {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      padding: .5rem 1rem; 
-    }
-        .menuPrincipalAsignatura a {
-          padding: .5rem 1rem;
-        } 
-            .menuPrincipalAsignatura a:hover {
-              background-color: var(--aguamar);
-            }
-
-    .tituloTema {
-      font-size: 1.8rem;
-      align-self: center;
-      padding: 2rem;
-      text-align: center;
-    }
-
-/* ----------------------------- */
-/* SECTIONS */
-.contenedor {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 70%;
-  margin: 0 auto;
-}
 
 section {
   display: flex;
@@ -85,50 +50,21 @@ section {
   width: 100%;
   margin: 2rem auto;
 }
-
-.indice {
-  width: 80%;
-  margin: 1rem auto;
+/*
+aside {
+  width: 25%;
+  -> alinear a la derecha
+  background-color: Mas claro que el fondo;
 }
 
-    .indice li { 
-      padding: .2rem;
-      list-style-type: none;
-    }
-
-    .indice li:hover {
-      background-color: rgba(33, 33, 33, .1);
-    }
-    .indice li:active {
-      border: 1px solid rgb(52, 152, 219);
-      background-color: rgba(52, 152, 219, .3);
-    }
-
-/* ----------------------------- */
-/* ARTICLES */
+*/
 article { 
   width: 100%;
   margin: 1rem auto;
 }
-
-.btnArriba {
-  width: 120px;
-  margin: 1rem 0;
-  padding: .3rem 1.5rem;
-  border: 3px solid rgba(52, 152, 219, .5 );
-  text-align: center;
-}
-
-.btnArriba:hover {
-  background-color: rgba(33, 33, 33, .1);
-}
-.btnArriba:active {
-  border: 3px solid rgb(52, 152, 219);
-  background-color: rgba(52, 152, 219, .3);
-}
-
-/* ----------------------------- */
-/* TEXTO */
+/*****************************************/
+/* ENCABEZADOS */
+/*****************************************/
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Titan One', cursive;
   font-weight: 100;
@@ -137,36 +73,28 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {margin-bottom: 2rem;}
 h3, h4 {margin-bottom: 1rem;}
 h5, h6 {margin-bottom: .5rem;}
-
+/*****************************************/
+/* PARRAFO */
+/*****************************************/
 p {
   margin-bottom: 1rem;
   padding: 1rem auto;
 }
-
+/*****************************************/
+/* TEXTO SIN FORMATO - CODIGO */
+/*****************************************/
 pre {
   background-color: var(--fondoOscuro);
   border-radius: 2rem;
   white-space: pre-wrap;
 }
-
-.subTitulo_3 {
-  border-bottom: 2px dashed var(--aguamar); 
-  padding-bottom: 10px;
-}
-
-.subTitulo_4 {
-  border-left: 10px solid var(--aguamar); 
-  padding-left: 10px;
-}
-
-/* ----------------------------- */
+/*****************************************/
 /* ENLACES */
-
+/*****************************************/
 a {color: var(--tipografiaClara);}
-
-
-/* ----------------------------- */
+/*****************************************/
 /* LISTAS */
+/*****************************************/
 ul, ol {
   margin: 1rem 0 2rem;
   list-style-position: inside;
@@ -174,15 +102,15 @@ ul, ol {
 
 ul { list-style-type: square;}
 
-li ul {
-  margin-left: 5%;
-}
+  li ul {
+    margin-left: 5%;
+  }
 
-li {margin: .5rem 0;}
-ul li::marker {color: var(--morado);}
-
-/* ----------------------------- */
+  li {margin: .5rem 0;}
+  ul li::marker {color: var(--morado);}
+/*****************************************/
 /* TABLAS */
+/*****************************************/
 table {
   margin: 2rem auto;
   border-collapse: collapse;
@@ -201,83 +129,101 @@ table {
     padding: .5rem 1.5rem;
     border: 2px dashed var(--aguamar);
   }
-  
-/* ----------------------------- */
-/* MEDIA QUERIES */
-
-
-@media screen and (max-width: 1280px){
-  body { 
-    font-size: 1.3rem; 
-  }
-  .tituloTema {font-size: 1.4rem;}
-  .contenedor {width: 80%;}
+/*****************************************/
+/*************************************************************************************/
+/* CLASES                                                                            */
+/*************************************************************************************/
+/*HEADER*/
+/*****************************************/
+.navtop { /* Barra superior */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding: .8rem 10%;
+  background-color: var(--aguamar);
 }
 
-@media screen and (max-width: 1024px){
-  body { 
-    font-size: 1.1rem; 
-  }
-  .tituloTema {font-size: 1.2rem;}
-  .contenedor {width: 90%;}
-  
+.menuPrincipalAsignatura { /* Menú de temas */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: .5rem 1rem; 
 }
-@media screen and (max-width: 600px){
-  body {
-    width: 100%;
-    font-size: 1rem;
-  }
+    .menuPrincipalAsignatura a {
+      padding: .5rem 1rem;
+    } 
+        .menuPrincipalAsignatura a:hover {
+          background-color: var(--aguamar);
+        }
 
-  .navtop {justify-content: space-between;}
-
-  #apuntes { display: none;}
-
-  .menuPrincipalAsignatura {
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 1rem 0;
-    padding: .2rem 0;
-  } 
-
-  .menuPrincipalAsignatura a { padding: .2rem auto;}
-
-  .tituloTema {
-    font-size: 1rem;
-    padding: .8rem 1rem;
-  }
-
-  .apartado { margin-top: 1rem;}
-  .contenedor {width: 100%;}
-  section { 
-    width: 100%; 
-    padding: 1rem .5rem;
-  }
-  .indice {
-    width: 100%;
-    font-size: .8rem;
-    margin: .5rem auto;
-    padding: 0 .2rem;
-  }
-
-  article {
-    margin: .5rem 0;
-    padding: .5rem 0;
-  }
-
-  .btnArriba {
-    margin: .5rem 0;
-    padding: .2rem 1rem;
-  }
-
-  p {
-    margin-bottom: .5rem;
-    padding: .5rem auto;
-  }
-
-  ul, ol { margin: 1rem 0;}
-
-  table { margin: 1rem auto;}
-
-  th, td { padding: .3rem 1rem;}
-
+.tituloTema { /* Título del tema */
+  font-size: 1.8rem;
+  align-self: center;
+  padding: 2rem;
+  text-align: center;
 }
+/*FIN HEADER*/
+/*****************************************/
+/*CONTENEDOR*/
+/*****************************************/
+.contenedor { /* Contenedor todo menos header */
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+  margin: 0 auto;
+}
+/*****************************************/
+/* INDICE DEL TEMA */
+/*****************************************/
+.indice { /* Indice del tema */
+  width: 80%;
+  margin: 1rem auto;
+}
+
+    .indice li { 
+      padding: .2rem;
+      list-style-type: none;
+    }
+
+    .indice li:hover {
+      background-color: rgba(33, 33, 33, .1);
+    }
+    .indice li:active {
+      border: 1px solid rgb(52, 152, 219);
+      background-color: rgba(52, 152, 219, .3);
+    }
+/*FIN INDICE*/
+/*****************************************/
+/*BOTONES*/
+/*****************************************/
+.btnArriba {
+  width: 120px;
+  margin: 1rem 0;
+  padding: .3rem 1.5rem;
+  border: 3px solid rgba(52, 152, 219, .5 );
+  text-align: center;
+}
+
+  .btnArriba:hover {
+    background-color: rgba(33, 33, 33, .1);
+  }
+  .btnArriba:active {
+    border: 3px solid rgb(52, 152, 219);
+    background-color: rgba(52, 152, 219, .3);
+  }
+/*FIN BOTONES*/
+/*****************************************/
+/*TEXTO - TITULOS, SUBTITULOS Y APARTADOS*/
+/*****************************************/
+.subTitulo_3 {
+  border-bottom: 2px dashed var(--aguamar); 
+  padding-bottom: 10px;
+}
+
+.subTitulo_4 {
+  border-left: 10px solid var(--aguamar); 
+  padding-left: 10px;
+}
+/*FIN TEXTO*/
+/*****************************************/
