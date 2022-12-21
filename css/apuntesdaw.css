@@ -130,6 +130,11 @@ table {
     border: 2px dashed var(--aguamar);
   }
 /*****************************************/
+/* IMAGENES */
+/*****************************************/
+img {
+  display: block;
+}
 /*************************************************************************************/
 /* CLASES                                                                            */
 /*************************************************************************************/
@@ -184,12 +189,10 @@ table {
     .indice li { 
       padding: .2rem;
       list-style-type: none;
+      border: 1px solid var(--fondoGris);
     }
 
     .indice li:hover {
-      background-color: rgba(33, 33, 33, .1);
-    }
-    .indice li:active {
       border: 1px solid rgb(52, 152, 219);
       background-color: rgba(52, 152, 219, .3);
     }
@@ -206,9 +209,6 @@ table {
 }
 
   .btnArriba:hover {
-    background-color: rgba(33, 33, 33, .1);
-  }
-  .btnArriba:active {
     border: 3px solid rgb(52, 152, 219);
     background-color: rgba(52, 152, 219, .3);
   }
