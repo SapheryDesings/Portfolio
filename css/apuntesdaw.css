@@ -53,10 +53,8 @@ section {
 /*
 aside {
   width: 25%;
-  -> alinear a la derecha
-  background-color: Mas claro que el fondo;
+  background-color: rgba(52, 152, 219, .2);
 }
-
 */
 article { 
   width: 100%;
@@ -73,6 +71,11 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {margin-bottom: 2rem;}
 h3, h4 {margin-bottom: 1rem;}
 h5, h6 {margin-bottom: .5rem;}
+
+b {
+  color: var(--morado);
+  font-style: italic;
+}
 /*****************************************/
 /* PARRAFO */
 /*****************************************/
@@ -107,7 +110,10 @@ ul { list-style-type: square;}
   }
 
   li {margin: .5rem 0;}
-  ul li::marker {color: var(--morado);}
+  ul li::marker {
+    color: var(--aguamar); 
+    font-size: 1.5rem;
+  }
 /*****************************************/
 /* TABLAS */
 /*****************************************/
