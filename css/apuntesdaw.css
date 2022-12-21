@@ -90,6 +90,7 @@ pre {
   background-color: var(--fondoOscuro);
   border-radius: 2rem;
   white-space: pre-wrap;
+  border: 2px dashed greenyellow;
 }
 /*****************************************/
 /* ENLACES */
