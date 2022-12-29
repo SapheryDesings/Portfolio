@@ -549,27 +549,27 @@
           <b>Try/catch:</b> el bloque try contiene el código protegido que puede producir la excepción. <br>
           Los mensajes de error y acciones para corregir el error estarán en el bloque catch.
           <p>
-<pre>
-  <code>
-    using System.IO;
+            <pre>
+              <code>
+                using System.IO;
 
-    string linea; 
-        try 
-        { 
-          FileStream fichero = new FileStream(“C:/fichero/ejercicio1. 
-          txt”, FileMode.Open, FileAccess.Read); 
-          StreamReader fs = new StreamReader(fichero); 
-          if ((linea= fs.ReadLine())!= null) 
-            Console.WriteLine(linea); 
-          fs.Close() 
-          fichero.Close(); 
-        } 
-        catch (Exception exp) 
-        { 
-      Console.WriteLine(“Ha habido un error: {0}”, exp.Message); 
-    } 
-  </code>
-</pre>
+                string linea; 
+                    try 
+                    { 
+                      FileStream fichero = new FileStream(“C:/fichero/ejercicio1. 
+                      txt”, FileMode.Open, FileAccess.Read); 
+                      StreamReader fs = new StreamReader(fichero); 
+                      if ((linea= fs.ReadLine())!= null) 
+                        Console.WriteLine(linea); 
+                      fs.Close() 
+                      fichero.Close(); 
+                    } 
+                    catch (Exception exp) 
+                    { 
+                  Console.WriteLine(“Ha habido un error: {0}”, exp.Message); 
+                } 
+              </code>
+            </pre>
           </p>
         </li>
       </ul>

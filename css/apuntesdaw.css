@@ -92,6 +92,11 @@ pre {
   white-space: pre-wrap;
   border: 2px dashed greenyellow;
 }
+
+code {
+  position: relative;
+  left: -10%;
+}
 /*****************************************/
 /* ENLACES */
 /*****************************************/
