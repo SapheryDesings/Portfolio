@@ -144,6 +144,22 @@
           </code>
         </pre>
       </p>
+      <p>
+        <pre>
+          <code>
+            static int sumar(int a, int b)
+              {
+                return a + b;
+              }
+            static void Main(string[] args)
+              {
+                int v1 = 2;
+                int v2 = 4;
+                Console.WriteLine(sumar(v1, v2));
+              }
+          </code>
+        </pre>
+      </p>
     </article>
     <article>
       <h4 class="subTitulo_4">Vemos el significado de cada parte:</h4>
@@ -185,6 +201,16 @@
           </code>
         </pre>
       </p>
+      <p>
+        <pre>
+          <code>
+            public void suma(int a, int b) {
+              int resultado = (a + b);
+              Console.WriteLine("La suma es " + resultado);
+            }
+          </code>
+        </pre>
+      </p>
     </article>
     <h4 class="subTitulo_4">Paso de parámetros. Paso por valor y paso por referencia</h4>
     <article>
@@ -192,11 +218,49 @@
       <p>
         Cuando ejecutamos una función que tiene parámetros pasados por valor, se realiza una copia del parámetro que se ha pasado, que todas las modificaciones y cambios que se realicen se están haciendo en esta copia que ha creado. El original no se modifica.
       </p>
+      <p>
+        <pre>
+          <code>
+            static int sumar(int a, int b) 
+              {
+                a = 20;
+                return a + b;
+              }
+            static void Main(string[] args)
+              {
+                int v1 = 3;
+                int v2 = 4;
+
+                Console.WriteLine(sumar(v1, v2));
+                Console.WriteLine(v1+v2);
+              }
+          </code>
+        </pre>
+      </p>
     </article>
     <article>
       <h4 class="subTitulo_4">Por referencia</h4>
       <p>
         Cuando los párametros son pasados por referencia todas aquellas modificaciones que se realicen en la función van a afectar a sus parámetros, ya que se trabaja con los originales.
+      </p>
+      <p>
+        <pre>
+          <code>
+            static int sumar(ref int a, ref int b)
+              {
+                a = 20;
+                return a + b;
+              }
+            static void Main(string[] args)
+              {
+                int v1 = 3;
+                int v2 = 4;
+
+                Console.WriteLine(sumar(ref v1, ref v2));
+                Console.WriteLine(v1+v2);
+              }
+          </code>
+        </pre>
       </p>
     </article>
     <article>
@@ -343,6 +407,21 @@
         <li>Un caso base que permita la finalización del programa (sería nuestra condición de salida)</li>
         <li>Casos recursivos, que son los que se van a encargar de que la función vuelva a ejecutarse, pero acerándose cada vez más al caso base.</li>
       </ul>
+      <p>
+        <pre>
+          <code>
+            static void cuentaAtras(int numero)
+              {
+                Console.WriteLine(numero + "-");
+
+                if(numero>0)
+                {
+                  cuentaAtras(numero - 1);
+                }
+              }
+          </code>
+        </pre>
+      </p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>

@@ -251,6 +251,18 @@
           </code>
         </pre>
       </p>
+      <p>
+        <pre>
+          <code>
+            vidas = vidas - 1;
+              if (vidas == 0)
+                {
+                  Console.WriteLine("Game Over");
+                  finPartida();
+                }
+          </code>
+        </pre>
+      </p>
       <h4 class="subTitulo_4">Instrucción doble (IF-ELSE)</h4>
       <p>
         <pre>
@@ -264,6 +276,22 @@
         </pre>
       </p>
       <p>
+        <pre>
+          <code>
+            vidas = vidas - 1;
+              if (vidas == 0)
+                {
+                  Console.WriteLine ("Game Over");
+                  finPartida();
+                }
+                else
+                {
+                  repetirNivel();
+                }
+          </code>
+        </pre>
+      </p>
+      <p>
         Si condición es cierta, ejecutaremos lo que hay en instrucciones1 y saltaremos hasta el fin si.
       </p>
       <p>
@@ -271,6 +299,24 @@
       </p>
       <p>
         En las estructuras dobles, por cada IF, debe haber un ELSE.
+      </p>
+      <p>
+        <pre>
+          <code>
+            if (saludJugador == 0)
+              {
+                muerteJugador();
+              }
+              else if (saludJugador < 15)
+                {
+                  mostrarAvisoSaludBaja();
+                }
+              else
+                {
+                  continuarJugando();
+                }
+          </code>
+        </pre>
       </p>
     </article>
     <article>
@@ -369,6 +415,28 @@
           </code>
         </pre>
       </p>
+      <p>
+        <pre>
+          <code>
+            while (distancia > 20)
+              {
+                paso();
+                distancia = leerSensor();
+              }
+          </code>
+        </pre>
+      </p>
+      <p>
+        <pre>
+          <code>
+            int i = 0;
+              while (i < 3) {
+                Console.WriteLine(i);
+                i++;
+              }
+          </code>
+        </pre>
+      </p>
       <h4 class="subTitulo_4">Hacer... mientras (Do... while)</h4>
       <p>
         <pre>
@@ -381,6 +449,17 @@
           </code>
         </pre>
       </p>
+      <p>
+        <pre>
+          <code>
+            int i = 0;
+              do {
+                Console.WriteLine(i);
+                i++;
+              } while (i < 3);
+          </code>
+        </pre>
+      </p>
       <h4 class="subTitulo_4">Para</h4>
       <p>
         <pre>
@@ -389,6 +468,26 @@
               Instrucción_1; 
               Instrucción_2; 
               ModificarCondición; 
+          </code>
+        </pre>
+      </p>
+      <p>
+        <pre>
+          <code>
+            for (contador = 1; contador < 10; contador + 1)
+              {
+                paso();
+                Console.WriteLine("Paso número"+contador);
+              }
+          </code>
+        </pre>
+      </p>
+      <p>
+        <pre>
+          <code>
+            for (int i = 0; i < 3; i++) {
+              Console.WriteLine(i);
+            }
           </code>
         </pre>
       </p>
@@ -411,14 +510,57 @@
         Interrumpe el bucle indicando que debe continuar a partir de la siguiente sentencia después del bloque del ciclo. <br>
         El control se devuelve a la instrucción que haya a continuación de la intrucción finalizada.
       </p>
+      <p>
+        <pre>
+          <code>
+            static void Main(){
+              for (int = 1; i<=100; i++)
+              {
+                if (i==5)
+                {
+                  break;
+                }
+              Console.WriteLine(i);
+              }
+            }
+          </code>
+        </pre>
+      </p>
     </article>
     <h4 class="subTitulo_4">continue</h4>
     <p>
       Se utiliza en sentencias repetitivas con bucles for, foreach, while y do...while. Transfiere el control a la siguiente iteración.
     </p>
+    <p>
+      <pre>
+        <code>
+          static void Main()
+            {
+              for(int=1; i<=10; i++)
+              {
+                if (i < 9)
+                {
+                  continue;
+                }
+              Console.WriteLine(i);
+              }
+            }
+        </code>
+      </pre>
+    </p>
     <h4 class="subTitulo_4">return</h4>
     <p>
       Esta estructura de salto obliga a que finalice la ejecución de una determinada función. Se utiliza para devolver el control a la función de llamada.
+    </p>
+    <p>
+      <pre>
+        <code>
+          static int areaRectangulo (int lado1, int lado2)
+            {
+              return(lado1*lado2);
+            }
+        </code>
+      </pre>
     </p>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
@@ -496,6 +638,18 @@
           <th>Devuelve una cadena convertida en mayúsculas</th>
         </tr>
       </table>
+      <p>
+        <pre>
+          <code>
+            string nombre = "Programación";
+              Console.WriteLine(nombre.Trim());
+              Console.WriteLine("La longitud es de "+nombre.Lenght());
+              Console.WriteLine(nombre.ToUpper());
+              Console.WriteLine(nombre.Substring(2,3));
+              if (nombre.Contains("ogra"))
+          </code>
+        </pre>
+      </p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
   </section>
