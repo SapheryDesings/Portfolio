@@ -6,6 +6,17 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+  scrollbar-width: 5px;
+  scrollbar-color: #FF6F00;
+}
+*::-webkit-scrollbar {
+  width: auto;
+}
+*::-webkit-scrollbar-track { /*carril de la barra*/
+  background: var(--aguamar);
+}
+*::-webkit-scrollbar-thumb { /*la almohadilla de la barra*/
+  background-color: var(--tipografiaClara);
 }
 /*************************************************************************************/
 /* SEMANTICAS                                                                        */
@@ -88,9 +99,11 @@ p {
 /*****************************************/
 pre {
   background-color: var(--fondoOscuro);
-  border-radius: 2rem;
-  white-space: pre-wrap;
-  border: 2px dashed greenyellow;
+  overflow-x: auto;
+  border-width: 3px;
+  border-style: solid;
+  border-color: greenyellow #FF6F00 #FF6F00 greenyellow;
+  
 }
 
 code {
