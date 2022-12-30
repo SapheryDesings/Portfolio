@@ -22,15 +22,11 @@
 */
 }
 
-body {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: min-content;
-  grid-gap: 15px;
-  background-color: var(--azulPrincipal); 
-  color: var(--blancoTipologia);
-  font-family: 'Montserrat', sans-serif;
-  font-size: large;
+/*body {}*/
+
+section {
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1 { font-size: 3rem;}
@@ -44,18 +40,44 @@ a {
 /*************************************************************************************/
 /* CLASES                                                                            */
 /*************************************************************************************/
+.portfolio {
+  background-color: var(--azulPrincipal); 
+  color: var(--blancoTipologia);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+}
+
+.contenedorPortfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+/*    Presentacion    *//* Titulo principal SapheryDesings */
+.presentacion {
+  font-family: 'Smooch', cursive;
+  font-size: 8rem;
+  text-align: center;
+}
+
 /*       Titulos       *//* Son los titulos de la tres secciones daw, proyectos y devAcademy*/
 .tituloSeccion {
-  grid-column: 2 /span 4;
   margin: 1rem 0;
   font-family: 'Titan One', cursive;
   font-weight: 100;
+}
+
+.daw {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 /*        Card        *//* Prototipo de tarjeta */
 .card {
   display: flex;
   flex-flow: column wrap;
+  flex-grow: 1;
 }
   .imgCard {
     max-height: 150px;
@@ -71,67 +93,7 @@ a {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
   }
-
-  /*    Presentacion    *//* Titulo principal SapheryDesings */
-.presentacion {
-  grid-column: 1 / span 6;
-  margin-top: 2rem;
-  margin-bottom: 100px;
-  font-family: 'Smooch', cursive;
-  font-size: 8rem;
-  text-align: center;
-}
-
-/*        Daw         *//* Grid individuales de cada una de las tarjetas*/
-.asignaturaUno {
-  grid-column: 2 /span 1;
-  grid-row: 3;
-}
-.asignaturaDos {
-  grid-column: 3 /span 1;
-  grid-row: 3;
-}
-.asignaturaTres {
-  grid-column: 4 /span 1;
-  grid-row: 3;
-}
-.asignaturaCuatro {
-  grid-column: 5 /span 1;
-  grid-row: 3;
-}
-.asignaturaCinco {
-  grid-column: 2 /span 1;
-  grid-row: 4;
-}
-.asignaturaSeis {
-  grid-column: 3 /span 1;
-  grid-row: 4;
-}
-.asignaturaSiete {
-  grid-column: 4 /span 1;
-  grid-row: 4;
-}
-.asignaturaOcho {
-  grid-column: 5 /span 1;
-  grid-row: 4;
-}
-.asignaturaNueve {
-  grid-column: 2 /span 1;
-  grid-row: 5;
-}
-.asignaturaDiez {
-  grid-column: 3 /span 1;
-  grid-row: 5;
-}
-.asignaturaOnce {
-  grid-column: 4 /span 1;
-  grid-row: 5;
-}
-.asignaturaDoce {
-  grid-column: 5 /span 1;
-  grid-row: 5;
-}
-.asignaturaTrece {
-  grid-column: 2 /span 1;
-  grid-row: 6;
-}
+/*
+  @media screen and (max-width: 1024px){
+    .card {width: 10%;}
+  }
