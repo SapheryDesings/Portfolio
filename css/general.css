@@ -69,15 +69,16 @@ a {
 .daw {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 10px;
+  padding: 10px 0;
 }
 
 /*        Card        *//* Prototipo de tarjeta */
 .card {
   display: flex;
   flex-flow: column wrap;
-  flex-grow: 1;
+  width: 320px;
 }
   .imgCard {
     max-height: 150px;
@@ -93,7 +94,24 @@ a {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
   }
-/*
-  @media screen and (max-width: 1024px){
-    .card {width: 10%;}
+
+@media screen and (min-width:768px) and (max-width: 1024px){
+  .presentacion {font-size: 6rem;}
+  .card {width: 330px;}
+}
+
+@media screen and (max-width: 425px) and (max-width: 768px){
+  .presentacion {font-size: 6rem;}
+  .card {width: 250px;}
+}
+
+@media screen and (max-width: 425px){
+  section {width: 98%;}
+  .presentacion {font-size: 3.5rem;}
+  .tituloSeccion {
+    text-align: center;
+    font-size: 1.6rem;
   }
+  .card {width: 100%;}
+  .descripcionCard {font-size: 1rem;}
+}
