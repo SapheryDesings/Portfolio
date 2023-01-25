@@ -79,9 +79,11 @@ a {
   display: flex;
   flex-flow: column wrap;
   width: 320px;
+  border: 1px dashed darkred;
 }
   .imgCard {
     max-height: 150px;
+    border: 1px dashed darkorange;
   }
     .imgCard img {
       object-fit: cover;
@@ -93,6 +95,7 @@ a {
     padding: .5rem;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
+    border: 1px dashed whitesmoke;
   }
 
 @media screen and (min-width:768px) and (max-width: 1024px){
