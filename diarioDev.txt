@@ -1,0 +1,6 @@
+Organizar y estructura el proyecto
+Boceto Figma -> Principal y partes
+
+Main flex columna
+    contenedor cards
+        cards -> flex con ancho fijo, solo cambia en las mQ
