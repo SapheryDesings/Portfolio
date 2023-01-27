@@ -77,37 +77,38 @@ a {
 /*        Card        *//* Prototipo de tarjeta */
 .card {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
+  justify-content: space-between;
   width: 300px;
   height: 400px;
   border: 1px dashed darkorange;
   font-size: 1rem;
-}
-  .tituloCard, .footerCard {
-    display: flex;
-    flex-direction: column wrap;
-  }
-  .tituloCard {
-    min-height: 35px;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .tituloCard strong {margin: auto;}
-  .card img {
-    min-height: 150px;
-    min-width: 100%;
-    background-color: rgba(255, 255, 255, .1);
-  }
-  .descripcionCard {
-    /*height: 130px;*/
-    padding: .2rem;
-  }
-  .footerCard {
-    height: 35px;
-    border: 1px dashed white;
-    align-self: flex-end;
-  }
-  .footerCard span { padding: .2rem;}
+} 
+    .tituloCard, .footerCard {
+      line-height: normal;
+      display: flex;
+      flex-direction: column;
+    }
+    .tituloCard {
+      min-height: 35px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .tituloCard strong {margin: auto;}
+    .card img {
+      min-height: 150px;
+      min-width: 100%;
+      background-color: rgba(255, 255, 255, .1);
+    }
+    .descripcionCard {
+      height: 130px;
+      padding: .2rem;
+    }
+    .footerCard {
+      height: 35px;
+      border: 1px dashed white;
+    }
+    .footerCard span { padding: .2rem;}
 
 @media screen and (min-width:768px) and (max-width: 1024px){
   .presentacion {font-size: 6rem;}
