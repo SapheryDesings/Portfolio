@@ -201,6 +201,7 @@ img {
 .contenedor { /* Contenedor todo menos header */
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   width: 70%;
   margin: 0 auto;
 }
