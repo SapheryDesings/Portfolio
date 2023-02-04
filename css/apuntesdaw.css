@@ -60,11 +60,10 @@ section {
   flex-flow: column nowrap;
   width: 100%;
   margin: 0 auto;
-  border: 1px dashed darkmagenta;
 }
 /* >>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<< */
 aside {
-  min-width: 25%;
+  min-width: 20%;
   height: max-content;
   border: 2px dashed darkorange;
 }
