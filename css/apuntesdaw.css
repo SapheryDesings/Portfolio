@@ -59,7 +59,7 @@ section {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  margin: 2rem auto;
+  margin: 0 auto;
   border: 1px dashed darkmagenta;
 }
 /* >>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<< */
