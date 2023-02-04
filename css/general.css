@@ -75,6 +75,7 @@ a {
 }
 
 /*        Card        *//* Prototipo de tarjeta */
+.sombra {box-shadow: 0 0 2px 1px rgba(1, 87, 155, .5);}
 .card {
   display: flex;
   flex-flow: column;
@@ -82,8 +83,7 @@ a {
   width: 300px;
   height: 400px;
   /*border: 1px dashed darkorange;*/
-  background-color: rgb(1, 87, 155);
-  box-shadow: 0 0 2px 1px rgba(1, 87, 155, .5);
+  
   font-size: 1rem;
 } 
     .tituloCard, .footerCard {
