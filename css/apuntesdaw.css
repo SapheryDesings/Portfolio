@@ -61,12 +61,13 @@ section {
   width: 100%;
   margin: 2rem auto;
 }
-/*
+
 aside {
   width: 25%;
   background-color: rgba(52, 152, 219, .2);
+  border: 2px dashed darkorange;
 }
-*/
+
 article { 
   width: 100%;
   margin: 1rem auto;
@@ -199,7 +200,7 @@ img {
 /*****************************************/
 .contenedor { /* Contenedor todo menos header */
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   width: 70%;
   margin: 0 auto;
 }
