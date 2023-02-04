@@ -85,7 +85,7 @@ a {
   width: 300px;
   height: 400px;
   border: 1px dashed darkorange;
-  box-shadow: 0 0 5px 5px rgba(1, 87, 155, .5);
+  box-shadow: 0 0 5px 5px rgba(1, 87, 155, 0.1);
   font-size: 1rem;
 } 
     .tituloCard, .footerCard {
