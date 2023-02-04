@@ -93,11 +93,11 @@ a {
       flex-direction: column;
     }
     .tituloCard {
-      height: 55px; /*35*/
+      height: 35px; 
       font-size: 1.2rem;
       text-align: center;
     }
-    .tituloCard strong {margin: auto; } /*line-height: 35px;*/
+    .tituloCard strong {margin: auto; }
     .card img {
       min-height: 150px;
       min-width: 100%;
