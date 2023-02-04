@@ -75,7 +75,7 @@ a {
 }
 
 /*        Card        *//* Prototipo de tarjeta */
-.sombra {box-shadow: 2px 1px #01579b80;}
+.sombra {background-color: cadetblue; box-shadow: 2px 1px #01579b80;}
 .card {
   display: flex;
   flex-flow: column;
