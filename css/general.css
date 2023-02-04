@@ -83,6 +83,7 @@ a {
   width: 300px;
   height: 400px;
   background-color: rgba(2, 119, 189, .4);
+  
   /*border: 1px dashed darkorange;*/
   font-size: 1rem;
 } 
