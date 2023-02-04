@@ -82,7 +82,7 @@ a {
   justify-content: space-between;
   width: 300px;
   height: 400px;
-  background-color: rgba(2, 119, 189, .8);
+  background-color: rgba(2, 119, 189, .6);
   /*border: 1px dashed darkorange;*/
   font-size: 1rem;
 } 
