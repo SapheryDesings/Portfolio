@@ -89,7 +89,6 @@ a {
   font-size: 1rem;
 } 
     .tituloCard, .footerCard {
-      /*line-height: normal;*/
       display: flex;
       flex-direction: column;
     }
@@ -98,15 +97,16 @@ a {
       font-size: 1.2rem;
       text-align: center;
     }
-    .tituloCard strong {margin: auto;}
+    .tituloCard strong {margin: auto; line-height: 35px;}
     .card img {
       min-height: 150px;
       min-width: 100%;
       background-color: rgba(255, 255, 255, .1);
     }
     .descripcionCard {
-      height: 130px;
+      /*height: 130px;*/
       padding: .2rem;
+      flex-grow: 5;
     }
     .footerCard {
       height: 35px;
