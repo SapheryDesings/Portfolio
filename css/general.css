@@ -93,7 +93,7 @@ a {
       flex-direction: column;
     }
     .tituloCard {
-      height: 35px;
+      min-height: 35px;
       font-size: 1.2rem;
       text-align: center;
     }
