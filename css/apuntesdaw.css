@@ -63,7 +63,7 @@ section {
 }
 /* >>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<< */
 aside {
-  min-width: 150px;
+  min-width: 20%;
   height: max-content;
   border: 2px dashed darkorange;
 }
@@ -90,7 +90,7 @@ aside {
     padding: 0;
     width: 100%;
     position: absolute;
-    left: 150px;
+    left: 0;
     top: 100%;
     opacity: 0.5;
     display: none;
