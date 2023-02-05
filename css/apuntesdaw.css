@@ -90,7 +90,7 @@ aside {
     padding: 0;
     width: 100%;
     position: absolute;
-    left: 0;
+    left: 2rem;
     top: 100%;
     opacity: 0;
     display: none;
