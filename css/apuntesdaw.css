@@ -69,6 +69,7 @@ aside {
 }
   .menuAside {
     display: flex;
+    flex-direction: column;
     gap: .5rem;
     list-style: none;
   }
