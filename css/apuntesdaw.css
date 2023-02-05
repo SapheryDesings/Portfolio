@@ -67,6 +67,37 @@ aside {
   height: max-content;
   border: 2px dashed darkorange;
 }
+  .menuAside {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+  }
+    .menuAside li {
+      padding: .5rem 1rem;
+      background-color: #212121;
+    }
+  .desplegableLi {
+    position: relative;
+  }
+    .desplegableLi:hover .desplegable {
+      display: block;
+      opacity: 1;
+    }
+  .desplegable {
+    background-color: slateblue;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    display: none;
+    background: #3498db;
+  }
+  .desplegable li {
+    list-style: none;
+  }
 
 article { 
   width: 100%;
