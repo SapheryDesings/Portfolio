@@ -26,8 +26,6 @@
 
   .navtop {justify-content: space-between;}
 
-  #apuntes { display: none;}
-
   .menuPrincipalAsignatura {
     flex-flow: row nowrap;
     justify-content: space-between;
