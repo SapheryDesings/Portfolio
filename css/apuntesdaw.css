@@ -275,7 +275,7 @@ nav {
   .navVertical li:hover {
     background-color: black;
   }
-  .navVertical {
+  .navVertical li a {
     display: block;
     color: white;
     padding: .2rem;
