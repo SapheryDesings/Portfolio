@@ -255,7 +255,13 @@ nav {
 }
 
   .navHorizontal {
-
+    display: flex;
+    justify-content: space-around;
+  }
+  .navHorizontal > li > a {
+    display: block;
+    padding: .2rem .4rem;
+    color: white;
   }
   .navVertical {
     position: absolute;
