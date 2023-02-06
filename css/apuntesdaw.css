@@ -249,3 +249,28 @@ img {
 }
 /*FIN TEXTO*/
 /*****************************************/
+
+nav {
+
+}
+
+  .navHorizontal {
+
+  }
+  .navVertical {
+    position: absolute;
+    display: none;
+    width: 100px;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .navHorizontal li:hover .navVertical {
+    display: block;
+  }
+  .navVertical li:hover {
+    background-color: black;
+  }
+  .navVertical {
+    display: block;
+    color: white;
+    padding: .2rem;
+  }
