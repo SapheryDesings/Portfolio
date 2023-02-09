@@ -6,20 +6,9 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  scrollbar-width: 5px;
-  scrollbar-color: #FF6F00;
-}
-*::-webkit-scrollbar {
-  width: auto;
-}
-*::-webkit-scrollbar-track { /*carril de la barra*/
-  background: var(--aguamar);
-}
-*::-webkit-scrollbar-thumb { /*la almohadilla de la barra*/
-  background-color: var(--tipografiaClara);
 }
 /*************************************************************************************/
-/* SEMANTICAS                                                                        */
+/* ESTRUCTURA                                                                        */
 /*************************************************************************************/
 :root {
   --fondoGris: #212121;
@@ -29,6 +18,12 @@
   --azulGrisaceo: #2980B9;
   --morado: #8E44AD;
   --mostaza: #F1C40F;
+}
+
+.apuntes, .tema, .articuloApuntes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
