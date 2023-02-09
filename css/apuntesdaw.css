@@ -251,7 +251,7 @@ img {
 /*****************************************/
 
 nav {
-
+  border: 2px dashed darkorchid;
 }
 
   .navHorizontal {

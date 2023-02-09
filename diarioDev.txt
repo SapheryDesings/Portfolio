@@ -1,21 +1,40 @@
 ESTRUCTURA DE TEMAS
 
-body
+body -> CLASE APUNTES PARA CCS GLOBAL
     header
         div.navtop
-        div.menuPrincipalAsignatura
-        div.tituloTema
+        div.menuPrincipalAsignatura - ELIMINAR
+        div.tituloTema -> DENTRO DE section
     /header
 
-    div.contenedor
-        div.indice
+    div.contenedor -> ELIMINAR
+        div.indice -> MENU COMPUESTO TEMAS Y APARTADOS
 
-        section -> section por tema
+        section -> section POR TEMA
             a /a ¿?
             h3 - Titulos y subtitulos fuera.. ¿?
             article
                 ...
             /article
-
     /div.contenedor
+/body
+
+ESTRUCTURA NEW TEMAS
+
+body.apuntes
+    header
+        div.navtop (INCLUYE MENU TEMAS Y APARTADOS)
+    /header
+    section.tema -> FONDO DEGRADADO LINEAL CLARO OSCURO CLARO ?
+        div.tituloTema
+            a -> Navegación
+            div.numeroTema
+            h2 -> Titulo TEMA
+        /div
+            article.articuloApuntes
+                a -> Navegación
+                h3 -> Titulo Apartado 
+                ...
+            /article
+    /section
 /body
