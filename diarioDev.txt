@@ -1,6 +1,21 @@
-Organizar y estructura el proyecto
-Boceto Figma -> Principal y partes
+ESTRUCTURA DE TEMAS
 
-Main flex columna
-    contenedor cards
-        cards -> flex con ancho fijo, solo cambia en las mQ
+body
+    header
+        div.navtop
+        div.menuPrincipalAsignatura
+        div.tituloTema
+    /header
+
+    div.contenedor
+        div.indice
+
+        section -> section por tema
+            a /a ¿?
+            h3 - Titulos y subtitulos fuera.. ¿?
+            article
+                ...
+            /article
+
+    /div.contenedor
+/body
