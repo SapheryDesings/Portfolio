@@ -24,13 +24,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*POSIBLE GAP ¿? */
 }
 
 body {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column nowrap;
+  width: 100%; /*ELIMINAR*/
+  margin: 0 auto; /*ELIMINAR*/
+  display: flex; /*ELIMINAR*/
+  flex-flow: column nowrap; /*ELIMINAR*/
   font-size: 1.5rem;
   background-color: var(--fondoGris);
   color: var(--tipografiaClara);
@@ -40,10 +41,10 @@ body {
 /* Contenedor para navtop, menuPrincipalAsignatura y el titúlo del tema */
 /*****************************************/
 header {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  display: flex; /*ELIMINAR*/
+  flex-flow: column nowrap; /*ELIMINAR*/
+  justify-content: center; /*ELIMINAR*/
+  align-items: center; /*ELIMINAR*/
   width: 100%;
   min-height: 200px;
   font-family: 'Titan One', cursive;
@@ -51,15 +52,15 @@ header {
 }
 
 section {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  margin: 0 auto;
+  display: flex; /*ELIMINAR*/
+  flex-flow: column nowrap; /*ELIMINAR*/
+  width: 100%; /*MODIFICAR*/
+  margin: 0 auto; /*REVISION ESPACIOS*/
 }
 
 article { 
-  width: 100%;
-  margin: 1rem auto;
+  width: 100%; /*ELIMINAR*//*COMPROBAR*/
+  margin: 1rem auto; /*REVISION ESPACIOS*/
 }
 /*****************************************/
 /* ENCABEZADOS */
@@ -69,11 +70,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
 
-h1, h2 {margin-bottom: 2rem;}
-h3, h4 {margin-bottom: 1rem;}
-h5, h6 {margin-bottom: .5rem;}
+h1, h2 {margin-bottom: 2rem;} /*REVISION ESPACIOS*/
+h3, h4 {margin-bottom: 1rem;} /*REVISION ESPACIOS*/
+h5, h6 {margin-bottom: .5rem;} /*REVISION ESPACIOS*/
 
-b {
+b { /*MODIFICAR OBSOLETA*/
   color: var(--morado);
   font-style: italic;
 }
@@ -81,8 +82,8 @@ b {
 /* PARRAFO */
 /*****************************************/
 p {
-  margin-bottom: 1rem;
-  padding: 1rem auto;
+  margin-bottom: 1rem; /*REVISION ESPACIOS*/
+  padding: 1rem auto;  /*REVISION ESPACIOS*/
 }
 /*****************************************/
 /* TEXTO SIN FORMATO - CODIGO */
@@ -164,7 +165,7 @@ img {
   background-color: var(--aguamar);
 }
 
-.menuPrincipalAsignatura { /* Menú de temas */
+.menuPrincipalAsignatura { /* Menú de temas *//*ELIMINAR*/
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -177,7 +178,7 @@ img {
           background-color: var(--aguamar);
         }
 
-.tituloTema { /* Título del tema */
+.tituloTema { /* Título del tema *//*MODIFICACION*/
   font-size: 1.8rem;
   align-self: center;
   padding: 2rem;
@@ -187,7 +188,7 @@ img {
 /*****************************************/
 /*CONTENEDOR*/
 /*****************************************/
-.contenedor { /* Contenedor todo menos header */
+.contenedor { /* Contenedor todo menos header *//*ELIMINAR*/
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -198,7 +199,7 @@ img {
 /*****************************************/
 /* INDICE DEL TEMA */
 /*****************************************/
-.indice { /* Indice del tema */
+.indice { /* Indice del tema */ /*ELIMINAR*/
   width: 80%;
   margin: 1rem auto;
 }
@@ -233,19 +234,19 @@ img {
 /*****************************************/
 /*TEXTO - TITULOS, SUBTITULOS Y APARTADOS*/
 /*****************************************/
-.subTitulo_3 {
+.subTitulo_3 { /*ELIMINAR*/
   border-bottom: 2px dashed var(--aguamar); 
   padding-bottom: 10px;
 }
 
-.subTitulo_4 {
+.subTitulo_4 { /*ELIMINAR*/
   border-left: 10px solid var(--aguamar); 
   padding-left: 10px;
 }
 /*FIN TEXTO*/
 /*****************************************/
 
-nav {
+nav { /*MODIFICAR Y ADAPTAR -> TEMAS + APARTADOS*/
   border: 2px dashed darkorchid;
 }
 
