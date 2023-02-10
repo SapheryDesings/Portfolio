@@ -107,11 +107,11 @@ code {
 a {color: var(--tipografiaClara);}
 /*****************************************/
 /* LISTAS */
-/*****************************************/
-ul, ol {
+/*****************************************//*
+ul, ol { -> REVISAR
   margin: 1rem 0 2rem;
   list-style-position: inside;
-}
+}*/
 
 ul { list-style-type: square;}
 
@@ -119,7 +119,7 @@ ul { list-style-type: square;}
     margin-left: 5%;
   }
 
-  li {margin: .5rem 0;}
+  /*li {margin: .5rem 0;}*/
   ul li::marker {
     color: var(--aguamar); 
     font-size: 1.5rem;
@@ -160,23 +160,41 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   padding: .8rem 10%;
   background-color: var(--aguamar);
 }
 
-.menuPrincipalAsignatura { /* Menú de temas *//*ELIMINAR*/
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  padding: .5rem 1rem; 
-}
-    .menuPrincipalAsignatura a {
-      padding: .5rem 1rem;
-    } 
-        .menuPrincipalAsignatura a:hover {
-          background-color: var(--aguamar);
-        }
+  /*nav { MODIFICAR Y ADAPTAR -> TEMAS + APARTADOS
+    border: 2px dashed darkorchid;
+  }*/
+    .navHorizontal {
+      display: flex;
+      justify-content: space-around;
+    }
+    .navHorizontal > li > a {
+      display: block;
+      padding: .2rem .6rem;
+    }
+    .navVertical {
+      position: absolute;
+      display: none;
+      list-style: none;
+      width: 200px;
+      background-color: var(--aguamar);
+      border: 2px dashed hotpink;
+    }
+    .navHorizontal li:hover .navVertical {
+      display: block;
+    }
+    .navVertical li:hover {
+      background-color: black;
+    }
+    .navVertical li a {
+      display: block;
+      padding: .2rem;
+    }
 
 .tituloTema { /* Título del tema *//*MODIFICACION*/
   font-size: 1.8rem;
@@ -245,35 +263,3 @@ img {
 }
 /*FIN TEXTO*/
 /*****************************************/
-
-nav { /*MODIFICAR Y ADAPTAR -> TEMAS + APARTADOS*/
-  border: 2px dashed darkorchid;
-}
-
-  .navHorizontal {
-    display: flex;
-    justify-content: space-around;
-  }
-  .navHorizontal > li > a {
-    display: block;
-    padding: .2rem .4rem;
-    color: white;
-  }
-  .navVertical {
-    position: absolute;
-    display: none;
-    list-style: none;
-    width: 200px;
-    background-color: rgba(0, 0, 0, .5);
-  }
-  .navHorizontal li:hover .navVertical {
-    display: block;
-  }
-  .navVertical li:hover {
-    background-color: black;
-  }
-  .navVertical li a {
-    display: block;
-    color: white;
-    padding: .2rem;
-  }
