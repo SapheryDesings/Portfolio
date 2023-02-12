@@ -76,6 +76,6 @@
 
 }
 
-.navHorizontal li:active {
+.navHorizontal li:active .navVertical{
   display: block;
 }
