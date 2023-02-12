@@ -66,6 +66,7 @@ section { /*
 article { 
   /*width: 100%; ELIMINAR*/
   margin: 1rem auto; /*REVISION ESPACIOS*/
+  border: 2px dashed darkorchid;
 }
   article ul, ol { 
     margin: 1rem 0 2rem;
