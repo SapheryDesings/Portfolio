@@ -50,7 +50,7 @@
   <!--*************************************************************-->
   <section>
     <h3 class="subTitulo_3">Introducción</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>El <b>software base</b> es el programa encargado de controlar el ordenador.</p>
     </article>
   </section>
@@ -58,24 +58,24 @@
   <section>
     <a name="2.1"></a>
     <h3 class="subTitulo_3">Administración de usuarios y grupos locales</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Mediante las cuentas de usuario se identifica y autentifica un individuo con el sistema. En un mismo equipo pueden trabajar varias personas, con su propio espacio de trabajo.</p>
       <p>El usuario administrador es el encargado de dar acceso a los usuarios y controlar todas las operaciones, este usuario no tiene límites cuando trabaja sobre el sistema.</p>
       <p>Los S.O. multiusuario ofrecen la posibilidad de registrarse al iniciar sesión, con estos datos se puede controlar el acceso y permite asignar permisos y restricciones.</p>
     </article>
     <h4 >Diferentes permisos</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Lectura(read):</b> El usuario tiene la posibilidad de abrir y leer los contenidos del fichero.</li>
         <li><b>Escritura(write):</b> Además puede hacer cualquier modificación sobre el fichero.</li>
         <li><b>Ejecución(execute):</b> Ofrece al usuario la posibilidad de ejecutar el fichero.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>La gestión de usuarios la lleva a cabo el administrador o root, que es el que dispone de todos los permisos, sin limitación.</p>
     </article>
     <h4 >Permisos en linux</h4>
-    <article>
+    <article class="articuloApuntes">
       <p>
         <b>-rw-r--r--</b> Estos nueve caracteres se dividen en tres grupos en tres caracteres.
         <ul>
@@ -85,7 +85,7 @@
         </ul>
       </p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>
         <b>-rwx</b>r--r-- Acceso al fichero de propietario.
         <ul>
@@ -96,7 +96,7 @@
         El acceso del propietario tiene acceso de lectura, escritura y ejecución.
       </p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>
         -rwx<b>r--</b>r-- Acceso al fichero de propietario.
         <ul>
@@ -107,7 +107,7 @@
         El acceso para el fichero del grupo solo tiene permiso de lectura.
       </p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>
         -rwxr--<b>r--</b> Acceso al fichero de propietario.
         <ul>
@@ -118,7 +118,7 @@
         El acceso a los permisos globales es de solo lectura.
       </p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>Para simplificar tenemos la opción de <b>establecer grupos de usuarios</b>. Utilizando los grupos, es más fácil conceder o denegar permisos a varios usuarios a la vez, en vez de individual. <br>Hay dos situaciones en las que resulta útil:</p>
       <ul>
         <li><b>Creación de grupos para la asignación de recursos:</b> Cuando hemos instalado un nuevo recurso y queremos asignarlo a varios usuarios.</li>
@@ -131,17 +131,17 @@
   <section>
     <a name="2.2"></a>
     <h3 class="subTitulo_3">Seguridad de cuentas de usuario</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Si únicamente nosotros tenemos acceso a un equipo es habitual que lo hagmos como administrador, teneiendo todos los permisos. Es importante que iniciemos sesión con dicha cuenta o con otras que nos birnden permisos avanzados si las operaciones lo requieren. Para maximizar la seguridad debemos tener en cuenta las siguientes pautas:</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Cuentas de administrador:</b> Cambiar el nombre de la cuenta de administrador y asignarle una contraseña segura.</li>
         <li><b>Cuentas de invitado:</b> Mejor mantenerlas deshabilitadas, pueden comprometer la seguridad.</li>
         <li><b>Cuentas de usuario:</b> se le deben asignar únicamente los permisos estrictamente necesarios.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>El uso de la cuenta de administrador se debe limitar a aquellas situaciones en las que necesitamos disponer de privilegios:</b> Cambios de configuración, instalar una nueva aplicación, dar alta a un nuevo usuario, etc..</p>
       <p>Si un virus infecta cuando utilizamos la cuenta administrador, resulta más difícil de eliminar, al tener control total del equipo. En una cuenta estándar la limitación de permisos reducirá sus efectos nocivos.</p>
     </article>
@@ -151,11 +151,11 @@
   <section>
     <a name="2.3"></a>
     <h3 class="subTitulo_3">Seguridad de contraseñas</h3>
-    <article>  
+    <article class="articuloApuntes">  
       <p>Las contraseñas son clave para proteger las cuentas de usuario y la información que se almacena en el equipo, cuanto más segura sea una contraseña, mayor protección nos ofrecerá.</p>
       <p>Los S.O. ofrecen al administrador la posibilidad de establecer cuáles serán las características de las contraseñas.</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Número de caracteres:</b> Mínimo ocho caracteres, pudiendo tener más.</li>
         <li><b>Tipo de caracteres:</b> Deben contener diferentes tipos de símbolos: mayúsculas, minúsculas, números y alfanuméricos.</li>
@@ -163,21 +163,21 @@
         <li><b>Renovación periódica de las contraseñas:</b> Deben ser cambiadas con regularidad y ser significativamente distintas a la anterior.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>La cuenta de usuario invitado tiene los mismos privilegios que un usuario estándar, pero es anónima y sin contraseña. Viene deshabilitada por defecto y por seguridad convien no habilitarla.</p>
     </article>
     <h4 >Administración de perfiles locales de usuario</h4>
-    <article>
+    <article class="articuloApuntes">
       <p>En los S.O. multiusuario podemos definir diferentes perfiles, cada uno contendrá la información relativa a la configuración de esos usuarios específicos.</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li>Configuración del escritorio del usuario</li>
         <li>Configuración de las aplicaciones a las que tendrá acceso.</li>
         <li>Accesos a carpetas, impresoras en red, etc.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>El perfil se crea automaticacmente al darlos de alta o cuando inician sesión por primera vez. No obstante, el administrador podrá crear perfiles idóneos y asignarlos las cuentas.</p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
@@ -186,44 +186,44 @@
   <section>
     <a name="2.4"></a>
     <h3 class="subTitulo_3">Configuración del protocolo TCP/IP. Direcciones IP y máscaras de subred</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>La <b>dirección IP</b> constituye el concepto fundamental en para configurar debidamente el servidor de redes. Con ella podemos identificar a cada equipo y consta siempre de cuatro números enteros de 4 bytes separados por puntos que pueden oscilar entre 0 y 255.</p>
       <p>Su formato sera W.X.Y.Z (192.168.1.21), dentro du una misma red no pueden existir dos direcciones IP iguales.</p>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Dirección de red:</b> Son los primeros bits de la dirección IP, así todos los equipos que pertenecen a una misma red contienen la misma dirección de red. Esto nos indica que estos equipos pueden comunicarse entre sí de forma directa.</li>
         <li><b>Dirección de equipo:</b> Son los ultimos bits de la dirección IP, son diferentes para cada equipo e indican la dirección del equipo en dicha red.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>¿Qué números corresponden a la red y cuál al equipo?</b></p>
       <p>Para ello utilizamos la máscara de red o máscara de subred. Estos parámetros establecen la longitud de ambas mitades. Es una dirección IP que tiene asignado un valor de 255 para los bytes correspondientes a la dirección de red y 0 para los bytes que se corresponden con la dirección del equipo. Por ejempo 255.255.255.0</p>
       <p>Una posible división de los distintos tipos de direcciones IP daría lugar a tres clases de redes:</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Direcciones IP de clase A:</b> En ellas únicamente el primer entero identifica la red, los tres restantes se refieren a los equipos dentro de ella. Así una dirección W.X.Y.Z de clase A, solamente W identifica la red, X.Y.Z hacen referencia a los ordenadores.</li>
         <li><b>La clase B</b> El segmento W.X identifica la red y Y.Z los equipos.</li>
         <li><b>La clase C</b> W.X.Y identifican a la red y únicamente Z se refiere a los equipos.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>Dividir la red en subredes facilita la identificación de los equipos cuando estos son muy numerosos. A este proceso se le denomina subnetting y para ello se usa la máscara de subred.</p>
       <p>La división de subredes plantea que si una red desperdicia muchas direcciones IP, esta puede ser dividida en subredes para aprovechar mejor el espacio de direccionamiento. Para obtener dos subredes será necesario coger un único bit de los reservador para direccionar, ya que con él se pueden representar dos números. Si fueran tres subredes se necesitaría un bit más, que daría como resultado cuatro subredes. Al utilizar bits de host para crear subredes, menos host podrá albergar cada una.</p>
       <p><b>Cantidad de redes por cada clase:</b></p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Clase A:</b> 7 bits para direccionar redes -> 2<sup>7</sup> redes</li>
         <li><b>Clase B:</b> 14 bits para direccionar -> 2<sup>14</sup> redes</li>
         <li><b>Clase C:</b> 21 bits para direccionar -> 2<sup>21</sup> redes</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>2n - 2 donde "n" es el número de bits reservados para hosts.</b> <br> Se restan 2 porque el primero se reserva para identificar la red y el último para la IP de broadcast.</p>
       <p><b>Cantidad de hosts por cada red de cada clase:</b></p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Clase A:</b> 24 bits para direccionar hosts -> 2<sup>24</sup> - 2 hosts</li>
         <li><b>Clase B:</b> 16 bits para direccionar hosts -> 2<sup>16</sup> - 2 hosts</li>
@@ -231,20 +231,20 @@
       </ul>
     </article>
     <h4 class="subTitulo_4">Conceptos asociados a la IP</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>IP privada:</b> Es la dirección que posee cada equipo o dispositivo que se conecta a nuestra red a través del protocolo TCP/IP. Podemos asignarla nosotros o hacer que se asigne automáticamente a través del DHCP.</li>
         <li><b>IP pública:</b> Es la dirección que usamos para identificarnos en la red cuando nos conectarmos a otras redes externas, como internet. Nos la asigna el proveedor de internet, no se puede configurar.</li>
       </ul>
     </article>
     <h4 class="subTitulo_4">Las IP públicas que nos asignan los ISP pueden ser:</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Estáticas:</b> La IP es fija, siempre es la misma. Este servicio suelen cobrarlo ya que nos permite mayor control y nos da la posibilidad de asignar un nombre de dominio (www.dominio.com).</li>
         <li><b>Dinámicas:</b> La más habitual, nos la asigna de forma aleatoria cada vez que nos conectarmos a la red.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>Señalar que la versión 4 del protocolo IP (IPv4) permite algo más de 4000 millones de direcciones distintas. Los S.O. más recientes incorporan el IPv6 que admite muchas más direcciones.</p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
@@ -253,7 +253,7 @@
   <section>
     <a name="2.5"></a>
     <h3 class="subTitulo_3">Servicio de Nombres de Dominios (DNS)</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Los servidores DNS son muy importantes, estos tienen la misión de evitar recordar la IP del equipo al que nos conectamos. Es el servidor DNS el que relaciona el nombre escrito (www.google.es) con la ip (142.250.200.68) que tiene alojada la página que queremos visualizar.</p>
       <p>Para comprobar el estado de los servidores DNS en un equipo se realiza habitualmente por consola de comandos y a que es la forma más sencilla y rápida.</p>
       <p>Utilizaremos el comando (ipconfig) en el caso de windows y (ifconfig) en sistemas linux, con la sentencia (/all) para mostrar toda la información.</p>
@@ -266,18 +266,18 @@
   <section>
   <a name="2.6"></a>
     <h3 class="subTitulo_3">Archivos de configuración de red</h3>  
-    <article>  
+    <article class="articuloApuntes">  
       <p>Toda la comunicación en red sigue el modelo TCP/IP. Como protocolo, rige las normas al realizar este proceso de comunicación.</p>
       <p>La configuración de nuestro equipo se realiza a través del Panel de control:</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ol>
         <li><b>Panel de control / redes e internet</b></li>
         <li><b>Centro de redes y recursos compartidos:</b> En ver redes activas observamos la red por la que conectamos y hacemos clic en ella.</li>
         <li><b>Propiedades del adaptador:</b> Elegimos Protocolo de internet TCP/IPv4.</li>
       </ol>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>Una vez configurada la dirección IP, máscara de subred y servidores DNS, aceptar. La información se guarda en los archivos de configuración del sistema. La configuración de linux se almacena en /etc/network/interfaces.</p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
@@ -287,14 +287,14 @@
   <a name="2.7"></a>
     <h3 class="subTitulo_3">Optimización de sistemas para ordenadores portátiles. Archivos de red sin conexión</h3>  
     <h4 class="subTitulo_4">Los pórtatiles poseen unas características propias que debemos tener en cuenta:</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Mayor vulnerabilidad:</b> Por su movilidad fuera de casa u oficina resulta más vulnerable a intrusiones. Si nos conectamos a una red inalámbica se duplica. E incluso debemos tener en cuenta que pueden llegar a caer en manos inadecuadas.</li>
         <li><b>Menos rendimiento y otras características:</b> Aunque los equipos de última generación están equiparandose a los sobremesa, los de gama baja y los más antiguos el rendimiento es menor.</li>
       </ul>
     </article>
     <h4 class="subTitulo_4">Por esto es conveniente aplicar mayor seguirdad:</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Habilitar contraseñas adicionales:</b> Además de la contraseña de inicio de sesión, podemos habilitar la de la BIOS e instalar software adicional para proteger archivos y carpetas.</li>
         <li><b>Sistemas de autenticación fuertes:</b> Como lectores de huellas o tarjetas inteligentes.</li>
@@ -302,7 +302,7 @@
       </ul>
     </article>
       <h4 class="subTitulo_4">En cuanto los portátiles de gama baja podemos optimizar el sistema con algunos cambios en su configuración:</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li>Desactivar los sonidos del sistema</li>
         <li>Eliminar aplicaciones que no se usen</li>
@@ -310,7 +310,7 @@
         <li>Desactivar los programas que se cargan en el inicio</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>También es importante tener encuenta que si abandonamos el lugar desde el que nos conectarmos a la red, los archivos que se encuentren accesibles a través de ella dejarán de estar disponibles. Para solucionarlo tendremos que pulsar sobre el archivo o carpeta con el botón secundario del ratón y elegir <b>Siempre disponible sin conexión</b>.</p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
@@ -319,10 +319,10 @@
   <section>
   <a name="2.8"></a>
     <h3 class="subTitulo_3">Principales comandos de sistemas operativos libres y propietarios</h3>  
-    <article>
+    <article class="articuloApuntes">
       <p>Existen una serie de comandos que nos ofrecen la posibilidad de movernos y gestionar los S.O. Es conveniente conocer los más utilizados:</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <table>
         <tr>
           <th>Comando</th>
@@ -373,7 +373,7 @@
         </tr>
       </table>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>Para mayor información consultaremos las páginas oficiales donde encontraremos información más detallada. Además de comandos más complejos, tenemos más opciones que disponen o el formato que tienen que cumplir pueden variar.</p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>

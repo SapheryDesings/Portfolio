@@ -43,10 +43,10 @@
   <section> <!-- INTRO -->
     <a name="2.0"></a>
     <h3 class="subTitulo_3">Introducción</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Para desarrollar nuestros programas utilizaremos el lenguaje de programación C# es un lenguaje de alto nivel que pertenece al conjunto de lenguajes de .NET. Para ello utilizaremos un IDE, un entorno de desarrollo integrado diseñado para el desarrollo de aplicaciones con un conjunto de herramientas integradas en una interfaz gráfica de usuario (GUI). Sus características son:</p>
     </article> 
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Editor de código fuente:</b> Ayuda a escribir el código resaltando la sintaxis de forma visual y rellenando de forma automática las distintas opciones que nos proporciona el lenguaje.</li>
         <li><b>Depurador:</b> Localiza errores de código.</li>
@@ -58,18 +58,18 @@
   <section> <!-- PUNTO 2.1 -->
     <a name="2.1"></a>
     <h3 class="subTitulo_3">Bloques de un programa informático</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Un programa es una secuencia de intrucciones separadas por un punto y coma que se van a ir agrupando en diferentes bloques mediante llaves.</p>
       <p>Cuando creamos un nuevo proyecto, se crea la siguiente estructura.</p>
       <p>Primero nos crea la clase <b>program</b>. Una <b>clase</b> es una estructura de datos que está compuesta por atributos o variables y métodos o funciones.</p>
       <p>El método principal se denomina <b>Main</b>. Será el primero en ejecutarse en nuestro programa. Este tiene una serie de argumentos, que son cadenas de caracteres que podemos pasar línea de comandos.</p>
     </article>
     <h4 class="subTitulo_4">Entrada y salida por pantalla</h4>
-    <article>
+    <article class="articuloApuntes">
       <p>Emplearemos la clase <b>Console</b> para establecer la comunicación entre usuario y el programa.</p>
       <p>Para la salida por pantalla, vamos utilizar los métodos de esta clase, <b>Write</b> y <b>Writeline:</b></p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Write()</b> escribe un valor o valores especificados en el flujo de salida estándar.</li>
         <li><b>WriteLine()</b> escribe un valor o valores especificado y se realiza un salto de línea en nuestra consola.</li>
@@ -87,7 +87,7 @@
         </pre>
       </p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>Para la entrada de datos, utilizaremos el método <b>ReadLine()</b>. Este leerá el dato introducido por el usuario y devolverá un dato de tipo cadena (string).</p>
       <p>Otro método es <b>Read()</b>, que leerá el dato introducido y devolverá un dato tipo entero (int).</p>
       <p>También podemos utilizar <b>ReadKey()</b>, aquí se obtiene el carácter presionado por el usuario y se muestra esta tecla por la pantalla.</p>
@@ -104,12 +104,12 @@
   <section> <!-- PUNTO 2.2 -->  
     <a name="2.2"></a>
     <h3 class="subTitulo_3">Variables. Usos y Tipos</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Una <b>variable</b> es una estructura de datos que ocupan un espacio en memoria y pueden variar a lo largo de un programa.</p>
       <p>Cuando <b>declaramos una variable</b> establecemos el tipo de dato (entero, cadena, carácter, etc) y su identificador.</p>
     </article>
     <h4 class="subTitulo_4">Tipos de datos en C#:</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Enteros con signo:</b> Sbyte, short, int, long.</li>
         <li><b>Enteros sin signo:</b> Byte, unshort, unit, ulong.</li>
@@ -119,14 +119,14 @@
         <li><b>Booleano:</b> Bool</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>Tipo Sting:</b> son cadenas de caracteres.</p>
       <p><b>Tipo de dato enumerado, enum:</b> días_semana {lunes, martes, miercoles};</p>
       <p>Tipos matriz: Unidimensionales y Multidimensionales.</p>
       <p>Para <b>definir una variable</b>, primero necesitamos conocer el tipo de datos que va almacenar y el nombre que le vamos asignar. Es importante que el nombre sea identificativo con su contenido.</p>
     </article>
     <h4 class="subTitulo_4">Para identificar a una variable, debemos seguir una serie de normas:</h4>
-    <article>  
+    <article class="articuloApuntes">  
       <ul>
         <li>Debe comenzar por un carácter (letra o "_").</li>
         <li>Debe estar formada por caracteres del alfabeto (no podemos usar ñ) o por dígitos (del 0 al 9). Se puede utilizar el subrayado("_").</li>
@@ -136,18 +136,18 @@
         <li>No se pueden utilizar palabras reservadas.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>A las variables también se les puede asignar un valor, ej.: int num = 5;</p>
       <p>Definimos una variable de tipo entero, llamada num y le asignamos el valor 5.</p>
     </article>
     <h4 class="subTitulo_4">Las variables pueden ser dependiendo de su ámbito:</h4>
-    <article>
+    <article class="articuloApuntes">
       <ul>
         <li><b>Variables locales:</b> aquellas declaradas <b>dentro</b> de un método o función.</li>
         <li><b>Variables globales:</b> aquellas declaradas <b>fuera</b> de un método o función. Podemos acceder a ellas desde cualquier punto del programa.</li>
       </ul>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>No es buena prática utilizar variables globales. El problema es que se crean dependencias ocultas. Cuando la aplicación es grande, no se conoce los objetos que tiene ni sus relaciones.</p>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
@@ -156,27 +156,27 @@
     <a name="2.3"></a>
     <h3 class="subTitulo_3">Constantes y Literales. Tipos y utilidades</h3>
     <h4 class="subTitulo_4">Constantes</h4>
-    <article>  
+    <article class="articuloApuntes">  
       <p>Son aquellas cuyo contenido no se puede alterar a lo largo del programa. La palabra reservada es <b>const</b>, y se definen fuera del cuerpo de cualquier función, normalmente al principio del programa.</p>
     </article>
     <h4 class="subTitulo_4">Literales</h4>
-    <article>
+    <article class="articuloApuntes">
       <p>Así podemos representar de forma explícita todos los valores que pueden tomar los tipos básicos del lenguaje.</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>Literales enteros:</b></p>
       <ul>
         <li><b>Decimales:</b> sin ningún prefijo.</li>
         <li><b>Hexadecimales:</b> con el prefijo de 0x o 0X.</li>
       </ul>
     </article>  
-    <article>
+    <article class="articuloApuntes">
       <p><b>Literales reales:</b> sin sufijo o con el sufijo d o D es del tipo <b>double</b>.Con el sufijo f o F es del tipo <b>float</b>. Con el sufijo m o M es del tipo <b>decimal</b>.</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>Literales de lógicos:</b> representados por los valores lógicos true (verdadero) y false (falso).</p>
     </article>  
-    <article>
+    <article class="articuloApuntes">
       <p><b>Literales de carácter:</b> cualquier carácter en C# podemos representarlo con comillas simpres ´´.</p>
       <p>Existen caracteres especiales:</p>
       <ul>
@@ -197,7 +197,7 @@
     <a name="2.4"></a>
     <h3 class="subTitulo_3">Operadores del lenguaje de programación</h3>
     <h4 class="subTitulo_4">Operadores aritméticos</h4>
-    <article> 
+    <article class="articuloApuntes"> 
       <table>
         <tr>
           <th>Operador</th>
@@ -232,11 +232,11 @@
           <td>Obtiene el resto de la división entera</td>
         </tr>
       </table> 
-    <article>
+    <article class="articuloApuntes">
       <p>El <b>operador de incremento ++</b> puede ser aplicado como prefijo o sufijo de una variable. Sucede lo mismo con el operador decremento --.</p>
       <p>La prioridad de los operadores (de mayor a menor):</p>
     </article>
-    <article>  
+    <article class="articuloApuntes">  
       <ol>
         <li>De incremento y decremento sufijos.</li>
         <li>De incremento y decremento prefijos.</li>
@@ -245,7 +245,7 @@
       </ol>
     </article>
     <h4 class="subTitulo_4">Operadores booleanos</h4>
-    <article>
+    <article class="articuloApuntes">
       <table>
         <tr>
           <th>Operador</th>
@@ -277,14 +277,14 @@
         </tr>
       </table>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>El operador <b>AND lógico &</b> calcula el resultado de a & b es true si a y b se evalúan como true. Si no, el resultado es false.</p>
       <p><b>&&</b> también evalúa sus operandos, pero no evalúa el operando derecho si el izquierdo es false.</p>
       <p>| calcula el resultado de a | b es true si a o b se evalúan como true. Si no, es false.</p>
       <p>|| también evalúa sus operandos pero no evalúa el operando derecho si el izquierdo se evalúa como true.</p>
       <p>^ es el operador exclusivo o XOR. La tabla de la verdad es:</p>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <table>
         <caption>Tabla de verdad XOR</caption>
         <tr>
@@ -314,11 +314,11 @@
         </tr>
       </table>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p><b>El operador !</b> calcula la negación de su operando, si el operando es true, devolverá el valor false y viceversa.</p>
     </article>
     <h4 class="subTitulo_4">Operadores de comparación e igualdad</h4>
-    <article>
+    <article class="articuloApuntes">
       <table>
         <tr>
           <th>Operador</th>
@@ -354,7 +354,7 @@
         </tr>
       </table>
     </article>
-    <article>
+    <article class="articuloApuntes">
       <p>El operador < devuelve true si el operador izquierdo es menor que el derecho. El operador > devuelve true si el izquierdo es mayor que el derecho.</p>
       <p>El operador <= devuelve true si el izquierdo es menor o igual que el derecho. >= devuelve true si el izquierdo es mayor o igual que el derecho.</p>
       <p>El operador de igualdad == devuelve true si sus operandos son iguales.</p>
@@ -365,7 +365,7 @@
   <section> <!-- PUNTO 2.5 -->
     <a name="2.5"></a>
     <h3 class="subTitulo_3">Conversiones de tipos de clase</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>Cuando declaramos una variable, no se puede volver a declarar, ni asignar un valor de otro tipo. En ocasiones, podemos convertir el valor de una variable de un tipo a otro. Podemos tener diferentes clases de conversiones:</p>
       <ul>
         <li><b>Conversiones implícitas:</b> son aquellas que se producen cuadno el valor que se va a almacenar se puede almacenar en una variable sin truncarse ni redondearse. Por ejemplo almacenar una variable int dentro de una variable long.</li>
@@ -373,12 +373,12 @@
       </ul>
     </article>
     <h4 class="subTitulo_4">Parse y TryParse</h4>
-    <article>
+    <article class="articuloApuntes">
       <p>Con estos métodos podemos convertir una cadena en varios tipos numéricos: int, decimal, double...</p>
       <p>El método Parse devuelve el número convertido. TryParse devuelve un valor booleano indicado si la conversión se realizó correctamente o no, y devuelve el número convertido.</p>
     </article>
     <h4 class="subTitulo_4">Convert</h4>
-    <article>
+    <article class="articuloApuntes">
     <p>Es una clase que convierte un tipo de datos en otro. Algunos métodos son:</p>
       <table>
         <caption>Métodos de Conversión</caption>
@@ -425,7 +425,7 @@
   <section> <!-- PUNTO 2.6 -->
     <a name="2.6"></a>
     <h3 class="subTitulo_3">Comentario al código</h3>
-    <article>
+    <article class="articuloApuntes">
       <p>No debemos pasar por alto que, además de realizar programas, lo debemos hacer de la forma más optimizada y ordenada posible. Los <b>comentarios</b> son una herramienta disponible en el compilador para que se puedan hacer anotaciones en el código sin que sea procesado por el compilador. Está permitido hacer dos tipos de comentarios:</p>
       <ul>
         <li><b>Comentarios de una línea:</b> son frases cortas, solo pueden ocupar una línea del código. Para comenzar escribir // antes de comenzar con dichas anotaciones.</li>

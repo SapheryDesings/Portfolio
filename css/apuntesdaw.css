@@ -20,19 +20,22 @@
   --morado: #8E44AD;
   --mostaza: #F1C40F;
 }
-
-.apuntes, .tema, .articuloApuntes {
+/*
+body class principal
+body class apuntes
+*/
+.principal, .apuntes, .tema, .articuloApuntes {
   display: flex;
   flex-direction: column;
   align-items: center;
   /*POSIBLE GAP ¿? */
 }
 
-body {
-  width: 100%; /*ELIMINAR*/
-  margin: 0 auto; /*ELIMINAR*/
-  display: flex; /*ELIMINAR*/
-  flex-flow: column nowrap; /*ELIMINAR*/
+body { /*
+  width: 100%; 
+  margin: 0 auto; 
+  display: flex; 
+  flex-flow: column nowrap; ELIMINAR*/
   font-size: 1.5rem;
   background-color: var(--fondoGris);
   color: var(--tipografiaClara);
@@ -41,20 +44,20 @@ body {
 /* CABECERA */
 /* Contenedor para navtop, menuPrincipalAsignatura y el titúlo del tema */
 /*****************************************/
-header {
-  display: flex; /*ELIMINAR*/
-  flex-flow: column nowrap; /*ELIMINAR*/
-  justify-content: center; /*ELIMINAR*/
-  align-items: center; /*ELIMINAR*/
+header { /*
+  display: flex;
+  flex-flow: column nowrap; 
+  justify-content: center; 
+  align-items: center; ELIMINAR*/
   width: 100%;
   min-height: 200px;
   font-family: 'Titan One', cursive;
   font-weight: 100;
 }
 
-section {
-  display: flex; /*ELIMINAR*/
-  flex-flow: column nowrap; /*ELIMINAR*/
+section { /*
+  display: flex; 
+  flex-flow: column nowrap; ELIMINAR*/
   width: 100%; /*MODIFICAR*/
   margin: 0 auto; /*REVISION ESPACIOS*/
 }
