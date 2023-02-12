@@ -192,6 +192,9 @@ img {
     .navHorizontal li:hover .navVertical {
       display: block;
     }
+    .navHorizontal li:active {
+      display: block;
+    }
     .navVertical li:hover {
       background-color: var(--aguamar);
     }
