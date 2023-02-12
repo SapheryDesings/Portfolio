@@ -58,12 +58,12 @@ header { /*
 section { /*
   display: flex; 
   flex-flow: column nowrap; ELIMINAR*/
-  width: 80%; /*MODIFICAR*/
+  width: 80%;
   margin: 0 auto; /*REVISION ESPACIOS*/
 }
 
 article { 
-  width: 100%; /*ELIMINAR*//*COMPROBAR*/
+  /*width: 100%; ELIMINAR*/
   margin: 1rem auto; /*REVISION ESPACIOS*/
 }
   article ul, ol { 
