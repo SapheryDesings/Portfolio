@@ -31,6 +31,10 @@ body class apuntes
   /*POSIBLE GAP ¿? */
 }
 
+  .articuloApuntes {
+    align-items: flex-start;
+  }
+
 body { /*
   width: 100%; 
   margin: 0 auto; 
