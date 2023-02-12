@@ -189,10 +189,10 @@ img {
       background-color: rgba(52, 152, 219, 0.5);
       backdrop-filter: blur(2px);
     }
-    .navHorizontal li:hover .navVertical {
+    .navHorizontal li:active .navVertical {
       display: block;
     }
-    
+
     .navVertical li:hover {
       background-color: var(--aguamar);
     }
