@@ -75,3 +75,7 @@
   th, td { padding: .3rem 1rem;}
 
 }
+
+.navHorizontal li:active {
+  display: block;
+}
