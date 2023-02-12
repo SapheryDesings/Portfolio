@@ -60,6 +60,7 @@ section { /*
   flex-flow: column nowrap; ELIMINAR*/
   width: 80%;
   margin: 0 auto; /*REVISION ESPACIOS*/
+  border: 2px dashed darkorange;
 }
 
 article { 
