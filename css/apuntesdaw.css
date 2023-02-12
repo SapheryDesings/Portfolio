@@ -58,7 +58,7 @@ header { /*
 section { /*
   display: flex; 
   flex-flow: column nowrap; ELIMINAR*/
-  width: 100%; /*MODIFICAR*/
+  width: 80%; /*MODIFICAR*/
   margin: 0 auto; /*REVISION ESPACIOS*/
 }
 
