@@ -24,7 +24,7 @@
 body class principal
 body class apuntes
 */
-.principal, .apuntes, .tema, .articuloApuntes {
+.principal, .apuntes, main, .temaIndice, .tema, .articuloApuntes {
   display: flex;
   flex-direction: column;
   align-items: center;

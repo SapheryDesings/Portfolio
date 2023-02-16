@@ -112,7 +112,10 @@ a {
       background-color: rgba(255, 255, 255, .1);
     }
     .footerCard span { margin: auto 0; padding: .2rem;}
+/*********************/
 
+
+/****** MEDIASQ ******/
 @media screen and (min-width:768px) and (max-width: 1024px){
   .presentacion {font-size: 6rem;}
   .card {width: 330px;}
