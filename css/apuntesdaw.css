@@ -27,7 +27,7 @@ body class apuntes
 .principal, .apuntes, main, .temaIndice, .tema, .articuloApuntes {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   /*POSIBLE GAP ¿? */
 }
 
@@ -278,4 +278,32 @@ img {
   padding-left: 10px;
 }
 /*FIN TEXTO*/
+/*****************************************/
+/*Indices*/
+  .temaIndice {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .temaIndice span {
+    padding: 1rem;
+    font-weight: bold;
+    background-color: var(--aguamar);
+    /*border: 2px dashed darkorange;*/
+  }
+
+  .temaIndice ul {
+    border: 5px dashed rgba(255, 255, 255, 0.1);
+  }
+  .temaIndice ul li {
+    padding: 1rem 2rem;
+    border-bottom: 5px dashed rgba(255, 255, 255, 0.1);
+  }
+
+    .temaIndice ul li:last-child {
+      border: none;
+    }
+    .temaIndice ul li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
 /*****************************************/
