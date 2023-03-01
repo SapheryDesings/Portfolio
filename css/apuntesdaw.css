@@ -178,40 +178,6 @@ img {
   background-color: var(--aguamar);
 }
 
-  /*nav { MODIFICAR Y ADAPTAR -> TEMAS + APARTADOS
-    border: 2px dashed darkorchid;
-  }*/
-    .navHorizontal {
-      display: flex;
-      justify-content: space-around;
-    }
-    .navHorizontal > li > a {
-      display: block;
-      padding: .2rem .6rem;
-    }
-    .navVertical {
-      position: absolute;
-      display: none;
-      list-style: none;
-      width: 200px;
-      background-color: rgba(52, 152, 219, 0.5);
-      backdrop-filter: blur(2px);
-    }
-    .navHorizontal li:hover .navVertical {
-      display: block;
-    }
-
-    .navVertical li:hover {
-      background-color: var(--aguamar);
-    }
-    .navVertical li a {
-      display: block;
-      padding: .5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      font-family: 'Montserrat', sans-serif;
-    }
-
 .tituloTema { /* Título del tema *//*MODIFICACION*/
   font-size: 1.8rem;
   align-self: center;
@@ -230,25 +196,6 @@ img {
   width: 80%;
   margin: 0 auto;
 }
-/*****************************************/
-/* INDICE DEL TEMA */
-/*****************************************/
-.indice { /* Indice del tema */ /*ELIMINAR*/
-  width: 80%;
-  margin: 1rem auto;
-} /*
-
-    .indice li { 
-      padding: .2rem;
-      list-style-type: none;
-      border: 1px solid var(--fondoGris);
-    }
-
-    .indice li:hover {
-      border: 1px solid rgb(52, 152, 219);
-      background-color: rgba(52, 152, 219, .3);
-    }
-/*FIN INDICE*/
 /*****************************************/
 /*BOTONES*/
 /*****************************************/
