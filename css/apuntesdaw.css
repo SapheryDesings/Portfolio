@@ -295,7 +295,6 @@ img {
     border: 5px dashed rgba(255, 255, 255, 0.1);
   }
   .temaIndice ul li {
-    padding: 1rem 2rem;
     border-bottom: 5px dashed rgba(255, 255, 255, 0.1);
   }
 
@@ -304,6 +303,10 @@ img {
     }
     .temaIndice ul li:hover {
       background-color: rgba(255, 255, 255, 0.1);
+    }
+    .temaIndice ul li a {
+      display: block;
+      padding: 1rem 2rem;
     }
 
 /*****************************************/
