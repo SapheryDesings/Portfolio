@@ -1,31 +1,6 @@
-/*************************************************************************************/
-/* MEDIA QUERIES                                                                     */
-/*************************************************************************************/
+/* MEDIA QUERIES ______________________*/
 
-@media screen and (min-width:768px) and (max-width: 1024px){
-  .presentacion {font-size: 6rem;}
-  .card {width: 330px;}
-}
-
-@media screen and (max-width: 425px) and (max-width: 768px){
-  .presentacion {font-size: 6rem;}
-  .card {width: 250px;}
-}
-
-@media screen and (max-width: 425px){
-  section {width: 98%;}
-  .presentacion {font-size: 3.5rem;}
-  .tituloSeccion {
-    text-align: center;
-    font-size: 1.6rem;
-  }
-  .card {width: 100%;}
-  .descripcionCard {font-size: 1rem;}
-}
-
-/*********************************************************/
-
-@media screen and (max-width: 1280px){
+@media screen and (min-width: 425px){ /* Desktop */
   body { 
     font-size: 1.3rem; 
   }
@@ -33,15 +8,17 @@
   .contenedor {width: 80%;}
 }
 
-@media screen and (max-width: 1024px){
-  body { 
-    font-size: 1.1rem; 
+@media screen and (max-width: 425px){ /* Móvil */
+
+  .presentacion {font-size: 3.5rem;}
+  .tituloSeccion {
+    text-align: center;
+    font-size: 1.6rem;
   }
-  .tituloTema {font-size: 1.2rem;}
-  .contenedor {width: 90%;}
+  .card {width: 100%;}
+  .descripcionCard {font-size: 1rem;}
+
   
-}
-@media screen and (max-width: 600px){
   body {
     width: 100%;
     font-size: 1rem;
@@ -65,10 +42,12 @@
 
   .apartado { margin-top: 1rem;}
   .contenedor {width: 100%;}
+
   section { 
     width: 100%; 
     padding: 1rem .5rem;
   }
+
   .indice {
     width: 100%;
     font-size: .8rem;
@@ -102,3 +81,27 @@
 .navHorizontal li:active .navVertical{
   display: block;
 }
+
+
+
+
+/*
+@media screen and (min-width:768px) and (max-width: 1024px){
+  .presentacion {font-size: 6rem;}
+  .card {width: 330px;}
+}
+
+@media screen and (max-width: 425px) and (max-width: 768px){
+  .presentacion {font-size: 6rem;}
+  .card {width: 250px;}
+}
+
+@media screen and (max-width: 1024px){
+  body { 
+    font-size: 1.1rem; 
+  }
+  .tituloTema {font-size: 1.2rem;}
+  .contenedor {width: 90%;}
+  
+}
+@media screen and (max-width: 600px){
