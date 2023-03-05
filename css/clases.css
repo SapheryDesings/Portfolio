@@ -11,61 +11,7 @@
     align-items: flex-start;
     border: 2px dashed hotpink;
   }
-  
-/*****************************************/
-/* TEXTO SIN FORMATO - CODIGO */
-/*****************************************/
-pre {
-  background-color: var(--fondoOscuro);
-  overflow-x: auto;
-  border-width: 3px;
-  border-style: solid;
-  border-color: greenyellow #FF6F00 #FF6F00 greenyellow;
-  
-}
 
-code {
-  position: relative;
-  left: -10%;
-}
-/*****************************************/
-/* ENLACES */
-/*****************************************/
-a {color: var(--tipografiaClara);}
-/*****************************************/
-/* LISTAS */
-/*****************************************/
-
-/*****************************************/
-/* TABLAS */
-/*****************************************/
-table {
-  margin: 2rem auto;
-  border-collapse: collapse;
-}
-  caption {
-    text-align: center;
-    font-weight: bold;
-    background-color: rgba(52, 152, 219, .5); 
-    border: 2px dashed var(--aguamar);
-    border-bottom: none;
-  }
-  tr {
-    border: 2px dashed var(--aguamar);
-  }
-  th, td {
-    padding: .5rem 1.5rem;
-    border: 2px dashed var(--aguamar);
-  }
-/*****************************************/
-/* IMAGENES */
-/*****************************************/
-img {
-  display: block;
-}
-/*************************************************************************************/
-/* CLASES                                                                            */
-/*************************************************************************************/
 /*HEADER*/
 /*****************************************/
 .navtop { /* Barra superior */
@@ -157,3 +103,77 @@ img {
     }
 
 /*****************************************/
+
+.portfolio {
+  background-color: var(--azulPrincipal); 
+  color: var(--blancoTipologia);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+}
+
+.contenedorPortfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+/*    Presentacion    *//* Titulo principal SapheryDesings */
+.presentacion {
+  font-family: 'Smooch', cursive;
+  font-size: 8rem;
+  text-align: center;
+}
+
+/*       Titulos       *//* Son los titulos de la tres secciones daw, proyectos y devAcademy*/
+.tituloSeccion {
+  margin: 1rem 0;
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
+}
+
+.daw {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/*        Card        *//* Prototipo de tarjeta */
+.card {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(2, 119, 189, .4);
+  /*box-shadow: 0 0 2px 2px rgba(2, 119, 189, .8);*/
+  /*border: 1px dashed darkorange;*/
+  font-size: 1rem;
+} 
+    .tituloCard, .footerCard {
+      display: flex;
+      flex-direction: column;
+    }
+    .tituloCard {
+      height: 35px; 
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .tituloCard strong {margin: auto; }
+    .card img {
+      height: 150px;
+      min-width: 100%;
+      object-fit: cover;
+      background-color: rgba(255, 255, 255, .1);
+    }
+    .descripcionCard {
+      /*height: 130px;*/
+      padding: .2rem;
+      flex-grow: 5;
+    }
+    .footerCard {
+      height: 35px;
+      background-color: rgba(255, 255, 255, .1);
+    }
+    .footerCard span { margin: auto 0; padding: .2rem;}
+    
