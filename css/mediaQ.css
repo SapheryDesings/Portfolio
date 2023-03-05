@@ -18,7 +18,7 @@
   .card {width: 100%;}
   .descripcionCard {font-size: 1rem;}
 
-  
+
   body {
     width: 100%;
     font-size: 1rem;
@@ -85,7 +85,9 @@
 
 
 
-/*
+/* PARA ELEMINAR DESPUES DE COMPROBAR
+
+
 @media screen and (min-width:768px) and (max-width: 1024px){
   .presentacion {font-size: 6rem;}
   .card {width: 330px;}
