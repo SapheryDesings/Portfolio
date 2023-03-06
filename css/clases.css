@@ -1,5 +1,4 @@
-
-
+/* CALSES GLOBALES _______________________*/
 .principal, .apuntes, main, .temaIndice, .tema, .articuloApuntes {
   display: flex;
   flex-direction: column;
@@ -7,13 +6,6 @@
   /*POSIBLE GAP ¿? */
 }
 
-  .articuloApuntes {
-    align-items: flex-start;
-    border: 2px dashed hotpink;
-  }
-
-/*HEADER*/
-/*****************************************/
 .navtop { /* Barra superior */
   display: flex;
   flex-direction: row;
@@ -24,16 +16,6 @@
   background-color: var(--aguamar);
 }
 
-.tituloTema { /* Título del tema *//*MODIFICACION*/
-  font-size: 1.8rem;
-  align-self: center;
-  padding: 2rem;
-  text-align: center;
-}
-/*FIN HEADER*/
-/*****************************************/
-/*CONTENEDOR*/
-/*****************************************/
 .contenedor { /* Contenedor todo menos header *//*ELIMINAR*/
   display: flex;
   flex-flow: column nowrap;
@@ -42,9 +24,7 @@
   width: 80%;
   margin: 0 auto;
 }
-/*****************************************/
-/*BOTONES*/
-/*****************************************/
+
 .btnArriba {
   width: 120px;
   margin: 1rem 0;
@@ -57,65 +37,8 @@
     border: 3px solid rgb(52, 152, 219);
     background-color: rgba(52, 152, 219, .3);
   }
-/*FIN BOTONES*/
-/*****************************************/
-/*TEXTO - TITULOS, SUBTITULOS Y APARTADOS*/
-/*****************************************/
-.subTitulo_3 { /*ELIMINAR*/
-  border-bottom: 2px dashed var(--aguamar); 
-  padding-bottom: 10px;
-}
 
-.subTitulo_4 { /*ELIMINAR*/
-  border-left: 10px solid var(--aguamar); 
-  padding-left: 10px;
-}
-/*FIN TEXTO*/
-/*****************************************/
-/*Indices*/
-  .temaIndice {
-    width: 80%;
-    margin-bottom: 2rem;
-  }
-  .temaIndice span {
-    padding: 1rem;
-    font-weight: bold;
-    background-color: var(--aguamar);
-    /*border: 2px dashed darkorange;*/
-  }
-
-  .temaIndice ul {
-    border: 5px dashed rgba(255, 255, 255, 0.1);
-  }
-  .temaIndice ul li {
-    border-bottom: 5px dashed rgba(255, 255, 255, 0.1);
-  }
-
-    .temaIndice ul li:last-child {
-      border: none;
-    }
-    .temaIndice ul li:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    .temaIndice ul li a {
-      display: block;
-      padding: 1rem 2rem;
-    }
-
-/*****************************************/
-
-.portfolio {
-  background-color: var(--azulPrincipal); 
-  color: var(--blancoTipologia);
-  font-family: 'Montserrat', sans-serif;
-  font-size: large;
-}
-
-.contenedorPortfolio {
-  display: flex;
-  flex-direction: column;
-}
-
+/* CLASES VISTA PRINCIPAL ________________*/
 /*    Presentacion    *//* Titulo principal SapheryDesings */
 .presentacion {
   font-family: 'Smooch', cursive;
@@ -176,4 +99,84 @@
       background-color: rgba(255, 255, 255, .1);
     }
     .footerCard span { margin: auto 0; padding: .2rem;}
+/*      Fin Card      */
+
+.portfolio {
+  background-color: var(--azulPrincipal); 
+  color: var(--blancoTipologia);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+}
+
+.contenedorPortfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* CLASES VISTA INDICE ___________________*/
+.temaIndice {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+.temaIndice span {
+  padding: 1rem;
+  font-weight: bold;
+  background-color: var(--aguamar);
+  /*border: 2px dashed darkorange;*/
+}
+
+.temaIndice ul {
+  border: 5px dashed rgba(255, 255, 255, 0.1);
+}
+.temaIndice ul li {
+  border-bottom: 5px dashed rgba(255, 255, 255, 0.1);
+}
+
+  .temaIndice ul li:last-child {
+    border: none;
+  }
+  .temaIndice ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .temaIndice ul li a {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+
+/* CLASES VISTA APUNTES __________________*/
+.articuloApuntes {
+  align-items: flex-start;
+  border: 2px dashed hotpink;
+}
+
+.tituloTema { /* Título del tema *//*MODIFICACION*/
+  font-size: 1.8rem;
+  align-self: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.subTitulo_3 { /*ELIMINAR*/
+  border-bottom: 2px dashed var(--aguamar); 
+  padding-bottom: 10px;
+}
+
+.subTitulo_4 { /*ELIMINAR*/
+  border-left: 10px solid var(--aguamar); 
+  padding-left: 10px;
+}
+
+/**********************************************/
+
+
+
+
+
+
+
+
+
+
     
