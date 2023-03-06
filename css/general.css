@@ -46,7 +46,6 @@ section {
 }
 
 article { 
-  /*width: 100%; ELIMINAR*/
   margin: 1rem auto; /*REVISION ESPACIOS*/
 }
   article ul, ol { 
@@ -103,6 +102,7 @@ code {
   position: relative;
   left: -10%;
 }
+
 /* Tablas _____________________________ */
 table {
   margin: 2rem auto;
