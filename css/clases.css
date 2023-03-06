@@ -5,6 +5,7 @@
   align-items: stretch;
   /*POSIBLE GAP ¿? */
 }
+
 /* Barra superior - Indices y apuntes, se incluye botón hacia principal y nombre asignatura */
 .navtop { 
   display: flex;

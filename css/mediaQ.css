@@ -88,31 +88,3 @@
   }
 
 }
-
-
-
-
-
-
-/* PARA ELEMINAR DESPUES DE COMPROBAR
-
-
-@media screen and (min-width:768px) and (max-width: 1024px){
-  .presentacion {font-size: 6rem;}
-  .card {width: 330px;}
-}
-
-@media screen and (max-width: 425px) and (max-width: 768px){
-  .presentacion {font-size: 6rem;}
-  .card {width: 250px;}
-}
-
-@media screen and (max-width: 1024px){
-  body { 
-    font-size: 1.1rem; 
-  }
-  .tituloTema {font-size: 1.2rem;}
-  .contenedor {width: 90%;}
-  
-}
-@media screen and (max-width: 600px){
