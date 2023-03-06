@@ -76,11 +76,17 @@
 
   th, td { padding: .3rem 1rem;}
 
+  .navHorizontal li:active .navVertical{
+    display: block;
+  }
+
+  .temaIndice {
+    width: 100%;
+  }
+
 }
 
-.navHorizontal li:active .navVertical{
-  display: block;
-}
+
 
 
 
