@@ -1,6 +1,7 @@
 /* MEDIA QUERIES ______________________*/
 
-@media screen and (min-width: 425px){ /* Desktop */
+/* Desktop ______________*/
+@media screen and (min-width: 425px){ 
   body { 
     font-size: 1.3rem; 
   }
@@ -8,7 +9,9 @@
   .contenedor {width: 80%;}
 }
 
-@media screen and (max-width: 425px){ /* Móvil */
+
+/* Móvil ________________*/
+@media screen and (max-width: 425px){ 
 
   .presentacion {font-size: 3.5rem;}
   .tituloSeccion {
@@ -70,7 +73,7 @@
     padding: .5rem auto;
   }
 
-  ul, ol { margin: 1rem 0;}
+  /*ul, ol { margin: 1rem 0;}*/
 
   table { margin: 1rem auto;}
 
