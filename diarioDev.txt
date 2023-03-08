@@ -21,22 +21,24 @@ body -> CLASE APUNTES PARA CCS GLOBAL
 
 ESTRUCTURA NEW TEMAS
 
-body.apuntes
+body
     header
         div.navtop (INCLUYE MENU TEMAS Y APARTADOS)
     /header
-    section.tema -> FONDO DEGRADADO LINEAL CLARO OSCURO CLARO ?
-        div.tituloTema
-            a -> Navegación
-            div.numeroTema
-            h2 -> Titulo TEMA
-        /div
-            article.articuloApuntes
+    main.apuntes
+        section
+            div.tituloTema
                 a -> Navegación
-                h3 -> Titulo Apartado 
-                ...
-            /article
-    /section
+                div.numeroTema
+                h2 -> Titulo TEMA
+            /div
+                article.articuloApuntes
+                    a -> Navegación
+                    h3 -> Titulo Apartado 
+                    ...
+                /article
+        /section
+    /main
 /body
 
 
