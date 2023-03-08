@@ -72,9 +72,10 @@ h3 { font-size: 2rem;}
 a { color: var(--blancoTipologia)}
 
 /* PARRAFO ______________________*/
+/*
 p {
-  margin-bottom: 1rem; /*REVISION ESPACIOS*/
-  padding: 1rem auto;  /*REVISION ESPACIOS*/
+  margin-bottom: 1rem; 
+  padding: 1rem auto;  
 }
 
 /* TEXTO SIN FORMATO - CODIGO */
