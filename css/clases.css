@@ -6,6 +6,14 @@
   /*POSIBLE GAP ¿? */
 }
 
+.main--Principal, .main--Indice, .main--Apuntes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  width: 80%;
+}
+
 /* Barra superior - Indices y apuntes, se incluye botón hacia principal y nombre asignatura */
 .navtop { 
   display: flex;
@@ -92,17 +100,6 @@
     .footerCard span { margin: auto 0; padding: .2rem;}
 /*      Fin Card      */
 
-.portfolio {
-  background-color: var(--azulPrincipal); 
-  color: var(--blancoTipologia);
-  font-family: 'Montserrat', sans-serif;
-  font-size: large;
-}
-
-.contenedorPortfolio {
-  display: flex;
-  flex-direction: column;
-}
 /* ______________________________________ */
 
 /* CLASES VISTA INDICE ___________________*/

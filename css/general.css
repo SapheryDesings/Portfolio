@@ -28,9 +28,10 @@
 }
 
 body { 
-  font-size: 1.5rem;
-  background-color: var(--fondoGris);
-  color: var(--tipografiaClara);
+  background-color: var(--azulPrincipal); 
+  color: var(--blancoTipologia);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
 }
 
 header { 
