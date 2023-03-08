@@ -1,1 +1,0 @@
-document.getElementById("demo").textContent = 'Esto <b> es un párrafo </b> de ejemplo';
