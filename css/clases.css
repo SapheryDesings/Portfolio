@@ -1,17 +1,11 @@
 /* CALSES GLOBALES _______________________*/
-.principal, .apuntes, main, .temaIndice, .articuloApuntes {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  /*POSIBLE GAP ¿? */
-}
 
 .main--Principal, .main--Indice, .main--Apuntes {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  width: 80%;
 }
 
 /* Barra superior - Indices y apuntes, se incluye botón hacia principal y nombre asignatura */
@@ -21,8 +15,18 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: .8rem 10%;
+  margin-bottom: 1rem;
+  padding: 1rem 10%;
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
   background-color: var(--aguamar);
+}
+
+.temaIndice, .articuloApuntes {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* Botón para ir hacia arriba en la página */
@@ -64,7 +68,7 @@
 }
 
 /*        Card - Prototipo de tarjeta */
-.card {
+.card { /* Modificar metodología BEM */
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -111,7 +115,6 @@
   padding: 1rem;
   font-weight: bold;
   background-color: var(--aguamar);
-  /*border: 2px dashed darkorange;*/
 }
 
 .temaIndice ul {
