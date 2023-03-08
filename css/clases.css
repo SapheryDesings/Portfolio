@@ -1,5 +1,5 @@
 /* CALSES GLOBALES _______________________*/
-.principal, .apuntes, main, .temaIndice, .tema, .articuloApuntes {
+.principal, .apuntes, main, .temaIndice, .articuloApuntes {
   display: flex;
   flex-direction: column;
   align-items: stretch;
