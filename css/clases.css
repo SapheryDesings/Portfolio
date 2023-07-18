@@ -71,38 +71,15 @@
 /*        Card - Prototipo de tarjeta */
 .card { /* Modificar metodología BEM */
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 300px;
-  height: 400px;
+  height: 200px;
   background-color: rgba(2, 119, 189, .4);
   font-size: 1rem;
 } 
-    .tituloCard, .footerCard {
-      display: flex;
-      flex-direction: column;
-    }
-    .tituloCard {
-      height: 35px; 
-      font-size: 1.2rem;
-      text-align: center;
-    }
-    .tituloCard strong {margin: auto; }
-    .card img {
-      height: 150px;
-      min-width: 100%;
-      object-fit: cover;
-      background-color: rgba(255, 255, 255, .1);
-    }
-    .descripcionCard {
-      padding: .2rem;
-      flex-grow: 5;
-    }
-    .footerCard {
-      height: 35px;
-      background-color: rgba(255, 255, 255, .1);
-    }
-    .footerCard span { margin: auto 0; padding: .2rem;}
+  .card div { margin: auto; text-align: center;}
+
+  .segundoT { background-color: rgba(142, 68, 173, .4);}
 /*      Fin Card      */
 
 /* ______________________________________ */
