@@ -1,7 +1,7 @@
 /* MEDIA QUERIES ______________________*/
 
 /* Desktop ______________*/
-@media screen and (min-width: 425px){ 
+@media screen and (min-width: 619px){ 
   body { 
     font-size: 1.3rem; 
   }
@@ -11,16 +11,16 @@
 
 
 /* Móvil ________________*/
-@media screen and (max-width: 425px){ 
-
+@media screen and (max-width: 619px){ 
+ 
   .presentacion {font-size: 3.5rem;}
   .tituloSeccion {
     text-align: center;
     font-size: 1.6rem;
   }
+  .daw a {width: 100%;}
   .card {width: 100%;}
   .descripcionCard {font-size: 1rem;}
-
 
   body {
     width: 100%;
@@ -48,7 +48,7 @@
 
   section { 
     width: 100%; 
-    padding: 1rem .5rem;
+    padding: auto .5rem;
   }
 
   .indice {
