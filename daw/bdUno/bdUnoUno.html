@@ -189,5 +189,64 @@
             <li>Instalación de la BBDD.</li>
             <li>Exportación e importación de datos.</li>
         </ul>
+        <p>Tipos de usuarios de BBDD: informáticos y no informáticos</p>
+        <ul>
+            <li><b>Informáticos:</b> usuarios sofisticados que se comunican con el sistema mediante consultas, incluyendo a los especializados, capaces de diseñar las aplicaciones de la BBDD en diferentes sistemas. Los administradores de la BBDD también forman parte de los informáticos.</li>
+            <li><b>No informáticos:</b> aquellos que simplemente interactúan con el programa mediante interfaces de formularios rellenando datos.</li>
+        </ul>
+        <p>Administrador de la BD: funciones y responsabilidades</p>
+        <p>Son aquellas personas que tienen el control sobre la BBDD en cuestión. Sus funciones principales son</p>
+        <ul>
+            <li>Definir el esquema de la BBDD.</li>
+            <li>Definir sus estructuras de almacenamiento.</li>
+            <li>Modificar dicho esquema y su organización física.</li>
+            <li>Asignar autorización para su uso.</li>
+            <li>Especificar restricciones de integridad.</li>
+        </ul>
+        <h4 class="apartado">Tipos de lenguajes de BBDD</h4>
+        <p>Podemos diferenciar cuatro tipos de lenguajes</p>
+        <ul>
+            <li><b>DDL (Data Definition Languaje):</b> es el lenguaje de definición de datos y se utiliza para crear la estructura de una BBDD y, también, para diseñar las vistas del nivel externo. Genera una serie de tablas que se almacenan en un archivo al que llamamos diccionario de datos.</li>
+            <li><b>DML (Data Manipulation Languaje):</b> es el lenguaje de manipulación de datos y se utiliza para realizar operaciones sobre los datos, como insertar, modificar, borrar y consultar. Pueden ser de dos tipos:
+                <ul>
+                    <li><b>Procedimentales:</b> cuando tenemos que especificar de qué forma se obtienen los datos.</li>
+                    <li><b>No procedimentales:</b> cuando solo tenemos que especificar qué datos son los que se van a necesitar.</li>
+                </ul>
+            </li>
+            <li><b>DCL (Data Control Languaje):</b> es el lenguaje que nos permite crear permisos y roles y, de ese modo, controlar el acceso a la BBDD. Utiliza GRANT para dar privilegios y REVOKE para retirarlos.</li>
+            <li><b>TCL (Transactional Control Languaje):</b> permite administrar las transacciones que ocurren en la BBDD. Emplea COMMIT para guardar el trabajo realizado y ROLLBACK para deshacer lo realizado desde el último COMMIT.</li>
+        </ul>
+        <h4 class="apartado">Diccionario de datos: concepto, contenido, tipos y uso</h4>
+        <p>Un diccionario de datos es el lugar donde se va a depositar la información referente a los datos que forman la BBDD. Contiene las características lógicas de los sitios donde se van a almacenar los datos del sistema.</p>
+        <p>El diccionario proporciona información sobre la estructura lógica y física de la BD:</p>
+        <ul>
+            <li>Define todos los objetos de la BD: tablas, vistas, funciones, procedimientos, etc.</li>
+            <li>Define el espacio que tiene asignado y va a ser utilizado por los objetos.</li>
+            <li>Define los valores por defecto de las columnas de las tablas.</li>
+            <li>Define los privilegios asignados.</li>
+            <li>Contiene información sobre restricciones de integridad.</li>
+        </ul>
+        <p>Características</p>
+        <ul>
+            <li>Soportar descripciones del modelo conceptual.</li>
+            <li>Apoyar la transferencia de información.</li>
+            <li>Estar integrado dentro de DBMS.</li>
+            <li>Actualizar los cambios en la descripción de la BBDD.</li>
+            <li>Estar almacenado mediante un acceso directo para tener una fácil recuperación de información.</li>
+        </ul>
+        <p>Entre los tipos de diccionarios de datos</p>
+        <ul>
+            <li><b>Off-Line:</b> su función es mantener el diccionario.</li>
+            <li><b>On-Line:</b>
+                <ul>
+                    <li>Funciona con el compilador.</li>
+                    <li>No deja que el programador defina los datos, sino que los define directamente.</li>
+                    <li>Se asegura de que los datos existen en el diccionario.</li>
+                    <li>Añade la definición de los datos.</li>
+                </ul>
+            </li>
+            <li><b>In-Line:</b> no añade la definición de los datos hasta que no se ejecuta.</li>
+        </ul>
+        <h3 class="subTitulo">ANSI/X3/SPARC. Estándares y niveles</h3>
     </body>
 </html>
