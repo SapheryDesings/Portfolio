@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--<link rel="stylesheet" href="../../css/clases.css">
-  <link rel="stylesheet" href="../../css/general.css">
+  <link rel="stylesheet" href="../../css/clases.css">
+  <!--<link rel="stylesheet" href="../../css/general.css">
   <link rel="stylesheet" href="../../css/mediaQ.css">-->
   <link rel="stylesheet" href="../../css/apuntes.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,242 +13,252 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
   <title>Bases de Datos I</title>
 </head>
-    <body><!--
-        <header>
+    <body>
+        <!--<header> Arreglar header 
             <div class="navtop">
                 <a href="../bdUno/indiceBdUno.html">Bases de Datos I</a>
                 <a href="../../index.html">Principal</a>
             </div>
-        </header>
-        <main class="main--Apuntes">
-            <div class="tituloTema">
-                <a href=""></a>
-                <div class="numeroTema">1</div>
-                <h2>Introducción a las bases de datos</h2>
+        </header> -->
+        <div class="navtop">
+            <a href="../bdUno/indiceBdUno.html">Bases de Datos I</a>
+            <a href="../../index.html">Principal</a>
+        </div>
+        <div class="contenedorApuntes">
+            <h2 class="tituloTema" id="unoUno">Tema 1. - Introducción a las bases de datos</h2>
+            <p>Las bases de datos son una parte esencial e imprescindible en el ámbito de los sistemas informáticos.</p>
+            <p class="nota">Una BBDD se puede definir como una agrupación de datos relacionados entre sí, almacenados en formato digital, con una organización o estructura determinada, de modo que se permite el acceso a dicha información con cierta rapidez.</p>
+            <p>Las propiedades más importantes:</p>
+            <ul>
+                <li>Representan elementos abstractos o concretos del mundo real.</li>
+                <li>Están diseñadas para un objetivo específico.</li>
+                <li>Pueden llegar a almacenar grandes cantidades de información.</li>
+                <li>Se habilita su uso para un grupo de usuarios concreto.</li>
+            </ul>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="unoDos">Ventajas e inconvenientes de las BBDD</h3>
+            <p><b>Ventajas</b></p>
+            <ul>
+                <li>La información contenida se procesa de forma independiente. Gracias a un buen diseño de relación entre los datos, conseguimos la menor redundancia posible.</li>
+                <li>Podemos llegar a conseguir la unidad máxima de información partiendo de una pequeña cantidad de datos.</li>
+                <li>Aseguran la integridad de los datos y devuelven unos resultados coherentes.</li>
+                <li>Posibilitan una gran seguridad para la información.</li>
+                <li>Reducen el espacio para el almacenamiento de la información comparada con otros medios como el papel físico.</li>
+                <li>Se obtiene una forma muy eficiente de almacenar los datos.</li>
+            </ul>
+            <p><b>Desventajas</b></p>
+            <ul>
+                <li>Requieren de un mantenimiento por parte de un administrador cualificado.</li>
+                <li>Requieren la adquisición y configuración de un hardware, lo cual resulta más costoso que otras alternativas como la información en papel. A corto plazo no ofrece rentabilidad.</li>
+                <li>Necesita un espacio considerable en la memoria de la computadora, además del espacio requerido en el disco duro.</li>
+            </ul>
+            <div class="menuOpcional">
+                <a href="../bdUno/indiceBdUno.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#unoUno"><div class="botonO">Arriba</div></a>
             </div>
-            <article class="articuloApuntes" id="unoUno">
-                <a href=""></a>
-                <h3>Evolución histórica</h3>
-            </article>
-            <article class="articuloApuntes" id="unoDos">
-                <a href=""></a>
-                <h3>Ventajas e inconvenientes</h3>
-            </article>
-            <article class="articuloApuntes" id="unoTres">
-                <a href=""></a>
-                <h3>Almacenamiento de la información</h3>
-            </article>
-            <article class="articuloApuntes" id="unoCuatro">
-                <a href=""></a>
-                <h3>Sistemas Gestores de bases de datos</h3>
-            </article>
-            <article class="articuloApuntes" id="unoCinco">
-                <a href=""></a>
-                <h3>ANSI/X3/SPARC. Estándares y niveles</h3>
-            </article>
-            <article class="articuloApuntes" id="unoSeis">
-                <a href=""></a>
-                <h3>Modelos de BBDD. Tipos: jerárquico, red, relacional y orientado a objetos</h3>
-            </article>
-            <article class="articuloApuntes" id="unoSiete">
-                <a href=""></a>
-                <h3>Bases de datos centralizadas y distribuidas</h3>
-            </article>
-        </main>-->
-        <h1 class="tituloPrincipal">Bases de datos I</h1>
-        <h2 class="tituloTema" id="unoUno">Tema 1. - Introducción a las bases de datos</h2>
-        <p>Las bases de datos son una parte esencial e imprescindible en el ámbito de los sistemas informáticos.</p>
-        <p class="nota">Una BBDD se puede definir como una agrupación de datos relacionados entre sí, almacenados en formato digital, con una organización o estructura determinada, de modo que se permite el acceso a dicha información con cierta rapidez.</p>
-        <p>Las propiedades más importantes:</p>
-        <ul>
-            <li>Representan elementos abstractos o concretos del mundo real.</li>
-            <li>Están diseñadas para un objetivo específico.</li>
-            <li>Pueden llegar a almacenar grandes cantidades de información.</li>
-            <li>Se habilita su uso para un grupo de usuarios concreto.</li>
-        </ul>
-        <h3 class="subTitulo" id="unoDos">Ventajas e inconvenientes de las BBDD</h3>
-        <p><b>Ventajas</b></p>
-        <ul>
-            <li>La información contenida se procesa de forma independiente. Gracias a un buen diseño de relación entre los datos, conseguimos la menor redundancia posible.</li>
-            <li>Podemos llegar a conseguir la unidad máxima de información partiendo de una pequeña cantidad de datos.</li>
-            <li>Aseguran la integridad de los datos y devuelven unos resultados coherentes.</li>
-            <li>Posibilitan una gran seguridad para la información.</li>
-            <li>Reducen el espacio para el almacenamiento de la información comparada con otros medios como el papel físico.</li>
-            <li>Se obtiene una forma muy eficiente de almacenar los datos.</li>
-        </ul>
-        <p><b>Desventajas</b></p>
-        <ul>
-            <li>Requieren de un mantenimiento por parte de un administrador cualificado.</li>
-            <li>Requieren la adquisición y configuración de un hardware, lo cual resulta más costoso que otras alternativas como la información en papel. A corto plazo no ofrece rentabilidad.</li>
-            <li>Necesita un espacio considerable en la memoria de la computadora, además del espacio requerido en el disco duro.</li>
-        </ul>
-        <h3 class="subTitulo" id="unoTres">Almacenamiento de la información</h3>
-        <p>Las BBDD son hoy la técnica más eficiente para guardar información de todo tipo de una manera estructurada y accesible.</p>
-        <p>Para almacenar información se utiliza un elemento clave llamado fichero. Los ficheros, también denominados archivos, son una secuencia de dígitos binarios que, siguiendo una estructura lógica determinada, almacenan una información concreta.</p>
-        <h4 class="apartado">Tipos de ficheros</h4>
-        <p>Según el método de acceso a un fichero</p>
-        <ul>
-            <li><b>Planos:</b> se caracterizan por tener un orden contiguo de registros, de modo que para acceder a un registro concreto se han de recorrer secuencialmente, desde el principio, todos los registros que existan previamente.</li>
-            <li><b>Indexados:</b> en estos ficheros la información se divide en dos tipos: el índice y los registros. En el índice se establece una tabla de claves que indican la posición física de cada uno de los registros, para así acceder a cada uno más rápidamente.</li>
-            <li><b>De acceso directo:</b> en este tipo se prescinde del índice y el campo clave de un registro pasa a ser dirección física. De este modo, el posicionamiento es inmediato y normalmente se necesita que los registros tengan un tamaño fijo.</li>
-            <li><b>Otros:</b> existen otros tipos de ficheros, como los que usan las funciones Hash, esto es, un algoritmo matemático que se utiliza para generar la relación clave-posición de cada registro.</li>
-        </ul>
-        <table>
-            <caption>Operaciones básicas que se pueden realizar en un fichero</caption>
-            <tr>
-                <td>Abrir (open)</td>
-                <td>Prepara el fichero para su posterior operación de lectura y/o escritura.</td>
-            </tr>
-            <tr>
-                <td>Cerrar (close)</td>
-                <td>Cierra el fichero, por lo que no se puede trabajar más con él.</td>
-            </tr>
-            <tr>
-                <td>Leer (read)</td>
-                <td>Obtiene la información del fichero.</td>
-            </tr>
-            <tr>
-                <td>Escribir (write)</td>
-                <td>Guarda la información en el fichero.</td>
-            </tr>
-            <tr>
-                <td>Posicionarse (seek)</td>
-                <td>Posiciona el puntero para su posterior operación de lectura y/o escritura.</td>
-            </tr>
-            <tr>
-                <td>Fin de fichero (eof)</td>
-                <td>Marca el final del fichero.</td>
-            </tr>
-        </table>
-        <h4 class="apartado">Conceptos clave de las BBDD</h4>
-        <p>Una BD se puede entender como una colección de datos que se relacionan entre sí, en formato digital, como una organización determinada y accesible.</p>
-        <p>Se utiliza para mantener la información de diversos objetos de una forma coherente y jerarquizada, de tal manera que, con la mínima cantidad de datos almacenados podamos sacar el mayor número de resultados posible. </p>
-        <p>Vamos a organizar la información en unas estructuras llamadas tablas, definidas posteriormente, que deben estar perfectamente relacionadas entre ellas.</p>
-        <p>Conceptos más usados en BBDD</p>
-        <ul>
-            <li><b>Dato:</b> expresa una información concreta sobre algo específico. Por ejemplo, la edad de una persona es un dato, su fecha de nacimiento es otro dato, la calificación de un alumno en un examen, etc.</li>
-            <li><b>Tipo de dato:</b> es la estructura en la que se está expresando un dato concreto. Por ejemplo, un dato podría ser de tipo numérico si expresa una edad o podría ser tipo fecha. Un dato también podría ser de tipo booleano, si lo que se desea es expresar un valor binario, es decir, verdadero o falso.</li>
-            <li><b>Campo:</b> es un identificador que agrupa los datos de una misma propiedad o atributo en común de todos los registros de una tabla. Por ejemplo, en la tabla Personas, cada registro es una persona concreta y un campo de esos registros podría ser la fecha de nacimiento o el apellido. En función de la información que indica el campo, este tendrá un tipo de dato u otro.</li>
-            <li><b>Tabla:</b> corresponde a una entidad formada por varios campos y registros. Por ejemplo, podríamos crear la tabla Persona, que estuviera formada por los campos nombre, apellidos, edad, sexo, DNI, etc.… y cada registro sería una persona distinta.</li>
-            <li><b>Registro:</b> un registro es una agrupación de datos que hacen referencia a un mismo elemento. Por ejemplo, en la tabla Persona un registro podría ser: María, Gómez, 25 años, Mujer, 47585858X.</li>
-            <li><b>Campo clave:</b> es un campo que identifica de manera única cada registro. Por ejemplo, en la tabla Persona el campo clave podría ser el DNI, ya que el DNI no se repetirá entre los diferentes registros.</li>
-            <li><b>Consulta:</b> una consulta es una petición de búsqueda que se realiza cuando se quiere obtener alguna información. También se conoce como query y se diferencian consultas de peticiones, inserciones de datos, actualización o eliminación. Estas consultas pueden ser ejecutadas sobre una o varias tablas.</li>
-            <li><b>Índice:</b> es una estructura que agrupa los campos clave de cada tabla. De esta forma, si buscamos a través de este índice podemos encontrar los registros de una forma más rápida.</li>
-            <li><b>Vista:</b> es una tabla virtual que engloba campos de una o diferentes tablas.</li>
-            <li><b>Informe:</b> es un listado de campos y registros seleccionados con un formato que facilita su lectura. Por ejemplo, un informe puede ser un listado de los trabajadores de mayor edad de una empresa.</li>
-            <li><b>Guiones o scripts:</b> son un conjunto de instrucciones que con una cierta funcionalidad. Estas instrucciones suelen realizarse para el mantenimiento d ellos datos de las tablas.</li>
-            <li><b>Procedimientos:</b> un procedimiento es un tipo especial de script que está almacenado en la propia BD.</li>
-        </ul>
-        <h4 class="apartado">Usos de las BBDD</h4>
-        <p>Las BBDD se utilizan en infinidad de áreas</p>
-        <ul>
-            <li><b>Bibliotecas:</b> almacenamos la información perteneciente tanto a libros (títulos, autores, editoriales, años de publicación…) como a usuarios, que reservan y utilizan dichos libros (nombres, apellidos, fecha de alquiler, fecha de devolución…).</li>
-            <li><b>Censo:</b> guardamos información demográfica de los habitantes (nombres, edades, sexo…) y de sus municipios, comarcas, regiones, países…</li>
-            <li><b>Científicas:</b> guardamos información recogida en todo tipo de proyectos y experimentos científicos para su posterior tratamiento.</li>
-            <li><b>Administrativas:</b> cualquier empresa necesita mantener la información totalmente ordenada, estructurada y accesible para su buen funcionamiento.</li>
-        </ul>
-        <h4 class="apartado">Tipos de BBDD</h4>
-        <p>Existen diversos tipos de BBDD según su modelo de datos (cómo están estructurados internamente) y según su ubicación.</p>
-        <p>Según su modelo de datos</p>
-        <ul>
-            <li><b>Jerárquicas:</b> se organizan en una estructura de diferentes niveles, como un árbol invertido. Esta se asemeja a la organización de árbol que usa el sistema operativo para almacenar la información en el disco.</li>
-            <li><b>En red:</b> la información se organiza en una estructura de enlaces y nodos. Cada registro contiene un enlace a otro registro. No hay una jerarquía entre los nodos.</li>
-            <li><b>Relacionales:</b> la información se organiza a través de tablas. Las tablas pueden estar interrelacionadas entre sí, de modo que ciertos datos de una tabla pueden depender de otras tablas.</li>
-            <li><b>Orientadas a objetos:</b> la información se estructura en objetos, los cuales pertenecen a clases. Este tipo permite evitar la redundancia gracias a la reutilización de las clases.</li>
-        </ul>
-        <p>Por el criterio de la ubicación, podemos dividir las bases de datos en centralizadas y distribuidas.</p>
-        <h3 class="subTitulo" id="unoCuatro">Sistemas gestores de bases de datos SGBD</h3>
-        <p class="nota">Un sistema gestor de base de datos o SGBD es un programa o software que facilita a la persona encargada de la administración de las BBDD el tratamiento de la información que contiene. Puede realizar operaciones como diseño, consulta y modificación de dichos datos.</p>
-        <h4 class="apartado">Funciones, componentes y tipos</h4>
-        <p>Las funciones de los SGBD se pueden clasificar en tres tipos</p>
-        <ul>
-            <li><b>Definición:</b> especifican los tipos de datos, las estructuras y las restricciones que se van a almacenar, asegurando la cohesión e integridad de estos.</li>
-            <li><b>Construcción:</b> proceso de almacenamiento de datos en algún medio controlado por el SGDB. En esta función, podemos citar la posibilidad que deben tener estos sistemas de gestión para que dicha BBDD se pueda conectar con el exterior utilizando algún medio. El estándar más utilizado para estos casos es el protocolo ODBC, que comunica la BD con una aplicación externa.</li>
-            <li><b>Manipulación:</b> incluye tareas como la manipulación y consulta de los datos almacenados para obtener una información.</li>
-        </ul>
-        <p>Los SGBD deben estar implementados para que estas operaciones se realicen de forma sencilla y ofrezcan un gran rendimiento.</p>
-        <p>Según su capacidad y potencia</p>
-        <ul>
-            <li><b>Ofimáticos:</b> destinados a manipular BBDD de uso doméstico o pequeñas empresas. Presentan una interfaz intuitiva y sencilla. El administrador de este sistema no tiene que ser un usuario experto. Ejemplo, Microsoft Access.</li>
-            <li><b>Corporativos:</b> implementados para manipular BBDD con una capacidad mucho mayor que los anteriores. Suelen ser implantados en grandes o medianas empresas con una gran carga de datos y un volumen alto de transacciones, de tal forma que requieren de un servidor con altas prestaciones. Ejemplo Oracle.</li>
-        </ul>
-        <p>Según su licencia de uso</p>
-        <ul>
-            <li><b>Comerciales:</b> son aquellos que requieren una licencia de uso, de tal modo que el usuario debe abonar un pago establecido para tener el derecho al uso o redistribución del SGBD. Un SGDB comercial puede ser de código cerrado, el usuario no tiene acceso al código fuente y no puede modificarlo. Suele tener una garantía de mantenimiento, así como una cierta estabilidad en su funcionamiento. Los más comunes son Oracle, Microsoft Access, o Microsoft SQL Server.</li>
-            <li><b>Libres:</b> no requieren de una licencia de uso por parte del usuario, ni para la utilización ni para la distribución. Disponen de código abierto, de modo que el usuario pueda modificar el mismo SGBD. Los más comunes son MySQL, PostgresSQL y MariaDB.</li>
-        </ul>
-        <h4 class="apartado">Objetivos del SGBD</h4>
-        <p>Son programas que brindan a los distintos usuarios la posibilidad de procesar, describir, administrar y recuperar aquellos datos almacenados en las BBDD. Ofrecen una serie de programas y procedimientos que permiten a los usuarios llevar a cabo las diferentes tareas, teniendo siempre especial cuidado con la seguridad de los datos.</p>
-        <p>Para mantener la seguridad e integridad de todos los datos, deben proporcionar una serie de herramientas</p>
-        <ul>
-            <li>Creación y especificación de los datos: crean la estructura física que se requiera en cada unidad.</li>
-            <li>Manipulación de los datos de las BBDD: añaden, modifican, suprimen o consultan los datos.</li>
-            <li>Recuperación: se lleva a cabo mediante la creación de copias de seguridad.</li>
-            <li>Gestión de la comunicación de la BBDD.</li>
-            <li>Creación de aplicaciones.</li>
-            <li>Instalación de la BBDD.</li>
-            <li>Exportación e importación de datos.</li>
-        </ul>
-        <p>Tipos de usuarios de BBDD: informáticos y no informáticos</p>
-        <ul>
-            <li><b>Informáticos:</b> usuarios sofisticados que se comunican con el sistema mediante consultas, incluyendo a los especializados, capaces de diseñar las aplicaciones de la BBDD en diferentes sistemas. Los administradores de la BBDD también forman parte de los informáticos.</li>
-            <li><b>No informáticos:</b> aquellos que simplemente interactúan con el programa mediante interfaces de formularios rellenando datos.</li>
-        </ul>
-        <p>Administrador de la BD: funciones y responsabilidades</p>
-        <p>Son aquellas personas que tienen el control sobre la BBDD en cuestión. Sus funciones principales son</p>
-        <ul>
-            <li>Definir el esquema de la BBDD.</li>
-            <li>Definir sus estructuras de almacenamiento.</li>
-            <li>Modificar dicho esquema y su organización física.</li>
-            <li>Asignar autorización para su uso.</li>
-            <li>Especificar restricciones de integridad.</li>
-        </ul>
-        <h4 class="apartado">Tipos de lenguajes de BBDD</h4>
-        <p>Podemos diferenciar cuatro tipos de lenguajes</p>
-        <ul>
-            <li><b>DDL (Data Definition Languaje):</b> es el lenguaje de definición de datos y se utiliza para crear la estructura de una BBDD y, también, para diseñar las vistas del nivel externo. Genera una serie de tablas que se almacenan en un archivo al que llamamos diccionario de datos.</li>
-            <li><b>DML (Data Manipulation Languaje):</b> es el lenguaje de manipulación de datos y se utiliza para realizar operaciones sobre los datos, como insertar, modificar, borrar y consultar. Pueden ser de dos tipos:
-                <ul>
-                    <li><b>Procedimentales:</b> cuando tenemos que especificar de qué forma se obtienen los datos.</li>
-                    <li><b>No procedimentales:</b> cuando solo tenemos que especificar qué datos son los que se van a necesitar.</li>
-                </ul>
-            </li>
-            <li><b>DCL (Data Control Languaje):</b> es el lenguaje que nos permite crear permisos y roles y, de ese modo, controlar el acceso a la BBDD. Utiliza GRANT para dar privilegios y REVOKE para retirarlos.</li>
-            <li><b>TCL (Transactional Control Languaje):</b> permite administrar las transacciones que ocurren en la BBDD. Emplea COMMIT para guardar el trabajo realizado y ROLLBACK para deshacer lo realizado desde el último COMMIT.</li>
-        </ul>
-        <h4 class="apartado">Diccionario de datos: concepto, contenido, tipos y uso</h4>
-        <p>Un diccionario de datos es el lugar donde se va a depositar la información referente a los datos que forman la BBDD. Contiene las características lógicas de los sitios donde se van a almacenar los datos del sistema.</p>
-        <p>El diccionario proporciona información sobre la estructura lógica y física de la BD:</p>
-        <ul>
-            <li>Define todos los objetos de la BD: tablas, vistas, funciones, procedimientos, etc.</li>
-            <li>Define el espacio que tiene asignado y va a ser utilizado por los objetos.</li>
-            <li>Define los valores por defecto de las columnas de las tablas.</li>
-            <li>Define los privilegios asignados.</li>
-            <li>Contiene información sobre restricciones de integridad.</li>
-        </ul>
-        <p>Características</p>
-        <ul>
-            <li>Soportar descripciones del modelo conceptual.</li>
-            <li>Apoyar la transferencia de información.</li>
-            <li>Estar integrado dentro de DBMS.</li>
-            <li>Actualizar los cambios en la descripción de la BBDD.</li>
-            <li>Estar almacenado mediante un acceso directo para tener una fácil recuperación de información.</li>
-        </ul>
-        <p>Entre los tipos de diccionarios de datos</p>
-        <ul>
-            <li><b>Off-Line:</b> su función es mantener el diccionario.</li>
-            <li><b>On-Line:</b>
-                <ul>
-                    <li>Funciona con el compilador.</li>
-                    <li>No deja que el programador defina los datos, sino que los define directamente.</li>
-                    <li>Se asegura de que los datos existen en el diccionario.</li>
-                    <li>Añade la definición de los datos.</li>
-                </ul>
-            </li>
-            <li><b>In-Line:</b> no añade la definición de los datos hasta que no se ejecuta.</li>
-        </ul>
-        <h3 class="subTitulo" id="unoCinco">ANSI/X3/SPARC. Estándares y niveles</h3>
-        <h3 class="subTitulo" id="unoSeis">Modelos de BBDD. Tipos: jerárquico, red, relacional y orientado a objetos</h3>
-        <h3 class="subTitulo" id="unoSiete">Bases de datos centralizadas y distribuidas</h3>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="unoTres">Almacenamiento de la información</h3>
+            <p>Las BBDD son hoy la técnica más eficiente para guardar información de todo tipo de una manera estructurada y accesible.</p>
+            <p>Para almacenar información se utiliza un elemento clave llamado fichero. Los ficheros, también denominados archivos, son una secuencia de dígitos binarios que, siguiendo una estructura lógica determinada, almacenan una información concreta.</p>
+            <h4 class="apartado">Tipos de ficheros</h4>
+            <p>Según el método de acceso a un fichero</p>
+            <ul>
+                <li><b>Planos:</b> se caracterizan por tener un orden contiguo de registros, de modo que para acceder a un registro concreto se han de recorrer secuencialmente, desde el principio, todos los registros que existan previamente.</li>
+                <li><b>Indexados:</b> en estos ficheros la información se divide en dos tipos: el índice y los registros. En el índice se establece una tabla de claves que indican la posición física de cada uno de los registros, para así acceder a cada uno más rápidamente.</li>
+                <li><b>De acceso directo:</b> en este tipo se prescinde del índice y el campo clave de un registro pasa a ser dirección física. De este modo, el posicionamiento es inmediato y normalmente se necesita que los registros tengan un tamaño fijo.</li>
+                <li><b>Otros:</b> existen otros tipos de ficheros, como los que usan las funciones Hash, esto es, un algoritmo matemático que se utiliza para generar la relación clave-posición de cada registro.</li>
+            </ul>
+            <table>
+                <caption>Operaciones básicas que se pueden realizar en un fichero</caption>
+                <tr>
+                    <td>Abrir (open)</td>
+                    <td>Prepara el fichero para su posterior operación de lectura y/o escritura.</td>
+                </tr>
+                <tr>
+                    <td>Cerrar (close)</td>
+                    <td>Cierra el fichero, por lo que no se puede trabajar más con él.</td>
+                </tr>
+                <tr>
+                    <td>Leer (read)</td>
+                    <td>Obtiene la información del fichero.</td>
+                </tr>
+                <tr>
+                    <td>Escribir (write)</td>
+                    <td>Guarda la información en el fichero.</td>
+                </tr>
+                <tr>
+                    <td>Posicionarse (seek)</td>
+                    <td>Posiciona el puntero para su posterior operación de lectura y/o escritura.</td>
+                </tr>
+                <tr>
+                    <td>Fin de fichero (eof)</td>
+                    <td>Marca el final del fichero.</td>
+                </tr>
+            </table>
+            <h4 class="apartado">Conceptos clave de las BBDD</h4>
+            <p>Una BD se puede entender como una colección de datos que se relacionan entre sí, en formato digital, como una organización determinada y accesible.</p>
+            <p>Se utiliza para mantener la información de diversos objetos de una forma coherente y jerarquizada, de tal manera que, con la mínima cantidad de datos almacenados podamos sacar el mayor número de resultados posible. </p>
+            <p>Vamos a organizar la información en unas estructuras llamadas tablas, definidas posteriormente, que deben estar perfectamente relacionadas entre ellas.</p>
+            <p>Conceptos más usados en BBDD</p>
+            <ul>
+                <li><b>Dato:</b> expresa una información concreta sobre algo específico. Por ejemplo, la edad de una persona es un dato, su fecha de nacimiento es otro dato, la calificación de un alumno en un examen, etc.</li>
+                <li><b>Tipo de dato:</b> es la estructura en la que se está expresando un dato concreto. Por ejemplo, un dato podría ser de tipo numérico si expresa una edad o podría ser tipo fecha. Un dato también podría ser de tipo booleano, si lo que se desea es expresar un valor binario, es decir, verdadero o falso.</li>
+                <li><b>Campo:</b> es un identificador que agrupa los datos de una misma propiedad o atributo en común de todos los registros de una tabla. Por ejemplo, en la tabla Personas, cada registro es una persona concreta y un campo de esos registros podría ser la fecha de nacimiento o el apellido. En función de la información que indica el campo, este tendrá un tipo de dato u otro.</li>
+                <li><b>Tabla:</b> corresponde a una entidad formada por varios campos y registros. Por ejemplo, podríamos crear la tabla Persona, que estuviera formada por los campos nombre, apellidos, edad, sexo, DNI, etc.… y cada registro sería una persona distinta.</li>
+                <li><b>Registro:</b> un registro es una agrupación de datos que hacen referencia a un mismo elemento. Por ejemplo, en la tabla Persona un registro podría ser: María, Gómez, 25 años, Mujer, 47585858X.</li>
+                <li><b>Campo clave:</b> es un campo que identifica de manera única cada registro. Por ejemplo, en la tabla Persona el campo clave podría ser el DNI, ya que el DNI no se repetirá entre los diferentes registros.</li>
+                <li><b>Consulta:</b> una consulta es una petición de búsqueda que se realiza cuando se quiere obtener alguna información. También se conoce como query y se diferencian consultas de peticiones, inserciones de datos, actualización o eliminación. Estas consultas pueden ser ejecutadas sobre una o varias tablas.</li>
+                <li><b>Índice:</b> es una estructura que agrupa los campos clave de cada tabla. De esta forma, si buscamos a través de este índice podemos encontrar los registros de una forma más rápida.</li>
+                <li><b>Vista:</b> es una tabla virtual que engloba campos de una o diferentes tablas.</li>
+                <li><b>Informe:</b> es un listado de campos y registros seleccionados con un formato que facilita su lectura. Por ejemplo, un informe puede ser un listado de los trabajadores de mayor edad de una empresa.</li>
+                <li><b>Guiones o scripts:</b> son un conjunto de instrucciones que con una cierta funcionalidad. Estas instrucciones suelen realizarse para el mantenimiento d ellos datos de las tablas.</li>
+                <li><b>Procedimientos:</b> un procedimiento es un tipo especial de script que está almacenado en la propia BD.</li>
+            </ul>
+            <h4 class="apartado">Usos de las BBDD</h4>
+            <p>Las BBDD se utilizan en infinidad de áreas</p>
+            <ul>
+                <li><b>Bibliotecas:</b> almacenamos la información perteneciente tanto a libros (títulos, autores, editoriales, años de publicación…) como a usuarios, que reservan y utilizan dichos libros (nombres, apellidos, fecha de alquiler, fecha de devolución…).</li>
+                <li><b>Censo:</b> guardamos información demográfica de los habitantes (nombres, edades, sexo…) y de sus municipios, comarcas, regiones, países…</li>
+                <li><b>Científicas:</b> guardamos información recogida en todo tipo de proyectos y experimentos científicos para su posterior tratamiento.</li>
+                <li><b>Administrativas:</b> cualquier empresa necesita mantener la información totalmente ordenada, estructurada y accesible para su buen funcionamiento.</li>
+            </ul>
+            <h4 class="apartado">Tipos de BBDD</h4>
+            <p>Existen diversos tipos de BBDD según su modelo de datos (cómo están estructurados internamente) y según su ubicación.</p>
+            <p>Según su modelo de datos</p>
+            <ul>
+                <li><b>Jerárquicas:</b> se organizan en una estructura de diferentes niveles, como un árbol invertido. Esta se asemeja a la organización de árbol que usa el sistema operativo para almacenar la información en el disco.</li>
+                <li><b>En red:</b> la información se organiza en una estructura de enlaces y nodos. Cada registro contiene un enlace a otro registro. No hay una jerarquía entre los nodos.</li>
+                <li><b>Relacionales:</b> la información se organiza a través de tablas. Las tablas pueden estar interrelacionadas entre sí, de modo que ciertos datos de una tabla pueden depender de otras tablas.</li>
+                <li><b>Orientadas a objetos:</b> la información se estructura en objetos, los cuales pertenecen a clases. Este tipo permite evitar la redundancia gracias a la reutilización de las clases.</li>
+            </ul>
+            <p>Por el criterio de la ubicación, podemos dividir las bases de datos en centralizadas y distribuidas.</p>
+            <div class="menuOpcional">
+                <a href="../bdUno/indiceBdUno.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#unoUno"><div class="botonO">Arriba</div></a>
+            </div>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="unoCuatro">Sistemas gestores de bases de datos SGBD</h3>
+            <p class="nota">Un sistema gestor de base de datos o SGBD es un programa o software que facilita a la persona encargada de la administración de las BBDD el tratamiento de la información que contiene. Puede realizar operaciones como diseño, consulta y modificación de dichos datos.</p>
+            <h4 class="apartado">Funciones, componentes y tipos</h4>
+            <p>Las funciones de los SGBD se pueden clasificar en tres tipos</p>
+            <ul>
+                <li><b>Definición:</b> especifican los tipos de datos, las estructuras y las restricciones que se van a almacenar, asegurando la cohesión e integridad de estos.</li>
+                <li><b>Construcción:</b> proceso de almacenamiento de datos en algún medio controlado por el SGDB. En esta función, podemos citar la posibilidad que deben tener estos sistemas de gestión para que dicha BBDD se pueda conectar con el exterior utilizando algún medio. El estándar más utilizado para estos casos es el protocolo ODBC, que comunica la BD con una aplicación externa.</li>
+                <li><b>Manipulación:</b> incluye tareas como la manipulación y consulta de los datos almacenados para obtener una información.</li>
+            </ul>
+            <p>Los SGBD deben estar implementados para que estas operaciones se realicen de forma sencilla y ofrezcan un gran rendimiento.</p>
+            <p>Según su capacidad y potencia</p>
+            <ul>
+                <li><b>Ofimáticos:</b> destinados a manipular BBDD de uso doméstico o pequeñas empresas. Presentan una interfaz intuitiva y sencilla. El administrador de este sistema no tiene que ser un usuario experto. Ejemplo, Microsoft Access.</li>
+                <li><b>Corporativos:</b> implementados para manipular BBDD con una capacidad mucho mayor que los anteriores. Suelen ser implantados en grandes o medianas empresas con una gran carga de datos y un volumen alto de transacciones, de tal forma que requieren de un servidor con altas prestaciones. Ejemplo Oracle.</li>
+            </ul>
+            <p>Según su licencia de uso</p>
+            <ul>
+                <li><b>Comerciales:</b> son aquellos que requieren una licencia de uso, de tal modo que el usuario debe abonar un pago establecido para tener el derecho al uso o redistribución del SGBD. Un SGDB comercial puede ser de código cerrado, el usuario no tiene acceso al código fuente y no puede modificarlo. Suele tener una garantía de mantenimiento, así como una cierta estabilidad en su funcionamiento. Los más comunes son Oracle, Microsoft Access, o Microsoft SQL Server.</li>
+                <li><b>Libres:</b> no requieren de una licencia de uso por parte del usuario, ni para la utilización ni para la distribución. Disponen de código abierto, de modo que el usuario pueda modificar el mismo SGBD. Los más comunes son MySQL, PostgresSQL y MariaDB.</li>
+            </ul>
+            <h4 class="apartado">Objetivos del SGBD</h4>
+            <p>Son programas que brindan a los distintos usuarios la posibilidad de procesar, describir, administrar y recuperar aquellos datos almacenados en las BBDD. Ofrecen una serie de programas y procedimientos que permiten a los usuarios llevar a cabo las diferentes tareas, teniendo siempre especial cuidado con la seguridad de los datos.</p>
+            <p>Para mantener la seguridad e integridad de todos los datos, deben proporcionar una serie de herramientas</p>
+            <ul>
+                <li>Creación y especificación de los datos: crean la estructura física que se requiera en cada unidad.</li>
+                <li>Manipulación de los datos de las BBDD: añaden, modifican, suprimen o consultan los datos.</li>
+                <li>Recuperación: se lleva a cabo mediante la creación de copias de seguridad.</li>
+                <li>Gestión de la comunicación de la BBDD.</li>
+                <li>Creación de aplicaciones.</li>
+                <li>Instalación de la BBDD.</li>
+                <li>Exportación e importación de datos.</li>
+            </ul>
+            <p>Tipos de usuarios de BBDD: informáticos y no informáticos</p>
+            <ul>
+                <li><b>Informáticos:</b> usuarios sofisticados que se comunican con el sistema mediante consultas, incluyendo a los especializados, capaces de diseñar las aplicaciones de la BBDD en diferentes sistemas. Los administradores de la BBDD también forman parte de los informáticos.</li>
+                <li><b>No informáticos:</b> aquellos que simplemente interactúan con el programa mediante interfaces de formularios rellenando datos.</li>
+            </ul>
+            <p>Administrador de la BD: funciones y responsabilidades</p>
+            <p>Son aquellas personas que tienen el control sobre la BBDD en cuestión. Sus funciones principales son</p>
+            <ul>
+                <li>Definir el esquema de la BBDD.</li>
+                <li>Definir sus estructuras de almacenamiento.</li>
+                <li>Modificar dicho esquema y su organización física.</li>
+                <li>Asignar autorización para su uso.</li>
+                <li>Especificar restricciones de integridad.</li>
+            </ul>
+            <h4 class="apartado">Tipos de lenguajes de BBDD</h4>
+            <p>Podemos diferenciar cuatro tipos de lenguajes</p>
+            <ul>
+                <li><b>DDL (Data Definition Languaje):</b> es el lenguaje de definición de datos y se utiliza para crear la estructura de una BBDD y, también, para diseñar las vistas del nivel externo. Genera una serie de tablas que se almacenan en un archivo al que llamamos diccionario de datos.</li>
+                <li><b>DML (Data Manipulation Languaje):</b> es el lenguaje de manipulación de datos y se utiliza para realizar operaciones sobre los datos, como insertar, modificar, borrar y consultar. Pueden ser de dos tipos:
+                    <ul>
+                        <li><b>Procedimentales:</b> cuando tenemos que especificar de qué forma se obtienen los datos.</li>
+                        <li><b>No procedimentales:</b> cuando solo tenemos que especificar qué datos son los que se van a necesitar.</li>
+                    </ul>
+                </li>
+                <li><b>DCL (Data Control Languaje):</b> es el lenguaje que nos permite crear permisos y roles y, de ese modo, controlar el acceso a la BBDD. Utiliza GRANT para dar privilegios y REVOKE para retirarlos.</li>
+                <li><b>TCL (Transactional Control Languaje):</b> permite administrar las transacciones que ocurren en la BBDD. Emplea COMMIT para guardar el trabajo realizado y ROLLBACK para deshacer lo realizado desde el último COMMIT.</li>
+            </ul>
+            <h4 class="apartado">Diccionario de datos: concepto, contenido, tipos y uso</h4>
+            <p>Un diccionario de datos es el lugar donde se va a depositar la información referente a los datos que forman la BBDD. Contiene las características lógicas de los sitios donde se van a almacenar los datos del sistema.</p>
+            <p>El diccionario proporciona información sobre la estructura lógica y física de la BD:</p>
+            <ul>
+                <li>Define todos los objetos de la BD: tablas, vistas, funciones, procedimientos, etc.</li>
+                <li>Define el espacio que tiene asignado y va a ser utilizado por los objetos.</li>
+                <li>Define los valores por defecto de las columnas de las tablas.</li>
+                <li>Define los privilegios asignados.</li>
+                <li>Contiene información sobre restricciones de integridad.</li>
+            </ul>
+            <p>Características</p>
+            <ul>
+                <li>Soportar descripciones del modelo conceptual.</li>
+                <li>Apoyar la transferencia de información.</li>
+                <li>Estar integrado dentro de DBMS.</li>
+                <li>Actualizar los cambios en la descripción de la BBDD.</li>
+                <li>Estar almacenado mediante un acceso directo para tener una fácil recuperación de información.</li>
+            </ul>
+            <p>Entre los tipos de diccionarios de datos</p>
+            <ul>
+                <li><b>Off-Line:</b> su función es mantener el diccionario.</li>
+                <li><b>On-Line:</b>
+                    <ul>
+                        <li>Funciona con el compilador.</li>
+                        <li>No deja que el programador defina los datos, sino que los define directamente.</li>
+                        <li>Se asegura de que los datos existen en el diccionario.</li>
+                        <li>Añade la definición de los datos.</li>
+                    </ul>
+                </li>
+                <li><b>In-Line:</b> no añade la definición de los datos hasta que no se ejecuta.</li>
+            </ul>
+            <div class="menuOpcional">
+                <a href="../bdUno/indiceBdUno.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#unoUno"><div class="botonO">Arriba</div></a>
+            </div>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="unoCinco">ANSI/X3/SPARC. Estándares y niveles</h3>
+
+            <div class="menuOpcional">
+                <a href="../bdUno/indiceBdUno.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#unoUno"><div class="botonO">Arriba</div></a>
+            </div>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="unoSeis">Modelos de BBDD. Tipos: jerárquico, red, relacional y orientado a objetos</h3>
+            
+            <div class="menuOpcional">
+                <a href="../bdUno/indiceBdUno.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#unoUno"><div class="botonO">Arriba</div></a>
+            </div>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="unoSiete">Bases de datos centralizadas y distribuidas</h3>
+
+            <div class="menuOpcional">
+                <a href="../bdUno/indiceBdUno.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#unoUno"><div class="botonO">Arriba</div></a>
+            </div>
+        </div><!-- Fin contenedorApuntes -->
+        <footer><div>SapheryDesings - 2023</div></footer>
     </body>
 </html>

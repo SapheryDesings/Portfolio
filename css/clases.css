@@ -6,6 +6,8 @@
   --rojonaranjaIlumina: #FF5722;
   --fusciaIlumina: #E91E63;
   --aguamarIlumina: #00BCD4;
+  /* --------------------------*/
+  --azulPrincipal: #3498db;
 }
 .main--Principal, .main--Indice, .main--Apuntes {
   display: flex;
@@ -26,8 +28,10 @@
   padding: 1rem 10%;
   font-family: 'Titan One', cursive;
   font-weight: 100;
-  background-color: var(--aguamar);
+  background-color: var(--azulPrincipal);
+  color: white;
 }
+ .navtop a { color: white;}
 
 .temaIndice, .articuloApuntes {
   width: 80%;
@@ -125,25 +129,25 @@
   }
 /* ______________________________________ */
 
-/* CLASES VISTA APUNTES __________________*/
+/* CLASES VISTA APUNTES __________________ Eliminar todo
 .articuloApuntes {
   align-items: flex-start;
   border: 2px dashed hotpink;
 }
 
-.tituloTema { /* Título del tema *//*MODIFICACION*/
+.tituloTema { 
   font-size: 1.8rem;
   align-self: center;
   padding: 2rem;
   text-align: center;
 }
 
-.subTitulo_3 { /*ELIMINAR*/
+.subTitulo_3 { 
   border-bottom: 2px dashed var(--aguamar); 
   padding-bottom: 10px;
 }
 
-.subTitulo_4 { /*ELIMINAR*/
+.subTitulo_4 { 
   border-left: 10px solid var(--aguamar); 
   padding-left: 10px;
 }

@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
-  /*border: 2px solid red;*/
 }
 
 :root {
@@ -12,10 +11,9 @@
 }
 
 body {
-  width: 60%;
+  width: 100%;
   margin: auto;
   font-family: 'Montserrat', sans-serif;
-  background-color: white;
 }
 
 h1, h2, h3, h4, p, ol, ul, table {
@@ -56,13 +54,16 @@ li, td {
 
 footer {
   background-color: var(--azulDetalles);
+  min-height: 50px;
+  margin-top: .5rem;
   color: #D0D3D4;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* CLASES */
-
+.contenedorApuntes { width: 60%; margin: auto;}
 .tituloPrincipal {
   font-weight: 800;
   background-color: var(--azulPrincipal);
@@ -101,26 +102,30 @@ footer {
   font-style: italic;
 }
 
+.menuOpcional {
+  
+  display: flex;
+  gap: .5rem;
+}
+  .botonO {
+    background-color: darkorange;
+    color: white;
+    font-weight: bold;
+    padding: .3rem 1.2rem;
+  }
+
 /***********************************************/
 @media screen and (max-width: 1280px){ 
-  body { 
-    width: 70%;
-  }
+  .contenedorApuntes { width: 70%;}
 }
 @media screen and (max-width: 1024px){ 
-  body { 
-    width: 80%;
-  }
+  .contenedorApuntes { width: 80%;}
 }
 @media screen and (max-width: 800px){ 
-  body { 
-    width: 90%;
-  }
+  .contenedorApuntes { width: 90%;}
 }
 @media screen and (max-width: 480px){ 
-  body { 
-    width: 100%;
-  }
+  .contenedorApuntes { width: 100%;}
   table {
     margin: 1rem auto;
   }
