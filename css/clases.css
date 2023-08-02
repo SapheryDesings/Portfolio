@@ -129,28 +129,8 @@
   }
 /* ______________________________________ */
 
-/* CLASES VISTA APUNTES __________________ Eliminar todo
-.articuloApuntes {
-  align-items: flex-start;
-  border: 2px dashed hotpink;
-}
+/* CLASES VISTA APUNTES __________________
 
-.tituloTema { 
-  font-size: 1.8rem;
-  align-self: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.subTitulo_3 { 
-  border-bottom: 2px dashed var(--aguamar); 
-  padding-bottom: 10px;
-}
-
-.subTitulo_4 { 
-  border-left: 10px solid var(--aguamar); 
-  padding-left: 10px;
-}
 
 /* ______________________________________ */
 
