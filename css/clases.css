@@ -170,7 +170,7 @@
   }
 
 /* LISTAS ___________________________*/
-.contenedorApuntes ol, ul {
+.contenedorApuntes :is(ol, ul) {
   margin: 1rem auto; 
   padding: .5rem;
   padding-left: 2rem;
