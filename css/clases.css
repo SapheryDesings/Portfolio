@@ -34,7 +34,7 @@
   --morado: #8E44AD;
   --mostaza: #F1C40F;
   /* --------------------------*/
-  --azulPrincipal: #3498db;
+  --azulPapuntes: #3498db;
   --azulDetalles: #01579b;
   --amarilloNota: #FFFF99;
   --azulClaro: #EBF5FB;
@@ -226,6 +226,7 @@
 
 .contenedorApuntes li {
   padding: .5rem;
+  list-style-type: square;
 }
 
 .contenedorApuntes { 
