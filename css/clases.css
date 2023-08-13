@@ -9,12 +9,6 @@
 }
 
 /* CALSES GLOBALES _______________________*/
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
 
 :root {
   --cyanIlumina: #03A9F4;
