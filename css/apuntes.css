@@ -1,18 +1,19 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
-  
+  margin: 0; /* Eliminar general ok */
+  padding: 0; /* Eliminar general ok */
 }
 
 :root {
-  --azulPrincipal: #3498db;
+  --azulPapuntes: #3498db;
   --azulDetalles: #01579b;
   --amarilloNota: #FFFF99;
   --azulClaro: #EBF5FB;
 }
 
 
-.contenedorApuntes h1, h2, h3, h4, p {
+.contenedorApuntes h1, h2, h3, h4, p { /* ERROR */
   margin: 1rem auto; 
   padding: .5rem;
 }
@@ -61,7 +62,7 @@
 }
 .tituloPrincipal {
   font-weight: 800;
-  background-color: var(--azulPrincipal);
+  background-color: var(--azulPapuntes);
   color: white;
   margin-bottom: 2rem;
   margin-top: 0;
@@ -69,12 +70,12 @@
 
 .tituloTema {
   border-left: 10px solid var(--azulDetalles);
-  color: var(--azulPrincipal);
+  color: var(--azulPapuntes);
 }
 
 .subTitulo {
   margin-top: 5rem;
-  color: var(--azulPrincipal);
+  color: var(--azulPapuntes);
   border-top: 5px solid var(--azulDetalles);
 }
 

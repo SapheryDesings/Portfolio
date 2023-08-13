@@ -1,4 +1,4 @@
-/* RESET _______________________________*/
+/* RESET _______________________________*//*
 
 * {
   box-sizing: border-box;
@@ -7,6 +7,7 @@
   list-style: none;
   list-style-type: none;
   text-decoration: none;
+  
 }
 
 :root {
@@ -22,100 +23,9 @@
   --mostaza: #F1C40F;
 
 
-/* Fuentes
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Smooch', cursive;
-  font-family: 'Titan One', cursive;
-*/
-}
+
+}*/
 
 body { 
-  background-color: var(--azulPrincipal); 
-  color: var(--blancoTipologia);
-  font-family: 'Montserrat', sans-serif;
-  font-size: large;
-}
-
-article { 
-  margin: 1rem auto; /*REVISION ESPACIOS*/
-}
-  article ul, ol { 
-    margin: 1rem 0 2rem;
-    list-style-position: inside;
-  }
-
-  article ul { list-style-type: square;}
-
-    article li ul {
-      margin-left: 5%;
-    }
-
-    article li {margin: .5rem 0;}
-    article ul li::marker {
-      color: var(--aguamar); 
-      font-size: 1.5rem;
-    }
-
-/* ENCABEZADOS ___________________*/
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Titan One', cursive;
-  font-weight: 100;
-}
-
-h1, h2 {margin-bottom: 2rem;} /*REVISION ESPACIOS*/
-h3, h4 {margin-bottom: 1rem;} /*REVISION ESPACIOS*/
-h5, h6 {margin-bottom: .5rem;} /*REVISION ESPACIOS*/
-
-h1 { font-size: 3rem;}
-h2 { font-size: 2.5rem;}
-h3 { font-size: 2rem;}
-
-/* ENLACES ______________________*/
-a { color: var(--blancoTipologia)}
-
-/* PARRAFO ______________________*/
-/*
-p {
-  margin-bottom: 1rem; 
-  padding: 1rem auto;  
-}
-
-/* TEXTO SIN FORMATO - CODIGO */
-pre {
-  background-color: var(--fondoOscuro);
-  overflow-x: auto;
-  border-width: 3px;
-  border-style: solid;
-  border-color: greenyellow #FF6F00 #FF6F00 greenyellow;
   
 }
-
-code {
-  position: relative;
-  left: -10%;
-}
-
-/* Tablas _____________________________ */
-table {
-  margin: 2rem auto;
-  border-collapse: collapse;
-}
-  caption {
-    text-align: center;
-    font-weight: bold;
-    background-color: rgba(52, 152, 219, .5); 
-    border: 2px dashed var(--aguamar);
-    border-bottom: none;
-  }
-  tr {
-    border: 2px dashed var(--aguamar);
-  }
-  th, td {
-    padding: .5rem 1.5rem;
-    border: 2px dashed var(--aguamar);
-  }
-
-  /* IMAGENES ______________________________*/
-  img {
-    display: block;
-  }

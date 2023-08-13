@@ -1,3 +1,14 @@
+/* RESET _______________________________*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  
+}
+
 /* CALSES GLOBALES _______________________*/
 :root {
   --cyanIlumina: #03A9F4;
@@ -6,15 +17,36 @@
   --rojonaranjaIlumina: #FF5722;
   --fusciaIlumina: #E91E63;
   --aguamarIlumina: #00BCD4;
+  --azulPrincipal: rgb(1, 87, 155);
+  --blancoTipologia: #FDFEFE;
+  --naranjaContraste: #FF6F00;
+  --fondoGris: #212121;
+  --fondoOscuro: #151515;
+  --tipografiaClara: #E5E7E9;
+  --aguamar: #3498db;
+  --azulGrisaceo: #2980B9;
+  --morado: #8E44AD;
+  --mostaza: #F1C40F;
   /* --------------------------*/
-  --azulPrincipal: #3498db;
+  --azulPapuntes: #3498db;
 }
-.main--Principal, .main--Indice, .main--Apuntes {
+/* FUENTES
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Smooch', cursive;
+  font-family: 'Titan One', cursive;
+*/
+
+.main--Principal, .main--Indice {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  background-color: var(--azulPrincipal);
+  color: var(--blancoTipologia);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
 }
 
 /* Barra superior - Indices y apuntes, se incluye botón hacia principal y nombre asignatura */
@@ -24,7 +56,6 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-bottom: 1rem;
   padding: 1rem 10%;
   font-family: 'Titan One', cursive;
   font-weight: 100;
@@ -39,6 +70,10 @@
   flex-direction: column;
   align-items: stretch;
   gap: 1rem;
+}
+
+.main--Principal a, .main--Indice a{
+  color: var(--blancoTipologia)
 }
 
 /* Botón para ir hacia arriba en la página */
@@ -57,6 +92,21 @@
 /* ______________________________________ */
 
 /* CLASES VISTA PRINCIPAL ________________*/
+
+/* ENCABEZADOS ___________________*/
+.main--Principal :is(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
+}
+
+.main--Principal :is(h1, h2) {margin-bottom: 2rem;} 
+.main--Principal :is(h3, h4) {margin-bottom: 1rem;} 
+.main--Principal :is(h5, h6) {margin-bottom: .5rem;} 
+
+.main--Principal h1 { font-size: 3rem;}
+.main--Principal h2 { font-size: 2.5rem;}
+.main--Principal h3 { font-size: 2rem;}
+
 /*    Presentacion - Titulo principal SapheryDesings */
 .presentacion {
   font-family: 'Smooch', cursive;
@@ -133,14 +183,3 @@
 
 
 /* ______________________________________ */
-
-
-
-
-
-
-
-
-
-
-    
