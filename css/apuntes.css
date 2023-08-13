@@ -1,8 +1,6 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
-  margin: 0; /* Eliminar general ok */
-  padding: 0; /* Eliminar general ok */
 }
 
 :root {
@@ -13,7 +11,7 @@
 }
 
 
-.contenedorApuntes h1, h2, h3, h4, p { /* ERROR */
+.contenedorApuntes :is(h1, h2, h3, h4, p) {
   margin: 1rem auto; 
   padding: .5rem;
 }
@@ -41,7 +39,7 @@
     background-color: var(--azulClaro);
   }
 
-.contenedorApuntes ol, ul {
+.contenedorApuntes :is(ol, ul) {
   margin: 1rem auto; 
   padding: .5rem;
   padding-left: 2rem;
