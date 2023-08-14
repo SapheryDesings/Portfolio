@@ -269,8 +269,10 @@
   /* MENÚ NAVEGACIÓN */  
   .menuOpcional {
     margin-top: 5rem;
+    padding-bottom: .5rem;
     display: flex;
     gap: .5rem;
+    border-bottom: 2px dotted darkorange;
   }
     .botonO {
       background-color: white;
