@@ -23,7 +23,7 @@
   --fondoGris: #212121;
   --fondoOscuro: #151515;
   --tipografiaClara: #E5E7E9;
-  --aguamar: #3498db;
+  --aguamar: #3498db; /* => --azulPapuntes - CORREGIR */
   --azulGrisaceo: #2980B9;
   --morado: #8E44AD;
   --mostaza: #F1C40F;
@@ -204,7 +204,7 @@
     color: var(--azulPapuntes);
   }
   .subTitulo {
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: .5rem;
     border-top: 5px solid var(--azulDetalles);
     color: var(--azulPapuntes);
@@ -265,20 +265,25 @@
       border: 3px dashed var(--azulDetalles);
       background-color: var(--azulClaro);
     }
-
-
-.menuOpcional {
-  
-  display: flex;
-  gap: .5rem;
-}
-  .botonO {
-    background-color: darkorange;
-    color: white;
-    font-weight: bold;
-    padding: .3rem 1.2rem;
+  /*_________________*/  
+  /* MENÚ NAVEGACIÓN */  
+  .menuOpcional {
+    margin-top: 5rem;
+    display: flex;
+    gap: .5rem;
   }
-
+    .botonO {
+      background-color: white;
+      color: var(--azulPapuntes);
+      font-weight: bold;
+      padding: .3rem 1.2rem;
+      border: 1px solid var(--azulPapuntes);
+    }
+    .botonO:hover {
+      background-color: darkorange;
+      color: white;
+      border: 1px solid darkorange;
+    }
 .pieApuntes {
   background-color: var(--azulDetalles);
   min-height: 50px;
@@ -287,6 +292,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Smooch', cursive;
 }
 
 
