@@ -183,88 +183,89 @@
 /* ______________________________________ */
 
 /* CLASES VISTA APUNTES __________________*/
-.contenedorApuntes :is(h1, h2, h3, h4, p) {
-  margin: 1rem auto; 
-  padding: .5rem;
-}
-
-.contenedorApuntes table {
-  margin: 5rem auto;
-  border-collapse: collapse;
-}
-.contenedorApuntes caption {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-  .contenedorApuntes th {
-    color: var(--azulClaro);
-    padding: .3rem 1.2rem;
-    border: 3px dashed var(--azulDetalles);
-    border-right: 3px dashed var(--azulClaro);
-    background-color: var(--azulDetalles);
-  }
-  .contenedorApuntes th:last-child { border-right: 3px dashed var(--azulDetalles);}
-  .contenedorApuntes td {
-    padding: .5rem;
-    color: var(--azulDetalles);
-    border: 3px dashed var(--azulDetalles);
-    background-color: var(--azulClaro);
-  }
-
-.contenedorApuntes :is(ol, ul) {
-  margin: 1rem auto; 
-  padding: .5rem;
-  padding-left: 2rem;
-  background-color: var(--azulClaro);
-}
-
-.contenedorApuntes li {
-  padding: .5rem;
-  list-style-type: square;
-}
-
+/* Contenedor principal de la vista apuntes */
 .contenedorApuntes { 
   width: 60%; 
   margin: auto;
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
 }
-.tituloPrincipal {
-  font-weight: 800;
-  background-color: var(--azulPapuntes);
-  color: white;
-  margin-bottom: 2rem;
-  margin-top: 0;
-}
+  /* ____ TITULOS ____*/
+  .tituloPrincipal { /* Si no hace falta borrar */
+    font-weight: 800;
+    background-color: var(--azulPapuntes);
+    color: white;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+  .tituloTema {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 10px solid var(--azulDetalles);
+    color: var(--azulPapuntes);
+  }
+  .subTitulo {
+    margin-top: 5rem;
+    padding: .5rem;
+    border-top: 5px solid var(--azulDetalles);
+    color: var(--azulPapuntes);
+  }
+  .apartado {
+    margin-top: 2rem;
+    padding: .5rem 15% .5rem .5rem;
+    display: inline-block;
+    color: var(--azulClaro);
+    background-color: var(--azulDetalles);
+  }
+  .nota {
+    width: 92%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--amarilloNota);
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+  /*___________________*/
+  /* ____ PARRAFOS ____*/
+  .contenedorApuntes p {  
+    margin: 1rem auto; 
+    padding: .5rem 0;
+  }
+  /* ____ LISTAS ____*/
+  .contenedorApuntes :is(ol, ul) {
+    margin: 1rem auto; 
+    padding: .5rem;
+    background-color: var(--azulClaro);
+  }
+  .contenedorApuntes li {
+    padding: .5rem;
+    list-style-type: square;
+    list-style-position: inside;
+  }
+  /* ____ TABLAS ____*/
+  .contenedorApuntes table { 
+    margin: 5rem auto;
+    border-collapse: collapse;
+  }
+  .contenedorApuntes caption {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    .contenedorApuntes th {
+      color: var(--azulClaro);
+      padding: .3rem 1.2rem;
+      border: 3px dashed var(--azulDetalles);
+      border-right: 3px dashed var(--azulClaro);
+      background-color: var(--azulDetalles);
+    }
+    .contenedorApuntes th:last-child { border-right: 3px dashed var(--azulDetalles);}
+    .contenedorApuntes td {
+      padding: .5rem;
+      color: var(--azulDetalles);
+      border: 3px dashed var(--azulDetalles);
+      background-color: var(--azulClaro);
+    }
 
-.tituloTema {
-  border-left: 10px solid var(--azulDetalles);
-  color: var(--azulPapuntes);
-}
-
-.subTitulo {
-  margin-top: 5rem;
-  color: var(--azulPapuntes);
-  border-top: 5px solid var(--azulDetalles);
-}
-
-.apartado {
-  margin-top: 2rem;
-  margin-bottom: 0;
-  padding: .5rem 2rem .5rem .5rem;
-  display: inline-block;
-  color: var(--azulClaro);
-  background-color: var(--azulDetalles);
-}
-
-.nota {
-  width: 92%;
-  margin: auto;
-  padding: 1rem;
-  background-color: var(--amarilloNota);
-  font-size: 1.1rem;
-  font-weight: bold;
-  font-style: italic;
-}
 
 .menuOpcional {
   

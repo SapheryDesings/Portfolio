@@ -129,18 +129,18 @@
         Dependiendo de cómo empecemos la ruta de directorio para nombrar el archivo:
       </p>
       <ul>
-        <li><b>Ruta absoluta o completa:</b> se indica el camino desde el comienzo. En linux se empieza por "/", Windows cada partición posee un directorio raíz, no existe un directorio ráiz común que los contenga a todos ellos.</li>
-        <li><b>Ruta relativa:</b> se le indica el camino del directorio desde la posición actual.</li>
+        <li><strong>Ruta absoluta o completa:</strong> se indica el camino desde el comienzo. En linux se empieza por "/", Windows cada partición posee un directorio raíz, no existe un directorio ráiz común que los contenga a todos ellos.</li>
+        <li><strong>Ruta relativa:</strong> se le indica el camino del directorio desde la posición actual.</li>
       </ul>
       <h4 class="subTitulo_4">Tipos de fichero</h4>
       <ul>
         <li>
-          <b>Según su acceso:</b> según la forma de organizar la información:
+          <strong>Según su acceso:</strong> según la forma de organizar la información:
           <ul>
-            <li><b>Secuencial:</b> los registros se van almacenando en posiciones consecutivas de manera que cada vez que queramos acceder a ellos tendremos que empezar desde el primero e ir recorriéndolos de uno en uno</li>
-            <li><b>Aleatorio o directo:</b> podemos acceder a un registro concreto indicando una posición perteneciente a un conjunto de posiciones posibles. Los registros están organizados y pueden ser léidos o escritos en cualquier orden, ya que se accede a cada uno da través de su posición. Cuando queremos realizar una operación, basta con colocar el puntero que maneja el fichero justo antes de este</li>
+            <li><strong>Secuencial:</strong> los registros se van almacenando en posiciones consecutivas de manera que cada vez que queramos acceder a ellos tendremos que empezar desde el primero e ir recorriéndolos de uno en uno</li>
+            <li><strong>Aleatorio o directo:</strong> podemos acceder a un registro concreto indicando una posición perteneciente a un conjunto de posiciones posibles. Los registros están organizados y pueden ser léidos o escritos en cualquier orden, ya que se accede a cada uno da través de su posición. Cuando queremos realizar una operación, basta con colocar el puntero que maneja el fichero justo antes de este</li>
             <li>
-              <b>Secuencial indexado:</b> poseen un campo clave (índice) para ser identificados. Permiten el acceso secuencial y aleatorio a un fichero de la siguiente forma: <br>
+              <strong>Secuencial indexado:</strong> poseen un campo clave (índice) para ser identificados. Permiten el acceso secuencial y aleatorio a un fichero de la siguiente forma: <br>
               <ol>
                 <li>Primero busca de forma secuencial el campo clave o índice</li>
                 <li>Una vez que lo encuentra, el acceso al fichero es directo, ya que solo tenemos que acceder a la posición indicada por el campo clave</li>
@@ -150,10 +150,10 @@
           </ul>
         </li>
         <li>
-          <b>Según su estructura:</b>
+          <strong>Según su estructura:</strong>
           <ul>
-            <li><b>Ficheros de texto:</b> formados por texto plano sin formato legible por el usuario</li>
-            <li><b>Ficheros binarios:</b> los datos se almacenan de forma binaria y de se guardan de la misma forma. Los datos se encriptan en ceros y unos, así se hace mucho más eficiente su almacenamiento.</li>
+            <li><strong>Ficheros de texto:</strong> formados por texto plano sin formato legible por el usuario</li>
+            <li><strong>Ficheros binarios:</strong> los datos se almacenan de forma binaria y de se guardan de la misma forma. Los datos se encriptan en ceros y unos, así se hace mucho más eficiente su almacenamiento.</li>
           </ul> 
         </li>
       </ul>
@@ -252,9 +252,9 @@
         Utilizaremos las clases pertenecientes a los dos tipos de ficheros: binarios y de texto. Se pueden distinguir dos tipos de flujos:
       </p>
       <ul>
-        <li><b>Flujos base:</b> Son aquellos que operan más a nivel máquina, como, porción de memoria, espacio de disco o conexión de red</li>
-        <li><b>Flujos intermedios:</b> Trabajan por encima de los anteriores. Se pueden combinar con el flujo base de manera que este pueda verse beneficiado por todas las funcionalidades que ofrezca el flujo base</li>
-        <li>El <b>flujo intermedio</b> procesa la información, mientras que la base realiza la función de envío de bytes de un lugar a otro</li>
+        <li><strong>Flujos base:</strong> Son aquellos que operan más a nivel máquina, como, porción de memoria, espacio de disco o conexión de red</li>
+        <li><strong>Flujos intermedios:</strong> Trabajan por encima de los anteriores. Se pueden combinar con el flujo base de manera que este pueda verse beneficiado por todas las funcionalidades que ofrezca el flujo base</li>
+        <li>El <strong>flujo intermedio</strong> procesa la información, mientras que la base realiza la función de envío de bytes de un lugar a otro</li>
       </ul>
     </article>
     <a class="btnArriba" href="#top">Arriba</a>
@@ -270,12 +270,12 @@
           Modos en los que se puede abrir un fichero:
         </p>
         <ul>
-          <li><b>Open:</b> Abrimos un fichero, que desencadena una excepción si el fichero no existe (FileNotFoundException)</li>
-          <li><b>Create:</b> Creamos un nuevo fichero. Si ya existe se sobrescribirá, equivalente a utilizar CreateNew si no existe el archivo, y Truncate en caso contrario</li>
-          <li><b>CreateNew:</b> Creamos un nuevo fichero, si ya existe lanzará una excepción (IOExcption)</li>
-          <li><b>Truncate:</b> Abrimos un archvios existenete, se debe truncar su tamaño a cero bytes. Al intentar leer un archivo en este modo se producirá una excepción (ArgumentException)</li>
-          <li><b>OpenOrCreate:</b> Abre un archivo si ya existe, si no se crea uno nuevo</li>
-          <li><b>Append:</b> Abre el archivo si existe y realiza una búsqueda hasta el final, si no existe crea uno nuevo</li>
+          <li><strong>Open:</strong> Abrimos un fichero, que desencadena una excepción si el fichero no existe (FileNotFoundException)</li>
+          <li><strong>Create:</strong> Creamos un nuevo fichero. Si ya existe se sobrescribirá, equivalente a utilizar CreateNew si no existe el archivo, y Truncate en caso contrario</li>
+          <li><strong>CreateNew:</strong> Creamos un nuevo fichero, si ya existe lanzará una excepción (IOExcption)</li>
+          <li><strong>Truncate:</strong> Abrimos un archvios existenete, se debe truncar su tamaño a cero bytes. Al intentar leer un archivo en este modo se producirá una excepción (ArgumentException)</li>
+          <li><strong>OpenOrCreate:</strong> Abre un archivo si ya existe, si no se crea uno nuevo</li>
+          <li><strong>Append:</strong> Abre el archivo si existe y realiza una búsqueda hasta el final, si no existe crea uno nuevo</li>
         </ul>
       </article>
       <article class="articuloApuntes">
@@ -430,13 +430,13 @@
           Comenzamos por utilizar la clase FileStream, para acceder a un byte o a bloques de byte. Esto nos proporciona un método para el acceso:
         </p>
         <p>
-          <b>Read(Byte[], int offset, int count)</b> lee un bloque de bytes de la secuencia y escribe los datos en un búffer dado. <br>
+          <strong>Read(Byte[], int offset, int count)</strong> lee un bloque de bytes de la secuencia y escribe los datos en un búffer dado. <br>
           Los parámetros:
         </p>
         <ul>
-          <li><b>array Byte[]:</b> contiene la matriz de bytes con los valores de offset y reemplazados por leídos desde el origen actual</li>
-          <li><b>offset:</b> se colocarán los bytes leídos</li>
-          <li><b>count:</b> el número máximo de bytes que se deben leer</li>
+          <li><strong>array Byte[]:</strong> contiene la matriz de bytes con los valores de offset y reemplazados por leídos desde el origen actual</li>
+          <li><strong>offset:</strong> se colocarán los bytes leídos</li>
+          <li><strong>count:</strong> el número máximo de bytes que se deben leer</li>
         </ul>
         <p>
           <pre>
@@ -511,7 +511,7 @@
       </p>
       <ul>
         <li>
-          <b>Exists(string path):</b> le pasamos la ruta del fichero y devolverá un booleano. Si no existe, devolverá un false. Si la ruta no existe o es incorrecta, también devolverá un false.
+          <strong>Exists(string path):</strong> le pasamos la ruta del fichero y devolverá un booleano. Si no existe, devolverá un false. Si la ruta no existe o es incorrecta, también devolverá un false.
           <p>
             <pre>
               <code>
@@ -526,7 +526,7 @@
           </p>
         </li>
         <li>
-          <b>Try/catch:</b> el bloque try contiene el código protegido que puede producir la excepción. <br>
+          <strong>Try/catch:</strong> el bloque try contiene el código protegido que puede producir la excepción. <br>
           Los mensajes de error y acciones para corregir el error estarán en el bloque catch.
           <p>
             <pre>

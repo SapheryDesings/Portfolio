@@ -38,8 +38,8 @@
         </p>
         <p>Consta de los elementos:</p>
         <ul>
-          <li><b>Cliente:</b> es el sistema que precisa de servicios</li>
-          <li><b>Servidor:</b> es el sistema que proporciona servicios</li>
+          <li><strong>Cliente:</strong> es el sistema que precisa de servicios</li>
+          <li><strong>Servidor:</strong> es el sistema que proporciona servicios</li>
         </ul>
         <p>
           Cliente y servidor son elementos separados que establecen su comunicación mediante la red de comunicaciones y colaboran para completar tareas de forma conjunta. Cuando el cliente precisa un servicio, realiza una petición y el servidor le da una respuesta. El servidor recibirá y procesará la petición y le brindará el servicio requerido. Ejemplo, el servicio web que empleamos para navegar por internet.
@@ -59,21 +59,21 @@
         <p>Las características y funcionalidades que nos brinda son muchas. Las más destacables son:</p>
         <ul>
           <li>
-            <b>Acreditación de usuarios:</b>
+            <strong>Acreditación de usuarios:</strong>
             <p>
               Los usuarios pueden acceder a sus respectivas cuentas desde cualquier equipo en red acreditado mediante LDAP.
             </p>
           </li>
           <li>
-            <b>Búsqueda de datos:</b>
+            <strong>Búsqueda de datos:</strong>
             <p>También pueden emplearlo como si se tratara de una guía virtual que brinda los datos de contacto de otros usuarios de manera sencilla y accesible.</p>
           </li>
           <li>
-            <b>Centralización de la administración:</b>
+            <strong>Centralización de la administración:</strong>
             <p>Permite centralizar la gestión de cuentas de usuario y sus permisos asociados.</p>
           </li>
           <li>
-            <b>Posibilidad de replicar la base de datos:</b>
+            <strong>Posibilidad de replicar la base de datos:</strong>
             <p>Una vez hayamos configurado la base de datos podemos replicarla. Lo que nos permite la opción de configurar diversos servidores LDAP sincronizados. Cuando la red y cantidad de usuarios crecen rápidamente, la red puede balancear la carga entre varios servidores.</p>
           </li>
         </ul>
@@ -99,24 +99,24 @@
         </p>
         <ul>
           <li>
-            <b>Dominios de redes:</b>
+            <strong>Dominios de redes:</strong>
             <p>De redes en general, comprende un determinado grupo de ordenadores que están conectados y que han otorgado a uno de los equipos la gestión de los usuarios, sus privilegios de acceso y otros datos.</p>
           </li>
           <li>
-            <b>Dominios en internet:</b>
+            <strong>Dominios en internet:</strong>
             <p>Hace referencia a la parte principal de una determinada dirección web. Dicha parte hace referencia a la empresa u organización que gestiona el sitio.</p>
           </li>
         </ul>
         <p>El subdominio, también puede variar dependiendo de a qué nos refiramos:</p>
         <ul>
           <li>
-            <b>Subdominios en redes:</b>
+            <strong>Subdominios en redes:</strong>
             <p>
               Son subgrupos o subclasificaciones dentro de un dominio. Su creación implica la creación de un dominio de segundo nivel, anidado dentro del dominio primario. La nueva estructura está relacionada con la primera, pero cuenta con características propias. Se utilizan con fines administrativos o para separar los diversos bloques de una organización.
             </p>
           </li>
           <li>
-            <b>Subdominios en internet:</b>
+            <strong>Subdominios en internet:</strong>
             <p>
               Suele hacer referencia a la parte de la dirección web que antecede al dominio y queda separado de este por un punto. Se emplea para compartimentar grandes sitios web en diferentes áreas. Con otros fines podemos usarlos para hacer pruebas y desarrollar nuevas páginas o aplicaciones. Si trabajamos en un subdominio, mantendremos intacta la estructura básica y nuestro posicionamiento no se verá afectado.
             </p>
@@ -178,61 +178,61 @@
         <p>Debemos aprender la terminología que emplea:</p>
         <ul>
           <li>
-            <b>Objeto:</b>
+            <strong>Objeto:</strong>
             <p>
               Genérico para referirnos al cualquiera de los componentes que conforman el directorio. Cada objeto puede tener sus características y un nombre para identificarlo.
             </p>
           </li>
           <li>
-            <b>Directorio:</b>
+            <strong>Directorio:</strong>
             <p>
               AD se basa en el concepto de directorio, que es un repositorio en el que se guarda toda la información referente a usuarios, grupos, recursos, etc.
             </p>
           </li>
           <li>
-            <b>Dominio:</b>
+            <strong>Dominio:</strong>
             <p>
               Conjunto de objetos dentro del directorio que conforman un subconjunto administrativo. Dentro de un "bosque" puede haber varios dominios. Cada uno puede tener su propio conjunto de objetos y unidades organizativas.
             </p>
           </li>
           <li>
-            <b>Controlador de dominio:</b>
+            <strong>Controlador de dominio:</strong>
             <p>
               Conjunto de objetos del directorio para un determinado dominio. En un dominio puede haber varios controladores de dominio.
             </p>
           </li>
           <li>
-            <b>Árboles:</b>
+            <strong>Árboles:</strong>
             <p>
               Son conjuntos de dominios que poseen una raíz común. Están organizados jerárquicamente y su jerarquía se refleja en los nombres.
             </p>
           </li>
           <li>
-            <b>Bosque:</b>
+            <strong>Bosque:</strong>
             <p>
               Abarca todos los dominios dentro de su ámbito, por otra parte están interconectados por lo que se denomina Relaciones de confianza. Todos los dominios de un bosque confían automáticamente entre si, los distintos árboles pueden compartir recursos entre sí. Un bosque contiene siempre al menos un dominio, que ejerce de raíz del bosque.
             </p>
           </li>
           <li>
-            <b>Unidades organizativas:</b>
+            <strong>Unidades organizativas:</strong>
             <p>
               Contenedores de objetos que permiten organizarlos jerárquicamente en subgrupos dentro del dominio. Podemos definir estructuras lógicas que faciliten la organización y hagan que la administración sea más sencilla.
             </p>
           </li>
           <li>
-            <b>Relaciones de confianza:</b>
+            <strong>Relaciones de confianza:</strong>
             <p>
               Son un método de comunicación entre dominios, árboles y bosques que rige la seguridad de la red. Los usuarios de AD pueden autenticarse en otro dominio del directorio.
             </p>
             <p>Pueden ser de diversos tipos, las más comunes:</p>
             <ul>
-              <li><b>Unidireccionales:</b> funcionan en una única dirección</li>
-              <li><b>Bidireccionales:</b> funcionan en ambas direcciones</li>
-              <li><b>Transitivas:</b> en ellas la confianza se propaga</li>
+              <li><strong>Unidireccionales:</strong> funcionan en una única dirección</li>
+              <li><strong>Bidireccionales:</strong> funcionan en ambas direcciones</li>
+              <li><strong>Transitivas:</strong> en ellas la confianza se propaga</li>
             </ul>
           </li>
           <li>
-            <b>Delegación de control entre dominios:</b>
+            <strong>Delegación de control entre dominios:</strong>
             <p>
               Permite a los usuarios de un dominio administrar recursos de otro dominio. Es necesario entre los dominio una relación de confianza. La delegación de control la realizaremos solamente a usuarios en los que confiemos plenamente.
             </p>
@@ -259,8 +259,8 @@
         <p>
           Los servidores Linux son utilizados en modo texto. Los comandos más básicos para agregar o eliminar usuarios:
           <ul>
-            <li><b>sudo adduser usuario:</b> crea una cuenta de usuario</li>
-            <li><b>sudo deluser usuario:</b> elimina una cuenta de usuario</li>
+            <li><strong>sudo adduser usuario:</strong> crea una cuenta de usuario</li>
+            <li><strong>sudo deluser usuario:</strong> elimina una cuenta de usuario</li>
           </ul>
         </p>
         <p>
@@ -359,10 +359,10 @@
         </p>
         <p>Las más comunes de Windows son:</p>
         <ul>
-          <li><b>%APPDATA%:</b> directorio de las carpetas ocultas para datos de las aplicaciones</li>
-          <li><b>%USERPORFILE%:</b> directorio del usuario de la sesión</li>
-          <li><b>%WINDIR%:</b> ruta por defecto de la instalación de Windows</li>
-          <li><b>%PROGRAMFILES%:</b> directorio que almacenan la instalación de los programas</li>
+          <li><strong>%APPDATA%:</strong> directorio de las carpetas ocultas para datos de las aplicaciones</li>
+          <li><strong>%USERPORFILE%:</strong> directorio del usuario de la sesión</li>
+          <li><strong>%WINDIR%:</strong> ruta por defecto de la instalación de Windows</li>
+          <li><strong>%PROGRAMFILES%:</strong> directorio que almacenan la instalación de los programas</li>
         </ul>
         <p>Estas no siempre conducen a directorios. %TIME% nos devuelve la hora actual del sistema.</p>
         <p>
@@ -370,15 +370,15 @@
         </p>
         <p>En caso de linux encontramos variables como:</p>
         <ul>
-          <li><b>'SHELL':</b> intérprete de comandos</li>
-          <li><b>'LANG':</b> idioma actual del sistema</li>
-          <li><b>'HOME':</b> directorio actual del usuario de la sesión</li>
+          <li><strong>'SHELL':</strong> intérprete de comandos</li>
+          <li><strong>'LANG':</strong> idioma actual del sistema</li>
+          <li><strong>'HOME':</strong> directorio actual del usuario de la sesión</li>
         </ul>
         <p>Para modificar los valores de estas variables debemos acceder a tres archivos de texto almacenados en el sistema</p>
         <ul>
-          <li><b>/etc/environment -></b> variables independientes del intérprete de comandos</li>
-          <li><b>/etc/profile -></b> para definir variables que serán válidas para todas las shells interactivas que exijan login. Si queremos definir únicamente variables de usuario el directorio es /.bash_profile</li>
-          <li><b>/etc/bash.bashrc -></b> igual que el anterior aunque para consolas no logueadas. El equivalente para variables de usuario es /.bashrc</li>
+          <li><strong>/etc/environment -></strong> variables independientes del intérprete de comandos</li>
+          <li><strong>/etc/profile -></strong> para definir variables que serán válidas para todas las shells interactivas que exijan login. Si queremos definir únicamente variables de usuario el directorio es /.bash_profile</li>
+          <li><strong>/etc/bash.bashrc -></strong> igual que el anterior aunque para consolas no logueadas. El equivalente para variables de usuario es /.bashrc</li>
         </ul>
       <a class="btnArriba" href="#top">Arriba</a>
     </article>
@@ -394,14 +394,14 @@
         </p>
         <p>Distinguimos entre los siguientes tipos de grupos:</p>
         <ul>
-          <li><b>Grupos de distribución:</b> pensados solamente para usarse con aplicaciones de correo electrónico</li>
-          <li><b>Grupos de seguridad:</b> se utilizan para administrar permisos de acceso a los diversos recursos de la red</li>
+          <li><strong>Grupos de distribución:</strong> pensados solamente para usarse con aplicaciones de correo electrónico</li>
+          <li><strong>Grupos de seguridad:</strong> se utilizan para administrar permisos de acceso a los diversos recursos de la red</li>
         </ul>
         <p>Otra clsificación en función de su ámbito:</p>
         <ul>
-          <li><b>Grupos de ámbito universal:</b> pueden emplearse en cualquier parte de un mismo bosque. Tras definir un grupo universal podemos asignarle usuarios, anidados y usar listas de control de acceso para definir permisos</li>
-          <li><b>Grupos de ámbito global:</b> los permisos que conferiremos a este grupo son válidos en cualquier dominio, pero sus miembros solo pueden realizar acciones en el  dominio en el que está dado de alta el grupo global</li>
-          <li><b>Grupos de ámbito local:</b> los miembros dados de alta en este pueden realizar acciones en cualquier dominio, pero sus permisos son efectivos únicamente para recursos del dominio en el que fue creado el grupo.</li>
+          <li><strong>Grupos de ámbito universal:</strong> pueden emplearse en cualquier parte de un mismo bosque. Tras definir un grupo universal podemos asignarle usuarios, anidados y usar listas de control de acceso para definir permisos</li>
+          <li><strong>Grupos de ámbito global:</strong> los permisos que conferiremos a este grupo son válidos en cualquier dominio, pero sus miembros solo pueden realizar acciones en el  dominio en el que está dado de alta el grupo global</li>
+          <li><strong>Grupos de ámbito local:</strong> los miembros dados de alta en este pueden realizar acciones en cualquier dominio, pero sus permisos son efectivos únicamente para recursos del dominio en el que fue creado el grupo.</li>
         </ul>
         <p>Hay una serie de grupos que se crean de forma predeterminada:</p>
         <ul>
