@@ -300,22 +300,26 @@
 
 /***********************************************/
 @media screen and (max-width: 1280px){ 
+  /* VISTA APUNTES */
   .contenedorApuntes { width: 70%;}
 }
 @media screen and (max-width: 1024px){ 
+  /* VISTA APUNTES */
   .contenedorApuntes { width: 80%;}
 }
 @media screen and (max-width: 800px){ 
+  /* VISTA APUNTES */
   .contenedorApuntes { width: 90%;}
 }
 @media screen and (max-width: 480px){ 
+  /* VISTA APUNTES */
   .contenedorApuntes { width: 100%;}
   table {
     margin: 1rem auto;
   }
   .tituloTema { 
     border: none;
-    padding-left: .2rem;
+    padding-left: .1rem;
   }
 }
 
