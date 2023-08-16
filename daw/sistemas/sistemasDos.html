@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../css/mediaQ.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smooch&family=Titan+One&display=swap" rel="stylesheet">
   <title>Sistemas Informáticos</title>
 </head>
 <body>
@@ -19,10 +19,10 @@
     </div>
   </header>
   <div class="contenedorApuntes">
-      <div class="tituloTema"><h1>Tema 2.- Administración de software base</h1></div>
+      <div class="tituloTema" id="2.1"><h1>Tema 2.- Administración de software base</h1></div>
         <h3 class="subTitulo">Introducción</h3>
         <p>El <strong>software base</strong> es el programa encargado de controlar el ordenador.</p>
-      <h3 class="subTitulo" id="2.1">Administración de usuarios y grupos locales</h3>
+      <h3 class="subTitulo">Administración de usuarios y grupos locales</h3>
         <p>Mediante las cuentas de usuario se identifica y autentifica un individuo con el sistema. En un mismo equipo pueden trabajar varias personas, con su propio espacio de trabajo.</p>
         <p>El usuario administrador es el encargado de dar acceso a los usuarios y controlar todas las operaciones, este usuario no tiene límites cuando trabaja sobre el sistema.</p>
         <p>Los S.O. multiusuario ofrecen la posibilidad de registrarse al iniciar sesión, con estos datos se puede controlar el acceso y permite asignar permisos y restricciones.</p>
@@ -69,7 +69,7 @@
         <div class="menuOpcional">
           <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
           <a href="../../index.html"><div class="botonO">Principal</div></a>
-          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
         </div>
       <h3 class="subTitulo" id="2.2">Seguridad de cuentas de usuario</h3>
         <p>Si únicamente nosotros tenemos acceso a un equipo es habitual que lo hagmos como administrador, teneiendo todos los permisos. Es importante que iniciemos sesión con dicha cuenta o con otras que nos birnden permisos avanzados si las operaciones lo requieren. Para maximizar la seguridad debemos tener en cuenta las siguientes pautas:</p>
@@ -101,7 +101,7 @@
         <div class="menuOpcional">
           <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
           <a href="../../index.html"><div class="botonO">Principal</div></a>
-          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
         </div>
       <h3 class="subTitulo" id="2.4">Configuración del protocolo TCP/IP. Direcciones IP y máscaras de subred</h3>
         <p>La <strong>dirección IP</strong> constituye el concepto fundamental en para configurar debidamente el servidor de redes. Con ella podemos identificar a cada equipo y consta siempre de cuatro números enteros de 4 bytes separados por puntos que pueden oscilar entre 0 y 255.</p>
@@ -147,7 +147,7 @@
         <div class="menuOpcional">
           <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
           <a href="../../index.html"><div class="botonO">Principal</div></a>
-          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
         </div>
       <h3 class="subTitulo" id="2.5">Servicio de Nombres de Dominios (DNS)</h3>
         <p>Los servidores DNS son muy importantes, estos tienen la misión de evitar recordar la IP del equipo al que nos conectamos. Es el servidor DNS el que relaciona el nombre escrito (www.google.es) con la ip (142.250.200.68) que tiene alojada la página que queremos visualizar.</p>
@@ -167,7 +167,7 @@
         <div class="menuOpcional">
           <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
           <a href="../../index.html"><div class="botonO">Principal</div></a>
-          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
         </div>
       <h3 class="subTitulo" id="2.7">Optimización de sistemas para ordenadores portátiles. Archivos de red sin conexión</h3>  
       <h4 class="apartado">Los pórtatiles poseen unas características propias que debemos tener en cuenta:</h4>
@@ -192,16 +192,18 @@
         <div class="menuOpcional">
           <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
           <a href="../../index.html"><div class="botonO">Principal</div></a>
-          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
         </div>
       <h3 class="subTitulo" id="2.8">Principales comandos de sistemas operativos libres y propietarios</h3>
         <p>Existen una serie de comandos que nos ofrecen la posibilidad de movernos y gestionar los S.O. Es conveniente conocer los más utilizados:</p>
         <table>
           <tr>
-            <th>Comando</th>
+            <th>Comando Windows</th>
+            <th>Comando Linux</th>
             <th>Acción</th>
           </tr>
           <tr>
+            <td>cd</td>
             <td>cd</td>
             <td>Moverse de directorio</td>
           </tr>
@@ -227,6 +229,7 @@
           </tr>
           <tr>
             <td>mkdir</td>
+            <td>mkdir</td>
             <td>Crear directorio</td>
           </tr>
           <tr>
@@ -249,7 +252,7 @@
         <div class="menuOpcional">
           <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
           <a href="../../index.html"><div class="botonO">Principal</div></a>
-          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
         </div>
   </div>
   <footer class="pieApuntes"><div>- SapheryDesings -</div></footer>
