@@ -185,7 +185,7 @@
 /* CLASES VISTA APUNTES __________________*/
 /* Contenedor principal de la vista apuntes */
 .contenedorApuntes { 
-  width: clamp( 200px, 90vw , 1024px);
+  width: clamp( 200px, 95vw , 1024px);
   margin: auto;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(14px, 3vw, 22px);
