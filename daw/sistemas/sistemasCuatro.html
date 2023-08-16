@@ -5,11 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/clases.css">
-  
   <link rel="stylesheet" href="../../css/mediaQ.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smooch&family=Titan+One&display=swap" rel="stylesheet">
   <title>Sistemas Informáticos</title>
 </head>
 <body>
@@ -19,389 +18,195 @@
         <a href="../../index.html">Principal</a>
     </div>
   </header>
-  <main class="main--Apuntes">
-    <article class="articuloApuntes">
-    <div class="tituloTema">
-      <h1>Tema 4.- Administración de dominios</h1>
-    </div>
-      <a name="4.1"></a>
-      <h3 class="subTitulo" id="">>Introducción</h3>
-        <p>
-          Mediante la Administración dominios podemos centralizar, simplificar y agilizar muy significativamente las tareas de gestión. Crear un dominio en un equipo servidor al que se conecten equipos cliente resulta muy práctico para administrar redes.
-        </p>
-      <h3 class="subTitulo" id="">Estructura cliente-servidor</h3>
-        <p>
-          Este modelo de comunicación es bastante sencillo, ya que apartir de un equipo cliente, se necesita otro equipo servidor para que este realice aquellas funciones que tiene asignadas.
-        </p>
-        <p>
-          Pueden ser equipos diferentes o iguales. Una computadora puede ser cliente y servidor a la misma vez depediendo del software.
-        </p>
+  <div class="contenedorApuntes">
+    <div class="tituloTema" id="4.1"><h1>Tema 4.- Administración de dominios</h1></div>
+      <h3 class="subTitulo">Introducción</h3>
+        <p>Mediante la Administración dominios podemos centralizar, simplificar y agilizar muy significativamente las tareas de gestión. Crear un dominio en un equipo servidor al que se conecten equipos cliente resulta muy práctico para administrar redes.</p>
+      <h3 class="subTitulo">Estructura cliente-servidor</h3>
+        <p>Este modelo de comunicación es bastante sencillo, ya que apartir de un equipo cliente, se necesita otro equipo servidor para que este realice aquellas funciones que tiene asignadas.</p>
+        <p>Pueden ser equipos diferentes o iguales. Una computadora puede ser cliente y servidor a la misma vez depediendo del software.</p>
         <p>Consta de los elementos:</p>
         <ul>
-          <li><strong>Cliente:</strong> es el sistema que precisa de servicios</li>
-          <li><strong>Servidor:</strong> es el sistema que proporciona servicios</li>
+          <li><strong>Cliente</strong>: es el sistema que precisa de servicios.</li>
+          <li><strong>Servidor</strong>: es el sistema que proporciona servicios.</li>
         </ul>
-        <p>
-          Cliente y servidor son elementos separados que establecen su comunicación mediante la red de comunicaciones y colaboran para completar tareas de forma conjunta. Cuando el cliente precisa un servicio, realiza una petición y el servidor le da una respuesta. El servidor recibirá y procesará la petición y le brindará el servicio requerido. Ejemplo, el servicio web que empleamos para navegar por internet.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.2"></a>
-      <h3 class="subTitulo" id="">Protocolo LDAP</h3>
-        <p>
-          Consideramos LDAP(Lightweight Directory Access Protocol) como un protocolo ligero de acceso a directorios. Se utiliza especialmente en las empresas, se emplea para acceder a servicios de directorio.
-        </p>
-        <p>
-          Podemos considerarlo como una base de datos pensada para almacenar directorios. La información se organiza de manera jerárquica y cada directorio puede almacenar un amplio abanico de datos.
-        </p>
+        <p>Cliente y servidor son elementos separados que establecen su comunicación mediante la red de comunicaciones y colaboran para completar tareas de forma conjunta. Cuando el cliente precisa un servicio, realiza una petición y el servidor le da una respuesta. El servidor recibirá y procesará la petición y le brindará el servicio requerido. Ejemplo, el servicio web que empleamos para navegar por internet.</p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.2">Protocolo LDAP</h3>
+        <p>Consideramos LDAP(Lightweight Directory Access Protocol) como un protocolo ligero de acceso a directorios. Se utiliza especialmente en las empresas, se emplea para acceder a servicios de directorio.</p>
+        <p>Podemos considerarlo como una base de datos pensada para almacenar directorios. La información se organiza de manera jerárquica y cada directorio puede almacenar un amplio abanico de datos.</p>
         <p>Las características y funcionalidades que nos brinda son muchas. Las más destacables son:</p>
         <ul>
-          <li>
-            <strong>Acreditación de usuarios:</strong>
-            <p>
-              Los usuarios pueden acceder a sus respectivas cuentas desde cualquier equipo en red acreditado mediante LDAP.
-            </p>
-          </li>
-          <li>
-            <strong>Búsqueda de datos:</strong>
-            <p>También pueden emplearlo como si se tratara de una guía virtual que brinda los datos de contacto de otros usuarios de manera sencilla y accesible.</p>
-          </li>
-          <li>
-            <strong>Centralización de la administración:</strong>
-            <p>Permite centralizar la gestión de cuentas de usuario y sus permisos asociados.</p>
-          </li>
-          <li>
-            <strong>Posibilidad de replicar la base de datos:</strong>
-            <p>Una vez hayamos configurado la base de datos podemos replicarla. Lo que nos permite la opción de configurar diversos servidores LDAP sincronizados. Cuando la red y cantidad de usuarios crecen rápidamente, la red puede balancear la carga entre varios servidores.</p>
-          </li>
+          <li><strong>Acreditación de usuarios</strong>: Los usuarios pueden acceder a sus respectivas cuentas desde cualquier equipo en red acreditado mediante LDAP.</li>
+          <li><strong>Búsqueda de datos</strong>: También pueden emplearlo como si se tratara de una guía virtual que brinda los datos de contacto de otros usuarios de manera sencilla y accesible.</li>
+          <li><strong>Centralización de la administración</strong>: Permite centralizar la gestión de cuentas de usuario y sus permisos asociados.</li>
+          <li><strong>Posibilidad de replicar la base de datos</strong>: Una vez hayamos configurado la base de datos podemos replicarla. Lo que nos permite la opción de configurar diversos servidores LDAP sincronizados. Cuando la red y cantidad de usuarios crecen rápidamente, la red puede balancear la carga entre varios servidores.</li>
         </ul>
-        <p>
-          LDAP brinda gran rapidez en lectura y escritura de datos, incluso cuando se da un gran volumen de accesos simultáneos. Cuando un cliente se conecta al servidor puede consultar o modificar directorios. En el segundo caso el servidor verifica los permisos necesarios antes de actualizar la información.
-        </p>
-        <p>
-          En la distro Ubuntu podemos instalar el paquete OpenLDAP y sus utilidades en el servidor tecleando:
-        </p>
+        <p>LDAP brinda gran rapidez en lectura y escritura de datos, incluso cuando se da un gran volumen de accesos simultáneos. Cuando un cliente se conecta al servidor puede consultar o modificar directorios. En el segundo caso el servidor verifica los permisos necesarios antes de actualizar la información.</p>
+        <p>En la distro Ubuntu podemos instalar el paquete OpenLDAP y sus utilidades en el servidor tecleando:</p>
         <p>“sudo apt-get install slapdldap-utils”</p>
         <p>En Windows también podemos utilizar OpenLDAP.</p>
-        <p>
-          El sistema de Microsoft se refiere a su implementación del servicio de directorio en red como Active Directory. Este emplea varios protocolos, entre los que se encuentra LDAP. En Windows Server se instala por defecto, en Windows on podemos instalar Active Directory pero si gestionarlo remotamente a traves de la red mediante la aplicación Sitios y servicios de Active Directory.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.3"></a>
-      <h3 class="subTitulo" id="">Concepto de dominio. Subdominios. Requisitos necesarios para montar un dominio</h3>
-        <p>
-          Dependiendo de si estamos hablando de redes en sentido general o bien de internet podemos encontrar dos deficiones diferentes.
-        </p>
+        <p>El sistema de Microsoft se refiere a su implementación del servicio de directorio en red como Active Directory. Este emplea varios protocolos, entre los que se encuentra LDAP. En Windows Server se instala por defecto, en Windows on podemos instalar Active Directory pero si gestionarlo remotamente a traves de la red mediante la aplicación Sitios y servicios de Active Directory.</p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.3">Concepto de dominio. Subdominios. Requisitos necesarios para montar un dominio</h3>
+        <p>Dependiendo de si estamos hablando de redes en sentido general o bien de internet podemos encontrar dos deficiones diferentes.</p>
         <ul>
-          <li>
-            <strong>Dominios de redes:</strong>
-            <p>De redes en general, comprende un determinado grupo de ordenadores que están conectados y que han otorgado a uno de los equipos la gestión de los usuarios, sus privilegios de acceso y otros datos.</p>
-          </li>
-          <li>
-            <strong>Dominios en internet:</strong>
-            <p>Hace referencia a la parte principal de una determinada dirección web. Dicha parte hace referencia a la empresa u organización que gestiona el sitio.</p>
-          </li>
+          <li><strong>Dominios de redes:</strong>: De redes en general, comprende un determinado grupo de ordenadores que están conectados y que han otorgado a uno de los equipos la gestión de los usuarios, sus privilegios de acceso y otros datos.</li>
+          <li><strong>Dominios en internet</strong>: Hace referencia a la parte principal de una determinada dirección web. Dicha parte hace referencia a la empresa u organización que gestiona el sitio.</li>
         </ul>
         <p>El subdominio, también puede variar dependiendo de a qué nos refiramos:</p>
         <ul>
-          <li>
-            <strong>Subdominios en redes:</strong>
-            <p>
-              Son subgrupos o subclasificaciones dentro de un dominio. Su creación implica la creación de un dominio de segundo nivel, anidado dentro del dominio primario. La nueva estructura está relacionada con la primera, pero cuenta con características propias. Se utilizan con fines administrativos o para separar los diversos bloques de una organización.
-            </p>
-          </li>
-          <li>
-            <strong>Subdominios en internet:</strong>
-            <p>
-              Suele hacer referencia a la parte de la dirección web que antecede al dominio y queda separado de este por un punto. Se emplea para compartimentar grandes sitios web en diferentes áreas. Con otros fines podemos usarlos para hacer pruebas y desarrollar nuevas páginas o aplicaciones. Si trabajamos en un subdominio, mantendremos intacta la estructura básica y nuestro posicionamiento no se verá afectado.
-            </p>
-          </li>
+          <li><strong>Subdominios en redes</strong>: Son subgrupos o subclasificaciones dentro de un dominio. Su creación implica la creación de un dominio de segundo nivel, anidado dentro del dominio primario. La nueva estructura está relacionada con la primera, pero cuenta con características propias. Se utilizan con fines administrativos o para separar los diversos bloques de una organización.</li>
+          <li><strong>Subdominios en internet</strong>: Suele hacer referencia a la parte de la dirección web que antecede al dominio y queda separado de este por un punto. Se emplea para compartimentar grandes sitios web en diferentes áreas. Con otros fines podemos usarlos para hacer pruebas y desarrollar nuevas páginas o aplicaciones. Si trabajamos en un subdominio, mantendremos intacta la estructura básica y nuestro posicionamiento no se verá afectado.</li>
         </ul>
-        <p>Requisitos para la creación de un dominio de red</p>
-        <p>
-          El principal requisito es disponer de un S.O. orientado a servidor. Ejemplo Windows Server. Entre las tareas que realiza, destacar la de asignar CPU y memoria a los procesos.
-        </p>
-        <p>
-          Para configurar el dominio debemos instalar los roles necesarios para gestionar el dominio de red.
-        </p>
-        <p>
-          El rol DNS nos facilita esta tarea. Debemos instalar los roles de AD/DS y DHCP para complementar el funcionamiento del primer rol de dominio.
-        </p>
-        <p>
-          Una vez instalado los roles debemos configurar toda la infraestructura del dominio.
-        </p>
-        <p>
-          Configuramos el servicio DNS, estableciendo un servidor principal de dominio y un usuario administrador. Para finalizar debemos promover el  servidor a controlador de dominio, donde estableceremos características como el nombre que sea concreto y orientativo.
-        </p>
-        <p>
-          Debemos generar las zonas de búsqueda directa e inversa en el servidor DNS.
-        </p>
-        <p>
-          Establecer en el servicio DHCP el rango de IP a proporcionar a los equipos clientes conectados con el servicio DHCP.
-        </p>
-        <p>
-          En estas configuraciones podemos realizar todas las configuraciones del dominio, como las reservas de direcciones, configuraciones de correo, etc.
-        </p>
-        <p>
-          En Linux podemos utilizar Ubuntu Server. Para crear el dominio tenemos que configurar el servidor DNS: “sudo apt-get install -y bind9 ”.
-        </p>
-        <p>
-          Entramos en el directorio /etc/bind/ para editar los archivos de configuración.
-        </p>
-        <p>
-          Las configuraciones se realizaran mediante la modificación de los ficheros “named.conf.options” donde configuraremos las opciones de bind y la comunicación entre la red privada.
-        </p>
-        <p>
-          En el fichero “named.conf.local” junto con el fichero “zones. rfc1918” configuraremos las zonas de búsqueda.
-        </p>
-        <p>
-          En el directorio “var/cache/bind” los ficheros para configurar las direcciones de los equipos conectados al dominio.
-        </p>
-        <h4 class="subTitulo_4">Requisitos para la creación de un dominio en internet</h4>
+        <h4 class="apartado">Requisitos para la creación de un dominio de red</h4>
+        <p>El principal requisito es disponer de un S.O. orientado a servidor. Ejemplo Windows Server. Entre las tareas que realiza, destacar la de asignar CPU y memoria a los procesos.</p>
+        <p>Para configurar el dominio debemos instalar los roles necesarios para gestionar el dominio de red.</p>
+        <p>El rol DNS nos facilita esta tarea. Debemos instalar los roles de AD/DS y DHCP para complementar el funcionamiento del primer rol de dominio.</p>
+        <p>Una vez instalado los roles debemos configurar toda la infraestructura del dominio.</p>
+        <p>Configuramos el servicio DNS, estableciendo un servidor principal de dominio y un usuario administrador. Para finalizar debemos promover el  servidor a controlador de dominio, donde estableceremos características como el nombre que sea concreto y orientativo.</p>
+        <p>Debemos generar las zonas de búsqueda directa e inversa en el servidor DNS.</p>
+        <p>Establecer en el servicio DHCP el rango de IP a proporcionar a los equipos clientes conectados con el servicio DHCP.</p>
+        <p>En estas configuraciones podemos realizar todas las configuraciones del dominio, como las reservas de direcciones, configuraciones de correo, etc.</p>
+        <p>En Linux podemos utilizar Ubuntu Server. Para crear el dominio tenemos que configurar el servidor DNS: “sudo apt-get install -y bind9 ”.</p>
+        <p>Entramos en el directorio /etc/bind/ para editar los archivos de configuración.</p>
+        <p>Las configuraciones se realizaran mediante la modificación de los ficheros “named.conf.options” donde configuraremos las opciones de bind y la comunicación entre la red privada.</p>
+        <p>En el fichero “named.conf.local” junto con el fichero “zones. rfc1918” configuraremos las zonas de búsqueda.</p>
+        <p>En el directorio “var/cache/bind” los ficheros para configurar las direcciones de los equipos conectados al dominio.</p>
+        <h4 class="apartado">Requisitos para la creación de un dominio en internet</h4>
         <p>
           Debemos contratar el servicio con una empresa. La administración se lleva a cabo de manera remota, a través del navegador web.
         </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.4"></a>
-      <h3 class="subTitulo" id="">Conceptos clave de Active Directory</h3>
-        <p>
-          Es una herramienta de Microsoft para gestionar servidores y administrar en ellos usuarios, grupos, etc.. Podemos gestionar los inicios de sesión de los equipos conectados a la red, definir políticas, etc.
-        </p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.4">Conceptos clave de Active Directory</h3>
+        <p>Es una herramienta de Microsoft para gestionar servidores y administrar en ellos usuarios, grupos, etc.. Podemos gestionar los inicios de sesión de los equipos conectados a la red, definir políticas, etc.</p>
         <p>Debemos aprender la terminología que emplea:</p>
         <ul>
-          <li>
-            <strong>Objeto:</strong>
-            <p>
-              Genérico para referirnos al cualquiera de los componentes que conforman el directorio. Cada objeto puede tener sus características y un nombre para identificarlo.
-            </p>
-          </li>
-          <li>
-            <strong>Directorio:</strong>
-            <p>
-              AD se basa en el concepto de directorio, que es un repositorio en el que se guarda toda la información referente a usuarios, grupos, recursos, etc.
-            </p>
-          </li>
-          <li>
-            <strong>Dominio:</strong>
-            <p>
-              Conjunto de objetos dentro del directorio que conforman un subconjunto administrativo. Dentro de un "bosque" puede haber varios dominios. Cada uno puede tener su propio conjunto de objetos y unidades organizativas.
-            </p>
-          </li>
-          <li>
-            <strong>Controlador de dominio:</strong>
-            <p>
-              Conjunto de objetos del directorio para un determinado dominio. En un dominio puede haber varios controladores de dominio.
-            </p>
-          </li>
-          <li>
-            <strong>Árboles:</strong>
-            <p>
-              Son conjuntos de dominios que poseen una raíz común. Están organizados jerárquicamente y su jerarquía se refleja en los nombres.
-            </p>
-          </li>
-          <li>
-            <strong>Bosque:</strong>
-            <p>
-              Abarca todos los dominios dentro de su ámbito, por otra parte están interconectados por lo que se denomina Relaciones de confianza. Todos los dominios de un bosque confían automáticamente entre si, los distintos árboles pueden compartir recursos entre sí. Un bosque contiene siempre al menos un dominio, que ejerce de raíz del bosque.
-            </p>
-          </li>
-          <li>
-            <strong>Unidades organizativas:</strong>
-            <p>
-              Contenedores de objetos que permiten organizarlos jerárquicamente en subgrupos dentro del dominio. Podemos definir estructuras lógicas que faciliten la organización y hagan que la administración sea más sencilla.
-            </p>
-          </li>
-          <li>
-            <strong>Relaciones de confianza:</strong>
-            <p>
-              Son un método de comunicación entre dominios, árboles y bosques que rige la seguridad de la red. Los usuarios de AD pueden autenticarse en otro dominio del directorio.
-            </p>
+          <li><strong>Objeto:</strong>: Genérico para referirnos al cualquiera de los componentes que conforman el directorio. Cada objeto puede tener sus características y un nombre para identificarlo.</li>
+          <li><strong>Directorio</strong>: AD se basa en el concepto de directorio, que es un repositorio en el que se guarda toda la información referente a usuarios, grupos, recursos, etc.</li>
+          <li><strong>Dominio</strong>: Conjunto de objetos dentro del directorio que conforman un subconjunto administrativo. Dentro de un "bosque" puede haber varios dominios. Cada uno puede tener su propio conjunto de objetos y unidades organizativas.</li>
+          <li><strong>Controlador de dominio</strong>: Conjunto de objetos del directorio para un determinado dominio. En un dominio puede haber varios controladores de dominio.</li>
+          <li><strong>Árboles</strong>: Son conjuntos de dominios que poseen una raíz común. Están organizados jerárquicamente y su jerarquía se refleja en los nombres.</li>
+          <li><strong>Bosque</strong>: Abarca todos los dominios dentro de su ámbito, por otra parte están interconectados por lo que se denomina Relaciones de confianza. Todos los dominios de un bosque confían automáticamente entre si, los distintos árboles pueden compartir recursos entre sí. Un bosque contiene siempre al menos un dominio, que ejerce de raíz del bosque.</li>
+          <li><strong>Unidades organizativas</strong>: Contenedores de objetos que permiten organizarlos jerárquicamente en subgrupos dentro del dominio. Podemos definir estructuras lógicas que faciliten la organización y hagan que la administración sea más sencilla.</li>
+          <li><strong>Relaciones de confianza</strong>: Son un método de comunicación entre dominios, árboles y bosques que rige la seguridad de la red. Los usuarios de AD pueden autenticarse en otro dominio del directorio.
             <p>Pueden ser de diversos tipos, las más comunes:</p>
             <ul>
-              <li><strong>Unidireccionales:</strong> funcionan en una única dirección</li>
-              <li><strong>Bidireccionales:</strong> funcionan en ambas direcciones</li>
-              <li><strong>Transitivas:</strong> en ellas la confianza se propaga</li>
+              <li><strong>Unidireccionales</strong>: funcionan en una única dirección.</li>
+              <li><strong>Bidireccionales</strong>: funcionan en ambas direcciones.</li>
+              <li><strong>Transitivas</strong>: en ellas la confianza se propaga.</li>
             </ul>
           </li>
-          <li>
-            <strong>Delegación de control entre dominios:</strong>
-            <p>
-              Permite a los usuarios de un dominio administrar recursos de otro dominio. Es necesario entre los dominio una relación de confianza. La delegación de control la realizaremos solamente a usuarios en los que confiemos plenamente.
-            </p>
-          </li>
+          <li><strong>Delegación de control entre dominios</strong>: Permite a los usuarios de un dominio administrar recursos de otro dominio. Es necesario entre los dominio una relación de confianza. La delegación de control la realizaremos solamente a usuarios en los que confiemos plenamente.</li>
         </ul>
-        <p>
-          En AD  podemos establecer distintos tipos de grupos. Se emplean para reunir a usuarios, equipos y otros tipos de cuenta en entidades administrables.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.5"></a>
-      <h3 class="subTitulo" id="">Administración de cuentas. Cuentas predeterminadas</h3>
-        <p>
-          En aplicaciones como AD nos interesa generar cuentas de usuario para asignarlas a las distintas personas que van acceder a la red. A nivel interno, las cuentas de usuario son elementos de una base de datos de directorio a los que se les asigna de forma automatizada unos identificadores para garantizar la seguridad. Tras dar de alta a los usuarios, estos pueden acceder y utilizar los recursos del dominio que tengan asignados.
-        </p>
-        <p>
-          En Windows podemos gestionar las cuentas entrando en Server Manager y posteriormente en Local Server. Agregar y eliminar usuarios se llevan a cabo desde AD User and Computers.
-        </p>
-        <p>
-          Nos permitirá gestionar los usuarios y grupos del dominio de una forma muy similar a las versiones cliente de Windows. También podmos gestionar los equipos enlazados al dominio u otros servidores que gestionen la red, con el objetivo de tener un mayor control sobre las conexiones en dominio.
-        </p>
-        <p>
-          Los servidores Linux son utilizados en modo texto. Los comandos más básicos para agregar o eliminar usuarios:
+        <p>En AD  podemos establecer distintos tipos de grupos. Se emplean para reunir a usuarios, equipos y otros tipos de cuenta en entidades administrables.</p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.5">Administración de cuentas. Cuentas predeterminadas</h3>
+        <p>En aplicaciones como AD nos interesa generar cuentas de usuario para asignarlas a las distintas personas que van acceder a la red. A nivel interno, las cuentas de usuario son elementos de una base de datos de directorio a los que se les asigna de forma automatizada unos identificadores para garantizar la seguridad. Tras dar de alta a los usuarios, estos pueden acceder y utilizar los recursos del dominio que tengan asignados.</p>
+        <p>En Windows podemos gestionar las cuentas entrando en Server Manager y posteriormente en Local Server. Agregar y eliminar usuarios se llevan a cabo desde AD User and Computers.</p>
+        <p>Nos permitirá gestionar los usuarios y grupos del dominio de una forma muy similar a las versiones cliente de Windows. También podmos gestionar los equipos enlazados al dominio u otros servidores que gestionen la red, con el objetivo de tener un mayor control sobre las conexiones en dominio.</p>
+        <p>Los servidores Linux son utilizados en modo texto. Los comandos más básicos para agregar o eliminar usuarios:</p>
           <ul>
-            <li><strong>sudo adduser usuario:</strong> crea una cuenta de usuario</li>
-            <li><strong>sudo deluser usuario:</strong> elimina una cuenta de usuario</li>
+            <li><strong>sudo adduser usuario</strong>: crea una cuenta de usuario.</li>
+            <li><strong>sudo deluser usuario</strong>: elimina una cuenta de usuario.</li>
           </ul>
-        </p>
-        <p>
-          En Linux podemos instalar diferentes interfaces gráficas y cada una pueden tener unas opciones diferentes de gestión.
-        </p>
+        <p>En Linux podemos instalar diferentes interfaces gráficas y cada una pueden tener unas opciones diferentes de gestión.</p>
         <p>En el listado de usuarios, encontramos tres cuentas predeterminadas:</p>
         <ul>
-          <li>Administrador (Plenos derechos)</li>
-          <li>Invitado (Permisos muy limitados)</li>
-          <li>Asistente de ayuda</li>
+          <li>Administrador (Plenos derechos).</li>
+          <li>Invitado (Permisos muy limitados).</li>
+          <li>Asistente de ayuda.</li>
         </ul>
         <p>Cada una tiene asignada una combinación distinta de privilegios y permisos.</p>
-        <p>
-          La instalación de los servicios de red como los dominio crea grupos de usuarios por defecto y se les asigna un usuario administrador del dominio, el cual tendrá plenos privilegios.
-        </p>
-        <p>
-          Las cuentas de usuarios del dominio suelen estar vinculadas a ciertos equipos para mejorar el rendimiento de la red, aunque con ellas podemos acceder a cualquier equipo que esté conectado al dominio, teniendo siempre los permisos necesarios.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.6"></a>
-      <h3 class="subTitulo" id="">Contraseñas. Bloqueos de cuenta. Cuentas de usuarios y equipos</h3>
-        <p>
-          A los usuarios dados de alta se les asignarán distintos privilegios, por lo que es vital que le asignemos contraseñas seguras.
-        </p>
-        <p>
-          Servicios como AD se encargan de autentificar la identidad de los usuarios. Cuando una persona inicia sesión en el dominio, se comprueban sus credenciales en el directorio. Deben tener su propio nombre de usuario y contraseña.
-        </p>
-        <p>
-          Tras solicitar el acceso a los recursos mediante la introducción de los datos, pueden tener acceso si son correctos, en caso contrario se les deniega el acceso.
-        </p>
-        <p>
-          Para impedir que los usuarios no autorizados realicen infinitos intentos de entrar, podemos definir unos parámetros que la bloquearán.
-        </p>
-        <p>
-          Mediante otros parámetros, como Duración de bloqueos o Restablecer la cuenta, podemos restaurar la cuenta pasado un intervalo de tiempo.
-        </p>
-        <p>
-          Otros bloqueos pueden ir en función de si mantienen su sesión iniciada durante demasiado tiempo, etc...
-        </p>
-        <p>
-          En AD > Configuración de seguridad local > Directiva de bloqueo de cuentas.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.7"></a>
-      <h3 class="subTitulo" id="">Perfiles móviles y obligatorios</h3>
-        <p>
-          Los perfiles de usuario nos permiten asignar a los usuarios del sistema características como los archivos y carpetas que utilizarán y la configuración de su escritorio. Toda esa información se lee y se carga cada vez que un usuario inicia sesión.
-        </p>
-        <p>
-          Por defecto, los perfiles suelen ser locales. Tenemos la posibilidad de crear un perfil móvil. Se trata de que el usuario tenga siempre acceso a su perfil, independientemente del equipo desde el que inicie sesión.
-        </p>
-        <p>
-          Este perfil lo puede realizar el administrador o un usuario con privilegios. Lo definirán en un directorio del servidor, de modo que quede compartido en red.
-        </p>
-        <p>
-          Los perfiles obligatorios se definen por el hecho de ser de solo lectura y únicamente pueden ser modificados por un administrador. Cuando el ususario inicie sesión se cargará su perfil pero no se guardará ninguna configuración o dato cuando cierre sesión.
-        </p>
-        <p>
-          En caso de un perfil móvil obligatorio, tenemos que introducir la información correspondiente a la ruta del acceso en el perfil, le agregamos la extensión .man.
-        </p>
-        <p>
-          Para convertir un perfil móvil en uno obligatorio accedemos al archivo ntuser.dat,  y le cambiamos la extensión por ntuser.man.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.8"></a>
-      <h3 class="subTitulo" id="">Carpetas personales</h3>
-        <p>
-          Cada usuario puede almacenar su información personal en una subcarpeta propia. Esta tendra el nombre del propio usuario y es frecuente que aparezca en los equipos cliente como una unidad de red. 
-        </p>
-        <p>
-          Hay que tener en cuenta que los directorios que indiquemos para los usuarios del dominio tiene que ser recursos compartidos del servidor.
-        </p>
-        <p>
-          Estos serán visibles para los usuarios que indiquemos, aunque esots se podrían asignar directamente a grupos de usuarios para agilizar el proceso. Hay que definir muy bien los permisos que damos a cada usuario para acceder a los recursos compartidos, ya que por defecto vienen con control total.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.9"></a>
-      <h3 class="subTitulo" id="">Plantillas de usuario. Variables de entorno</h3>
-        <p>
-          Se utilizan para ahorrarnos una gran cantidad de trabajo. Nos permiten definir una serie de características comunes que posteriormente podemos aplicar a un gran número de usuarios.
-        </p>
-        <p>
-          Las variables de entorno, conforman un conjunto de valores que se ejecutan al inicio de la sesión del usuario y afectan al comportamiento de comandos y procesos.
-        </p>
+        <p>La instalación de los servicios de red como los dominio crea grupos de usuarios por defecto y se les asigna un usuario administrador del dominio, el cual tendrá plenos privilegios.</p>
+        <p>Las cuentas de usuarios del dominio suelen estar vinculadas a ciertos equipos para mejorar el rendimiento de la red, aunque con ellas podemos acceder a cualquier equipo que esté conectado al dominio, teniendo siempre los permisos necesarios.</p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.6">Contraseñas. Bloqueos de cuenta. Cuentas de usuarios y equipos</h3>
+        <p>A los usuarios dados de alta se les asignarán distintos privilegios, por lo que es vital que le asignemos contraseñas seguras.</p>
+        <p>Servicios como AD se encargan de autentificar la identidad de los usuarios. Cuando una persona inicia sesión en el dominio, se comprueban sus credenciales en el directorio. Deben tener su propio nombre de usuario y contraseña.</p>
+        <p>Tras solicitar el acceso a los recursos mediante la introducción de los datos, pueden tener acceso si son correctos, en caso contrario se les deniega el acceso.</p>
+        <p>Para impedir que los usuarios no autorizados realicen infinitos intentos de entrar, podemos definir unos parámetros que la bloquearán.</p>
+        <p>Mediante otros parámetros, como Duración de bloqueos o Restablecer la cuenta, podemos restaurar la cuenta pasado un intervalo de tiempo.</p>
+        <p>Otros bloqueos pueden ir en función de si mantienen su sesión iniciada durante demasiado tiempo, etc...</p>
+        <p>En AD > Configuración de seguridad local > Directiva de bloqueo de cuentas.</p>
+      <h3 class="subTitulo" id="4.7">Perfiles móviles y obligatorios</h3>
+        <p>Los perfiles de usuario nos permiten asignar a los usuarios del sistema características como los archivos y carpetas que utilizarán y la configuración de su escritorio. Toda esa información se lee y se carga cada vez que un usuario inicia sesión.</p>
+        <p>Por defecto, los perfiles suelen ser locales. Tenemos la posibilidad de crear un perfil móvil. Se trata de que el usuario tenga siempre acceso a su perfil, independientemente del equipo desde el que inicie sesión.</p>
+        <p>Este perfil lo puede realizar el administrador o un usuario con privilegios. Lo definirán en un directorio del servidor, de modo que quede compartido en red.</p>
+        <p>Los perfiles obligatorios se definen por el hecho de ser de solo lectura y únicamente pueden ser modificados por un administrador. Cuando el ususario inicie sesión se cargará su perfil pero no se guardará ninguna configuración o dato cuando cierre sesión.</p>
+        <p>En caso de un perfil móvil obligatorio, tenemos que introducir la información correspondiente a la ruta del acceso en el perfil, le agregamos la extensión .man.</p>
+        <p>Para convertir un perfil móvil en uno obligatorio accedemos al archivo ntuser.dat,  y le cambiamos la extensión por ntuser.man.</p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.8">Carpetas personales</h3>
+        <p>Cada usuario puede almacenar su información personal en una subcarpeta propia. Esta tendra el nombre del propio usuario y es frecuente que aparezca en los equipos cliente como una unidad de red.</p>
+        <p>Hay que tener en cuenta que los directorios que indiquemos para los usuarios del dominio tiene que ser recursos compartidos del servidor.</p>
+        <p>Estos serán visibles para los usuarios que indiquemos, aunque esots se podrían asignar directamente a grupos de usuarios para agilizar el proceso. Hay que definir muy bien los permisos que damos a cada usuario para acceder a los recursos compartidos, ya que por defecto vienen con control total.</p>
+      <h3 class="subTitulo" id="4.9">Plantillas de usuario. Variables de entorno</h3>
+        <p>Se utilizan para ahorrarnos una gran cantidad de trabajo. Nos permiten definir una serie de características comunes que posteriormente podemos aplicar a un gran número de usuarios.</p>
+        <p>Las variables de entorno, conforman un conjunto de valores que se ejecutan al inicio de la sesión del usuario y afectan al comportamiento de comandos y procesos.</p>
         <p>Las más comunes de Windows son:</p>
         <ul>
-          <li><strong>%APPDATA%:</strong> directorio de las carpetas ocultas para datos de las aplicaciones</li>
-          <li><strong>%USERPORFILE%:</strong> directorio del usuario de la sesión</li>
-          <li><strong>%WINDIR%:</strong> ruta por defecto de la instalación de Windows</li>
-          <li><strong>%PROGRAMFILES%:</strong> directorio que almacenan la instalación de los programas</li>
+          <li><strong>%APPDATA%</strong>: directorio de las carpetas ocultas para datos de las aplicaciones.</li>
+          <li><strong>%USERPORFILE%</strong>: directorio del usuario de la sesión.</li>
+          <li><strong>%WINDIR%</strong>: ruta por defecto de la instalación de Windows.</li>
+          <li><strong>%PROGRAMFILES%</strong>: directorio que almacenan la instalación de los programas.</li>
         </ul>
-        <p>Estas no siempre conducen a directorios. %TIME% nos devuelve la hora actual del sistema.</p>
-        <p>
-          Como usuarios del sistema podemos editar y crear variables de este tipo. Programas como Oracle Database crean variables de este tipo para gestionar mejor sus recursos.
-        </p>
+        <p>Estas no siempre conducen a directorios. <strong>%TIME%</strong> nos devuelve la hora actual del sistema.</p>
+        <p>Como usuarios del sistema podemos editar y crear variables de este tipo. Programas como Oracle Database crean variables de este tipo para gestionar mejor sus recursos.</p>
         <p>En caso de linux encontramos variables como:</p>
         <ul>
-          <li><strong>'SHELL':</strong> intérprete de comandos</li>
-          <li><strong>'LANG':</strong> idioma actual del sistema</li>
-          <li><strong>'HOME':</strong> directorio actual del usuario de la sesión</li>
+          <li><strong>'SHELL'</strong>: intérprete de comandos.</li>
+          <li><strong>'LANG'</strong>: idioma actual del sistema.</li>
+          <li><strong>'HOME'</strong>: directorio actual del usuario de la sesión.</li>
         </ul>
         <p>Para modificar los valores de estas variables debemos acceder a tres archivos de texto almacenados en el sistema</p>
         <ul>
-          <li><strong>/etc/environment -></strong> variables independientes del intérprete de comandos</li>
-          <li><strong>/etc/profile -></strong> para definir variables que serán válidas para todas las shells interactivas que exijan login. Si queremos definir únicamente variables de usuario el directorio es /.bash_profile</li>
-          <li><strong>/etc/bash.bashrc -></strong> igual que el anterior aunque para consolas no logueadas. El equivalente para variables de usuario es /.bashrc</li>
+          <li><strong>/etc/environment</strong>: variables independientes del intérprete de comandos.</li>
+          <li><strong>/etc/profile</strong>: para definir variables que serán válidas para todas las shells interactivas que exijan login. Si queremos definir únicamente variables de usuario el directorio es /.bash_profile</li>
+          <li><strong>/etc/bash.bashrc</strong>: igual que el anterior aunque para consolas no logueadas. El equivalente para variables de usuario es /.bashrc</li>
         </ul>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.10"></a>
-      <h3 class="subTitulo" id="">Administración de grupos. Tipo. Estrategias de anidamiento. Grupos predeterminados</h3>
-        <p>
-          Si la empresa u organización cuya red administramos tiene un elevado número de departamentos y usuarios es fundamental que planeemos una estrategia para estructurarla en grupos.
-        </p>
-        <p>
-          Definir permisos y el acceso a los recursos resultará mucho más rápido. Los grupos nos permiten aunar las cuentas de usuario en unidades fácilmente administrables. Cuando añadimos un usuario a un grupo, este recibe todos los privilegios de usuario asignados al grupo y los permisos referentes a sus recursos compartidos.
-        </p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.10">Administración de grupos. Tipo. Estrategias de anidamiento. Grupos predeterminados</h3>
+        <p>Si la empresa u organización cuya red administramos tiene un elevado número de departamentos y usuarios es fundamental que planeemos una estrategia para estructurarla en grupos.</p>
+        <p>Definir permisos y el acceso a los recursos resultará mucho más rápido. Los grupos nos permiten aunar las cuentas de usuario en unidades fácilmente administrables. Cuando añadimos un usuario a un grupo, este recibe todos los privilegios de usuario asignados al grupo y los permisos referentes a sus recursos compartidos.</p>
         <p>Distinguimos entre los siguientes tipos de grupos:</p>
         <ul>
-          <li><strong>Grupos de distribución:</strong> pensados solamente para usarse con aplicaciones de correo electrónico</li>
-          <li><strong>Grupos de seguridad:</strong> se utilizan para administrar permisos de acceso a los diversos recursos de la red</li>
+          <li><strong>Grupos de distribución</strong>: pensados solamente para usarse con aplicaciones de correo electrónico.</li>
+          <li><strong>Grupos de seguridad</strong>: se utilizan para administrar permisos de acceso a los diversos recursos de la red.</li>
         </ul>
         <p>Otra clsificación en función de su ámbito:</p>
         <ul>
-          <li><strong>Grupos de ámbito universal:</strong> pueden emplearse en cualquier parte de un mismo bosque. Tras definir un grupo universal podemos asignarle usuarios, anidados y usar listas de control de acceso para definir permisos</li>
-          <li><strong>Grupos de ámbito global:</strong> los permisos que conferiremos a este grupo son válidos en cualquier dominio, pero sus miembros solo pueden realizar acciones en el  dominio en el que está dado de alta el grupo global</li>
-          <li><strong>Grupos de ámbito local:</strong> los miembros dados de alta en este pueden realizar acciones en cualquier dominio, pero sus permisos son efectivos únicamente para recursos del dominio en el que fue creado el grupo.</li>
+          <li><strong>Grupos de ámbito universal</strong>: pueden emplearse en cualquier parte de un mismo bosque. Tras definir un grupo universal podemos asignarle usuarios, anidados y usar listas de control de acceso para definir permisos.</li>
+          <li><strong>Grupos de ámbito global</strong>: los permisos que conferiremos a este grupo son válidos en cualquier dominio, pero sus miembros solo pueden realizar acciones en el  dominio en el que está dado de alta el grupo global.</li>
+          <li><strong>Grupos de ámbito local</strong>: los miembros dados de alta en este pueden realizar acciones en cualquier dominio, pero sus permisos son efectivos únicamente para recursos del dominio en el que fue creado el grupo.</li>
         </ul>
         <p>Hay una serie de grupos que se crean de forma predeterminada:</p>
         <ul>
@@ -420,23 +225,19 @@
           <li>Usuarios</li>
           <li>Ofrecer aplicaciones auxiliares de asistencia remota</li>
         </ul>
-        <p>
-          En Linux al igual que sucedía con las cuentas de usuario tenemos dos formas de gestionarlo por comandos o interfaz gráfica.
-        </p>
+        <p>En Linux al igual que sucedía con las cuentas de usuario tenemos dos formas de gestionarlo por comandos o interfaz gráfica.</p>
         <p>Por comandos:</p>
         <ul>
           <li>sudo addgroupnombreGrupo</li>
           <li>sudo delgroupnombreGrupo</li>
         </ul>
-        <p>
-          Es importante que tengamos presente que los grupos pueden anidarse entre sí. El anidamiento de grupos consiste en hacer un grupo miembro de otro, de tal modo que utilice sus características.
-        </p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="4.11"></a>
-      <h3 class="subTitulo" id="">Instalación de Windows Server y Ubuntu Server</h3>
+        <p>Es importante que tengamos presente que los grupos pueden anidarse entre sí. El anidamiento de grupos consiste en hacer un grupo miembro de otro, de tal modo que utilice sus características.</p>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="4.11">Instalación de Windows Server y Ubuntu Server</h3>
         <p>Empecemos por Windows Server 2019:</p>
         <ol>
           <li>Configuramos la BIOS para que se inicie desde el DVD</li>
@@ -463,17 +264,19 @@
           <li>Elegimos la configuración de las instalaciones</li>
           <li>Configuramos el gestor de arranque</li>
           <li>Hecho esto, GRUB se instalará en el sector de arranque de la partición</li>
-          <li>
-            Tras reiniciar el PC y entrar por primera vez con la cuenta administrativa, actualizamos el sistema tecleando lo
-            siguiente:
+          <li>Tras reiniciar el PC y entrar por primera vez con la cuenta administrativa, actualizamos el sistema tecleando lo siguiente:
             <ul>
               <li>“sudo apt-get update”</li>
               <li>“sudo apt-get upgrade”</li>
             </ul>
           </li>
         </ol>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-  </main>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#2.1"><div class="botonO">Arriba</div></a>
+        </div>
+  </div>
+  <footer class="pieApuntes"><div>- SapheryDesings -</div></footer>
 </body>
 </html>
