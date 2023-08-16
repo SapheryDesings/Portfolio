@@ -19,74 +19,60 @@
         <a href="../../index.html">Principal</a>
     </div>
   </header>
-  <main class="main--Apuntes">
-      <div class="tituloTema">
-        <h1>Tema 2.- Administración de software base</h1>
-      </div>
-      <article class="articuloApuntes"></article>
-        <h3 class="subTitulo_3">Introducción</h3>
+  <div class="contenedorApuntes">
+      <div class="tituloTema"><h1>Tema 2.- Administración de software base</h1></div>
+        <h3 class="subTitulo">Introducción</h3>
         <p>El <strong>software base</strong> es el programa encargado de controlar el ordenador.</p>
-      </article>
-    <article class="articuloApuntes">
-      <a name="2.1"></a>
-      <h3 class="subTitulo_3">Administración de usuarios y grupos locales</h3>
+      <h3 class="subTitulo" id="2.1">Administración de usuarios y grupos locales</h3>
         <p>Mediante las cuentas de usuario se identifica y autentifica un individuo con el sistema. En un mismo equipo pueden trabajar varias personas, con su propio espacio de trabajo.</p>
         <p>El usuario administrador es el encargado de dar acceso a los usuarios y controlar todas las operaciones, este usuario no tiene límites cuando trabaja sobre el sistema.</p>
         <p>Los S.O. multiusuario ofrecen la posibilidad de registrarse al iniciar sesión, con estos datos se puede controlar el acceso y permite asignar permisos y restricciones.</p>
-      <h4 >Diferentes permisos</h4>
+      <h4 class="apartado">Diferentes permisos</h4>
         <ul>
           <li><strong>Lectura(read):</strong> El usuario tiene la posibilidad de abrir y leer los contenidos del fichero.</li>
           <li><strong>Escritura(write):</strong> Además puede hacer cualquier modificación sobre el fichero.</li>
           <li><strong>Ejecución(execute):</strong> Ofrece al usuario la posibilidad de ejecutar el fichero.</li>
         </ul>
         <p>La gestión de usuarios la lleva a cabo el administrador o root, que es el que dispone de todos los permisos, sin limitación.</p>
-      <h4 >Permisos en linux</h4>
-        <p>
-          <strong>-rw-r--r--</strong> Estos nueve caracteres se dividen en tres grupos en tres caracteres.
+      <h4 class="apartado">Permisos en linux</h4>
+          <p><strong>-rw-r--r--</strong> Estos nueve caracteres se dividen en tres grupos en tres caracteres.</p>
           <ul>
             <li><strong>rw-</strong> El primer grupo de tres controla el acceso al fichero del propietario de este.</li>
             <li><strong>r--</strong> El segundo grupo controla el acceso al grupo.</li>
             <li><strong>r--</strong> El tercer grupo controla los accesos de todos los demás usuarios (Permisos globales).</li>
           </ul>
-        </p>
-        <p>
-          <strong>-rwx</strong>r--r-- Acceso al fichero de propietario.
+          <p><strong>-rwx</strong>r--r-- Acceso al fichero de propietario.</p>
           <ul>
             <li><strong>Lectura</strong></li>
             <li><strong>Escritura</strong></li>
             <li><strong>Ejecución</strong></li>
           </ul>
-          El acceso del propietario tiene acceso de lectura, escritura y ejecución.
-        </p>
-        <p>
-          -rwx<strong>r--</strong>r-- Acceso al fichero de propietario.
+          <p>El acceso del propietario tiene acceso de lectura, escritura y ejecución.</p>
+          <p>-rwx<strong>r--</strong>r-- Acceso al fichero de propietario.</p>
           <ul>
             <li><strong>Lectura</strong></li>
             <li><strong>Escritura</strong></li>
             <li><strong>Ejecución</strong></li>
           </ul>
-          El acceso para el fichero del grupo solo tiene permiso de lectura.
-        </p>
-        <p>
-          -rwxr--<strong>r--</strong> Acceso al fichero de propietario.
+          <p>El acceso para el fichero del grupo solo tiene permiso de lectura.</p>
+          <p>-rwxr--<strong>r--</strong> Acceso al fichero de propietario.</p>
           <ul>
             <li><strong>Lectura</strong></li>
             <li><strong>Escritura</strong></li>
             <li><strong>Ejecución</strong></li>
           </ul>
-          El acceso a los permisos globales es de solo lectura.
-        </p>
+          <p>El acceso a los permisos globales es de solo lectura.</p>
         <p>Para simplificar tenemos la opción de <strong>establecer grupos de usuarios</strong>. Utilizando los grupos, es más fácil conceder o denegar permisos a varios usuarios a la vez, en vez de individual. <br>Hay dos situaciones en las que resulta útil:</p>
         <ul>
           <li><strong>Creación de grupos para la asignación de recursos:</strong> Cuando hemos instalado un nuevo recurso y queremos asignarlo a varios usuarios.</li>
           <li><strong>Gestión simplificada de usuarios:</strong> Podemos crear grupos que reúnan una serie de características en lo referente a privilegios de acceso.</li>
         </ul>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="2.2"></a>
-      <h3 class="subTitulo_3">Seguridad de cuentas de usuario</h3>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="2.2">Seguridad de cuentas de usuario</h3>
         <p>Si únicamente nosotros tenemos acceso a un equipo es habitual que lo hagmos como administrador, teneiendo todos los permisos. Es importante que iniciemos sesión con dicha cuenta o con otras que nos birnden permisos avanzados si las operaciones lo requieren. Para maximizar la seguridad debemos tener en cuenta las siguientes pautas:</p>
         <ul>
           <li><strong>Cuentas de administrador:</strong> Cambiar el nombre de la cuenta de administrador y asignarle una contraseña segura.</li>
@@ -95,12 +81,7 @@
         </ul>
         <p><strong>El uso de la cuenta de administrador se debe limitar a aquellas situaciones en las que necesitamos disponer de privilegios:</strong> Cambios de configuración, instalar una nueva aplicación, dar alta a un nuevo usuario, etc..</p>
         <p>Si un virus infecta cuando utilizamos la cuenta administrador, resulta más difícil de eliminar, al tener control total del equipo. En una cuenta estándar la limitación de permisos reducirá sus efectos nocivos.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes"> 
-      <a name="2.3"></a>
-      <h3 class="subTitulo_3">Seguridad de contraseñas</h3>
+      <h3 class="subTitulo" id="2.3">Seguridad de contraseñas</h3>
         <p>Las contraseñas son clave para proteger las cuentas de usuario y la información que se almacena en el equipo, cuanto más segura sea una contraseña, mayor protección nos ofrecerá.</p>
         <p>Los S.O. ofrecen al administrador la posibilidad de establecer cuáles serán las características de las contraseñas.</p>
         <ul>
@@ -110,7 +91,7 @@
           <li><strong>Renovación periódica de las contraseñas:</strong> Deben ser cambiadas con regularidad y ser significativamente distintas a la anterior.</li>
         </ul>
         <p>La cuenta de usuario invitado tiene los mismos privilegios que un usuario estándar, pero es anónima y sin contraseña. Viene deshabilitada por defecto y por seguridad convien no habilitarla.</p>
-      <h4 >Administración de perfiles locales de usuario</h4>
+      <h4 class="apartado">Administración de perfiles locales de usuario</h4>
         <p>En los S.O. multiusuario podemos definir diferentes perfiles, cada uno contendrá la información relativa a la configuración de esos usuarios específicos.</p>
         <ul>
           <li>Configuración del escritorio del usuario</li>
@@ -118,12 +99,12 @@
           <li>Accesos a carpetas, impresoras en red, etc.</li>
         </ul>
         <p>El perfil se crea automaticacmente al darlos de alta o cuando inician sesión por primera vez. No obstante, el administrador podrá crear perfiles idóneos y asignarlos las cuentas.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="2.4"></a>
-      <h3 class="subTitulo_3">Configuración del protocolo TCP/IP. Direcciones IP y máscaras de subred</h3>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="2.4">Configuración del protocolo TCP/IP. Direcciones IP y máscaras de subred</h3>
         <p>La <strong>dirección IP</strong> constituye el concepto fundamental en para configurar debidamente el servidor de redes. Con ella podemos identificar a cada equipo y consta siempre de cuatro números enteros de 4 bytes separados por puntos que pueden oscilar entre 0 y 255.</p>
         <p>Su formato sera W.X.Y.Z (192.168.1.21), dentro du una misma red no pueden existir dos direcciones IP iguales.</p>
         <ul>
@@ -153,35 +134,29 @@
           <li><strong>Clase B:</strong> 16 bits para direccionar hosts -> 2<sup>16</sup> - 2 hosts</li>
           <li><strong>Clase C:</strong> 8 bits para direccionar hosts -> 2<sup>8</sup> - 2 hosts</li>
         </ul>
-      </article>
-      <h4 class="subTitulo_4">Conceptos asociados a la IP</h4>
+      <h4 class="apartado">Conceptos asociados a la IP</h4>
         <ul>
           <li><strong>IP privada:</strong> Es la dirección que posee cada equipo o dispositivo que se conecta a nuestra red a través del protocolo TCP/IP. Podemos asignarla nosotros o hacer que se asigne automáticamente a través del DHCP.</li>
           <li><strong>IP pública:</strong> Es la dirección que usamos para identificarnos en la red cuando nos conectarmos a otras redes externas, como internet. Nos la asigna el proveedor de internet, no se puede configurar.</li>
         </ul>
-      <h4 class="subTitulo_4">Las IP públicas que nos asignan los ISP pueden ser:</h4>
+      <h4 class="apartado">Las IP públicas que nos asignan los ISP pueden ser:</h4>
         <ul>
           <li><strong>Estáticas:</strong> La IP es fija, siempre es la misma. Este servicio suelen cobrarlo ya que nos permite mayor control y nos da la posibilidad de asignar un nombre de dominio (www.dominio.com).</li>
           <li><strong>Dinámicas:</strong> La más habitual, nos la asigna de forma aleatoria cada vez que nos conectarmos a la red.</li>
         </ul>
         <p>Señalar que la versión 4 del protocolo IP (IPv4) permite algo más de 4000 millones de direcciones distintas. Los S.O. más recientes incorporan el IPv6 que admite muchas más direcciones.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-      <a name="2.5"></a>
-      <h3 class="subTitulo_3">Servicio de Nombres de Dominios (DNS)</h3>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="2.5">Servicio de Nombres de Dominios (DNS)</h3>
         <p>Los servidores DNS son muy importantes, estos tienen la misión de evitar recordar la IP del equipo al que nos conectamos. Es el servidor DNS el que relaciona el nombre escrito (www.google.es) con la ip (142.250.200.68) que tiene alojada la página que queremos visualizar.</p>
         <p>Para comprobar el estado de los servidores DNS en un equipo se realiza habitualmente por consola de comandos y a que es la forma más sencilla y rápida.</p>
         <p>Utilizaremos el comando (ipconfig) en el caso de windows y (ifconfig) en sistemas linux, con la sentencia (/all) para mostrar toda la información.</p>
         <p>Con la instrucción (ping) comprobaremos si el servidor está funcionando de la forma correcta.</p>
         <p>No solo basta con escoger los servidores más rápidos, sino que además es necesario configurar nuestro S.O. correctamente.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-    <a name="2.6"></a>
-      <h3 class="subTitulo_3">Archivos de configuración de red</h3>
+      <h3 class="subTitulo" id="2.6">Archivos de configuración de red</h3>
         <p>Toda la comunicación en red sigue el modelo TCP/IP. Como protocolo, rige las normas al realizar este proceso de comunicación.</p>
         <p>La configuración de nuestro equipo se realiza a través del Panel de control:</p>
         <ol>
@@ -190,24 +165,24 @@
           <li><strong>Propiedades del adaptador:</strong> Elegimos Protocolo de internet TCP/IPv4.</li>
         </ol>
         <p>Una vez configurada la dirección IP, máscara de subred y servidores DNS, aceptar. La información se guarda en los archivos de configuración del sistema. La configuración de linux se almacena en /etc/network/interfaces.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-    <a name="2.7"></a>
-      <h3 class="subTitulo_3">Optimización de sistemas para ordenadores portátiles. Archivos de red sin conexión</h3>  
-      <h4 class="subTitulo_4">Los pórtatiles poseen unas características propias que debemos tener en cuenta:</h4>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="2.7">Optimización de sistemas para ordenadores portátiles. Archivos de red sin conexión</h3>  
+      <h4 class="apartado">Los pórtatiles poseen unas características propias que debemos tener en cuenta:</h4>
         <ul>
           <li><strong>Mayor vulnerabilidad:</strong> Por su movilidad fuera de casa u oficina resulta más vulnerable a intrusiones. Si nos conectamos a una red inalámbica se duplica. E incluso debemos tener en cuenta que pueden llegar a caer en manos inadecuadas.</li>
           <li><strong>Menos rendimiento y otras características:</strong> Aunque los equipos de última generación están equiparandose a los sobremesa, los de gama baja y los más antiguos el rendimiento es menor.</li>
         </ul>
-      <h4 class="subTitulo_4">Por esto es conveniente aplicar mayor seguirdad:</h4>
+      <h4 class="apartado">Por esto es conveniente aplicar mayor seguirdad:</h4>
         <ul>
           <li><strong>Habilitar contraseñas adicionales:</strong> Además de la contraseña de inicio de sesión, podemos habilitar la de la BIOS e instalar software adicional para proteger archivos y carpetas.</li>
           <li><strong>Sistemas de autenticación fuertes:</strong> Como lectores de huellas o tarjetas inteligentes.</li>
           <li><strong>Encriptación de unidades de disco:</strong> El sistema de cifrado de unidad BitLocker de Windows permiten encriptar discos para que no sean accesibles sin contraseña.</li>
         </ul>
-        <h4 class="subTitulo_4">En cuanto los portátiles de gama baja podemos optimizar el sistema con algunos cambios en su configuración:</h4>
+        <h4 class="apartado">En cuanto los portátiles de gama baja podemos optimizar el sistema con algunos cambios en su configuración:</h4>
         <ul>
           <li>Desactivar los sonidos del sistema</li>
           <li>Eliminar aplicaciones que no se usen</li>
@@ -215,12 +190,12 @@
           <li>Desactivar los programas que se cargan en el inicio</li>
         </ul>
         <p>También es importante tener encuenta que si abandonamos el lugar desde el que nos conectarmos a la red, los archivos que se encuentren accesibles a través de ella dejarán de estar disponibles. Para solucionarlo tendremos que pulsar sobre el archivo o carpeta con el botón secundario del ratón y elegir <strong>Siempre disponible sin conexión</strong>.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-    <!--*************************************************************-->
-    <article class="articuloApuntes">
-    <a name="2.8"></a>
-      <h3 class="subTitulo_3">Principales comandos de sistemas operativos libres y propietarios</h3>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+        </div>
+      <h3 class="subTitulo" id="2.8">Principales comandos de sistemas operativos libres y propietarios</h3>
         <p>Existen una serie de comandos que nos ofrecen la posibilidad de movernos y gestionar los S.O. Es conveniente conocer los más utilizados:</p>
         <table>
           <tr>
@@ -272,8 +247,12 @@
           </tr>
         </table>
         <p>Para mayor información consultaremos las páginas oficiales donde encontraremos información más detallada. Además de comandos más complejos, tenemos más opciones que disponen o el formato que tienen que cumplir pueden variar.</p>
-      <a class="btnArriba" href="#top">Arriba</a>
-    </article>
-  </main>
+        <div class="menuOpcional">
+          <a href="../sistemas/indiceSistemas.html"><div class="botonO">Índice</div></a>
+          <a href="../../index.html"><div class="botonO">Principal</div></a>
+          <a href="#unoUno"><div class="botonO">Arriba</div></a>
+        </div>
+  </div>
+  <footer class="pieApuntes"><div>- SapheryDesings -</div></footer>
 </body>
 </html>
