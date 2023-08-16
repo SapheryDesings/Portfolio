@@ -185,9 +185,10 @@
 /* CLASES VISTA APUNTES __________________*/
 /* Contenedor principal de la vista apuntes */
 .contenedorApuntes { 
-  width: 60%; 
+  width: clamp( 200px, 90vw , 1024px);
   margin: auto;
   font-family: 'Montserrat', sans-serif;
+  font-size: clamp(14px, 3vw, 22px);
 }
   /* ____ TITULOS ____*/
   .tituloPrincipal { /* Si no hace falta borrar */
@@ -299,21 +300,11 @@
 
 
 /***********************************************/
-@media screen and (max-width: 1280px){ 
-  /* VISTA APUNTES */
-  .contenedorApuntes { width: 70%;}
-}
-@media screen and (max-width: 1024px){ 
-  /* VISTA APUNTES */
-  .contenedorApuntes { width: 80%;}
-}
-@media screen and (max-width: 800px){ 
-  /* VISTA APUNTES */
-  .contenedorApuntes { width: 90%;}
-}
+@media screen and (max-width: 1280px){ }
+@media screen and (max-width: 1024px){ }
+@media screen and (max-width: 800px){ }
 @media screen and (max-width: 480px){ 
   /* VISTA APUNTES */
-  .contenedorApuntes { width: 100%;}
   table {
     margin: 1rem auto;
   }
