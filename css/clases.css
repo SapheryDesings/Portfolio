@@ -11,27 +11,29 @@
 /* CALSES GLOBALES _______________________*/
 
 :root {
+  /*Principal -> Colores tarjetas*/
   --cyanIlumina: #03A9F4;
   --magentaIlumina: #673AB7;
   --verdemarIlumina: #009688;
   --rojonaranjaIlumina: #FF5722;
   --fusciaIlumina: #E91E63;
-  --aguamarIlumina: #00BCD4;
+  --azulPapuntesIlumina: #00BCD4;
+  /**/
   --azulPrincipal: rgb(1, 87, 155);
   --blancoTipologia: #FDFEFE;
-  --naranjaContraste: #FF6F00;
-  --fondoGris: #212121;
-  --fondoOscuro: #151515;
-  --tipografiaClara: #E5E7E9;
-  --aguamar: #3498db; /* => --azulPapuntes - CORREGIR */
-  --azulGrisaceo: #2980B9;
-  --morado: #8E44AD;
-  --mostaza: #F1C40F;
-  /* --------------------------*/
+  /* naranja -> darkorange */
   --azulPapuntes: #3498db;
   --azulDetalles: #01579b;
   --amarilloNota: #FFFF99;
   --azulClaro: #EBF5FB;
+  /* Tamaños FUENTES */
+  --fuenteTamañoEncabezados: clamp(14px, 3vw, 22px);
+  --fuenteTamañoGeneral: clamp(12, 2vw, 18px);
+  --fuenteTamañoSecundario: clamp(10px, 1.5vw, 16px);
+  /* FUENTES */
+  --specialSaphery: 'Smooch', cursive;
+  --gorditos: 'Titan One', cursive;
+  --fuenteGeneral: 'Montserrat', cursive;
 }
 /* FUENTES
   font-family: 'Montserrat', sans-serif;
@@ -160,7 +162,7 @@
 .temaIndice span {
   padding: 1rem;
   font-weight: bold;
-  background-color: var(--aguamar);
+  background-color: var(--azulPapuntes);
 }
 
 .temaIndice ul {
@@ -188,7 +190,7 @@
   width: clamp( 200px, 95vw , 1024px);
   margin: auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(14px, 3vw, 22px);
+  font-size: clamp(14px, 2vw, 20px);
 }
   /* ____ TITULOS ____*/
   .tituloPrincipal { /* Si no hace falta borrar */
@@ -222,7 +224,6 @@
     margin: 1rem auto;
     padding: 1rem;
     background-color: var(--amarilloNota);
-    font-size: 1.1rem;
     font-weight: bold;
     font-style: italic;
   }
@@ -278,7 +279,8 @@
     .botonO {
       background-color: white;
       color: var(--azulPapuntes);
-      font-weight: bold;
+      font-size: clamp(12px, 1.5vw, 16px);
+      /*font-weight: bold;*/
       padding: .3rem 1.2rem;
       border: 1px solid var(--azulPapuntes);
     }
