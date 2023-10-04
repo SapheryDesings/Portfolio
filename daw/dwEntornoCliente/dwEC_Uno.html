@@ -20,53 +20,133 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 1. - Selección de arquitecturas y de herramientas de programación</h2>
-            
+            <p>Un progamador web debe dominar todas las fases por las que pasa un proyecto, captar las necesidades del cliente, definir unos objetivos y una estrategia, desarrollar una interfaz gráfica y elaborar prototipos y una presentación final. Es imprescindible conocer el orden de cada fase y qué realizar en cada una de ellas.</p>
+            <p>Es un <b>campo multidisciplinar</b></p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Modelos de ejecución de código</h3>
-          
+            <h3 class="subTitulo">1.1.- Modelos de ejecución de código</h3>
+            <p>El diseño web comprende los siguientes campos:</p>
+            <ul>
+                <li><b>Visual:</b> su objetivo es la comunicación e intentar atraer a los clientes. Aumenta las posibilidades de que estos vuelvan a visitar.</li>
+                <li><b>Tecnología:</b> de esta elección dependerá las características del sitio web, si será una página estática o dinámica, qué bases de datos se utilizarán.</li>
+                <li><b>Distribución:</b> la velocidad y fiabilidad de la transmisión de datos.</li>
+                <li><b>Propósito:</b> debe tener un objetivo, con una finalidad <b>económica</b> o <b>informativa</b>.</li>
+            </ul>
+            <p>La arquitectura está basada en el <b>modelo cliente-servidor</b>.</p>
+            <ul>
+                <li>El <b>servidor</b>, donde tenemos instalados los elementos hardware y software, así como las técnicas incrustadas y los lenguajes de programación instalados en la máquina. Aconsejamos un lenguaje de programación que soporte multihilos.</li>
+                <li>Se dispone de la <b>máquina cliente</b>, donde tenemos implementados los programas que realizan la petición de solicitud web al servidor a través de los navegadores, que deben ser capaces de soportar las tecnologías del sitio web, como HTML o CSS, así como otros lenguajes, como JavaScript y controles ActiveX.</li>
+                <li>La <b>conectividad de la red</b> y las características utilizadas para el sitio web.</li>
+            </ul>
+            <p>El objetivo de un navegador es presentar la información, escrita normalmente en lenguaje HTML.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Lenguajes de programación en entorno cliente</h3>
-          
+            <h3 class="subTitulo" id="subDos">1.2.- Lenguajes de programación en entorno cliente</h3>
+            <p>También surge la necesidad de implementar un lenguaje que interactúe con el usuario. Se consigue que la página web sea más atractiva.</p>
+            <p>Lenguajes utilizados en la programación web, los basados en <b>entorno cliente</b>, que son ejecutados por los clientes en un navegador web, y en <b>entorno servidor</b>.</p>
+            <p class="nota">Debido al gran abanico disponible de lenguajes orientados a la programación web, es de vital importancia saber elegir el lenguaje web que se implementará en una página. Cada lenguaje presenta sus ventajas e inconvenientes. Es habitual que la última palabra la tenga el desarrollador, dependiendo del lenguaje con que mejor se desenvuelva.</p>
+            <p>En las <b>páginas web dinámicas</b> los lenguajes que se utilizan en los dos entornos (cliente y servidor) se complementan.</p>
+            <p>Con un lenguaje orientado a entorno servidor necesita recoger las peticiones que se realizan desde un leguaje de entrorno cliente y tener la posibilidad de guardar la información en una base de datos.</p>
+            <p>Tendría que comprobar la información recogida en un formulario web antes de que esta sea almacenada en la base de datos del servidor. La validación de los datos se realiza mediante un lenguaje de cliente, mientras que el almacenamiento en la base de datos se realiza mediante un lenguaje de servidor.</p>
+            <p>Lenguaje en <b>entorno cliente</b>, para tener una página lo más completa posible se recomienda la <b>combinación de varios lenguajes</b>. Por este motivo, es posible diferenciar dos tipos de lenguajes:</p>
+            <ul>
+                <li>Lengujes que permiten dar formato al texto y al estilo de la página (HTML y CSS).</li>
+                <li>Lenguajes que permiten crear páginas dinámicas con lenguajes de script (JavaScript).</li>
+            </ul>
+            <p>Las cuatro capas de desarrollo web en el lado del cliente. JavaScript se sitúa en la capa superior, gestionando el comportamiento de la página web.</p>
+            <table>
+                <caption>Capas en entorno cliente</caption>
+                <tr>
+                    <td>Capa de comportamiento (JavaScript)</td>
+                </tr>
+                <tr>
+                    <td>Capa de presentación (CSS)</td>
+                </tr>
+                <tr>
+                    <td>Capa de estructura (DOM / estructura HTML)</td>
+                    <td>Contenido estructurado (documento HTML)</td>
+                </tr>
+                <tr>
+                    <td>Capa de contenido (Texto, imágenes, etc)</td>
+                    <td>Contenido estructurado (documento HTML)</td>
+                </tr>
+            </table>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Mecanismos de ejecución de código en un navegador web</h3>
-          
+            <h3 class="subTitulo" id="subTres">1.3.- Mecanismos de ejecución de código en un navegador web</h3>
+            <p>Una serie de elementos y componentes determinados que conforman lo que se denomina <b>arquitectura del navegador</b>. La gran mayoría de ellos coinciden en una serie de componentes básicos y comunes, es lo que llamamos <b>arquitectura de referencia</b>.</p>
+            <ul>
+                <li><b>Interfaz de usuario:</b> capa que actúa como interfaz entre el usuario y el motor del buscador. Visualización de barras de herramientas, progreso de carga de la página, gestión inteligente de las descargas, preferencias de configuración de usuario o impresión. Puede mantener comunicación con el sistema operativo para el manejo de sesiones y preferencias de visualización o configuración.</li>
+                <li><b>Motor del buscador:</b> es un componente que ofrece una interfaz para el motor de renderizado. Su función es cargar una dirección determinada (URL o URI) y soportar mecanismos básicos como volver a la página anterior o siguiente o recargar la página. Además, carga las alertas de JavaScript.</li>
+                <li><b>Motor de renderizado:</b> se encarga de presentar de manera visual el recurso obtenido a partir del acceso a una dirección web. Interpretara el código de la página web. Capaz de mostrar documentos HTML, XML, CSS e incluso contenido embebido en la página e imágenes.</li>
+                <li><b>Subsistema de comunicaciones:</b> implementar los protocolos de transferencia de archivos y los documentos que se utilizan en internet.</li>
+                <li><b>Intérprete de JavaScript:</b> es el responsable de analizar y ejecutar dicho código, como pueden ser eventos del ratón o teclado u otro código intercalado para ciertas funcionalidades.</li>
+                <li><b>Parser XML:</b> facilitar el acceso a los contenidos definidos en un documento HTML, este módulo permite cargar en memoria una representación en árbol (DOM) de la página, facilitando y agilizando así el acceso a los elementos de una página.</li>
+                <li><b>Componente de visualización:</b> ofrece funcionalidades para la visualización del contenido de un documento HTML.</li>
+                <li><b>Subsistema de persistencia de datos:</b> almacena diferentes tipos de datos para los principales subsistemas del navegador, como historiales de navegación, mentenimiento de sesiones de usuario o preferencias de configuración del navegador. A nivel más bajo, también almacenan certificados de seguridad y cookies.</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Capacidades y limitaciones de ejecución</h3>
-          
+            <h3 class="subTitulo" id="subCuatro">1.4.- Capacidades y limitaciones de ejecución</h3>
+            <p>Con el objetivo de mejorar la usabilidad del usuario:</p>
+            <ul>
+                <li>JavaScript no puede escribir ficheros en el entorno servidor, una de sus funcionalidades es preparar los datos que van a ser enviados o ceder los datos para que estos sean tratados en otro lenguaje.</li>
+                <li>Se tendrá que preparar nuestro sitio web para que sea navegable sin la opción de JavaScript. Se utilizará para crear una navegación rápida, moderna y/o divertida, pero, en caso de que el navegador no tenga la opción, la web no deberá quedarse inactiva.</li>
+                <li>Los datos obtenidos desde el lado del servidor serán examinados mediante eeste lenguaje y actualizará las diferentes secciones o partes de la web.</li>
+            </ul>
+            <p>JavaScript da soluciones a:</p>
+            <ul>
+                <li>Dar un feedback al usuario desde formulario o hipertexto.</li>
+                <li>Ofrecer una interfaz amigable.</li>
+                <li>Controlar los plugins, marcos de navegación o applets de Java.</li>
+                <li>Procesar los datos del formulario antes de ser enviados.</li>
+                <li>Modificar la forma dinámica los estilos y contenidos en los navegadores.</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Programación de guiones</h3>
-          
+            <h3 class="subTitulo" id="subCinco">1.5.- Programación de guiones</h3>
+            <p>Se puede colocar en uno de los dos sitios posibles, entre las etiquetas head o entre las etiquetas body. La etiqueta contenedora empieza por script y termina por /script.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSeis">Integración del código con las etiquetas HTML</h3>
-          
+            <h3 class="subTitulo" id="subSeis">1.6.- Integración del código con las etiquetas HTML</h3>
+            <p>Los navegadores aceptan la integración dle código en HTML de varias formas. Las etiquetas script y el tributo <b>type</b>, que indicará el tipo de lenguaje que utilizaremos.</p>
+            <p>Otra forma es mediante un <b>fichero externo</b> que contenga el código. Es más recomendable, tendremos la opción de compartir el mismo fichero para varios archivos HTML y facilitar la depuración de los errores, así como contribuir a la claridad en el entendimiento del código, la modularidad, seguridad y rapidez a la hora de cargar la web.</p>
+            <p>A la etiqueta script se le añadirá el atributo <b>src</b> con el nombre del fichero, la extensión será <b>.js</b>.</p>
+            <p>Para cargar más de un fichero tendremos que repetir la etiqueta script pero cambiando el nombre del fichero fuente. Podemos utilizar la <b>ruta relativa</b> como la <b>ruta remota</b>.</p>
+            <p>Los navegadores que no soporte los scripts debemos informar al usuario. La marca que se deben utilizar para esta situación es noscrpt.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSiete">Herramientas de programación sobre clientes web. Herramientas y lenguajes asociados</h3>
-          
+            <h3 class="subTitulo" id="subSiete">1.7.- Herramientas de programación sobre clientes web. Herramientas y lenguajes asociados</h3>
+            <p>Una herramienta para desarrollar código, editor de texto.</p>
+            <ul>
+                <li>No utilizar los <b>editores orientados a modificación de contenidos</b></li>
+                <li>La <b>facilidad para almacenar ficheros HTML</b>, la codificación de colores, la verificación de la sintaxis, la inserción de comentarios, generación de bloques de códigos o la disposición de opciones extra, como clientes FTP.</li>
+            </ul>
+            <p>Para la realización de un portal web:</p>
+            <ul>
+                <li>Empezaremos codificando los códigos HTML, JavaScript y CSS en el documento.</li>
+                <li>Lo guardaremos con sus respectivas extensiones y lo ejecutaremos en los navegadores. Si se realizasen modificaciones, tendríamos que recargar el navegador.</li>
+                <li>La <b>validación</b> es el último paso, se ahorran horas de comprobaciones, aseguramos la validez del código y detectamos las imperfecciones que poseen los distintos archivos que componen el portal web.</li>
+            </ul>
+            <p>La estandarización dle consorcio <b>W3C</b> es la que rige las validaciones, en su dirección web es donde podemos acceder para esta operación.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
