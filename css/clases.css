@@ -248,24 +248,26 @@
   .contenedorApuntes table { 
     margin: 5rem auto;
     border-collapse: collapse;
+    background-color: var(--azulClaro);
   }
   .contenedorApuntes caption {
-      text-align: left;
-      margin-bottom: 1rem;
-    }
+    padding: .5rem;  
+    color: var(--azulDetalles);
+    font-weight: bold;
+    text-align: left;
+    background-color: var(--azulClaro);
+  }
     .contenedorApuntes th {
       color: var(--azulClaro);
       padding: .3rem 1.2rem;
-      border: 3px dashed var(--azulDetalles);
-      border-right: 3px dashed var(--azulClaro);
       background-color: var(--azulDetalles);
+      border: 2px dashed var(--azulPapuntes);
     }
-    .contenedorApuntes th:last-child { border-right: 3px dashed var(--azulDetalles);}
     .contenedorApuntes td {
       padding: .5rem;
       color: var(--azulDetalles);
-      border: 3px dashed var(--azulDetalles);
       background-color: var(--azulClaro);
+      border: 2px dashed var(--azulPapuntes);
     }
   /*_________________*/  
   /* MENÚ NAVEGACIÓN */  
