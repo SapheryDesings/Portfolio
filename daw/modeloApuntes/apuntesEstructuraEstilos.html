@@ -9,62 +9,68 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/apuntes.css">
 
   <title>Apuntes - Estructura y Estilos</title>
 </head>
 <body>
   <h1 class="tituloPrincipal">Asignatura</h1>
-  <h2 class="tituloTema">Tema 1. - Título del tema. Parrafos</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic in similique rem, autem delectus excepturi, iste commodi minus quis veniam laboriosam sint neque quae sapiente nisi beatae quasi at sequi laborum nemo corporis aut dolor! Dolore commodi aperiam perferendis illum obcaecati! Adipisci debitis excepturi temporibus ex doloremque tenetur enim!</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum odit vitae laborum rerum nam delectus fugiat. Eius, ut mollitia?</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit laudantium, dolorem nesciunt molestiae ad quod impedit, quas temporibus magni porro tempora aperiam obcaecati voluptate consectetur fugiat esse inventore perspiciatis ullam qui eum. Aliquid, sapiente voluptatem? Ipsam placeat dolores id eius omnis molestias cum, labore, dicta enim nemo at vel repellendus!</p>
-  <!-- ----------------------------------------- -->
-  <h3 class="subTitulo">1.1.- Subtitulo - Tablas</h3>
-  <table>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellidos</th>
-      <th>Ciudad</th>
-    </tr>
-    <tr>
-      <td>Pablo</td>
-      <td>Carrascosa</td>
-      <td>Nueva Zelanda</td>
-    </tr>
-    <tr>
-      <td>Carlos</td>
-      <td>García</td>
-      <td>México</td>
-    </tr>
-    <tr>
-      <td>Jesús</td>
-      <td>Taboada</td>
-      <td>Canadá</td>
-    </tr>
-  </table>
-  <!-- ----------------------------------------- -->
-  <h3 class="subTitulo">1.2.- Subtitulo - Listas ordenadas y desordenadas</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio explicabo quis. Reprehenderit cumque voluptas aperiam, eveniet ab expedita ullam dignissimos fugiat, error accusantium excepturi adipisci soluta perferendis quas libero sunt vel inventore neque debitis at. Similique temporibus corporis voluptatum.</p>
-  <ol>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-  </ol>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero pariatur nulla vitae voluptatem. Ullam aliquam tenetur, illo veritatis fugiat accusamus recusandae beatae ducimus unde nisi consequatur quam maiores eos rerum!</p>
-  <ul>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-    <li>Cuatro</li>
-  </ul>
-  <!-- ----------------------------------------- -->
-  <h3 class="subTitulo">1.3. - Subtitulo - Nota</h3>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius molestias amet culpa illo libero voluptatibus, maxime numquam officiis autem minus odio architecto nihil, temporibus omnis?</p>
-  <p class="nota">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, exercitationem.</p>
-  <!-- ----------------------------------------- -->
-  <h4 class="apartado">Esto es un apartado</h4>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id vitae sunt eius commodi assumenda voluptates nihil. Ut accusantium a quam officiis enim porro ad repellendus, eum, amet eligendi et sunt odit magnam doloremque excepturi illum, corporis eius ipsam. Deserunt esse quaerat vitae nihil necessitatibus nostrum repellendus consectetur quo assumenda dolore. Numquam maxime voluptatum soluta, saepe excepturi voluptate dolore deserunt ipsam sequi vitae facilis rem minima praesentium. Ex, eveniet?</p>
-  <footer><h5>SapheryDesings - 2023</h5></footer>
+  <div class="contenedorApuntes">
+    <h2 class="tituloTema">Tema 1. - Título del tema. Parrafos</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic in similique rem, autem delectus excepturi, iste commodi minus quis veniam laboriosam sint neque quae sapiente nisi beatae quasi at sequi laborum nemo corporis aut dolor! Dolore commodi aperiam perferendis illum obcaecati! Adipisci debitis excepturi temporibus ex doloremque tenetur enim!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum odit vitae laborum rerum nam delectus fugiat. Eius, ut mollitia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit laudantium, dolorem nesciunt molestiae ad quod impedit, quas temporibus magni porro tempora aperiam obcaecati voluptate consectetur fugiat esse inventore perspiciatis ullam qui eum. Aliquid, sapiente voluptatem? Ipsam placeat dolores id eius omnis molestias cum, labore, dicta enim nemo at vel repellendus!</p>
+    <!-- ----------------------------------------- -->
+    <h3 class="subTitulo">1.1.- Subtitulo - Tablas</h3>
+    <table>
+      <caption>Caption => Título Tabla</caption>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pablo</td>
+          <td>Carrascosa</td>
+          <td>Nueva Zelanda</td>
+        </tr>
+        <tr>
+          <td>Carlos</td>
+          <td>García</td>
+          <td>México</td>
+        </tr>
+        <tr>
+          <td>Jesús</td>
+          <td>Taboada</td>
+          <td>Canadá</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- ----------------------------------------- -->
+    <h3 class="subTitulo">1.2.- Subtitulo - Listas ordenadas y desordenadas</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio explicabo quis. Reprehenderit cumque voluptas aperiam, eveniet ab expedita ullam dignissimos fugiat, error accusantium excepturi adipisci soluta perferendis quas libero sunt vel inventore neque debitis at. Similique temporibus corporis voluptatum.</p>
+    <ol>
+      <li>Uno</li>
+      <li>Dos</li>
+      <li>Tres</li>
+    </ol>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero pariatur nulla vitae voluptatem. Ullam aliquam tenetur, illo veritatis fugiat accusamus recusandae beatae ducimus unde nisi consequatur quam maiores eos rerum!</p>
+    <ul>
+      <li>Uno</li>
+      <li>Dos</li>
+      <li>Tres</li>
+      <li>Cuatro</li>
+    </ul>
+    <!-- ----------------------------------------- -->
+    <h3 class="subTitulo">1.3. - Subtitulo - Nota</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius molestias amet culpa illo libero voluptatibus, maxime numquam officiis autem minus odio architecto nihil, temporibus omnis?</p>
+    <p class="nota">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, exercitationem.</p>
+    <!-- ----------------------------------------- -->
+    <h4 class="apartado">Esto es un apartado</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id vitae sunt eius commodi assumenda voluptates nihil. Ut accusantium a quam officiis enim porro ad repellendus, eum, amet eligendi et sunt odit magnam doloremque excepturi illum, corporis eius ipsam. Deserunt esse quaerat vitae nihil necessitatibus nostrum repellendus consectetur quo assumenda dolore. Numquam maxime voluptatum soluta, saepe excepturi voluptate dolore deserunt ipsam sequi vitae facilis rem minima praesentium. Ex, eveniet?</p>
+    <footer><h5>SapheryDesings - 2023</h5></footer>
+  </div>
 </body>
 </html>

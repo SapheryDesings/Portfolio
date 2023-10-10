@@ -258,9 +258,10 @@
   
   /* ____ TABLAS ____*/
   .contenedorApuntes table { 
-    margin: 5rem auto;
-    border-collapse: collapse;
-    background-color: var(--azulClaro);
+    overflow: scroll; /* REVISAR */
+    margin: 2rem auto;
+    padding: .5rem;
+    background-color: var(--azulPapuntes);
 
     & caption {
       padding: .5rem;  
@@ -270,18 +271,18 @@
       background-color: var(--azulClaro);
     }
 
+    & thead {background-color: var(--azulDetalles);}
+    & tbody {background-color: var(--azulClaro);}
+    
     & th {
       color: var(--azulClaro);
       padding: .3rem 1.2rem;
       background-color: var(--azulDetalles);
-      border: 2px dashed var(--azulPapuntes);
     }
 
     & td {
       padding: .5rem;
       color: var(--azulDetalles);
-      background-color: var(--azulClaro);
-      border: 2px dashed var(--azulPapuntes);
     }
   }
   /*_________________*/  
