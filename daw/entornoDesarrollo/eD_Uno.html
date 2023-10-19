@@ -23,11 +23,69 @@
             
             <!--*********************************************************************-->
             <h3 class="subTitulo">El software del ordenador</h3>
+            <p>La parte física, que llamamos <b>hardware</b> y que está compuesta por elementos físicos como el teclado, el ratón, el monitor, los discos duros o la placa base.</p>
+            <p>El ordenador posee otra parte lógica llamada <b>software</b>, encargada de dar instrucciones al hardware y hacer funcionar la computadora.</p>
+            <p>Podemos dividir el fostware en dos: según las tareas que realiza y según su método de distribución.</p>
+
+            <h4 class="apartado">1.1.1. Software basado en el tipo de trabajo que realizan</h4>
+            <ul>
+                <li><b>Software de sistema:</b> es el que hace que el hardware funciones.</li>
+                <li><b>Software de aplicación:</b> son los programas que realizan tareas específicas.</li>
+                <li><b>Software de programación o desarrollo:</b> herramientas necesarias para escribir los programas informáticos y para hacer uso de distintos lenguajes de programación.</li>
+            </ul>
+
+            <h4 class="apartado">1.1.2. Software basado en el método de distribución</h4>
+            <ul>
+                <li><b>Shareware:</b> puede evaluar de forma gratuita el producto, pero con limitaciones.</li>
+                <li><b>Freeware:</b> de forma gratuita, pero que mantiene los derechos de autor.</li>
+                <li><b>Adware:</b> se ofrece publicidad incrustada, incluso durante la instalación de este.</li>
+            </ul>
           
-            
+            <h4 class="apartado">1.1.3. Licencias de software. Software libre y propietario</h4>
+            <p>Una <b>licencia</b> es un contrato entre el desarrollador de un software y el usuario final. <br> Existen dos tipos de licencias:</p>
+            <ul>
+                <li><b>Software libre:</b> el autor concede libertades al usuario:
+                    <ul>
+                        <li>Libertad para usar el programa con cualquier fin.</li>
+                        <li>Libertad para saber cómo funciona el programa y adaptar el código a nuestras propias necesidades.</li>
+                        <li>Libertad para poder compartir copias con otros usuarios.</li>
+                        <li>Libertad para poder mejorar el programa y publicar las modificaciones realizadas.</li>
+                    </ul>
+                </li>
+                <p>"Libre" no significa que sea gratis, es un concepto de libertad, no de precio.</p>
+                <li><b>Software propietario:</b> no nos permitirá acceder al código fuente del programa, nos prohibirá la redistribución, la reprogramación, la copia o el uso simultáneo en varios equipos.</li>
+            </ul>
+            <p>La licencia que más se usa en el software libre es la licencia <b>GPL</b>, que nos dejará usar y cambiar el programa, con el único requisito de que se hagan públicas las modificaciones realizadas.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Concepto de programa informático</h3>
-          
+            <h3 class="subTitulo" id="subDos">1.2. - Concepto de programa informático</h3>
+            <p>Un <b>programa informático</b> es un fragmento de software formado por una secuencia de instrucciones y procesos construidos con el fin de cumplir un objetivo concreto. Están escritos utilizando lenguajes de programación y deben ser traducidos al lenguaje máquina.</p>
+            <h4 class="apartado">1.2.1. Programa y componentes del sistema informático</h4>
+            <p>La arquitectura de nuestra CPU está basado en la arquitectura de <b>Von Neumann</b>.</p>
+            <p>Tenemos otra estructura que es la llamada <b>Harvard</b>. La característica fundamental es eque tanto la memoria RAM como la memoria de instrucciones no comparten características comunes.</p>
+            <p>La unidad de control UC es el centro de la arquitectura y conecta con la unidad aritmético-lógica UAL, los dispositivos de entrada y salida y con ambar memorias mencionadas anteriormente.</p>
+            <p>En la arquitectura de Von Neumann, puede estar leyedendo o bien escribir pero ambos no pueden ocurrir a la vez.</p>
+            <p>En la arquitectura Harvard, puede tanto leer una instrucción como realizar un acceso de memoria de datos.</p>
+            <ul>
+                <li><b>La unidad de control UC:</b> se encarga de interpretar y ejecutar las instrucciones que se almacenan en la memoria principal y, genera las señales de control necesarias para ejecutarlas.</li>
+                <li><b>La unidad aritmético-lógica UAL:</b> es la que recibe los datos y ejecuta operaciones de cálculo y comparaciones, además de tomar decisiones lógicas (si son verdaderas o falsas), pero siempre supervisadas por la unidad de control.</li>
+                <li><b>Los registros:</b> son aquellos que almacenan la información temporal. Es el almacenamiento interno de la CPU.</li>
+            </ul>
+            <p>Diferentes registros que posee la UC:</p>
+            <ul>
+                <li><b>Contador de programa CP:</b> contendrá la dirección de la siguiente instrucción para realizar. Su valor será actualizado por la CPU después de capturar una instrucción.</li>
+                <li><b>Registro de instrucción RI:</b> es el que contiene el código de la instrucción, se analiza dicho código. Consta de dos partes: el código de la operación y la dirección de memoria en la que opera.</li>
+                <li><b>Registro de dirección de memoria RDM:</b> tiene asignada una dirección correspondiente a una posición de memoria que va a almacenar la información mediante el bus de direcciones.</li>
+                <li><b>Registro de intercambio de memoria RIM:</b> recibe o envía, según si es una operación de lectura o escritura, la información o dato contenido en el la posición apuntada por el RDM.</li>
+                <li><b>Decodificador de instrucción DI:</b> extrae y analiza el código de la instrucción contenida en el RI.</li>
+                <li><b>El reloj:</b> marca el ritmo del DI y nos proporciona unos impulsos eléctricos con intervalos constantes a la vez que marca los tiempos para ejecutar las instrucciones.</li>
+                <li><b>El secuenciador:</b> son órdenes que se sincronizan con el reloj para que ejecuten correctamente y de forma ordenada la instrucción.</li>
+            </ul>
+            <p>Cuando ejecutamos una instrucción podemos distinguir dos fases:</p>
+            <ul>
+                <li><b>1. Fase de búsqueda:</b> se localiza la instrucción en la memoria principal y se envía a la unidad de control para poder procesarla.</li>
+                <li><b>2. Fase de ejecución:</b> se ejecutan las acciones de las instrucciones.</li>
+            </ul>
+            <p>Para que podamos realizar operaciones de lectura y escritura en una celda de memoria, se utilizan el RDM, el RIM y el DI. El decodificador de instrucción es el encargado de conectar la celda RDM con el registro de intercambio RIM, el cual posibilita que la trasferencia de datos se realice en un sentido u otro según sea de lectura o escritura.</p>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
@@ -35,7 +93,49 @@
             </div>
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subTres">Código fuente, código objeto y código ejecutable. Máquinas virtuales</h3>
-          
+            <h4 class="apartado">1.3.1. Tipo de código</h4>
+            <p>Cuando escribamos un código, pasa por distintos estados:</p>
+            <ul>
+                <li><b>Código fuente:</b> es el código realizado por los programadores, en un lenguaje de alto nivel y para escribirlo se parte de, diagramas de clases. No se puede ejecutar directamente en el ordenador.</li>
+                <li><b>Código objeto:</b> es el código que se crea tras realizar la compilación, no es entendido ni por el ordenador ni por nosotros. Representación intermedia de bajo nivel.</li>
+                <li><b>Código ejecutable:</b> se obtiene tras unir el código objeto con varias librerías para que así pueda ser ejecutado por el ordenador.</li>
+            </ul>
+            <h4 class="apartado">1.3.2. Compilación</h4>
+            <p>Es el proceso a través del cual se convierte un programa en lenguaje máquina a partir de otro programa de computadora escrito en otro lenguaje. Se realiza a través de dos programas: el compilador y el enlazador. Si en el <b>compilador</b> se detecta algún tipo de error no se generará el código objeto y tendremos que modificar el código fuente.</p>
+            <ul>
+                <li><b>Análisis léxico:</b> se lee el código obteniendo unidades de caracterres llamados tokens.</li>
+                <li><b>Análisis sintáctico:</b> recibe el código fuente en forma de tokens y ejecuta el análisis para determinar la estructura del programa, se comprueba si cumplen las reglas sintácticas.</li>
+                <li><b>Análisis semántico:</b> revisa que las declaraciones sean correctas, los tipos de todas las expresiones, si las operaciones se pueden realizar.</li>
+                <li><b>Generación de código intermedio:</b> después de analizarlo todo, se crea una representación similar al código fuente para facilitar la tarea de traducir al código objeto.</li>
+                <li><b>Optimización de código:</b> se mejora el código intermedio anterior para que sea más fácil y rápido a la hora de interpretarlo la máquina.</li>
+                <li><b>Geración de código:</b> se genera el código objeto.</li>
+            </ul>
+            <p>El <b>enlazador</b> insertará en el código objeto las librerías necesarias para que se pueda producir un programa ejecutable. Si se hace referencia a otros ficheros que contengan las librerías especificadas en el código objeto, se combina con dicho código y se crea el fichero ejecutable.</p>
+            <h4 class="apartado">1.3.3.</h4>
+            <p>Una máquina virtual es un tipo de software capaz de ejecutar programas como si fuese una máquina real.</p>
+            <ul>
+                <li><b>De sistema:</b> permiten virtualizar máquinas con distintos sistemas operativos en cada una.</li>
+                <li><b>De proceso:</b> Se ejecutan como un proceso normal dentro de un sistema operativo y solo soportan un proceso. El objetivo es proporcionar un entorno de ejecución independiente del hardware y del sistema operativo y permitir que el programa sea ejecutado de la misma forma en cualquier plataforma.</li>
+            </ul>
+            <h4 class="apartado">La máquina virtual de Java</h4>
+            <p>Los programas que se compilan en lenguaje Java son capaces de funcionar en cualquier plataforma. El código no lo ejecuta el procesador del ordenador sino la propia Máquina Virtual de Java. El funcionamiento es el siguiente:</p>
+            <ul>
+                <li>1. El código fuente estará escrito en archivos de texto planos con la extensión .java.</li>
+                <li>2. El compilador <b>javac</b> generará uno o varios archivos, siempre que no se produzcan errores, y tendrán la extensión .class.</li>
+                <li>3. Este fichero contendrá un lenguaje intermedio bytecode.</li>
+                <li>4. La JVM coge y traduce mediante un compilador JIT el bytecode en código binario para que el procesador de nuestro ordenador sea capaz de reconocerlo.</li>
+                <li>5. Los ficheros .class podrán ser ejecutados en múltiples plataformas.</li>
+            </ul>
+            <p>La máquina virtual de Java contiene las siguientes tareas:</p>
+            <ul>
+                <li>Carga y almacenamiento de datos.</li>
+                <li>Excepciones (errores en tiempo de ejecución).</li>
+                <li>Operaciones aritméticas.</li>
+                <li>Conversiones de tipos de datos.</li>
+                <li>Llamadas a métodos y devolución de datos.</li>
+                <li>Creación y manejo de objetos.</li>
+            </ul>
+            <p>Las desventajas, puede ser que son más lentos que los ya compilados, debido a la capa intermedia.</p>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
@@ -43,7 +143,77 @@
             </div>
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subCuatro">Tipos de lenguajes de programación. Clasificación y características de los lenguajes más difundidos</h3>
-          
+            <p>Lenguaje de programación hace referencia al conjunto de caracteres, reglas y acciones combinadas y consecutivas que un equipo debe ejecutar. Constará de los siguientes elementos:</p>
+            <ul>
+                <li><b>Alfabeto o vocabulario:</b> conjunto de símbolos permitidos.</li>
+                <li><b>Sintaxis:</b> reglas para realizar correctamente construcciones con los símbolos.</li>
+                <li><b>Semántica:</b> reglas que determinan el significado de contrucción del lenguaje.</li>
+            </ul>
+            <h4 class="apartado">1.4.1. Clasificación y características</h4>
+            <p>Podemos clasificar los lenguajes de programación basándonos en los siguientes criterios:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Según su nivel de abstracción</th>
+                        <td>Lenguajes de bajo nivel. <br>
+                        Lenguajes de nivel medio. <br> 
+                        Lenguajes de alto nivel.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Según la forma de ejecución:</th>
+                        <td>Lenguajes compilados. <br> 
+                        Lenguajes interpretados. <br>
+                        </td>
+                    </tr>
+                    <th>Según el paradigma de programación:</th>
+                    <td>Lenguajes imperativos. <br>
+                        Lenguajes funcionales. <br>
+                        Lenguajes lógicos. <br>
+                        Lenguajes estructurados. <br>
+                        Lenguajes orientados a objetos. <br>
+                    </td>
+                </tbody>
+            </table>
+            <h4 class="apartado">Según su nivel de abstracción</h4>
+            <ul>
+                <li><b>Lenguajes de bajo nivel:</b> el de más bajo nivel es <b>el lenguaje máquina.</b> Utiliza el lenguaje binario y los programas son específicos para cada procesador. Al lenguaje máquina le sigue el <b>lenguaje ensamblador</b>. Complicado de aprender y es específico para cada procesador. Este lenguaje tiene que ser traducido al lenguaje máquina. Se utilizan nombres mnemotécnicos y las instrucciones trabajan directamente con registros de memoria física. <br>
+                    <ul>
+                        <li>Los registros extendidos de 32 bits, como EAX (registro acumulador), EBX (registro de índice base), ECX (registro de conteo) o EDX (registro de datos).</li>
+                        <li>Estos registros se dividen en registros de menor tamaño, como AX, BX, CX Y DX, de 16 bits, y estos, a su vez, en otros de 8 bits, como AH, AL, BH, BL, CH, CL, DH o DL.
+                            <ul>
+                                <li><b>EAX:</b> el acumulador se utiliza para instrucciones tales como multiplicación o división.</li>
+                                <li><b>EBX:</b> guarda la dirección de desplazamiento de una posición en el sistema de memoria.</li>
+                                <li><b>ECX:</b> es un registro de propósito general que guara la cuenta de varias instrucciones. Realiza funciones de contador.</li>
+                                <li><b>EDX:</b> es un registro de propósito general que almacena datos de, por ejemplo, aplicaciones aritméticas como el divisor antes de hacer una división.</li>
+                            </ul> <br>
+                            Podemos realizar operaciones con estos registros.
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Lenguajes de nivel medio:</b> poseen características de ambos tipos de nivel, tanto del nivel bajo como del alto, y se suele usar para la creación de sitemas operativos.</li>
+                <li><b>Lenguajes de alto nivel:</b> es más fácil a la hora de aprender, utilizan nuestro lenguaje natural. Para poder ejecutar lo que escribamos, necesitaremos un compilador para que traduzca al lenguaje máquina las intrucciones. Es independiente de la máquina, no depende del hardware.</li>
+            </ul>
+            <h4 class="apartado">Según la forma de ejecución</h4>
+            <ul>
+                <li><b>Lenguajes compilados:</b> al programar en alto nivel, hay que traducir ese lenguaje a lenguaje máquina a través de compiladores. Devolverán errores si el lenguaje fuente está mal escrito y lo ejecutarán si el lenguaje destino es ejecutable por la máquina.</li>
+                <li><b>Lenguajes interpretados:</b> otra variante para traducir programas de alto nivel. Cuando ejecutamos una instrucción, se debe interpretar y traducir al lenguaje máquina. El compilador es, más rápido que un intérprete, al usar el intérprete evitaremos tener que compilar cada vez que hagamos alguna modificación. Java usa tanto la compilación como la interpretación, puede compilarse primero en un formato intermedio, llamado bytecodes, para que luego una máquina virtual lo interprete.</li>
+            </ul>
+            <h4 class="apartado">Según el paradigma de programación</h4>
+            <p>El paradigma de programación nos detalla las reglas, patrones y los estilos de programación que usan los lenguajes. Pueden usar más de un paradigma.</p>
+            <ul>
+                <li><b>Lenguajes imperativos:</b> los primeros lenguajes imperativos que se usaron fueron el lenguaje máquina y el lenguaje ensamblador. Consisten en una serie de sentencias que establecen cómo debe manipularse la información presente en cada memoria o cómo se debe enviar o recibir la información. Las estructuras de control podemos establecer el orden en que se ejecutan y modificar el flujo del programa según los resultados de las acciones. Casi todos los <b>lenguajes de desarrollo de software comercial</b> son imperativos.
+                <ul>
+                    <li><b>Programación estructurada.</b></li>
+                    <li><b>Programación modular.</b></li>
+                    <li><b>Programación orientada a objetos.</b></li>
+                </ul>
+                </li>
+                <li><b>Lenguajes funcionales:</b> están basados en el concepto de función y estarán formados por definiciones de funciones junto con sus argumentos. Entre sus características destaca que no existe la operación de asignación. Las variables almacenan definiciones a expresiones. El resultado de un cálculo es la entrada del siguiente, y así sucesivamente hasta que se consigue el valor deseado. Apenas se usar para el software comercial.</li>
+                <li><b>Lenguajes lógicos:</b> están basados en el concepto de razonamiento, deductivo o inductivo. A partir de una base de datos consistente en un conjunto de entidades, propiedades de esas entidades o relaciones entre entidades, el sistema es capaz de hacer <b>razonamientos</b>. Los programas escritos en este lenguaje suelen tener forma de una <b>base de datos</b>, está formada por declaraciones lógicas, que son ciertas o falsas, que podremos consultar. La ejecución será en forma de consultas hacia esa base de datos. El lenguaje lógico más importante es Prolog.</li>
+                <li><b>Lenguajes estructurados:</b></li>
+            </ul>
+
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
