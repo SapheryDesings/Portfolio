@@ -236,8 +236,8 @@
   /*___________________*/
   /* ____ PARRAFOS ____*/
   .contenedorApuntes p {  
-    margin: 1rem auto; 
-    padding: .5rem 0;
+    margin: .5rem auto; 
+    padding: .2rem 0;
   }
   /* ____ LISTAS ____*/
   .contenedorApuntes :is(ol, ul) {

@@ -176,44 +176,47 @@
                 </tbody>
             </table>
             <h4 class="apartado">Según su nivel de abstracción</h4>
+            <p><b>Lenguajes de bajo nivel:</b> el de más bajo nivel es <b>el lenguaje máquina.</b> Utiliza el lenguaje binario y los programas son específicos para cada procesador. Al lenguaje máquina le sigue el <b>lenguaje ensamblador</b>. Complicado de aprender y es específico para cada procesador. Este lenguaje tiene que ser traducido al lenguaje máquina. Se utilizan nombres mnemotécnicos y las instrucciones trabajan directamente con registros de memoria física.</p>
             <ul>
-                <li><b>Lenguajes de bajo nivel:</b> el de más bajo nivel es <b>el lenguaje máquina.</b> Utiliza el lenguaje binario y los programas son específicos para cada procesador. Al lenguaje máquina le sigue el <b>lenguaje ensamblador</b>. Complicado de aprender y es específico para cada procesador. Este lenguaje tiene que ser traducido al lenguaje máquina. Se utilizan nombres mnemotécnicos y las instrucciones trabajan directamente con registros de memoria física. <br>
+                <li>Los registros extendidos de 32 bits, como EAX (registro acumulador), EBX (registro de índice base), ECX (registro de conteo) o EDX (registro de datos).</li>
+                <li>Estos registros se dividen en registros de menor tamaño, como AX, BX, CX Y DX, de 16 bits, y estos, a su vez, en otros de 8 bits, como AH, AL, BH, BL, CH, CL, DH o DL.
                     <ul>
-                        <li>Los registros extendidos de 32 bits, como EAX (registro acumulador), EBX (registro de índice base), ECX (registro de conteo) o EDX (registro de datos).</li>
-                        <li>Estos registros se dividen en registros de menor tamaño, como AX, BX, CX Y DX, de 16 bits, y estos, a su vez, en otros de 8 bits, como AH, AL, BH, BL, CH, CL, DH o DL.
-                            <ul>
-                                <li><b>EAX:</b> el acumulador se utiliza para instrucciones tales como multiplicación o división.</li>
-                                <li><b>EBX:</b> guarda la dirección de desplazamiento de una posición en el sistema de memoria.</li>
-                                <li><b>ECX:</b> es un registro de propósito general que guara la cuenta de varias instrucciones. Realiza funciones de contador.</li>
-                                <li><b>EDX:</b> es un registro de propósito general que almacena datos de, por ejemplo, aplicaciones aritméticas como el divisor antes de hacer una división.</li>
-                            </ul> <br>
-                            Podemos realizar operaciones con estos registros.
-                        </li>
-                    </ul>
+                        <li><b>EAX:</b> el acumulador se utiliza para instrucciones tales como multiplicación o división.</li>
+                        <li><b>EBX:</b> guarda la dirección de desplazamiento de una posición en el sistema de memoria.</li>
+                        <li><b>ECX:</b> es un registro de propósito general que guara la cuenta de varias instrucciones. Realiza funciones de contador.</li>
+                        <li><b>EDX:</b> es un registro de propósito general que almacena datos de, por ejemplo, aplicaciones aritméticas como el divisor antes de hacer una división.</li>
+                    </ul> <br>
+                    Podemos realizar operaciones con estos registros.
                 </li>
-                <li><b>Lenguajes de nivel medio:</b> poseen características de ambos tipos de nivel, tanto del nivel bajo como del alto, y se suele usar para la creación de sitemas operativos.</li>
-                <li><b>Lenguajes de alto nivel:</b> es más fácil a la hora de aprender, utilizan nuestro lenguaje natural. Para poder ejecutar lo que escribamos, necesitaremos un compilador para que traduzca al lenguaje máquina las intrucciones. Es independiente de la máquina, no depende del hardware.</li>
             </ul>
+            <p><b>Lenguajes de nivel medio:</b> poseen características de ambos tipos de nivel, tanto del nivel bajo como del alto, y se suele usar para la creación de sitemas operativos.</p>
+            <p><b>Lenguajes de alto nivel:</b> es más fácil a la hora de aprender, utilizan nuestro lenguaje natural. Para poder ejecutar lo que escribamos, necesitaremos un compilador para que traduzca al lenguaje máquina las intrucciones. Es independiente de la máquina, no depende del hardware.</p>
             <h4 class="apartado">Según la forma de ejecución</h4>
-            <ul>
-                <li><b>Lenguajes compilados:</b> al programar en alto nivel, hay que traducir ese lenguaje a lenguaje máquina a través de compiladores. Devolverán errores si el lenguaje fuente está mal escrito y lo ejecutarán si el lenguaje destino es ejecutable por la máquina.</li>
-                <li><b>Lenguajes interpretados:</b> otra variante para traducir programas de alto nivel. Cuando ejecutamos una instrucción, se debe interpretar y traducir al lenguaje máquina. El compilador es, más rápido que un intérprete, al usar el intérprete evitaremos tener que compilar cada vez que hagamos alguna modificación. Java usa tanto la compilación como la interpretación, puede compilarse primero en un formato intermedio, llamado bytecodes, para que luego una máquina virtual lo interprete.</li>
-            </ul>
+            <p><b>Lenguajes compilados:</b> al programar en alto nivel, hay que traducir ese lenguaje a lenguaje máquina a través de compiladores. Devolverán errores si el lenguaje fuente está mal escrito y lo ejecutarán si el lenguaje destino es ejecutable por la máquina.</p>
+            <p><b>Lenguajes interpretados:</b> otra variante para traducir programas de alto nivel. Cuando ejecutamos una instrucción, se debe interpretar y traducir al lenguaje máquina. El compilador es, más rápido que un intérprete, al usar el intérprete evitaremos tener que compilar cada vez que hagamos alguna modificación. Java usa tanto la compilación como la interpretación, puede compilarse primero en un formato intermedio, llamado bytecodes, para que luego una máquina virtual lo interprete.</p>
             <h4 class="apartado">Según el paradigma de programación</h4>
             <p>El paradigma de programación nos detalla las reglas, patrones y los estilos de programación que usan los lenguajes. Pueden usar más de un paradigma.</p>
+            <p><b>Lenguajes imperativos:</b> los primeros lenguajes imperativos que se usaron fueron el lenguaje máquina y el lenguaje ensamblador. Consisten en una serie de sentencias que establecen cómo debe manipularse la información presente en cada memoria o cómo se debe enviar o recibir la información. Las estructuras de control podemos establecer el orden en que se ejecutan y modificar el flujo del programa según los resultados de las acciones. Casi todos los <b>lenguajes de desarrollo de software comercial</b> son imperativos.</p>
             <ul>
-                <li><b>Lenguajes imperativos:</b> los primeros lenguajes imperativos que se usaron fueron el lenguaje máquina y el lenguaje ensamblador. Consisten en una serie de sentencias que establecen cómo debe manipularse la información presente en cada memoria o cómo se debe enviar o recibir la información. Las estructuras de control podemos establecer el orden en que se ejecutan y modificar el flujo del programa según los resultados de las acciones. Casi todos los <b>lenguajes de desarrollo de software comercial</b> son imperativos.
-                <ul>
-                    <li><b>Programación estructurada.</b></li>
-                    <li><b>Programación modular.</b></li>
-                    <li><b>Programación orientada a objetos.</b></li>
-                </ul>
-                </li>
-                <li><b>Lenguajes funcionales:</b> están basados en el concepto de función y estarán formados por definiciones de funciones junto con sus argumentos. Entre sus características destaca que no existe la operación de asignación. Las variables almacenan definiciones a expresiones. El resultado de un cálculo es la entrada del siguiente, y así sucesivamente hasta que se consigue el valor deseado. Apenas se usar para el software comercial.</li>
-                <li><b>Lenguajes lógicos:</b> están basados en el concepto de razonamiento, deductivo o inductivo. A partir de una base de datos consistente en un conjunto de entidades, propiedades de esas entidades o relaciones entre entidades, el sistema es capaz de hacer <b>razonamientos</b>. Los programas escritos en este lenguaje suelen tener forma de una <b>base de datos</b>, está formada por declaraciones lógicas, que son ciertas o falsas, que podremos consultar. La ejecución será en forma de consultas hacia esa base de datos. El lenguaje lógico más importante es Prolog.</li>
-                <li><b>Lenguajes estructurados:</b> pág 23</li>
+                <li><b>Programación estructurada.</b></li>
+                <li><b>Programación modular.</b></li>
+                <li><b>Programación orientada a objetos.</b></li>
             </ul>
-
+            <p><b>Lenguajes funcionales:</b> están basados en el concepto de función y estarán formados por definiciones de funciones junto con sus argumentos. Entre sus características destaca que no existe la operación de asignación. Las variables almacenan definiciones a expresiones. El resultado de un cálculo es la entrada del siguiente, y así sucesivamente hasta que se consigue el valor deseado. Apenas se usar para el software comercial.</p>
+            <p><b>Lenguajes lógicos:</b> están basados en el concepto de razonamiento, deductivo o inductivo. A partir de una base de datos consistente en un conjunto de entidades, propiedades de esas entidades o relaciones entre entidades, el sistema es capaz de hacer <b>razonamientos</b>. Los programas escritos en este lenguaje suelen tener forma de una <b>base de datos</b>, está formada por declaraciones lógicas, que son ciertas o falsas, que podremos consultar. La ejecución será en forma de consultas hacia esa base de datos. El lenguaje lógico más importante es Prolog.</p>
+            <p><b>Lenguajes estructurados:</b> utilizan las tres construcciones lógicas y resultan fáciles de leer. El inconveniente es el código, que está centrado en un solo bloque, lo que dificulta el proceso de hallar el problema. Nos estamos refiriendo a programas creados a través de modulos, pequeñas partes más manejables que unidas entre sí, hacen que el programa funcione. Cada módulo poseen una entrada y una salida y deben estar perfectamente comunicados, aunque cada uno de llos trabaja de forma independiente.</p>
+            <p>La evolución a esta programación mediante módulos se le denomina <b>programación modular</b> y posee las siguientes ventajas:</p>
+            <ul>
+                <li>Al dividir el programa en módulos, varios programadores podrán trabajar a la vez en cada uno de ellos.</li>
+                <li>Estos módulos pueden usarse para otras aplicaciones.</li>
+                <li>Si surge algún problema será más fácil y menos costoso detectarlo y abordarlo, ya qe se puede resolver de forma aislada.</li>
+            </ul>
+            <p><b>Lenguajes orientados a objetos:</b> estarán definidos por un conjunto de objetos en vez de por módulos.</p>
+            <p>Estos objetos están formados por una estructura de datos y por una colección de métodos que enterpretan esos datos. Los datos que se encuentran dentro de los objetos son sus <b>atributos</b>, y las operaciones que se realizan sobre los objetos cambian el valor de uno o más atributos.</p>
+            <p>La comunicación entre objetos se realiza a través de mensajes.</p>
+            <p>Una clase es una plantilla para creación de objetos. Al crear un objeto, se ha de especificar a qué clase pertenece para que el compilador sepa qué características posee.</p>
+            <p>Las ventajas, destacar la facilidad para reutilizar el código, el trabajo en equipo o el mantenimiento del software.</p>
+            <p>Una desventaja es que el concepto de un programador puede ser distinto a otros.</p>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
@@ -221,7 +224,196 @@
             </div>
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subCinco">1.5. - Fases del desarrollo de una aplicación: análisis, diseño, codificación, pruebas, documentación, mantenimiento y explotación</h3>
-          
+            <p>Cuando queramos realizar un proyecto de software, antes debemos crear un ciclo de vida en el que examinemos las características para eligir un modelo de desarrollo u otro.</p>
+            <h4 class="apartado">Las etapas para el desarrollo de software tienen un orden, para empezar una etapa, es necesario finalizar la etapa anterior. Después de cada etapa se realiza una revisión para comprobar si se puede pasar a la siguiente.</h4>
+            <p>Permite hacer iteraciones, es decir, si se tiene que volver a una de las etapas anteriores, hay que recorrer de nuevo el resto de etapas.</p>
+            <p>Tiene distintas variantes, una de las más utilizadas es el <b>modelo en cascada con retroalimentación</b>, en las etapas se detectan fallos, entonces, será necesario retornar a la etapa anterior para realizar los ajustes pertinentes. Se le conoce como retroalimentación.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ventajas</th>
+                        <th>Inconvenientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fácil de comprender, planificar y seguir.</td>
+                        <td>La necesidad de tener todos los requisitos definidos desde el principio.</td>
+                    </tr>
+                    <tr>
+                        <td>La calidad del producto resultante es alta.</td>
+                        <td>Es difícil volver atrás si se comenten errores en una etapa (es un modelo inflexible)</td>
+                    </tr>
+                    <tr>
+                        <td>Los recursos que se necesitan son mínimos.</td>
+                        <td>El producto no está disponible para su uso hasta que no está completamente terminado.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Se recomienda cuando:</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">El proyecto es similar a alguno que ya se haya realizado con éxito anteriormente.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Los requisitos son estables y están bien comprendidos.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Los clientes no necesitan versiones intermedias.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Modelo iterativo incremental</h4>
+            <p>Basado en varios ciclos en cascada realimentados aplicados repetidamente.</p>
+            <p>Entrega el software en partes pequeñas, pero utilizables, llamadas incrementos o prototipos.</p>
+            <p>Cada incremento se construye sobre aquel que ya ha sido entregado.</p>
+            <p>Al desarrollar el software de manera incremental, resulta más barato y fácil realizar cambios en el software conforme este se va desarrollando.</p>
+            <p>Cada incremento del aplicativo incorpora algunas de las funciones que necesita el cliente. Esto significa que el cliente puede evaluar el desarrollo del sistema en una etapa temprana.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ventajas</th>
+                        <th>Inconvenientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No necesitan conocer todo los requisitos. Se reduce, por tanto, el coste de adaptar los requerimientos cambiantes del cliente.</td>
+                        <td>Es difícil estimar el esfuerzo y el coste final necesarios.</td>
+                    </tr>
+                    <tr>
+                        <td>Permite la entrega temprana al cliente de partes operativas del software.</td>
+                        <td>Se tiene el riesgo de no acabar nunca.</td>
+                    </tr>
+                    <tr>
+                        <td>Las entregas facilitan la realimentación de los próximos entregables.</td>
+                        <td>No es recomendable para desarrollo de sistemas de tiempo real, de alto nivel de seguridad, de procesamiento distribuido y/o de alto índice de riesgos.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>La incorporación de muchos cambios hace que el software se vuelva inestable.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Se recomienda cuando:</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Los requisitos o el diseño no están completamente definidos y es posible que haya grandes cambios.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Se están probando o introduciendo nuevas tecnologías.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Modelo en espiral</h4>
+            <p>Combina el modelo en cascada con el modelo iterativo de construcción de prototipos. Se representa como una espiral donde en cada ciclo se desarrolla una parte de este. Cada ciclo está formado por cuatro fases y produce una versión incremental del software con respecto al ciclo anterior. Se parece al modelo iterativo incremental, con la diferencia de que en cada ciclo se tiene en cuenta el análisis de riesgos. Para cada ciclo, los desarrolladores siguen estas fases:</p>
+            <ul>
+                <li><b>1. Determinar objetivos:</b> cada ciclo comienza con la identificación de los objetivos, las alternativas para alcanzar los objetivos y  las restricciones impuestas a la aplicación de las alternativas.</li>
+                <li><b>2. Análisis del riesgo:</b> hay que evaluar las alternativas en relación con los objetivos y limitaciones. En este proceso se identifican los riesgos involucrados y la manera de resolverlos. Se aconseja realizar un análisis minucioso para reducir los riesgos. Utiliza la construcción de prototipos como mecanismo de reducción de riesgos.</li>
+                <li><b>3. Desarrollar y probar:</b> desarrollar la solución al problema en este ciclo y verificar que es aceptable.</li>
+                <li><b>4. Planificación:</b> revisar y evaluar todo lo que se ha hecho y, con ello, decidir si se continúa; entonces hay que planificar las fases del ciclo siguiente.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ventajas</th>
+                        <th>Inconvenientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No requiere una definición completa de los requisitos para empezar a funcionar.</td>
+                        <td>Es difícil evaluar los riesgos.</td>
+                    </tr>
+                    <tr>
+                        <td>Análisis del riesgo en todas las etapas.</td>
+                        <td>El costo del proyecto aumenta a medida que la espiral pasa por sucesivas iteraciones.</td>
+                    </tr>
+                    <tr>
+                        <td>Reduce riesgos del proyecto.</td>
+                        <td>El éxito del proyecto depende en gran medida de la fase de análisis de riesgos.</td>
+                    </tr>
+                    <tr>
+                        <td>Aumento de la productividad.</td>
+                        <td>Es difícil hacer ver al cliente que este enfoque evolutivo es controlable.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Se recomienda para:</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Proyectos de gran tamaño y que necesitan constantes cambios.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Proyectos donde sea importante el factor riesgo.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Modelo en V</h4>
+            <p>Es un proceso que representa la secuencia de pasos en el desarrollo del ciclo de vida de un proyecto. En él se describen las actividades y resultados que deben producirse durante el desarrollo del producto. El <b>lado izquierdo</b> representa la descomposición de las necesidades y la creación de las especificaciónes. El <b>lado derecho</b> representa la integración de las piezas y su verificación.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ventajas</th>
+                        <th>Inconvenientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Facilita la localización de fallos.</td>
+                        <td>Las pruebas pueden llegar a ser costosas.</td>
+                    </tr>
+                    <tr>
+                        <td>Modelo muy sencillo.</td>
+                        <td>El cliente debe tener paciencia hasta el producto final.</td>
+                    </tr>
+                    <tr>
+                        <td>El cliente está involucrado en las pruebas.</td>
+                        <td>Pueden no estar bien definidos los requisistos del cliente.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Se recomienda para:</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Ser aplicado en sistemas sencillos pero de confiabilidad alta (transacciones en bases de datos).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">1.5.1. Análisis</h4>
+            <p>La parte más importante es entender qué se quiere realizar y analizar las posibilidades alternativas y soluciones. Es <b>fundamental</b> analizar los requisitos que el cliente ha solicitado.</p>
+            <p>El análisis consiste en la especificación de las características operativas del software, indica cuál es la interfaz que ha de desarrollarse y marca las restricciones de este.</p>
+            <p>Aunque pueda parecerlo, no es una tarea fácil, ya que a menudo el cliente es poco claro y durante el desarrollo pueden surgir nuevos requerimientos. Para la obtención d estos requisitos, se usarán distintas técnicas:</p>
+            <ul>
+                <li><b>Entrevistas:</b> En un ambiente más relajado, el cliente tiende a expresarse con más claridad.</li>
+                <li><b>Desarrollo conjunto de aplicaciones:</b> entrevista de dinámica de grupo en la que cada integrante aporta su conocimiento.</li>
+                <li><b>Planificación conjunta de requisitos:</b> el objetivo es involucrar a la dirección para obtener mejores resultados en el menor tiempo. La diferencia es la participación del nivel más alto de la organización en la visión general del negocio.</li>
+                <li><b>Brainstorming:</b> se intentan crear ideas desde distintos puntos de vista. Idónea para el comienzo del proyecto.</li>
+                <li><b>Prototipos:</b> versión inicial del sistema en el que se puede ver el problema y sus posibles soluciones. Se puede desechar o usar para añadir más cosas.</li>
+                <li><b>Casos de uso:</b> son una ayuda para definir lo que existe fuera del sistema y lo que debe realizar el sistema son fundamentales en la ingeniería de requisistos.</li>
+            </ul>
+            <p>Requisitos:</p>
+            <ul>
+                <li><b>Requisitos funcionales:</b> nos describen al detalle la función que realiza el sistema, la reacción ante determinadas entradas y cómo se comporta en distintas situaciones.</li>
+                <li><b>Requisitos no funcionales:</b> son limitaciones sobre la funcionalidad que ofrece el sistema. Se refieren a las propiedades emergentes del sistema, como la fiabilidad o la capacidad de almacenamiento. Incluyen restricciones impuestas por el estándar del aplicativo.</li>
+            </ul>
+            <p>Representar estos requisitos, podemos:</p>
+            <p><b>Modelo basado en el escenario:</b> se basa en el punto de vista de los actores del sistema. Lo podemos representar con los casos de uso o las historias de usuario.</p>
+            <p><b>Modelo de datos:</b> muestra el entorno y la información del problema. Lo podemos representar con el diccionario de datos.</p>
+            <ul>
+                <li><b>Diccionario de datos:</b> descripción detallada de los datos utilizados por el sistema que gráficamente están representado por los flujos de datos y almacenes presentes sobre el conjunto de DFD. <br> En esta primera fase de análisis, todo lo que se realice quede plasmado en el documento Especificación de Requisitos de Software. Debe ser completo, sin ambigüedades, sencillo de usar a la hora de verificarlo, modificarlo o de identificar el origen y las consecuencias de los requisitos. Servirá para la siguiente fase.</li>
+                <li><b>Diagrama entidad/relación:</b> se usa para representar datos y sus relaciones. Representa los datos que se introducen, almacenan y transforman en el sistema.</li>
+            </ul>
+            <p><b>Modelos orientados al flujo:</b> representan los elementos funcionales del sistema de tal forma que reflejan cómo se transforman los datos a medida que avanzan dentro del aplicativo.</p>
+            <ul>
+                <li><b>Diagramas de flujo de datos:</b> nos va a representar el flujo de datos entre procesos, entidades externas y almacenes del sistema:</li>
+                <ul>
+                    <li><b>Procesos:</b> burbujas ovaladas o circulares.</li>
+                    <li><b>Entidades externas:</b> rectángulos.</li>
+                    <li><b>Almacenes:</b> dos líneas horizontales y paralelas.</li>
+                    <li><b>Flujo de datos:</b> flechas.</li>
+                </ul>
+                <li><b>Diagramas de flujo de control:</b> en vez de flujo de datos muestra el flujo de control. Producen información de control y procesan información con mucha atención al tiempo y al rendimiento.</li>
+                <li><b>Diagramas de transición de estados:</b> representa el comportamiento del sistema dependiente del tiempo.</li>
+            </ul>
+            <h4 class="apartado">1.5.2. Diseño</h4>
+            pág 37
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
