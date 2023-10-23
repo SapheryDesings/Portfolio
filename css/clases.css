@@ -130,8 +130,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
+  gap: 1rem;
+  padding: .5rem 1rem;
 }
 
 /*        Card - Prototipo de tarjeta */
