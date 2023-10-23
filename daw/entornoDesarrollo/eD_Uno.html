@@ -414,7 +414,279 @@
                 <li><b>Diagramas de transición de estados:</b> representa el comportamiento del sistema dependiente del tiempo.</li>
             </ul>
             <h4 class="apartado">1.5.2. Diseño</h4>
-            pág 37
+            <p><b>Diseño estructurado:</b> en la programación estructurada existen una serie de contrucciones: secuencial, condicional y repetitiva</p>
+            <ul>
+                <li><b>Construcción secuencial:</b> se refiere a la ejecución sentencia por sentencia hasta que no termine la ejecución de una sentencia, no pasará a la siguiente.</li>
+                <li><b>Construcción condicional:</b> selecciona un proceso u otro según una condición lógica(rombo). Si se cumple, se realiza la parte SI, si no, se realiza la parte NO. <br> La selección múltiple es una extensión de la estructura Si entonces si-no se prueba hasta que alguna es verdadera y ejecuta según ese camino.</li>
+                <li><b>Construcción repetitiva:</b>
+                    <ul>
+                        <li><b>Hacer hasta:</b> se ejecuta una primera vez la tarea y al finalizarla se comprueba la condición. Si esta no se cumple, se realiza de nuevo hasta que se cumpla la condición y finalice la tarea. Se realiza al menos una vez.</li>
+                        <li><b>Mientras:</b> se comprueba antes la condición y,  después, se realiza la tarea continuamente siempre que se cumpla la condición. Finaliza cuando la condición no se cumpla.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>El diseño estructurado podemos dividirlo en:</p>
+            <ul>
+                <li><b>Diseño de datos:</b> Transforma la información relativa al análisis en estructuras de datos para su posterior implementación.</li>
+                <li><b>Diseño arquitectónico:</b> Es un esquema similar al plano de una casa. Se centra en el representación de la estructura de los componentes del software, sus propiedades y sus interacciones. Este diseño se basa en la información del entorno del aplicativo que realizar y de los modelados de requerimientos.</li>
+                <li><b>Diseño de la interfaz:</b> Detalla la comunicación que realiza el software consigo mismo, los sistema que operan con él y los usuarios. Los elementos importantes son la interfaz de usuario (UI) e interfaces externas con otros sistemas, dispositivos o redes.</li>
+                <li><b>Diseño a nivel de componentes(procedimental):</b> Similar a los planos de cada habitación de una casa. Convierte elementos estructurales de la arquitectura del software en una descripción procedimental de los componentes del software. El resultado será el diseño de cada componente con el detalle necesario para que sirva de guía en la generación del código fuente. Se realiza mediante diagramas de flujo, diagramas de cajas, tabla de decisión, pseudocódigo, etcétera.</li>
+            </ul>
+            <h4 class="apartado">Notaciones gráficas para el diseño procedimental</h4>
+            <p>Al representar el diseño, usaremos diagramas de flujo, los diagramas de cajas, las tablas de decisión o el pseudocódigo.</p>
+            <p><b>Diagramas de cajas:</b> otra representación de diseño estructurado:</p>
+            <ul>
+                <li><b>Secuencia:</b> varias cajas seguidas.</li>
+                <li><b>Condicional:</b> una caja para la parte SI y otra para la parte NO. Encima indicamos la condición.</li>
+                <li><b>Repetitiva:</b> proceso que se repite, se encierra en una caja que se sitúa dentro de otra en la que indicamos la condición del bucle en la parte superior (while) o inferior (do-while).</li>
+                <li><b>Selección múltiple:</b> la parte superior indica el caso de condición, mientras que en la parte inferior se definen tantas columnas como valores se quieran comprobar. Debajo de cada valor se indica la parte que se debe ejecutar.</li>
+            </ul>
+            <p><b>Tablas de decisión:</b> nos permiten representar en una tabla las condiciones y las acciones que se llevarán a cabo al combinar esas condiciones. Proporcionan una notación que traduce las acciones y condiciones a una forma estructurada. Se dividirá en dos:</p>
+            <ul>
+                <li><b>Condiciones:</b> son las combinaciones posibles de nuestro sistema.</li>
+                <li><b>Acciones:</b> sentencias que se ejecutan cuando se cumplen determinadas condiciones.</li>
+            </ul>
+            <p>Podemos implementar las reglas que se deben cumplir para una determinada acción. Seguimos los siguientes pasos:</p>
+            <ul>
+                <li>1. Crear una lista con todas las acciones y todas las condiciones.</li>
+                <li>2. Relacionar los conjuntos con las acciones específicas, eliminando las combinaciones imposibles.</li>
+                <li>3. Determinar las reglas indicando la acción o acciones que ocurren para un conjunto de condiciones.</li>
+            </ul>
+            <p><b>Pseudocódigo:</b> utiliza un texto descriptivo para crear el diseño de un algoritmo. Mezcla el lenguaje natural con la sintaxis de la programación estructurada, incluyendo palabras clave.</p>
+            <p>No existe un estándar definido, no puede compilarse. La representación en pseudocódigo de las estructuras básicas.</p>
+            <p><b>Diseño orientado a objetos (DOO):</b> Deberemos definir un conjunto de clases para afinar los detalles de nuestro sistema, lo que nos permitirá implementar una infraestructura. Cinco clases de diseño:</p>
+            <ul>
+                <li>Clases de interfaces: definimos todas las interacciones entre el usuario y la máquina.</li>
+                <li>Clases de dominio de negocio: identificamos las claes y los métodos que se necesitan para implementar elementos del dominio.</li>
+                <li>Clases de proceso: implementación a bajo nivel para la gestión de las clases de domino de negocio.</li>
+                <li>Clases de persistencia: definimos el almacenamiento de los datos. Estas clases se mantendrán más allá de la ejecución de un determinado software.</li>
+                <li>Clases de sistema: se definen funciones que permiten al sistema comunicarse con el exterior.</li>
+            </ul>
+            <p>Utilizamos un <b>UML</b> (lenguaje de modelado unificado). Es un lenguaje de modelado basado en diagramas para expresar modelos anteriores.</p>
+            <h4 class="apartado">1.5.3. Codificación</h4>
+            <p>La tercera fase, consistirá en el proceso de codificación. Se encarga de recibir los datos del diseño y transformarlo en lenguaje, le llamaremos <b>código fuente</b>.</p>
+            <p>En un grupo, habrá que tener unas normas de codificación y estilo que sean <b>sencillas, claras y homogéneas</b>, facilitará la corrección.</p>
+            <p>Normas en código Java:</p>
+            <p><b>Nombre de ficheros:</b> los archivos de código fuente tendrán como extensión .java, y los archivos compilados .class.</p>
+            <p><b>Organización de ficheros:</b> cada archivo deberá tener una clase pública y podrá tener otras clases privadas e interfaces que irán definidas después de la pública y estarán asociadas a esta. El archivo se dividirá en varias secciones:</p>
+            <ul>
+                <li><b>Comentarios:</b> cada archivo debe empezar con un comentario en el que se indique el nombre de la clase, la información de la versión, la fecha y el aviso de derechos de autor.</li>
+                <li><b>Sentencias de tipo package e import:</b> se sitúan después de los comentarios en este orden: primero la sentencia package y después la de import.</li>
+                <li><b>Declaraciones de clases e interfaces:</b> consta de las siguientes partes:
+                    <ul>
+                        <li>Comentario de documentación (/**...*/) acerca de la clases o interfaz.</li>
+                        <li>Sentencia tipo class o interfaz.</li>
+                        <li>Comentario de la implementación (/*...*/) de la clase o interfaz.</li>
+                        <li>Variables estáticas, en este orden: públicas, protegidas y privadas.</li>
+                        <li>Variables de instancia en este orden: públicas, protegidas y privadas.</li>
+                        <li>Constructores.</li>
+                        <li>Métodos.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><b>Indentación:</b></p>
+            <ul>
+                <li>Se usarán cuatro espacios como indentación.</li>
+                <li>Longitud de líneas de código no superior a 80 líneas.</li>
+                <li>Longitud de líneas de comentarios no superior a 70 líneas.</li>
+                <li>Si una expresión no cabe en una sola línea, se deberá romper antes de una coma o un operador y se alineará al principio de la anterior.</li>
+            </ul>
+            <p><b>Comentarios:</b> contendrán solo información que sea relevante para la lectura y comprensión del programa. Dos tipos: documentación y de implementación.</p>
+            <p>La especificación del código como las clases Java, interfaces, constructores, métodos y campos. Se situarán antes de la declaración. <b>Javadoc</b> genera páginas HTML partiendo de este tipo de comentarios.</p>
+            <p>De implementación sirven para hacer algún comentario sobre la aplicación en particular.</p>
+            <ul>
+                <li>De bloque:</li>
+                <pre>
+                    <code>
+                        /*
+                        * Esto es un comentario de bloque
+                        */
+                    </code>
+                </pre>
+                <li>De línea:</li>
+                <pre>
+                    <code>
+                        /* Comentario de línea */
+                    </code>
+                </pre>
+                <li>Corto:</li>
+                <pre>
+                    <code>
+                        // Comentario corto
+                    </code>
+                </pre>
+            </ul>
+            <p><b>Declaraciones:</b></p>
+            <ul>
+                <li>Declarar una variable por línea.</li>
+                <li>Inicializar una variable local al comienzo, donde se declara, y situarla al comienzo del bloque.</li>
+                <li>En clases o interfaces:
+                    <ul>
+                        <li>No poner espacios en blanco entre el nombre del método y el paréntesis "(".</li>
+                        <li>Llave de apertura "{", situarla en la misma línea que el nombre del método.</li>
+                        <li>Llave de cierre "}", situarla en una línea aparte y en la misma columna que el inicio del método. Excepto cuando esté vacío.</li>
+                        <li>Métodos separados por una línea en blanco.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><b>Sentencias:</b></p>
+            <ul>
+                <li>Cada línea contendrá una sentencia.</li>
+                <li>Si es un bloque, debe estar sangrado con respecto a lo anterior y entre llaves, aunque solo tenga una sentencia.</li>
+                <li>Sentencias if-else, if else-if else. Nos definen bloques y tendrán todos los mismos niveles de sangrado.</li>
+                <li>Bucles. Tendrán las normas anteriores y, si están vacío, no irán entre llaves.</li>
+                <li>Sentencias return no irán entre paréntesis.</li>
+            </ul>
+            <p><b>Separaciones:</b> hacen más legible el código.</p>
+            <ul>
+                <li><b>Dos líneas en blanco</b> entre definiciones de clases e interfaces.</li>
+                <li><b>Una línea en blanco</b> entre métodos, definición de variables locales y la primera instrucción, antes de un comentario, entre secciones lógicas dentro de un método.</li>
+                <li><b>Un carácter en blanco</b> entre una palabra y un parentesis, después de una coma, de operadores binarios menos el punto, de expresiones del for y entre un cast y la variable.</li>
+            </ul>
+            <p><b>Nombres:</b> los nombres de las variables, métodos, clases, etcétera, hacen que los programas sean más fáciles a la hora de leerlos. Las normas para asignar nombres:</p>
+            <ul>
+                <li><b>Paquetes:</b> se escriben en minúscula. Se podrán utilizar puntos para algún tipo de organización jerárquica.</li>
+                <li><b>Clases e interfaces:</b> deben ser sustantivas o descriptivas, según lo que estemos creando. Si están compuestas por varias palabras, la primera letra de cada palabra irá en mayúscula.</li>
+                <li><b>Métodos:</b> se usarán verbos en infinitivo. Si están formados por varias palabras, el verbo estará en minúscula y la siguiente palabra empezará con mayúscula.</li>
+                <li><b>Variables:</b> deben ser cortas y significativas. Si están formadas por varias palabras, la primera debe ir en minúscula.</li>
+                <li><b>Constantes:</b> el nombre debe ser descriptivo. Será totalmente escrito en mayúscula y, si son varias palabras, separadas por un carácter de subrayado.</li>
+            </ul>
+            <p>Un ejemplo:</p>
+            <ul>
+                <li>1. Creamos la clase Persona con sus atributos privados y su instancia.</li>
+                <pre>
+                    <code>
+                        package Ejemplo;
+                        /**
+                        * Clase utulizada para crear nuevas personas
+                        * Pueden contener una edad y un nombre
+                        * @autor Martin Rivero
+                        * @version 1.0
+                        */
+                        public class Persona {
+                            /**
+                            * Variable privada para guardfar el nombre de la Persona
+                            */
+                            private String nombre;
+                            /**
+                            * Variable privada para guardar la edad de la Persona
+                            */
+                            private int edad;
+                            /**
+                            * Instancia una nueva persona sin nombre y sin edad.
+                            */
+                            public Persona() {
+                            }
+                            /**
+                            * Instancia una nueva PErsona.
+                            *
+                            * @param nombre el nombre
+                            * @param edad la edad
+                            */
+                            public Persona(String nombre, int edad) {
+                            this.nombre = nombre;
+                            this.edad = edad;
+                            }
+                    </code>
+                </pre>
+                <li>2. Posteriormente, creamos los getters y setters.</li>
+                <pre>
+                    <code>
+                        /**
+                        * Recupera el nombre.
+                        *
+                        * @return nombre
+                        */
+                        public String getNombre() {
+                        return nombre;
+                        }
+                        /**
+                        * Establece el nombre.
+                        *
+                        * @param nombre Nombre de la Persona
+                        */
+                        public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                        }
+                        /**
+                        * Recupera la edad.
+                        *
+                        * @return edad
+                        */
+                        public int getEdad() {
+                        return edad;
+                        }
+                        /**
+                        * Establece la edad.
+                        *
+                        * @param edad Edad de la Persona
+                        */
+                        public void setEdad(int edad) {
+                        this.edad = edad;
+                        }
+                    </code>
+                </pre>
+                <li>3. Creamos un método de tipo string para recuperar el nombre y la edad de la persona.</li>
+                <pre>
+                    <code>
+                        /**
+                        * Recupera la Persona en formato String..
+                        *
+                        * @return string de Persona
+                        */
+                        @Override
+                        public String toString() {
+                        return “persona{“ +
+                        “nombre=’“ + nombre + ‘\’’ +
+                        “, edad=” + edad +
+                        ‘}’;
+                        }
+                    </code>
+                </pre>
+            </ul>
+            <p>Lo tendremos que traducir al lenguaje máquina a través de <b>compiladores</b> o <b>intérpretes</b>. El resultado será el código objeto, no ejecutable hasta que lo enlacemos con las librerías para obtener así el <b>código ejecutable</b>. Comprobar el programa para ver si cumple con nuestras especificaciones en el diseño.</p>
+            <p>Deberemos escribir <b>manuales</b> técnicos y de referencia, así como la parte inicial del manual de usuario.</p>
+            <h4 class="apartado">1.5.4. Pruebas</h4>
+            <p>Trataremos de encontrar errores en la codificación, en la especificación o en el diseño.</p>
+            <p><b>Verificación:</b> probar que el software cumple con los requerimientos. En el documento de requerimientos, debe haber, como mínimo, una prueba por cada uno de ellos.</p>
+            <p><b>Validación:</b> encontrar alguna situación donde el software sea incorrecto o no cumple con las especificaciones. Trataremos de comprobar los distintos tipos de errores. Una prueba tendrá éxito si encontramos algún error no detectado anteriormente. Recomendaciones:</p>
+            <ul>
+                <li>Cada prueba definirá los resultados de la salida esperados.</li>
+                <li>Evitar que el programador pruebe sus propios programas.</li>
+                <li>Comprobar cada resultado en profundidad.</li>
+                <li>Incluir todo tipo de datos, tanto válido y esperados como inválidos e inesperados.</li>
+                <li>Comprobar que el software hace lo que debe y lo que no debe hacer.</li>
+                <li>No hacer pruebas que no estén documentadas.</li>
+                <li>No suponer que en las pruebas no se van a cometer errores.</li>
+                <li>Cuantas más pruebas se realicen, mayor es la probabilidad de encontrar errores y, una vez solucionados, tendremos una capacidad mayor de poder perfeccionar nuestro sistema.</li>
+            </ul>
+            <p>El flujo del proceso a la hora de probar el software:</p>
+            <ul>
+                <li>1. Primero <b>generamos un plan de pruebas</b> a partir de la documentación del proyecto y de la documentación del software que debamos probar.</li>
+                <li>2. Después se <b>diseñan las pruebas:</b> qué técnicas vamos a utilizar.</li>
+                <li>3. <b>Ejecución de las pruebas.</b></li>
+                <li>4. <b>Evaluación:</b> identificación de posibles errores.</li>
+                <li>5. <b>Depuración:</b> localizar y corregir errores. Testar de nuevo tras encontrarse un error para verificar que se ha corregido.</li>
+                <li>6. <b>Análisis de errores:</b> analizar la fiabilidad del software y mejorar los procesos de desarrollo.</li>
+            </ul>
+            <p>Para la realización del diseño de prueba se usan dos técnicas: <b>prueba de caja blanca y prueba de caja negra</b>. La primera valida la estructura interna del sistema, y la segunda, los requisitos funcionales sin observar el funcionamiento interno del programa.</p>
+            <h4 class="apartado">1.5.5. Documentación</h4>
+            <p>Cada etapa tiene que quedar documentada, necesitaremos reunir los documentos generados y hacer una clasificación según el nivel técnico.</p>
+            <ul>
+                <li>Deben actuar como medio de comunicación para que los miembros del equipo se puedan comunicar entre sí.</li>
+                <li>Deben ser un almacén de información del sistema para poder ser utilizado por personal de mantenimiento.</li>
+                <li>Proporcionan información para facilitar la planificación de gestión del presupuesto y programar el proceso de desarrollo de software.</li>
+                <li>Algunos documentos deben especificar al usuario cómo debe usar y administrar el sistema.</li>
+            </ul>
+            <p>La documentación se puede dividir:</p>
+            <ul>
+                <li><b>Documentación de proceso:</b> En estos documentos se registra el proceso de desarrollo y mantenimiento. Así, se incluyen planes, estimaciones y horarios que se usan para predecir y controlar el proceso de software.</li>
+                <li><b>Documentación del producto:</b> Este documento describe el producto que está siendo desarrollado e incluye la documentación del sistema y la documentación del usuario.</li>
+            </ul>
+            <p>La documentación se usará una vez que el sistema ya esté funcionando.</p>
+            <h4 class="apartado">Documentación del usuario</h4>pág 55
+
+
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>

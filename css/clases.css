@@ -317,6 +317,13 @@
   font-family: 'Smooch', cursive;
 }
 
+pre {
+  padding: .5rem;
+  white-space: pre-line;
+  background-color: var(--azulDetalles);
+  color: var(--blancoTipologia);
+}
+
 
 /***********************************************/
 @media screen and (max-width: 1280px){ }
