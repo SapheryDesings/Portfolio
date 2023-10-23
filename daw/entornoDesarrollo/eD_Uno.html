@@ -684,16 +684,180 @@
                 <li><b>Documentación del producto:</b> Este documento describe el producto que está siendo desarrollado e incluye la documentación del sistema y la documentación del usuario.</li>
             </ul>
             <p>La documentación se usará una vez que el sistema ya esté funcionando.</p>
-            <h4 class="apartado">Documentación del usuario</h4>pág 55
-
-
+            <h4 class="apartado">Documentación del usuario</h4>
+            <ul>
+                <li><b>Orientada usuarios finales:</b> describe la funcionalidad del sistema con el objetivo de que el usuario pueda interactuar con este.</li>
+                <li><b>Orientada a administradores del sistema:</b> describe la gestión de los programas utilizados por los usuarios finales.</li>
+            </ul>
+            <p>Al existir distintos tipos de usuario, tendremos que entregar un tipo de documento a cada uno.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Manual introductorio</th>
+                        <td>Destinado a usuarios noveles.</td>
+                        <td>Explicaciones sencillas de cómo empezar a usar el sistema. <br> Solución de errores.</td>
+                    </tr>
+                    <tr>
+                        <th>Manual de referencia del sistema</th>
+                        <td>Destinado a usuarios experimentados.</td>
+                        <td>Descripción detallada del sistema y lista completa de errores.</td>
+                    </tr>
+                    <tr>
+                        <th>Guía del administrador del sistema</th>
+                        <td>Destinado a administradores.</td>
+                        <td>Para sistemas en los que hay comandos, describir las tareas, los mensajes producidos y las respuestas del operador.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Documentación del sistema</h4>
+            <p>Serán los documentos que describen el sistema, desde la especificación de los requisitos hasta las pruebas de aceptación, y serán esenciales para entender y mantener el software. Deberán incluir:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Fundamentos del sistema</th>
+                        <td>Se describen los objetivos del sistema.</td>
+                    </tr>
+                    <tr>
+                        <th>El análisis y especificación de requisitos</th>
+                        <td>Información exacta de los requisitos.</td>
+                    </tr>
+                    <tr>
+                        <th>Diseño</th>
+                        <td>Se describe la arquitectura del sistema.</td>
+                    </tr>
+                    <tr>
+                        <th>Implementación</th>
+                        <td>Descripción de la forma en que se expresa el sistema y acciones del programa en forma de comentarios.</td>
+                    </tr>
+                    <tr>
+                        <th>Plan de pruebas del sistema</th>
+                        <td>Evaluación individual de las unidades del sistema y las pruebas que se realizan.</td>
+                    </tr>
+                    <tr>
+                        <th>Plan de pruebas de aceptación</th>
+                        <td>Descripción de pruebas que el sistema debe pasar antes de que los usuarios las acepten.</td>
+                    </tr>
+                    <tr>
+                        <th>Los diccionarios de datos</th>
+                        <td>Descripciones de los términos que se relacionan con el software en cuestión.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Cuando los sistemas son más pequeños, se obvia la documentación.</p>
+            <p>Como mínimo, incluir la especificación del sistema, el documento de diseño arquitectónico y el código fuente del programa.</p>
+            <h4 class="apartado">Estructura del documento</h4>
+            <p>El documento debe una organización para que, se localice fácilmente la información.</p>
+            <ul>
+                <li>Deben tener una portada, tipo de documento, autor, fecha de creación, versión, revisores, destinatarios del documento y la clase de confidencialidad del documento.</li>
+                <li>Deben poseer un índice con capítulos, secciones y subseciones.</li>
+                <li>Incluir al final un glosario de términos.</li>
+            </ul>
+            <p>La documentación tiene que estar formada por los siguientes elementos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Datos de identificación</b></td>
+                        <td>Título e identificación</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tabla de contenidos</b></td>
+                        <td>Capítulo, nombre de sección y número de página. <br> Es obligatoria en documentos de más de ocho páginas.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Lista de ilustraciones</b></td>
+                        <td>Números de figura y títulos(optativo).</td>
+                    </tr>
+                    <tr>
+                        <td><b>Introducción</b></td>
+                        <td>Propósito del documento y breve resumen.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Información para el uso de la documentación</b></td>
+                        <td>Sugerencia sobre cómo usar la documentación de forma eficaz.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Conceptos de las operaciones</b></td>
+                        <td>Explicaciones del uso del software</td>
+                    </tr>
+                    <tr>
+                        <td><b>Procedimientos</b></td>
+                        <td>Instrucciones sobre cómo utilizar el software.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Información sobre los comandos software</b></td>
+                        <td>Descripción de cada uno de los comandos del software.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Mensajes de error y resolución de problemas</b></td>
+                        <td>Descripción de los mensajes de error y los tipos de resolución.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Glosario</b></td>
+                        <td>Definiciones de términos especiales.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fuentes de información relacionadas</b></td>
+                        <td>Enlaces a otros documentos para proporcionar información adicional.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Características de navegación</b></td>
+                        <td>Permite encontrar su ubicación actual y moverse por el documento</td>
+                    </tr>
+                    <tr>
+                        <td><b>Índice</b></td>
+                        <td>Lista de términos clave y páginas a las que estos hacen referencia.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Capacidad de búsqueda</b></td>
+                        <td>Forma de buscar términos específicos (en documentos electrónicos)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">1.5.6. Explotación</h4>
+            <p>En esta etapa se lleva a cabo la instalación y puesta en marcha de producto. Se deberán indicar las tareas programadas, la monitorización o la gestión de la capacidad.</p>
+            <ul>
+                <li><b>Gestión de backups:</b> descripción detallada de la política de backups del sistema. Se incluirá cada cuánto tiempo se realiza un respaldo, un  almacenamiento de datos y la gestión de versiones del aplicativo.</li>
+                <li><b>Carga y descarga de datos:</b> se llevará un control de la carga y descarga masiva de datos y se detallarán las situaciónes por las cuales se ha llevado a cabo.</li>
+                <li><b>Monitorización y mapeo del aplicativo.</b></li>
+                <li><b>Estrategia para la implementación del proceso:</b> se definen procedimientos para recibir, registrar, solucionar y hacer un seguimiento de los problemas y probar el producto.</li>
+                <li><b>Soporte al usuario: dar asistencia y consultoría al usuario. Las peticiones y acciones que se hagan deberán registrarse y supervisarse.</b></li>
+            </ul>
+            <h4 class="apartado">1.5.7. Mantenimiento</h4>
+            <p>La fase de mantenimiento consiste en la modificación del software después de la entrega para corregir fallos, mejorar el redimiento o adaptar el producto a un entorno modificado. Tipos de mantenimiento:</p>
+            <ul>
+                <li><b>Recuperación de fallos:</b> los errores de codificación son los menos costosos. Los errores de diseño son más caros porque pueden verse afectados muchos componentes del software.</li>
+                <li><b>Adaptación ambiental:</b> mantenimiento respecto del entorno del sistema, como el hardware, el sistema operativo, etcétera.</li>
+                <li><b>Incremento de funcionalidad:</b> varían los requisitos del sistema debido.</li>
+            </ul>
+            <p>El coste de agregar una nueva funcionalidad después de haber realizado el aplicativo es mayor que añadir esta funcionalidad durante el desarrollo de este.</p>
+            <ul>
+                <li><b>La estabilidad del equipo:</b> una vez que el proyecto finaliza, el equipo de trabajo se separa y se encarga de nuevos proyectos. El nuevo equipo debe emplear un tiempo.</li>
+                <li><b>Diferencia de contratos:</b> el desarrollo y el mantenimiento suelen ir en contratos diferentes, incluso el mantenimiento puede ser encargado a una compañia diferente.</li>
+                <li><b>Habilidades del equipo de mantenimiento:</b> el equipo de mantenimiento suele ser más inexperto, pueden existir sistemas antiguos de lenguajes de programación obsoletos en los que no se tenga experiencia.</li>
+                <li><b>Antigüedad del programa:</b> según se van realizando cambios, la estructura del programa tiende a degradarse. Van envejeciendo y resultan más complicados de escalar y mantener.</li>
+            </ul>
+            <p>Intentar predecir el número de solicitudes de cambio para un sistema requiere un sobrecoste de entendimiento de la relación entre el sistema y su relación con el exterior.</p>
+            <p>Con base en la experiencia, podemos intentar:</p>
+            <ul>
+                <li>¿Cuántas peticiones cambio suelen producirse?</li>
+                <li>¿Qué partes del sistema suelen ser las más afectadas por los cambios?</li>
+                <li>¿Qué es lo más costoso en el mantenimiento?</li>
+                <li>¿Cómo se distribuye el coste en el sistema?</li>
+                <li>¿Cómo evolucionan esos costes a lo largo de vida del proyecto?</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSeis">1.6. - Metodologías ágiles</h3>
+            <h3 class="subTitulo" id="subSeis">1.6. - Metodologías ágiles</h3>pág 61
           
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
