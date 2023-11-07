@@ -195,6 +195,666 @@
         console.log(librosComprados);
       </code>
     </pre>
-    
+    <h4>Decremento</h4>
+    <pre>
+      <code>
+        let númeroDeEstudiantes = 256;
+        console.log(númeroDeEstudiantes);
+        númeroDeEstudiantes = númeroDeEstudiantes - 1;
+        console.log(númeroDeEstudiantes);
+        númeroDeEstudiantes--;
+        console.log(númeroDeEstudiantes);
+      </code>
+    </pre>
+    <h4>Asignación compuesta de suma</h4>
+    <pre>
+      <code>
+        let a = 23;
+        a = a + 5;
+        console.log(a);
+        a += 5;
+        console.log(a);
+        var totalVentas = 13567.34;
+        console.log(totalVentas);
+        totalVentas += 345.67;
+        console.log(totalVentas);
+      </code>
+    </pre>
+    <h4>Asignación compuesta de resta</h4>
+    <pre>
+      <code>
+        let b = 23;
+        b = b - 3;
+        console.log(b);
+        b -= 3;
+        console.log(b);
+
+        // Ejemplo
+
+        let totalDeuda = 2446;
+        console.log(totalDeuda);
+        totalDeuda -= 345;
+        console.log(totalDeuda);
+      </code>
+    </pre>
+    <h4>Asignación compuesta multiplicación</h4>
+    <pre>
+      <code>
+        let c = 23;
+        c = c * 2;
+        console.log(c);
+        c *= 2;
+        console.log(c);
+
+        // Ejemplo
+
+        let salario = 45000;
+        console.log(salario);
+        salario *= 5;
+        console.log(salario);
+      </code>
+    </pre>
+    <h4>Asignación compuesta de división</h4>
+    <pre>
+      <code>
+        let d = 39;
+        d = d / 3;
+        console.log(d);
+        d /= 3;
+        console.log(d);
+
+        // Ejemplo
+
+        let salario = 45000;
+        console.log(salario);
+        salario /= 2;
+        console.log(salario);
+      </code>
+    </pre>
+    <h4>Variables con cadenas de caracteres</h4>
+    <pre>
+      <code>
+        let nombre = "Alan";
+        // Variaciones de la cadena de caracteres
+        let nombre = "A lan";
+        let nombre = "A&*$%^&#@@lan";
+        let nombre = "Alan34534_+-";
+
+        // Ejemplo
+
+        let apellido = "Turing";
+      </code>
+    </pre>
+    <h4>Secuencia de escape - comillas en cadena</h4>
+    <pre>
+      <code>
+        // let miCadena = "Soy una cadena de caracteres "con comillas""; // Error
+        let miCadena = "Soy una cadena de caracteres \"con comillas\"";
+        console.log(miCadena);
+      </code>
+    </pre>
+    <h4>Cadenas con comillas simples</h4>
+    <pre>
+      <code>
+        let miMeta;
+        // mensaje = "Aprender a programar con "freeCodeCamp""; // Error
+        miMeta = "Aprender a programar con \"freeCodeCamp\""; // Opción previa
+
+        // Alternativa
+
+        miMeta = 'Aprender a programar con "freeCodeCamp"';
+        miMeta = "Aprender a programar con 'freeCodeCamp'";
+        console.log(miMeta);
+      </code>
+    </pre>
+    <h4>Secuencias de escape</h4>
+    <pre>
+      <code>
+        /*
+        Código | Resultado
+        ------------------
+        \' Comilla Simple
+        \" Comilla Doble
+        \\ Barra invertida
+        \n Línea Nueva
+        \r Retorno de Carro
+        \t Tabulación
+        \b Retroceso
+        \f Salto de Página
+        ...
+        */
+        let miMeta;
+        miMeta = "Aprender \'JavaScript\'";
+        console.log(miMeta);
+        miMeta = "Aprender \"JavaScript\"";
+        console.log(miMeta);
+        miMeta = "Aprender \\ JavaScript";
+        console.log(miMeta);
+        miMeta = "Aprender \n JavaScript";
+        console.log(miMeta);
+      </code>
+    </pre>
+    <h4>Concatenar cadenas</h4>
+    <pre>
+      <code>
+        let nombreCompleto = "Alan" + "Turing"; // Sin espacio entre las cadenas
+        console.log(nombreCompleto);
+        nombreCompleto = "Alan " + "Turing"; // Con espacio
+        console.log(nombreCompleto);
+        nombreCompleto = "Alan" + " Turing"; // Con espacio
+        console.log(nombreCompleto);
+        nombreCompleto = "Alan" + " " + "Turing"; // Con espacio
+        console.log(nombreCompleto);
+      </code>
+    </pre>
+    <h4>Concatenar cadenas con +=</h4>
+    <pre>
+      <code>
+        let mensajeCompleto = "Estoy aprendiendo a programar ";
+        console.log(mensajeCompleto);
+        mensajeCompleto += "con freeCodeCamp"; // Agregar la cadena al final de la
+        existente.
+        console.log(mensajeCompleto);
+      </code>
+    </pre>
+    <h4>Construir cadenas con variables</h4>
+    <pre>
+      <code>
+        let verbo = "programar"
+        let mensaje = "Estoy aprendiendo a " + verbo + " con freeCodeCamp";
+        console.log(mensaje);
+      </code>
+    </pre>
+    <h4>Agregar variables a cadenas</h4>
+    <pre>
+      <code>
+        let mensajeCompleto = "Estoy aprendiendo a programar ";
+        let parteFinal = "con freeCodeCamp";
+        console.log(mensajeCompleto);
+        mensajeCompleto += parteFinal;
+        console.log(mensajeCompleto);
+      </code>
+    </pre>
+    <h4>Longitud de una cadena de caracteres</h4>
+    <pre>
+      <code>
+        let miCadena;
+        miCadena = "A";
+        console.log(miCadena.length);
+        miCadena = "AB";
+        console.log(miCadena.length);
+        var lenguajeDeProgramación = "JavaScript";
+        console.log(lenguajeDeProgramación.length);
+        var mensaje = "¡Estoy aprendiendo a programar!";
+        console.log(mensaje.length);
+        var mensaje = "Estoy aprendiendo a programar";
+        console.log(mensaje.length);
+        var mensaje = "Estoy aprendiendo a programar @#&*";
+        console.log(mensaje.length);
+      </code>
+    </pre>
+    <h4>Notación de corchetes: Primer carácter</h4>
+    <pre>
+      <code>
+        let lenguajeDeProgramación = "JavaScript";
+        /*
+        Cadena: J a v a S c r i p t
+        Índices: 0 1 2 3 4 5 6 7 8 9
+        */
+        console.log(lenguajeDeProgramación[0]);
+      </code>
+    </pre>
+    <h4>Inmutabilidad de las cadenas de caracteres</h4>
+    <pre>
+      <code>
+        let miCadena = "Jola, Mundo";
+        console.log(miCadena);
+        miCadena[0] = "H"; // Error porque las cadenas son inmutables.
+        miCadena = "Hola, Mundo"; // Se debe asignar una cadena nueva.
+        console.log(miCadena);
+      </code>
+    </pre>
+    <h4>Notación de corchetes: enésimo carácter</h4>
+    <pre>
+      <code>
+        let miCadena = "JavaScript";
+        /*
+        Cadena: J a v a S c r i p t
+        Índices: 0 1 2 3 4 5 6 7 8 9
+        */
+        console.log(miCadena[0]); // J
+        console.log(miCadena[1]); // a
+        console.log(miCadena[2]); // v
+        console.log(miCadena[3]); // a
+        console.log(miCadena[4]); // S
+        console.log(miCadena[5]); // c
+        console.log(miCadena[6]); // r
+        console.log(miCadena[7]); // i
+        console.log(miCadena[8]); // p
+        console.log(miCadena[9]); // t
+
+        // Ejemplo
+
+        let miCadena = "Programar";
+        /*
+        Cadena: P r o g r a m a r
+        Índices: 0 1 2 3 4 5 6 7 8
+        */
+        console.log(miCadena[0]);
+      </code>
+    </pre>
+    <h4>Notación de corchetes: Último carácter</h4>
+    <pre>
+      <code>
+        let miCadena;
+        /*
+        El último índice siempre es longitud - 1 porque comenzamos
+        a contar desde 0.
+        miCadena.length para "JavaScript" es 10.
+        El último índice es 9.
+        Cadena: J a v a S c r i p t
+        Índices: 0 1 2 3 4 5 6 7 8 9
+        */
+        miCadena = "JavaScript";
+        console.log(miCadena[miCadena.length - 1]);
+        miCadena = "Python";
+        console.log(miCadena[miCadena.length - 1]);
+      </code>
+    </pre>
+    <h4>Notación de corchetes: de derecha e iquierda</h4>
+    <pre>
+      <code>
+        let miCadena;
+        let n;
+        /*
+        El penúltimo índice es longitud - 2 porque comenzamos
+        a contar desde 0.
+        miCadena.length es 10 para esta cadena de caracteres.
+        El penúltimo índice es 8.
+        Cadena: J a v a S c r i p t
+        Índices: 0 1 2 3 4 5 6 7 8 9
+        */
+        miCadena = "JavaScript";
+        console.log(miCadena[miCadena.length - 2]); // p
+
+        // Alternativa
+
+        miCadena = "JavaScript";
+        n = 4;
+        console.log(miCadena[miCadena.length - n]);
+      </code>
+    </pre>
+    <h4>Palabras en blanco</h4>
+    <pre>
+      <code>
+        let miSustantivo = "perro";
+        let miAdjetivo = "negro";
+        let miVerbo = "corrió";
+        let miAdverbio = "rápidamente";
+        /* Concatena las cadenas y crea una nueva cadena que muestre un mensaje.
+        Puedes cambiar los valores de las variables.
+        Por ejemplo: El perro negro corrió rápidamente a la tienda.
+        La bicicleta pequeña voló a tienda lentamente.
+        */
+        let palabrasEnBlanco = "El" + miSustantivo + " " + miAdjetivo + " " + miVerbo + "
+        " + miAdverbio + "a la tienda.";
+        console.log(palabrasEnBlanco);
+      </code>
+    </pre>
+    <h4>Arreglos</h4>
+    <pre>
+      <code>
+        let miArreglo = ["John", 24];
+        console.log(miArreglo);
+        let estudiantes = ["Nora", "Gino", "Emily", "Juan"];
+        console.log(estudiantes);
+        let notas = [95, 67, 89, 56];
+        console.log(notas);
+      </code>
+    </pre>
+    <h4>Arreglos anidados</h4>
+    <pre>
+      <code>
+        let listaDeEstudiantes = [["Nora", 97], ["Gino", 78]];
+        console.log(listaDeEstudiantes);
+        let listaDeProductos = [["Camisa", 5.67, "S134"], ["Celular", 250, "S356"],
+        ["Zapatos", 36.7, "S678"]];
+        console.log(listaDeProductos);
+        let datos = [[3.4, 5.6, 3.2], [6.7, 4.5, 7.8], [5.6, 3.4, 7.8]];
+        console.log(datos);
+      </code>
+    </pre>
+    <h4>Acceder a los elementos de un arreglo</h4>
+    <pre>
+      <code>
+        let miArreglo = [10, 20, 30];
+        /*
+        Arreglo: [10, 20, 30]
+        Índices: 0 1 2
+        */
+        console.log(miArreglo[0]); // 10
+        console.log(miArreglo[1]); // 20
+        console.log(miArreglo[2]); // 30
+        let suma = miArreglo[0] + miArreglo[1] + miArreglo[2];
+        console.log(suma);
+      </code>
+    </pre>
+    <h4>Modificar los elementos de un arreglo</h4>
+    <pre>
+      <code>
+        let miArreglo = [10, 20, 30];
+        console.log(miArreglo);
+        miArreglo[0] = 40;
+        console.log(miArreglo);
+        miArreglo[1] = "Hola";
+        console.log(miArreglo);
+        miArreglo[1] = [1, 2, 3];
+        console.log(miArreglo);
+      </code>
+    </pre>
+    <h4>Acceder a arreglos multidimensionales</h4>
+    <pre>
+      <code>
+        let miArreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        /*
+        Arreglo: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        Índices: 0 1 2
+        Índices internos: 0 1 2 0 1 2 0 1 2
+        */
+        console.log(miArreglo[0]); // [1, 2, 3]
+        console.log(miArreglo[1]); // [4, 5, 6]
+        console.log(miArreglo[2]); // [7, 8, 9]
+        // Acceder a los elementos del primer arreglo.
+        console.log(miArreglo[0][0]); // 1
+        console.log(miArreglo[0][1]); // 2
+        console.log(miArreglo[0][2]); // 3
+        // Acceder a los elementos del segundo arreglo.
+        console.log(miArreglo[1][0]); // 4
+        console.log(miArreglo[1][1]); // 5
+        console.log(miArreglo[1][2]); // 6
+      </code>
+    </pre>
+    <h4>(Arreglos) Método .push()</h4>
+    <pre>
+      <code>
+        let estaciones = ["Invierno", "Otoño", "Primavera"]; // Orden alfabético
+        console.log(estaciones);
+        estaciones.push("Verano"); // Agregar al final del arreglo
+        console.log(estaciones);
+      </code>
+    </pre>
+    <h4>(Arreglos) Método . pop()</h4>
+    <pre>
+      <code>
+        let estaciones;
+        estaciones = ["Invierno", "Otoño", "Primavera", "Verano"];
+        estacion = estaciones.pop();
+        console.log(estaciones);
+        console.log(estacion);
+      </code>
+    </pre>
+    <h4>(Arreglos) Método .shift()</h4>
+    <pre>
+      <code>
+        let estaciones = ["Invierno", "Otoño", "Primavera"];
+        estaciones.shift(); // Remover primer elemento del arreglo
+        console.log(estaciones);
+      </code>
+    </pre>
+    <h4>(Arreglos) Método .unshift()</h4>
+    <pre>
+      <code>
+        let estaciones = ["Invierno", "Otoño", "Primavera"];
+        estaciones.unshift("Verano"); // Agregar al principio del arreglo
+        console.log(estaciones);
+      </code>
+    </pre>
+    <h4>Ejemplo - Lista de compras</h4>
+    <pre>
+      <code>
+        let miListaDeCompras = [["cereal", 3], ["leche", 2], ["galletas", 4],
+        ["pan", 5], ["refresco", 7], ["pollo", 7]];
+        console.log("Voy a comprar " + miListaDeCompras[0][1] + " unidades de " +
+        miListaDeCompras[0][0] + ".");
+        console.log("Voy a comprar " + miListaDeCompras[1][1] + " unidades de " +
+        miListaDeCompras[1][0] + ".");
+        console.log("Voy a comprar " + miListaDeCompras[2][1] + " unidades de " +
+        miListaDeCompras[2][0] + ".");
+        console.log("Voy a comprar " + miListaDeCompras[3][1] + " unidades de " +
+        miListaDeCompras[3][0] + ".");
+        console.log("Voy a comprar " + miListaDeCompras[4][1] + " unidades de " +
+        miListaDeCompras[4][0] + ".");
+        console.log("Voy a comprar " + miListaDeCompras[5][1] + " unidades de " +
+        miListaDeCompras[5][0] + ".");
+      </code>
+    </pre>
+    <h4>Funciones</h4>
+    <pre>
+      <code>
+        function mostrarMensaje() {
+          console.log("¡Hola, Mundo!");
+          }
+          mostrarMensaje();
+          mostrarMensaje();
+          mostrarMensaje();
+          mostrarMensaje();
+          mostrarMensaje();
+          mostrarMensaje();
+      </code>
+    </pre>
+    <h4>Argumentos</h4>
+    <pre>
+      <code>
+        function sumar(a, b) {
+          suma = a + b;
+          console.log("El resultado de " + a + " + " + b + " es: " + suma);
+          }
+          sumar(5, 3);
+          sumar(8, 9);
+          sumar(2, 4);
+          sumar(5, 5);
+          // Podemos pasar variables como argumentos
+          // y sus nombres no tienen que ser iguales a los
+          // parámetros.
+          var x = 5;
+          var y = 3;
+          sumar(x, y);
+
+          // Ejemplo
+
+          function concatenarTresCadenas(cadena1, cadena2, cadena3) {
+            console.log(cadena1 + " " + cadena2 + " " + cadena3);
+            }
+            concatenarTresCadenas("Estoy", "aprendiendo", "a programar");
+      </code>
+    </pre>
+    <h4>Ámbito global</h4>
+    <pre>
+      <code>
+        var miVariableGlobal = 5;
+        console.log(miVariableGlobal);
+        function miFuncion() {
+        console.log(miVariableGlobal);
+        }
+        console.log(miVariableGlobal);
+      </code>
+    </pre>
+    <h4>Ámbito local</h4>
+    <pre>
+      <code>
+        function miFuncion() {
+          var miVariableLocal = 4;
+          console.log(miVariableLocal);
+          }
+          miFuncion(); // La variable está definida dentro de la función.
+          // ¡Error!
+          // Al ser una variable local, no se puede usar fuera de la función.
+          console.log(miVariableLocal);
+      </code>
+    </pre>
+    <h4>Ámbito global vs. ámbito local en funciones</h4>
+    <pre>
+      <code>
+        var miNombre = "Nora";
+        function mostrarMiNombre() {
+        var miNombre = "Gino";
+        console.log(miNombre);
+        }
+        mostrarMiNombre();
+        console.log(miNombre);
+      </code>
+    </pre>
+    <h4>Retornar un valor de una función</h4>
+    <pre>
+      <code>
+        function sumar(a, b) {
+          return a + b;
+          }
+          sumar(5, 3); // No se muestra nada en la consola
+          console.log(sumar(5, 3)); // Se muestra el valor retornado
+      </code>
+    </pre>
+    <h4>Valor "undefined" retornado por una función</h4>
+    <pre>
+      <code>
+        function sumar(a, b) {
+          console.log(a + b);
+          }
+          // undefined porque no hay una sentencia return
+          console.log(sumar(a, b))
+      </code>
+    </pre>
+    <h4>Asignar un valor retornado a una variable</h4>
+    <pre>
+      <code>
+        function sumar(a, b) {
+          return a + b;
+          }
+          // Se asigna el valor retornado a una variable
+          var resultado = sumar(5, 3);
+          console.log(resultado);
+          // Ejemplo
+          function crearCadenaConMeta(lenguajeDeProgramacion) {
+          return "Mi meta es aprender " + lenguajeDeProgramacion;
+          }
+          var miMeta = crearCadenaConMeta("JavaScript");
+          console.log(miMeta);
+      </code>
+    </pre>
+    <h4>Ejemplo de Cola</h4>
+    <p>Define una función proximoEnLaFila que tome un arreglo (arreglo) y un número (elemento)
+      como argumentos. Agrega el número al final del arreglo y luego elimina el primer
+      elemento del arreglo. La función proximoEnLaFila debe retornar el elemento
+      que fue removido.</p>
+    <pre>
+      <code>
+        function proximoEnLaFila(arreglo, elemento) {
+          arreglo.push(elemento); // Agregar al final del arreglo.
+          return arreglo.shift(); // Remover el primer elemento y retornarlo.
+          }
+          var miArreglo = [1, 2, 3, 4, 5];
+          console.log("Antes: " + JSON.stringify(miArreglo));
+          console.log(próximoEnLaFila(miArreglo, 6));
+          console.log("Después: " + JSON.stringify(miArreglo));
+      </code>
+    </pre>
+    <h4>Operador de igualdad</h4>
+    <pre>
+      <code>
+        console.log(5 == 5); // true
+        console.log(6 == 5); // false
+        console.log("Hola" == "Hola"); // true
+        console.log("Hola" == "JavaScript"); // false
+        console.log("Hola" == "hola"); // false
+        console.log([1, 2, 3] == [1, 2, 3]); // false (No compara si son iguales.
+        Compara si son el mismo objeto en memoria).
+        console.log([1, 2, 3] == [4, 5, 6]); // false
+      </code>
+    </pre>
+    <h4>Operador de igualdad estricta</h4>
+    <pre>
+      <code>
+        console.log(9 == 9); // true
+        console.log(9 == "9"); // true
+        console.log(9 === 9); // true
+        console.log(9 === "9"); // false
+      </code>
+    </pre>
+    <h4>Practica cómo comparar valores</h4>
+    <pre>
+      <code>
+        let a;
+        let b;
+        a = 5;
+        b = 5;
+        console.log(a == b); // true
+        console.log(a === b); // true
+        b = 8;
+        console.log(a == b); // false
+        console.log(a === b); // false
+        b = "5";
+        console.log(a == b); // true
+        console.log(a === b); // false
+        a = "JavaScript";
+        b = "Javascript";
+        console.log(a == b); // true
+        console.log(a === b); // true
+      </code>
+    </pre>
+    <h4>Operador de desigualdad</h4>
+    <pre>
+      <code>
+        console.log(9 != 6); // true
+        console.log(9 != 9); // false
+        console.log("JavaScript" != "JavaScript"); // false
+        console.log([1, 2, 3] != [1, 2, 3]); // true porque son distintos objetos.
+      </code>
+    </pre>
+    <h4>Operador de desigualdad estricta</h4>
+    <pre>
+      <code>
+        console.log(1 != "1"); // false
+        console.log(1 !== "1"); // true
+      </code>
+    </pre>
+    <h4>Operador "mayor que" ></h4>
+    <pre>
+      <code>
+        console.log(6 > 5); // true
+        console.log(3 > 10); // false
+        console.log("B" > "A"); // true
+        console.log("ACB" > "ABC"); // true
+        console.log("AB" > "A"); // true
+        console.log("Mundo" > "Hola"); // true
+        console.log("M" > "A"); // true
+        console.log("JavaScript" > "Python"); // false
+        console.log("J" > "P"); // false
+        var a = 15;
+        var b = 7;
+        console.log(a > b); // true
+        console.log(b > a); // false
+      </code>
+    </pre>
+    <h4>Operador "menor o igual que" <=</h4>
+    <pre>
+      <code>
+        console.log(5 < 5); // false
+        console.log(5 <= 5); // true
+      </code>
+    </pre>
+    <h4>Operador "menor que" <</h4>
+    <pre>
+      <code>
+        // Menor que: <
+        console.log(5 < 6); // true
+        console.log(10 < 3); // false
+        console.log("A" < "B"); // true
+        console.log("ABC" < "ACB"); // true
+        var a = 15;
+        var b = 7;
+        console.log(a < b); // false
+        console.log(b < a); // true
+      </code>
+    </pre>
 </body>
 </html>

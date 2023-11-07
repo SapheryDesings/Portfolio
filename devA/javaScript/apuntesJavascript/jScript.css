@@ -4,9 +4,15 @@
 }
 
 header {
-    min-height: 150px;
+    display: flex;
     padding: 2rem;
     font-family: 'Oswald', sans-serif;
+    color: orange;
+    background-color: #4A235A;
+
+    & h1 {
+        padding: 1rem;
+    }
 }
 
 .contenedor {
@@ -15,14 +21,19 @@ header {
 }
 
 .indice {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
     width: 80%;
     margin: 3rem auto;
     padding: 1rem;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border: 5px solid #4A235A;
+    background-color: #F4ECF7;
+    font-weight: bold;
     & li {
-        padding: .2rem 1rem;
-        list-style-position: inside;
+        padding: .2rem .8rem;
+        list-style-position: outside;
     }
 }
 
@@ -31,14 +42,18 @@ p, h2, h3, h4 {
 }
 
 table {
-    background-color: lightslategray;
+    background-color: #4A235A;
     & th, td {
         padding: .5rem 1rem;
     }
     & th {
-        background-color: lightblue;
+        background-color: #F4ECF7;
     }
     & td {
-        background-color: lightgrey;
+        background-color: white;
     }
+}
+
+pre {
+    white-space: pre-line;
 }
