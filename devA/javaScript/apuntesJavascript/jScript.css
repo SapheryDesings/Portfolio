@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 150px;
+    padding: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contenedor {
+    margin: 0 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.indice {
+    width: 80%;
+    margin: 3rem auto;
+    padding: 1rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    & li {
+        padding: .2rem 1rem;
+        list-style-position: inside;
+    }
+}
+
+p, h2, h3, h4 {
+    margin: 1rem 0;
+}
+
+table {
+    background-color: lightslategray;
+    & th, td {
+        padding: .5rem 1rem;
+    }
+    & th {
+        background-color: lightblue;
+    }
+    & td {
+        background-color: lightgrey;
+    }
+}

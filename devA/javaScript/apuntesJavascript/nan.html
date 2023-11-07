@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <ol class="indice">
+            <li>Intro</li>
+            <li>Variables y ambitos</li>
+            <li>Tipos de datos</li>
+            <li>Operadores y expresiones</li>
+            <li>Control de flujo</li>
+            <li>Gestión de errores</li>
+            <li>Bucles</li>
+            <li>Objetos</li>
+            <li>Funciones</li>
+            <li>Clases</li>
+            <li>Expresiones regulares</li>
+            <li>Eventos</li>
+            <li>DOM</li>
+        </ol>
+        <h2>NaN - Not a number</h2>
+        <p>NaN es un valor especial, que significa Not a number (No es un número), aunque no es su significado literal. Se usa para representar valores numéricos que son indeterminados o imposibles de representar como número.</p>
+        <ul>
+            <li><b>Indeterminación matemática:</b> Ejemplo 0 / 0</li>
+            <li><b>Valores imposibles:</b> Ejemplo 4 - 'a'</li>
+            <li><b>Operaciones con NaN:</b> Ejemplo NaN + 4</li>
+        </ul>
+        <p>Propiedades y métodos relacionados con NaN</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad o Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.NaN</td>
+                    <td>Es equivalente a NaN. Valor que no puede representarse como número.</td>
+                </tr>
+                <tr>
+                    <td>Number.isNaN(number)</td>
+                    <td>Comprueba si number</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Observa que existe Number.NaN como propiedad de number, para tenerlo modularizado y encapsulado como propiedad estática en el objeto Number.</p>
+        <p>El valor de NaN se utilizar para intentar representar un valor que no se puede representar, así que no podemos compararlo literalmente con NaN, sino que tenemos que utilizar la función Number.isNaN().</p>
+        <pre>
+            <code>
+                Number.isNaN(NaN);  //true
+                Number.isNaN(5);    //false
+                Number.isNaN("A");  //false
+            </code>
+        </pre>
+        <p>Recuerda que NaN sí que es un valor numérico no representable de forma númerica.</p>
+        <pre>
+            <code>
+                const number = NaN;
+
+                typeof number;
+                number.constructor.name;
+            </code>
+        </pre>
+        <h3>Conversiones NaN</h3>
+        <p>Si intentamos convertir un valor NaN a otro tipo de dato primitivo utilzando un typecast(forzar conversión explícita)</p>
+        <pre>
+            <code>
+                Boolean(NaN);   //false
+                String(NaN);    //"NaN"
+                Number(NaN);    //NaN
+            </code>
+        </pre>
+    </div>
+</body>
+</html>

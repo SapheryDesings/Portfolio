@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <ol class="indice">
+            <li>Intro</li>
+            <li>Variables y ambitos</li>
+            <li>Tipos de datos</li>
+            <li>Operadores y expresiones</li>
+            <li>Control de flujo</li>
+            <li>Gestión de errores</li>
+            <li>Bucles</li>
+            <li>Objetos</li>
+            <li>Funciones</li>
+            <li>Clases</li>
+            <li>Expresiones regulares</li>
+            <li>Eventos</li>
+            <li>DOM</li>
+        </ol>
+        <h2>Conversiones numéricas</h2>
+        <p>Que no tengamos que declarar su tipo de dato, no significa que nos despreocupemos de ello. Hay momentos en que nos interese convertir un string a número por muchos motivo.</p>
+        <h3>Convertir texto a número. Números enteros</h3>
+        <p>Para convertir un string en number lo ideal es utilizar las funciones de parseo numérico, parseInt() y parseFloat().</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.parseInt(text)</td>
+                    <td>Convierte un string text en un número entero</td>
+                </tr>
+                <tr>
+                    <td>Number.parseInt(text, radix)</td>
+                    <td>Idem, pero el string un número en base número radix</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Ejemplos con el método .parseInt() cuando sólo le pasamos un parámetro (texto) que queremos convertir a número.</p>
+        <pre>
+            <code>
+                Number.parseInt("42");          //42
+                Number.parseInt("42€");         //42
+                Number.parseInt("Núm. 42");     //NaN
+                Number.parseInt("A");           //NaN
+                Number.parseInt("");            //NaN
+            </code>
+        </pre>
+        <p>.parseInt() funciona bien para variables de texto que son números (o que empiezan por números), muy útil para eliminar unidades de variables de texto que se extraen de una página. Si la variable comienza por un valor que no es númerico, descartará todo el texto y devolverá un NaN. Si el string contiene números decimales, sólo se quedará con la parte entera.</p>
+        <pre>
+            <code>
+                Number.parseInt("42.5");        //42
+                Number.parseInt("88.99€");      //88
+                Number.parseInt("Núm. 35.5");   //NaN
+            </code>
+        </pre>
+        <h3>Números decimales</h3>
+        <p>.parseFloat() funciona igual que .parseInt() pero con números decimales.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.parseFloat(text)</td>
+                    <td>Convierte un string text en un número decimal</td>
+                </tr>
+                <tr>
+                    <td>Number.parseFloat(text, radix)</td>
+                    <td>Idem, pero el string tiene un número en base número radix.</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            <code>
+                Number.parseFloat("42.5");      //42.5
+                Number.parseFloat("42");        //42
+                Number.parseFloat("88.99€");    //88.99
+                Number.parseFloat("42€");       //42
+                Number.parseFloat("Núm. 33.5"); //NaN
+            </code>
+        </pre>
+        <h3>Convertir desde otra base</h3>
+        <p>Los método anteriores tiene un segundo parámetro number radix, que sirve para indicar la base numérica desde la que procede el número del string. Cuando se omite este parámetro, se asume que la base es 10 (base decimal).</p>
+        <pre>
+            <code>
+                // Base binaria: 0, 1 (Base 2)
+                // Base octal: 0, 1, .. 7 (Base 8)
+                // Base decimal: 0, 1, ..9 (Base 10)
+                // Base hexadecimal: 0, 1, .. 9, A, B, C, D, E, F (Base 16)
+            </code>
+        </pre>
+        <h3>Convertir a decimal</h3>
+        <p>Podemos convertir de cualqueier base numérica a la decimal, utilizando el parámetro radix.</p>
+        <pre>
+            <code>
+                Number.parseInt("11101", 2);    // 11101 en binario, es 29 en decimal
+                Number.parseInt("31", 8);       // 31 en octal, es 25 en decimal
+                Number.parseInt("FF", 16);      // FF en hexadecimal, es 255 en decimal
+            </code>
+        </pre>
+        <p>Otra forma de representar estos números en una base específica es utilizando la nomenclatura de la base numérica mediante un prefijo 0b, 0o o 0x. Al utilizarlos, se convertirán automáticamente a base decimal.</p>
+        <pre>
+            <code>
+                0b11101     // 29
+                0o31        // 25
+                0xFF        // 255
+            </code>
+        </pre>
+        <h3>Convertir desde decimal</h3>
+        <p>También podemos realizar la operación inversa, de base decimal a otra base numérica diferente, utilizando el método .toString() de los string.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.toString()</td>
+                    <td>Convierte un number en string</td>
+                </tr>
+                <tr>
+                    <td>Number.toString(radix)</td>
+                    <td>Convierte un number a la base number radix y lo devuelve como texto</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            <code>
+                (16).toString();        // "16"
+                (42.5).toString();      // "42.5"
+                (26).toString(2);       // "11010"
+                (80).toString(8);       // "120"
+                (245123).toString(16);  // "3bd83"
+            </code>
+        </pre>
+    </div>
+</body>
+</html>

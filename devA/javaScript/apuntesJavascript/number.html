@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <ol class="indice">
+            <li>Intro</li>
+            <li>Variables y ambitos</li>
+            <li>Tipos de datos</li>
+            <li>Operadores y expresiones</li>
+            <li>Control de flujo</li>
+            <li>Gestión de errores</li>
+            <li>Bucles</li>
+            <li>Objetos</li>
+            <li>Funciones</li>
+            <li>Clases</li>
+            <li>Expresiones regulares</li>
+            <li>Eventos</li>
+            <li>DOM</li>
+        </ol>
+
+        <h2>Number</h2>
+        <h3>Declaración</h3>
+        <p>Los números son uno de los tipos primitivos que para crearlos basta con escribirlos. También se pueden representar con objetos declarandolos mediante la palabra clave new, aunque no se suele utilizar ya que es bastante más complicado.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Constructor</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>new Number(numbre)</td>
+                    <td>Crea un objeto numérico a partir del número number pasado por parámetro</td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td>Simplemente, el número en cuestión. Notación preferida</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            <code>
+                //Notación literal
+                const number = 2;
+                const decimal = 46.5;
+                cons legibleNumber = 5_000_000; 
+            </code>
+        </pre>
+        <p>Los números decimales los separamos con un punto (.) y de forma opcional, podemos utilizar guión bajo (_) para separar visualmente y reconocer las magnitudes que usamos.</p>
+        <p>Existe una serie de constantes definidas que marcan los límites mínimo o máximo.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Constante</th>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Numbre.MAX_VALUE</td>
+                    <td>~2<sup>1024</sup></td>
+                    <td>Valor más grande</td>
+                </tr>
+                <tr>
+                    <td>Number.MIN_VALUE</td>
+                    <td>~ 5x10<sup>-324</sup></td>
+                    <td>Valor más pequeño</td>
+                </tr>
+                <tr>
+                    <td>Number.MAX_SAFE_INTEGER</td>
+                    <td>2<sup>53</sup>-1</td>
+                    <td>Valor seguro más grande</td>
+                </tr>
+                <tr>
+                    <td>Number.MIN_SAFE_INTEGER</td>
+                    <td>-(2<sup>53</sup>-1)</td>
+                    <td>Valor seguro más pequeño</td>
+                </tr>
+                <tr>
+                    <td>Number.EPSILON</td>
+                    <td>2<sup>-52</sup></td>
+                    <td>Número muy pequeño</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>El valor Number.EPSILON se suele utilizar para representar cantidades matemáticas muy pequeñas. Number.MAX_VALUE es el valor máximo que es porsible representar y Number.MAX_SAFE_INTEGER es el valor máximo para realizar cálculos con seguridad.</p>
+        <h3>Valores infinitos</h3>
+        <p>Si quieres representar un número muy alto, sin importar el valor en sí, puedes utilizar la constante Infinity y -Infinity para valores muy bajos.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Constante</th>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.POSITIVE_INFINITY</td>
+                    <td>Infinity</td>
+                    <td>Infinito positivo</td>
+                </tr>
+                <tr>
+                    <td>Number.NEGATIVE_INFINITY</td>
+                    <td>-Infinity</td>
+                    <td>Infinito negativo</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Los valores infinitos se pueden operar con números, pero ten en cuenta las reglas de los infinitos, y  que en algunos casos, puede resultar una indeterminación, por lo que nos dará como resultado NaN (not a number).</p>
+        <h3>comprobaciones numéricas</h3>
+        <p>Podemos comprobar con uno de los métodos estáticos de Number que tenemos a continuación</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number.isFinite(number)</td>
+                    <td>Comprueba si number es un número finito</td>
+                </tr>
+                <tr>
+                    <td>Number.isInteger(number)</td>
+                    <td>Comprueba si number es un número entero</td>
+                </tr>
+                <tr>
+                    <td>Number.isSafeInteger(number)</td>
+                    <td>Comprueba si number es un número seguro</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Estas funciones devuelven un boolean, que son ideales para usarlas como condiciones en bucles o condicionales.</p>
+        <pre>
+            <code>
+                //Número finito
+                Number.isFinite(56);        //true
+                Number.isFinite(566.2);     //true
+                Number.isFinite(Infinity);  //false, es infinito
+
+                //Número entero
+                Number.isInteger(8);        //true
+                Number.isInteger(8.4);      //false, es decimal
+
+                //Número seguro
+                Number.isSafeInteger(1e15)  //true
+                Number.isSafeInteger(1e16)  //false
+
+                1e309 === Infinity;         //true
+                Number.isSafeInteger(1e309) //false
+            </code>
+        </pre>
+        <h3>Representación numérica</h3>
+        <p>Tenemos dos formas de representar los números: la notación exponencial (basada en potencias de 10) y la notación de punto fijo (una cantidad de dígitos para la parte entera, y otra para la parte decimal). Se puede cambiar entre ellas utilizando los métodos:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.toExponential(digits)</td>
+                    <td>Convierte el número a notación exponencial con digits decimales</td>
+                </tr>
+                <tr>
+                    <td>.toFixed(digits)</td>
+                    <td>Convierte el número a notación de punto fijo con digits decimales</td>
+                </tr>
+                <tr>
+                    <td>.toPrecisión(size)</td>
+                    <td>Utiliza size dígitos de precisión en el número</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>El método .toPrecision() puede cambiar la precisión de un número.</p>
+        <pre>
+            <code>
+                //Notación exponencial
+                (1.25).toExponential(0);    //"1e+0"
+                (1.25).toExponential(1);    //"1.3e+0"
+                (1.25).toExponential(2);    //"1.25e+0"
+                (1.25).toExponential(3);    //"1.250e+0"
+
+                //Notación punto fijo
+                (1.25).toFixed(0);          //"1"
+                (1.25).toFixed(1);          //"1.3"
+                (1.25).toFixed(2);          //"1.25"
+                (1.25).toFixed(3);          //"1.250"
+
+                //Cambiando precisión
+                (523.75).toPrecisión(1);    //"5e+2"
+                (523.75).toPrecisión(2);    //"5.2e+2"
+                (523.75).toPrecisión(3);    //"524"
+                (523.75).toPrecisión(4);    //"523.8"
+                (523.75).toPrecisión(5);    //"523.75"
+            </code>
+        </pre>
+        <p>En todos los casos, el número se convierte a tipo de dato string.</p>
+    </div>
+</body>
+</html>

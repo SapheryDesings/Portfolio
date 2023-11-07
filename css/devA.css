@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*body {
+  
+}*/
+
+
+header {
+  min-height: 150px;
+  margin-bottom: 2rem;
+  color: orange;
+  background-color: #4A235A;
+
+  & h1 {
+    padding: 2rem;
+  }
+}
+p {
+  margin: 1rem .5rem;
+  padding: .5rem;
+}
+pre {
+  width: 90%;
+  margin: 1rem auto;
+  padding: .5rem;
+  white-space: pre-line;
+  border: 2px dashed black;
+}

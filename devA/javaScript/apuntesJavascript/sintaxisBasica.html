@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <ol class="indice">
+            <li>Intro</li>
+            <li>Variables y ambitos</li>
+            <li>Tipos de datos</li>
+            <li>Operadores y expresiones</li>
+            <li>Control de flujo</li>
+            <li>Gestión de errores</li>
+            <li>Bucles</li>
+            <li>Objetos</li>
+            <li>Funciones</li>
+            <li>Clases</li>
+            <li>Expresiones regulares</li>
+            <li>Eventos</li>
+            <li>DOM</li>
+        </ol>
+
+        <h2>Introducción</h2>
+        <h3>La consola</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>console.log()</td>
+                    <td>Muestra la información proporcionada en la consola</td>
+                </tr>
+                <tr>
+                    <td>console.info()</td>
+                    <td>Iden, se utiliza para mensajes de información</td>
+                </tr>
+                <tr>
+                    <td>console.warn()</td>
+                    <td>Muestra información de advertencia. Aparece en amarillo</td>
+                </tr>
+                <tr>
+                    <td>console.error()</td>
+                    <td>Muestra información de error. Aparece en rojo</td>
+                </tr>
+                <tr>
+                    <td>console.clear()</td>
+                    <td>Limpia la consola.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>¿Como incluimos nuestro código?</h3>
+            <h4>En línea</h4>
+            <p>En el mismo archivo HTML con la etiqueta "script", que contiene las órdenes o líneas de javascript. No es la forma recomendable, lo ideal es serparar el código en un archivo aparte del HTML.</p>
+            <pre>
+                <code>
+                    script console.log(); /script
+                </code>
+            </pre>
+        <h4>Archivo externo</h4>
+        <p>Para relacionar un documento javascript, utilizaremos también la etiqueta script, pero en este caso incluiremos el atributo src para indicar la ruta donde se encuentra el archivo.</p>
+        <pre>
+            <code>
+                script src="archivojavascript.js" /script
+            </code>
+        </pre>
+        <p>La ubicación de la etiqueta script, puede estar en diferentes sitios.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ubicación</th>
+                    <th>Cuando descarga el archivo</th>
+                    <th>Estado de la página</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>En la etiqueta head</td>
+                    <td><b>Antes</b> de empezar a dibujar la página</td>
+                    <td>Página aún no dibujada</td>
+                </tr>
+                <tr>
+                    <td>En la etiqueta body</td>
+                    <td><b>Durante</b> el dibujado de la página</td>
+                    <td>Dibujada hasta donde está la etiqueta script</td>
+                </tr>
+                <tr>
+                    <td>Antes del /body</td>
+                    <td><b>Después</b> de dibujar la página</td>
+                    <td>Dibujada al 100%</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Elegiremos el sition que más nos convenga para incluir la etiqueta script</p>
+
+        <h2>Tipos de Datos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de dato</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number</td>
+                    <td>Valor numérico (enteros, decimales, etc..)</td>
+                    <td>42, 2.65, 0</td>
+                </tr>
+                <tr>
+                    <td>BigInt</td>
+                    <td>Valor numérico grande</td>
+                    <td>65498731265499987n</td>
+                </tr>
+                <tr>
+                    <td>String</td>
+                    <td>Valor de texto (cadenas de texto, carácteres, etc...)</td>
+                    <td>'Saphery'</td>
+                </tr>
+                <tr>
+                    <td>Booolean</td>
+                    <td>Valor booleano (true o false)</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>undefined</td>
+                    <td>Valor sin definir (variable sin inicializar)</td>
+                    <td>undefined</td>
+                </tr>
+                <tr>
+                    <td>Function</td>
+                    <td>Función (función guardada en una variable)</td>
+                    <td>function() {}</td>
+                </tr>
+                <tr>
+                    <td>Symbol</td>
+                    <td>Símbolo (valor único)</td>
+                    <td>Symbol(1)</td>
+                </tr>
+                <tr>
+                    <td>Object</td>
+                    <td>Objeto (estructura más compleja)</td>
+                    <td>{}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Operadores</h2>
+        <h3>Aritméticos</h3>
+        <p>Para realizar operaciones matemáticas.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Suma</td>
+                    <td>a + b</td>
+                    <td>Suma el valor de a al valor de b</td>
+                </tr>
+                <tr>
+                    <td>Resta</td>
+                    <td>a - b</td>
+                    <td>Resta el valor de b al valor de a</td>
+                </tr>
+                <tr>
+                    <td>Multiplicación</td>
+                    <td>a * b</td>
+                    <td>Multiplica el valor de a por el valor de b</td>
+                </tr>
+                <tr>
+                    <td>División</td>
+                    <td>a / b</td>
+                    <td>Divide el valor de a entre el valor de b</td>
+                </tr>
+                <tr>
+                    <td>Módulo</td>
+                    <td>a % b</td>
+                    <td>Devuelve el resto de la división de a entre b</td>
+                </tr>
+                <tr>
+                    <td>Exponenciación</td>
+                    <td>a ** b</td>
+                    <td>Eleva a a la potencia de b, es decir, a<sub>b</sub>. Equivalente a Math.pow(a, b)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Asignación</h3>
+        <p>Para guardar información en variables</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Asignación</td>
+                    <td>c = a + b</td>
+                    <td>Asigna el valor de la parte derecha a c</td>
+                </tr>
+                <tr>
+                    <td>Suma y asignación</td>
+                    <td>a += b</td>
+                    <td>Es equivalente a a = a + b</td>
+                </tr>
+                <tr>
+                    <td>Resta y asignación</td>
+                    <td>a -= b</td>
+                    <td>Equivalente a a = a - b</td>
+                </tr>
+                <tr>
+                    <td>Multiplicación y asignación</td>
+                    <td>a *= b</td>
+                    <td>Equivalente a = a * b</td>
+                </tr>
+                <tr>
+                    <td>División y asignación</td>
+                    <td>a /= b</td>
+                    <td>Equivalente a a = a / b</td>
+                </tr>
+                <tr>
+                    <td>Módulo y asignación</td>
+                    <td>a %= b</td>
+                    <td>Equivalente a = a % b</td>
+                </tr>
+                <tr>
+                    <td>Exponenciación y asignación</td>
+                    <td>a **= b</td>
+                    <td>Equivalente a a = a ** b</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Unarios</h3>
+        <p>Se utilizan con un sólo operando</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Incremento</td>
+                    <td>a++</td>
+                    <td>Usa el valor de a y luego lo incrementa</td>
+                </tr>
+                <tr>
+                    <td>Decremento</td>
+                    <td>a--</td>
+                    <td>Usa el valor de a y luego lo decrementa</td>
+                </tr>
+                <tr>
+                    <td>Incremento previo</td>
+                    <td>++a</td>
+                    <td>Incrementa el valor de a y luego lo usa</td>
+                </tr>
+                <tr>
+                    <td>Decremento previo</td>
+                    <td>--a</td>
+                    <td>Decrementa el valor de a y luego lo usa</td>
+                </tr>
+                <tr>
+                    <td>Resta unaria</td>
+                    <td>-a</td>
+                    <td>Cambia el signo</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Comparación</h3>
+        <p>Para realizar comprobaciones</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operador de igualdad</td>
+                    <td>a == b</td>
+                    <td>Comprueba si el valor de a es igual al de b. No comprueba el tipo de dato</td>
+                </tr>
+                <tr>
+                    <td>Operador de desigualdad</td>
+                    <td>a != b</td>
+                    <td>Comprueba si el valor de a no es igual al de b</td>
+                </tr>
+                <tr>
+                    <td>Mayor que</td>
+                    <td>a > b</td>
+                    <td>Comprueba si el valor a es mayor que el de b</td>
+                </tr>
+                <tr>
+                    <td>Mayor/igual que</td>
+                    <td>a >= b</td>
+                    <td>Comprueba si el valor de a es mayor o igual que el de b</td>
+                </tr>
+                <tr>
+                    <td>Menor que</td>
+                    <td>a < b</td>
+                    <td>Comprueba si el valor de a es menor que el de b</td>
+                </tr>
+                <tr>
+                    <td>Menor/igual que</td>
+                    <td>a <= b</td>
+                    <td>Comprueba si el valor de a es menor o igual que el de b</td>
+                </tr>
+                <tr>
+                    <td>Operador de identidad</td>
+                    <td>a === b</td>
+                    <td>Comprueba si el valor y el tipo de dato de a es igual al de b</td>
+                </tr>
+                <tr>
+                    <td>Operador no idéntico</td>
+                    <td>a != b</td>
+                    <td>Comprueba si el valor y el tipo de dato de a no es igual al de b</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Binarios</h3>
+        <p>Operadores a bajo nivel</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operador AND</td>
+                    <td>a & b</td>
+                    <td>Devuelve 1 si ambos operandos son 1</td>
+                </tr>
+                <tr>
+                    <td>OR</td>
+                    <td>a | b</td>
+                    <td>Devuelve 1 si al menos un operando es 1</td>
+                </tr>
+                <tr>
+                    <td>XOR</td>
+                    <td>a ^ b</td>
+                    <td>Devuelve 1 si ambos operandos son diferentes</td>
+                </tr>
+                <tr>
+                    <td>NOT</td>
+                    <td>~a</td>
+                    <td>Invierte los bits del operando. Trunca a 32bits.</td>
+                </tr>
+                <tr>
+                    <td>Operador RIGHT SHIFT</td>
+                    <td>a >> b</td>
+                    <td>Desplazamiento de bits hacia la derecha</td>
+                </tr>
+                <tr>
+                    <td>Operador RIGHT SHIFT sin signo</td>
+                    <td>a >>> b</td>
+                    <td>Desplazamiento de bits hacia la derecha, como un operador sin signo</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>AND</th>
+                    <th>OR</th>
+                    <th>XOR</th>
+                    <th>NOT AND</th>
+                    <th>NOT OR</th>
+                    <th>NOT XOR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Operadores de Strings</h3>
+        <p>Operaciones con variables y/o String</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Concatenación de texto</td>
+                    <td>a + b</td>
+                    <td>Une el contenido de a con el contenido de b</td>
+                </tr>
+                <tr>
+                    <td>Conversión a número (Suma unaria)</td>
+                    <td>+a</td>
+                    <td>Si a no es número, intenta convertirlo en un número</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Operadores lógicos</h3>
+        <p>Como trabajar con valores boolean o similares</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operador lógico AND</td>
+                    <td>a && b</td>
+                    <td>Devuelve a si es false, sino devuelve b</td>
+                </tr>
+                <tr>
+                    <td>Operador ternario ?:</td>
+                    <td>a ? b : c</td>
+                    <td>Si a es true, devuelve b, sino devuelve c</td>
+                </tr>
+                <tr>
+                    <td>Lógico OR</td>
+                    <td>a || b</td>
+                    <td>Devuelve a si es true, sino devuelve b</td>
+                </tr>
+                <tr>
+                    <td>Lógico Nullish coalescing</td>
+                    <td>a ?? b</td>
+                    <td>Devuelve b si a es null o undefined, sino devuelve a</td>
+                </tr>
+                <tr>
+                    <td>Operador de asignación lógica nula</td>
+                    <td>a ??= b</td>
+                    <td>Es equivalente a a ?? (a = b)</td>
+                </tr>
+                <tr>
+                    <td>Operador de encadenamiento opcional</td>
+                    <td>data?.name</td>
+                    <td>Perminte intentar acceder a una propiedad, aunque su padre no exista</td>
+                </tr>
+                <tr>
+                    <td>Operador unario lógico NOT</td>
+                    <td>!a</td>
+                    <td>Invierte el valor. Si es true devuelve false y viceversa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

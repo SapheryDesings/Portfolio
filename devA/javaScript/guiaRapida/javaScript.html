@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/devA.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+  <title>DevAcademy - Javascript</title>
+</head>
+<body>
+  <header>
+    <h1>Guía rápida</h1>
+  </header>
+  <h3>Comentarios</h3>
+  <pre>
+    <code>
+      //Comentario de una línea
+
+      /*  Este es
+          es un 
+          comentario
+          de varias
+          líneas
+      */
+    </code>
+  </pre>
+  <h3>Tipos de Datos y Variables</h3>
+  <p>Tipos de Datos: undefined, null, boolean, string, symbol, number y object.</p>
+  <pre>
+    <code>
+      let miVariable = "devAcademy";
+
+      var miSegundaVariable = 1932; 
+    </code>
+  </pre>
+    <h4>Operador de asignación</h4>
+      <pre>
+        <code>
+          let a;
+          let b = 5;
+
+          let a = 10;
+        </code>
+      </pre>
+    <h4>Asignar el valor de una variable a otra variable</h4>
+    <pre>
+      <code>
+        let a = 6;
+        
+        let b = a;
+
+        let c = 8;
+
+        let d;
+
+        d = c;
+      </code>
+    </pre>
+    <h4>Inicializar variables</h4>
+    <pre>
+      <code>
+        let x = 13;
+
+        let miIdioma = "Español";
+      </code>
+    </pre>
+    <h4>Variables no inicializadas</h4>
+    <pre>
+      <code>
+        let a;
+        let b;
+
+        console.log(a);
+        a = 56;
+        console.log(a);
+      </code>
+    </pre>
+    <h4>Sensibilidad a mayúsculas y minúsculas</h4>
+    <pre>
+      <code>
+        let miVariable = 5;
+        console.log(MIVARIABLE); // Error
+        console.log(Mivariable); // Error
+        console.log(MIvARIABLE); // Error
+        console.log(mivariable); // Error
+        console.log(miVariable);
+      </code>
+    </pre>
+    <h4>Sumar</h4>
+    <pre>
+      <code>
+        let suma = 7 + 12;
+        console.log(suma);
+      </code>
+    </pre>
+    <h4>Restar</h4>
+    <pre>
+      <code>
+        let resta = 15 - 5; // Positivo
+        console.log(resta);
+        resta = 5 - 15; // Negativo
+        console.log(resta);
+        resta = 15 - 15; // Cero
+        console.log(resta);
+      </code>
+    </pre>
+    <h4>Multiplicar</h4>
+    <pre>
+      <code>
+        let producto = 5 * 3;
+        console.log(producto);
+        producto = 9 * 0;
+        console.log(producto);
+        producto = -5 * 6;
+        console.log(producto);
+        producto = 5 * -6;
+        console.log(producto);
+        producto = -5 * -6;
+        console.log(producto);
+      </code>
+    </pre>
+    <h4>Dividir</h4>
+    <pre>
+      <code>
+        let cociente = 20 / 2;
+        console.log(cociente);
+        cociente = 17 / 31;
+        console.log(cociente);
+        cociente = 3 / 0;
+        console.log(cociente);
+      </code>
+    </pre>
+    <h4>Números decimales</h4>
+    <pre>
+      <code>
+        let miNumeroDecimal = 23.4;
+        let peso = 78.34;
+      </code>
+    </pre>
+    <h4>Multiplicar decimales</h4>
+    <pre>
+      <code>
+        let producto = 3.4 * 10.4;
+        console.log(producto);
+        producto = 2.4 * 4;
+        console.log(producto);
+        producto = 6 * 8.9;
+        console.log(producto);
+        producto = 3.6 * 0;
+        console.log(producto);
+        producto = -5.7 * 3.4;
+        console.log(producto);
+      </code>
+    </pre>
+    <h4>Dividir decimales</h4>
+    <pre>
+      <code>
+        let cociente = 5.0 / 2.0;
+        console.log(cociente);
+        cociente = 2.3 / 6.7;
+        console.log(cociente);
+        cociente = 4.2 / 0.0;
+        console.log(cociente);
+      </code>
+    </pre>
+    <h4>Resto(división)</h4>
+    <pre>
+      <code>
+        let resto = 15 % 5;
+        console.log(resto);
+        resto = 5 % 1;
+        console.log(resto);
+        resto = 5 % 2;
+        console.log(resto);
+        resto = 5 % 3;
+        console.log(resto);
+        resto = 5 % 4;
+        console.log(resto);
+        resto = 5 % 5;
+        console.log(resto);
+      </code>
+    </pre>
+    <h4>Incremento</h4>
+    <pre>
+      <code>
+        var librosComprados = 105;
+        console.log(librosComprados); // Inicialmente
+        // Opción 1
+        librosComprados = librosComprados + 1;
+        console.log(librosComprados);
+        // Opción 2
+        librosComprados++;
+        console.log(librosComprados);
+      </code>
+    </pre>
+    
+</body>
+</html>
