@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <div class="indice">
+            <ol>
+                <li>Intro</li>
+                <li>Variables y ambitos</li>
+                <li>Tipos de datos</li>
+                <li>Operadores y expresiones</li>
+                <li>Control de flujo</li>
+                <li>Gestión de errores</li>
+                <li>Bucles</li>
+                
+            </ol>
+            <ol start="8">
+                <li>Objetos</li>
+                <li>Funciones</li>
+                <li>Clases</li>
+                <li>Expresiones regulares</li>
+                <li>Eventos</li>
+                <li>DOM</li>
+            </ol>
+        </div>
+        <h3>Tipo de dato String</h3>
+        <p>Una de las tareas que más solemos hacer es menejar cadenas de texto y realizar tareas con ellas. Cuando hablamos de una variable que posee información de texto, decimos que su tipo de dato es string.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Constructor</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>new String(text)</td>
+              <td>Crea un objeto de texto a partir del texto text pasado por parámetro. Evitar</td>
+            </tr>
+            <tr>
+              <td>"texto"</td>
+              <td>Simplemente, escribimos el texto entre comillas simples o dobles. Notación preferida.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Los string son uno de los tipos de datos primitivos, es más sencillo de utilizar los literales que la notación que utiliza la palabra clave new. Se pueden utilizar tres tipos de comillas:</p>
+        <ul>
+          <li>Simples: ''</li>
+          <li>Dobles: ""</li>
+          Backticks: `` (Interpolación de variables)
+        </ul>
+        <p>Se recomienda elegir por uno de los estilos y no mezclarlos.</p>
+        <pre>
+          <code>
+            // Notación literal (preferida)
+            const text = "¡Hola a todos!";
+            const message = "Otro mensaje de texto";
+
+            // Notación mediante objeto
+            const text = new String("¡Hola a todos!");
+            const message = new String("Otro mensaje de texto");
+          </code>
+        </pre>
+        <h3>Propiedades de un string</h3>
+    </div>
+</body>
+</html>

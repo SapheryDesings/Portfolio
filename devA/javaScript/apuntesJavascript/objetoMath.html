@@ -12,21 +12,26 @@
 <body>
     <header><h1>Sintáxis Básica</h1></header>
     <div class="contenedor">
-        <ol class="indice">
-            <li>Intro</li>
-            <li>Variables y ambitos</li>
-            <li>Tipos de datos</li>
-            <li>Operadores y expresiones</li>
-            <li>Control de flujo</li>
-            <li>Gestión de errores</li>
-            <li>Bucles</li>
-            <li>Objetos</li>
-            <li>Funciones</li>
-            <li>Clases</li>
-            <li>Expresiones regulares</li>
-            <li>Eventos</li>
-            <li>DOM</li>
-        </ol>
+        <div class="indice">
+            <ol>
+                <li>Intro</li>
+                <li>Variables y ambitos</li>
+                <li>Tipos de datos</li>
+                <li>Operadores y expresiones</li>
+                <li>Control de flujo</li>
+                <li>Gestión de errores</li>
+                <li>Bucles</li>
+                
+            </ol>
+            <ol start="8">
+                <li>Objetos</li>
+                <li>Funciones</li>
+                <li>Clases</li>
+                <li>Expresiones regulares</li>
+                <li>Eventos</li>
+                <li>DOM</li>
+            </ol>
+        </div>
         <h2>Objeto Math</h2>
         <p>En javascript es posible realizar gran cantidad de operaciones matemáticas de forma nativa, sin necesidad de librerías externas. Para ello utilizamos el objeto Math, que es un objeto interno que tiene incorporadas ciertas constantes y métodos (funciones).</p>
         <h3>Constantes de Math</h3>
@@ -94,59 +99,305 @@
             <tbody>
                 <tr>
                     <td>Math.abs(x)</td>
-                    <td>Devuelve el valor absoluto de x</td>
-                    <td>|x|</td>
+                    <td>Devuelve el valor absoluto de |x|</td>
+                    <td>Math.abs(-5); // 5</td>
                 </tr>
                 <tr>
                     <td>Math.sign(x)</td>
                     <td>Devuelve el signo del número: 1 positivo, -1 negativo</td>
+                    <td>Math.sign(-5); // -1</td>
                 </tr>
                 <tr>
                     <td>Math.exp(x)</td>
-                    <td>Exponenciación. Devuelve el número e elevado a x</td>
-                    <td>e<sup>x</sup></td>
+                    <td>Exponenciación. Devuelve el número e elevado a x //  e<sup>x</sup></td>
+                    <td>Math.exp(1); // e</td>
                 </tr>
                 <tr>
                     <td>Math.expm1(x)</td>
-                    <td>Equivalente a Math.exp(x) - 1</td>
-                    <td>e<sup>x</sup>-1</td>
+                    <td>Equivalente a Math.exp(x) - 1 // e<sup>x</sup>-1</td>
+                    <td>Math.expm1(1); // 1.718281828459045</td>
                 </tr>
                 <tr>
                     <td>Math.max(a, b, c...)</td>
                     <td>Devuelve el número más grande de los indicados por parámetro</td>
+                    <td>Math.max(1, 40, 5, 15); // 40</td>
                 </tr>
                 <tr>
                     <td>Math.min(a, b, c...)</td>
                     <td>Devuelve el número más pequeño de los indicados por parámetro</td>
+                    <td>Math.min(5, 10, -2, 0); // -2</td>
                 </tr>
                 <tr>
                     <td>Math.pow(base, exp)</td>
-                    <td>Potenciación. Devuelve el número base elevado a exp</td>
-                    <td>base<sup>exp</sup></td>
+                    <td>Potenciación. Devuelve el número base elevado a exp // base<sup>exp</sup></td>
+                    <td>Math.pow(2, 10); // 1024</td>
                 </tr>
                 <tr>
                     <td>Math.sqrt(x)</td>
                     <td>Devuleve la raíz cuadrada de x</td>
+                    <td>Math.sqrt(2); // 1.4142135623730951</td>
                 </tr>
                 <tr>
                     <td>Math.cbrt(x)</td>
                     <td>Devuelve la raíz cúbica de x</td>
+                    <td>Math.cbrt(2); // 1.2599210498948732</td>
                 </tr>
                 <tr>
                     <td>Math.imul(a, b)</td>
                     <td>Equivalente a a * b, pero a nivel de bits</td>
+                    <td>Math.imul(0xffffffff, 7); // -7</td>
                 </tr>
                 <tr>
                     <td>Math.clz32(x)</td>
                     <td>Devuelve el número de ceros a la izquierda de x en binario (32 bits)</td>
+                    <td>const x = 1;<br>
+                        "0".repeat(Math.clz32(x)) + x.toString(2);</td>
                 </tr>
             </tbody>
         </table>
+        <p>El método Math.random() lo explicaremos más detalladamente.</p>
+        <h3>Método Math.random()</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math.random()</td>
+                    <td>Devuelve un número al azar entre 0 y 1 con 16 decimales.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Normalmente, necesitamos buscamos obtener un número entero al azar entre a y b.</p>
         <pre>
             <code>
-                
+                // Obtenemos un número al azar entre [0, 1] con 16 decimales
+                let x = Math.random();
+
+                // Multiplicamos dicho número por el valor máximo que buscamos (5)
+                x = x * 5;
+
+                // Redondeamos inferiormente, quedándonos sólo con la parte entera
+                x = Math.floor(x);
             </code>
         </pre>
+        <p>El ejemplo dará un vlaor al azar entre 0 y 5, este no incluido</p>
+        <pre>
+            <code>
+                // Número al azar entre 0 y 5 (no incluido)
+                const x = Math.floor(Math.random() * 5);
+
+                // Equivalente al anterior
+                const x = ~~(Math.random() * 5);
+            </code>
+        </pre>
+        <p>En este segundo ejemplo, utilizamos el operador a nivel de bits ~~ (doble negación) como reemplazo rápido de Math.floor(), función que realiza un redondeo inferior.</p>
+        <h3>Métodos de logaritmos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math.log(x)</td>
+                    <td>Devuelve el logaritmo natural en base e de x</td>
+                    <td>log<sub>e</sub> x o ln x</td>
+                </tr>
+                <tr>
+                    <td>Math.log10(x)</td>
+                    <td>logaritmo decimal (en base 10) de x</td>
+                    <td>log<sub>10</sub> x o log x</td>
+                </tr>
+                <tr>
+                    <td>Math.log2(x)</td>
+                    <td>logaritmo binario (en base 2) de x</td>
+                    <td>log<sub>2</sub> x</td>
+                </tr>
+                <tr>
+                    <td>Math.log1p(x)</td>
+                    <td>logaritmo natural de (1+x)</td>
+                    <td>log<sub>e</sub>(1+x) o ln (1+x)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Ejemplos:</p>
+        <pre>
+            <code>
+                Math.log(2);    // 0.6931471805599453
+                Math.log10(2);  // 0.3010299956639812
+                Math.log2(2);   // 1
+                Math.log1p(2);  // 1.0986122886681096
+            </code>
+        </pre>
+        <h3>Método de redondeo</h3>
+        <p>Es muy común necesitar métodos para redondear números y reducir el número de decimales o aproximar a una cifra concreta.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math.round(x)</td>
+                    <td>Devuelve x con redondeo (el entero más cercano)</td>
+                </tr>
+                <tr>
+                    <td>Math.ceil(x)</td>
+                    <td>Devuelve x con redondeo superior (el entero más alto)</td>
+                </tr>
+                <tr>
+                    <td>Math.floor(x)</td>
+                    <td>Devuelve x con redondeo inferior (el entero más bajo)</td>
+                </tr>
+                <tr>
+                    <td>Math.fround(x)</td>
+                    <td>Devuelve x con redondeo (flotante con precisión simple)</td>
+                </tr>
+                <tr>
+                    <td>Math.trunc(x)</td>
+                    <td>Trunca el número x (devuelve sólo la parte entera)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Ejemplos</p>
+        <pre>
+            <code>
+                // Redondeo natural, el más cercano
+                Math.round(3.75);           // 4
+                Math.round(3.25);           // 3
+
+                // Redondeo superior (el más alto)
+                Math.ceil(3.75);            // 4
+                Math.ceil(3.25);            // 4
+
+                // Redondeo inferior (el más bajo)
+                Math.floor(3.75);           // 3
+                Math.floor(3.25);           // 3
+
+                // Redondeo con precisión
+                Math.round(3.123456789);    // 3
+                Math.fround(3.123456789);   // 3.1234567165374756
+
+                // Truncado (sólo parte entera)
+                Math.trunc(3.75);           // 3
+                Math.round(-3.75);          // -4
+                Math.trunc(-3.75);          // -3
+            </code>
+        </pre>
+        <h3>Métodos trigonométricos</h3>
+        <p>Math también nos proporciona de forma nativa una serie de métodos trigonométricos, que nos permiten hacer cálculos con operaciones como seno, coseno, tangente, etc...</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math.sin(x)</td>
+                    <td>Seno de x</td>
+                </tr>
+                <tr>
+                    <td>Math.asin(x)</td>
+                    <td>Arcoseno de x</td>
+                </tr>
+                <tr>
+                    <td>Math.sinh(x)</td>
+                    <td>Seno hiperbólico de x</td>
+                </tr>
+                <tr>
+                    <td>Math.asinh(x)</td>
+                    <td>Arcoseno hiperbólico de x</td>
+                </tr>
+                <tr>
+                    <td>Math.cos(x)</td>
+                    <td>Coseno de x</td>
+                </tr>
+                <tr>
+                    <td>Math.acos(x)</td>
+                    <td>Arcocoseno de x</td>
+                </tr>
+                <tr>
+                    <td>Math.cosh(x)</td>
+                    <td>Coseno hiperbólico de x</td>
+                </tr>
+                <tr>
+                    <td>Math.acosh(x)</td>
+                    <td>Arcocoseno hiperbólico de x</td>
+                </tr>
+                <tr>
+                    <td>Math.tan(x)</td>
+                    <td>Tangente de x</td>
+                </tr>
+                <tr>
+                    <td>Math.atan(x)</td>
+                    <td>Arcotangente de x</td>
+                </tr>
+                <tr>
+                    <td>Math.tanh(x)</td>
+                    <td>Tangente hiperbólica de x</td>
+                </tr>
+                <tr>
+                    <td>Math.atanh(x)</td>
+                    <td>Arcotangente hiperbólica de x</td>
+                </tr>
+                <tr>
+                    <td>Math.atan2(x, y)</td>
+                    <td>Arcotangente del cociente de x/y</td>
+                </tr>
+                <tr>
+                    <td>Math.hypot(a, b..)</td>
+                    <td>Devuelve la raíz cuadrada de a<sup>2</sup> + b<sup>2</sup> + ...</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Otras librerías matemáticas</h3>
+        <p>Las librerías de terceros pueden hacernos la vida más fácil a la hora de trabajar con otros valores matemáticos.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Libreria</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math.js</td>
+                    <td>Librería matemática de propósito general</td>
+                </tr>
+                <tr>
+                    <td>Fraction.js</td>
+                    <td>Librería matemática para trabajar con fracciones</td>
+                </tr>
+                <tr>
+                    <td>Polynomial.js</td>
+                    <td>Librería matemática para trabajar con polinomios</td>
+                </tr>
+                <tr>
+                    <td>Complex.js</td>
+                    <td>Librería matemática para trabajar con números complejos</td>
+                </tr>
+                <tr>
+                    <td>Angles.js</td>
+                    <td>Librería matemática para trabajar con ángulos</td>
+                </tr>
+                <tr>
+                    <td>BitSet.js</td>
+                    <td>Librería matemática para trabajar con vectores de bits</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Al contrario que muchos otros objetos, en estas ocasiones hemos indicado explícitamente el objeto (Math.round(numero)), en lugar de hacerlo sobre la variable (numero.round()). Esto ocurre porque Math es un objeto con métodos y constantes estáticas, algo que veremos en profundidad en futuros temas.</p>
     </div>
 </body>
 </html>

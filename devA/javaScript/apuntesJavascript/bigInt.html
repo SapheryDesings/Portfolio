@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <div class="indice">
+            <ol>
+                <li>Intro</li>
+                <li>Variables y ambitos</li>
+                <li>Tipos de datos</li>
+                <li>Operadores y expresiones</li>
+                <li>Control de flujo</li>
+                <li>Gestión de errores</li>
+                <li>Bucles</li>
+                
+            </ol>
+            <ol start="8">
+                <li>Objetos</li>
+                <li>Funciones</li>
+                <li>Clases</li>
+                <li>Expresiones regulares</li>
+                <li>Eventos</li>
+                <li>DOM</li>
+            </ol>
+        </div>
+        <h3>El tipo BigInt</h3>
+        <p>Es un tipo de dato que premite representar valores muy grandes, de una forma relativamente sencilla y compatible con lo que ya existe.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Constructor</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BigInt(number)</td>
+              <td>Devolvemos un número BigInt a partir de un number pasado por parámetro</td>
+            </tr>
+            <tr>
+              <td>number + n</td>
+              <td>Simplemente, añadir una n al final del número. Notación preferida.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Para poder realizar estar tareas de forma segura, podemos utilizar el tipo de dato BigInt simplemente añadiendo una n al final del número:</p>
+        <pre>
+          <code>
+            const number = 2n ** 53n;
+
+            number.constructor.name;    // "BigInt" (Es de tipo BigInt)
+
+            number;       // 9007199254740992n
+            number + 1n;  // 9007199254740993n
+            number + 5n;  // 9007199254740997n
+            number + 40n; // 9007199254741032n
+          </code>
+        </pre>
+        <h3>Mezclando tipos de dato</h3>
+        <p>Trabajando con tipos BigInt en ambos oporandos y no los estamos mezclando con tipos Number. Hay que tener varios detalles en cuenta a la hora de trabajar con BigInt:</p>
+        <pre>
+          <code>
+            const number = 5 + 5n;          // ERROR: Cannot mix BigInt and other types, use explicit conversions
+            const number = BigInt(5) + 5n   // 10n (Ok, convierte a BigInt y realiza la operación)
+            const number = 5 + Number(5n);  // 10 (Ok, convierte a Number y realiza la operación)
+          </code>
+        </pre>
+        <p>Ten en cuenta que no se recomienda hacer conversiones entre Number y BigInt salvo que tengas muy controlado lo que vas hacer:</p>
+        <ul>
+          <li>Pasas el Number a BigInt correctamente, pero el Number ya había perdido precisión previamente.</li>
+          <li>Pasas el BigInt a Number pero pierdes precisión en el proceso, porque Number no puede representarlo.</li>
+        </ul>
+        <p>Si comparamos un Number con un BigInt con el operador de identidad(===) nos dará falso aunque sea igual, ya que son dos tipos de datos diferentes. Con el operador de igualdad (==) si nos dará verdadero: </p>
+        <pre>
+          <code>
+            5n === 5;     // false (el valor es igual, el tipo de dato no)
+            5n == 5;      // true (el valor es igual)
+
+            String(2n ** 53n);        // "9007199254740992" (le quita la n)
+            (2n ** 53n).toString();   // "9007199254740992" (le quita la n)
+          </code>
+        </pre>
+        <p>Si convertimos a string un BigInt, retirará la n y se mostrará representado como un número normal.</p>
+        <h3>Método de BigInt</h3>
+        <p>Tiene dos métodos estáticos, que nos pueden servir para operar a nivel de bits. Los métodos .asIntN() y .asUintN()</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BigInt.asIntN(bits, bigNumber)</td>
+              <td>Ajusta bigNumber a bits (devuelve entero con signo)</td>
+            </tr>
+            <tr>
+              <td>BigInt.asUintN(bits, bigNumber)</td>
+              <td>Ajusta bigNumber a bits (devuelve entero sin signo)</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre>
+          <code>
+            // Con 2 bits con signo puedes representar desde (-2 hasta 1)
+            BigInt.asIntN(2, -3n);  // -3n (Representa el -3 con 2 bits) ❌
+            BigInt.asIntN(2, -2n);  // -2n (Representa el -2 con 2 bits) ✅ 10
+            BigInt.asIntN(2, -1n);  // -1n (Representa el -1 con 2 bits) ✅ 11
+            BigInt.asIntN(2, 0n);   // 0n (Representa el 0 con 2 bits) ✅ 00
+            BigInt.asIntN(2, 1n);   // 1n (Representa el 1 con 2 bits) ✅ 01
+            BigInt.asIntN(2, 2n);   // -2n (Representa el 2 con 2 bits) ❌
+            BigInt.asIntN(2, 3n);   // -1n (Representa el 3 con 2 bits) ❌
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // Con 2 bits sin signo puedes representar desde (0 hasta 4)
+            BigInt.asUintN(2, -2n);  // 2n (Representa el -2 con 2 bits) ❌
+            BigInt.asUintN(2, -1n);  // 3n (Representa el -1 con 2 bits) ❌
+            BigInt.asUintN(2, 0n);   // 0n (Representa el 0 con 2 bits) ✅ 00
+            BigInt.asUintN(2, 1n);   // 1n (Representa el 1 con 2 bits) ✅ 01
+            BigInt.asUintN(2, 2n);   // 2n (Representa el 2 con 2 bits) ✅ 10
+            BigInt.asUintN(2, 3n);   // 3n (Representa el 3 con 2 bits) ✅ 11
+            BigInt.asUintN(2, 4n);   // 0n (Representa el 4 con 2 bits) ❌
+          </code>
+        </pre>
+    </div>
+</body>
+</html>
