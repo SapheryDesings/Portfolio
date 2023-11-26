@@ -71,6 +71,89 @@
           </code>
         </pre>
         <h3>Propiedades de un string</h3>
+        <p>Al crear un string esa variable pasa a tener a su disposición todas las propiedades y métodos disponibles.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Propiedad</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.length</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Se encargade devolver el tamaño total de la cadena.</p>
+        <pre>
+          <code>
+            "Hola".length;  //4
+            "Adiós".length; //5
+            "".length;      //0
+            "¡Yeah!".length //6
+          </code>
+        </pre>
+        <h3>Acceso a un carácter</h3>
+        <p>Un string esta formado por carácteres, como si de un array se tratase. Si queremos acceder a cada uno de ellos, podemos utilizar el operador [] indicando la posición a la que queremos acceder.</p>
+        <pre>
+          <code>
+            const text = "Hola";
+            text[0];  //"H"
+            text[1];  //"o"
+            text[2];  //"l"
+            text[4];  //undefined
+          </code>
+        </pre>
+        <p>Si intentamos acceder a una posición que no existe, nos devolverá undefined.</p>
+        <h3>Métodos de un string</h3>
+        <p>Las carácteristicas más interesantes se encuentran en los métodos. En las variables de texto los métodos se ejecutan sobre el propio texto del string, devolviendo información modificada a partir de este.</p>
+        <p>El método .repeat() está disponible en cualquier string, y repite el texto el número de veces que le indicamos por parámetro:</p>
+        <pre>
+          <code>
+            const text = 'Javascript';
+
+            text.repeat(3); //"JavascriptJavascriptJavascript"
+          </code>
+        </pre>
+        <h3>Interpolación de variables</h3>
+        <p>A partir de ES2015, se introducen las backticks (comillas hacia atrás), que nos permitirán interpolar el valor de las variables sin tener que cerrar, concatenar y abrir la cadena de texto contituamente:</p>
+        <pre>
+          <code>
+            const primeraCadena = "frase";
+            const segundaCadena = "concatenada";
+            `Una ${primeraCadena} mejor ${segundaCadena}`; // 'Una frase mejor concatenada'
+          </code>
+        </pre>
+        <p>Es una funcionalidad muy simple que mejora sustancialmente la legibilidad de código. Aporta una serie de ventajas:</p>
+        <ul>
+          <li>Permite <b>múltiples líneas</b>, algo que no se puede hacer con las demás comillas.</li>
+          <li>Permite interpolar expresiones Javascript, no solo variables.</li>
+          <li>Permite interpolar el valor de variables.</li>
+        </ul>
+        <p>Esto es ideal para crear plantillas reutilizables:</p>
+        <pre>
+          <code>
+            const palabra = `strong palabra /strong`;
+            const plantilla = `
+              div class = "container"
+              &{palabra}
+              div
+            `;
+          </code>
+        </pre>
+        <p>La plantilla contiene HTML de palabra, que cobra sentido para crear funciones reutilizables:</p>
+        <pre>
+          <code>
+            function crearBoton(className, text){
+              return`button class="${className}"${text} /button`;
+            }
+
+            crearBoton("primary", "Aceptar");
+            crearBoton("warning", "Eliminar");
+          </code>
+        </pre>
     </div>
 </body>
 </html>

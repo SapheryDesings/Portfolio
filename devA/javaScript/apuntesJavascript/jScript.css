@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
 }
 
 .contenedor {
-    margin: 0 2rem;
+    margin: 0 2rem 2rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -35,6 +36,8 @@ header {
         padding: .2rem .8rem;
         list-style-position: outside;
     }
+
+    & li a { color: black;}
 }
 
 p, h2, h3, h4 {

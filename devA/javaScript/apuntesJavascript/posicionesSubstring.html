@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedor">
+        <div class="indice">
+            <ol>
+                <li>Intro</li>
+                <li>Variables y ambitos</li>
+                <li>Tipos de datos</li>
+                <li>Operadores y expresiones</li>
+                <li>Control de flujo</li>
+                <li>Gestión de errores</li>
+                <li>Bucles</li>
+                
+            </ol>
+            <ol start="8">
+                <li>Objetos</li>
+                <li>Funciones</li>
+                <li>Clases</li>
+                <li>Expresiones regulares</li>
+                <li>Eventos</li>
+                <li>DOM</li>
+            </ol>
+        </div>
+        <h2>Posiciones y substrings</h2>
+        <p>Una <b>substring</b> es un fragmento más pequeño que forma parte de un string. También se suele hacer referencia a ellos como subcadena o subcadena de texto.</p>
+        <p>Una <b>posición</b> es un number que representa el lugar donde está ubicado un substring, teniendo en cuenta que se empieza a contar en 0. Así pues, la primera letra del string tendría el índice 0, la segunda 1, la tercera 2, etc...</p>
+        <pre>
+            <code>
+                "Hola amigos"   // "amigos" es un substring
+                "Hola amigos"   // la posición de "amigos" es 5
+                0123456789        
+            </code>
+        </pre>
+        <h3>Obtener posición o índice</h3>
+        <p>Sobre la posición o índice exsiten métodos que permiten darnos información.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.charAt(pos)</td>
+                    <td>Devuelve el carácter de la posición pos. Similar al operador []</td>
+                </tr>
+                <tr>
+                    <td>.indexOf(text)</td>
+                    <td>Devuelve la primera posición del texto text</td>
+                </tr>
+                <tr>
+                    <td>.indexOf(text, from)</td>
+                    <td>Idem al anterior, partiendo desde la posición from</td>
+                </tr>
+                <tr>
+                    <td>.lastIndexOf(text)</td>
+                    <td>Devuelve la última posición del texto text</td>
+                </tr>
+                <tr>
+                    <td>.lastIndexOf(text, from)</td>
+                    <td>Idem al anterior, partiendo desde from hacia el inicio</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Carácter en cierta posición</h3>
+        <p>El método .charAt(pos) comprueba que carácter se encuentra en la posición pos del texto. Nos devuelve un string con dicho carácter. Si le pasamos una posición que no existe nos devolverá un string vacío. El valor por defecto de pos es 0, si se omite se obtendrá el primer elemento.</p>
+        <p>Es preferible utilizar el operador [] para obtener el carácter que ocupa una posición, ya que es más corto y rápido de utilizar y mucho más claro.</p>
+        <pre>
+            <code>
+                const nombre = "Saphery";
+                
+                nombre.charAt();    //'S'
+                nombre.charAt(0);   //'S'
+                nombre.charAt(1);   //'a'
+                nombre.charAt(15);  //''
+
+                nombre[];       //ERROR
+                nombre[0];      //'S'
+                nombre[1];      //'a'
+                nombre[15];     // undefined
+            </code>
+        </pre>
+        <h3>Posición de cierto carácter</h3>
+        <p>El método .indexOf(text, from) realiza la función opuesta a charAt(). El método .indexOf(text) buscará el subtexto text en nuestro string y nos devolverá un number con la posición de la primera aparición de dicho subtexto. Sino lo encuentra, devuelve -1. El parámetro from es opcional y es la posición en la que empezará a buscar, si se omite es 0.</p>
+        <pre>
+            <code>
+                const cadena = "LenguajeJS, página de Javascript";
+
+                cadena.indexOf('n');    //2
+                cadena.indexOf('n, 3')  //16
+                cadena.indexOf('n', 17) //-1
+            </code>
+        </pre>
+        <h3>Posición desde el final</h3>
+        <p>El método .lastindexOf(text, from) realiza la búsqueda empezando desde el final de la cadena hacia el principio.</p>
+        <pre>
+            <code>
+                const cadena = "LenguajeJS, página de Javascript";
+
+                cadena.lastindexOf('n');    //16
+                cadena.lastindexOf('n, 3')  //2
+                cadena.lastindexOf('n', 1) //-1
+            </code>
+        </pre>
+        <h3>Obtener fragmento substrings</h3>
+        <p>Métodos mediante los que podemos crear substrings formados por un fragmento del string original.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.repeat(num)</td>
+                    <td>Devuelve el string repetido num veces</td>
+                </tr>
+                <tr>
+                    <td>.substring(start, end)</td>
+                    <td>Devuelve el substring desde la posición start hasta end</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
