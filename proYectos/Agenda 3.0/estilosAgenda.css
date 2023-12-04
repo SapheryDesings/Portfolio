@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: white;
+}
+
+*:first-letter {
+  text-transform: capitalize;
+}
+
+.list {
+  margin: 25px auto;
+  padding: 25px;
+  background-color: lightgray;
+  width: 100%;
+  max-width: 350px;
+  border: 5px solid black;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateRight {
+  display: flex;
+  align-items: center;
+}
+
+#dateNumber {
+  font-size: 50px;
+}
+
+#dateText {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText {
+  font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+  margin-left: 7px;
+  font-size: 20px;
+}
+
+/* Lista de Tareas */
+
+#fomulario-nueva-tarea {
+  display: flex;
+}
+
+input, button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#input-nueva-tarea {
+  flex: 1 1 0%;
+  padding: 1rem;
+  margin-right: 1rem;
+  color: black;
+  font-size: 1.2rem;
+  border: 2px solid;
+}
+
+#input-nueva-tarea::placeholder {
+  color: lightgrey;
+}
+
+#submit-nueva-tarea {
+  padding: 1rem;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+main {
+  flex: 1 1 0%;
+  padding: .5rem;
+  max-width: 800px;
+  width: 100%;
+  margin: .5rem auto;
+  border: 2px solid;
+}
+
+.lista-tareas {
+  padding: .5rem;
+  border: 2px solid;
+}
+
+#tareas .tarea {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  margin: 1rem;
+  border: 2px solid lightcoral;
+}
+
+#tareas .tarea .contenedor {
+  flex: 1 1 0%;
+}
+
+#tareas .tarea .contenedor .text {
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+}
+
+#tareas .tarea .contenedor .text:not(:read-only) {
+  color: hotpink;
+}
+
+#tareas .tarea .controles {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.tarea .controles button {
+  cursor: pointer;
+  margin: 0 .5rem;
+  font-size: 1.125rem;
+}
+
+.tarea .controles .editar {
+  color: hotpink;
+}
+
+.tarea .controles .eliminar {
+  color: darkmagenta;
+}

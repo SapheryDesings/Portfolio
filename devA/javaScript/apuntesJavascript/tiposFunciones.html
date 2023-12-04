@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jScript.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Sintáxis Básica</h1></header>
+    <div class="contenedorJs">
+        <div class="botonVolver"><a href="indice.html"><<< Indice</a></div>
+        <h2>Tipos de Funciones</h2>
+        <p>Podemos continuar avanzando dentro del apartado de las funciones, estas son uno de los <b>tipos de datos</b> más importantes, ya que estamos utilizándolas a lo largo de nuestro código.</p>
+        <h3>Tipos de funciones</h3>
+        <p>Hay varias formas de crear funciones:</p>
+        <ul>
+          <li><b>Por declaración:</b> La más usada por principiantes.</li>
+          <li><b>Por expresión:</b> Habitual entre los programadores con expreriencia.</li>
+          <li><b>Constructor de objeto:</b> No recomendada.</li>
+        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Constructor</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>function nombre(p1, p2...){}</td>
+              <td>Crea una función mediante <b>declaración</b></td>
+            </tr>
+            <tr>
+              <td>var nombre = function(p1, p2...){}</td>
+              <td>Crea una función mediante <b>expresión</b></td>
+            </tr>
+            <tr>
+              <td>new Function(p1, p2..., code);</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Funciones por declaración</h3>
+        <p>La forma más popular, y a la que estamos acostumbrados si venimos de otros lenguajes. Esta forma permite declarar una función que existirá a lo largo de todo el código</p>
+        <pre>
+          <code>
+            function saludar(){
+              return "Hola";
+            }
+
+            saludar(); // 'Hola'
+          </code>
+        </pre>
+        <p>Podríamos ejecutar la función saludar() incluso antes de haberla creado y funcionaría correctamente, ya que primero busca las declaraciones de funciones y luego procesa el resto del código.</p>
+        <h3>Función por expresión</h3>
+        <p>Es muy habitual guardar funciones dentro de variables, para posteriormente ejecutar dichas variables. Es un enfoque diferente, creación de funciones por expresión, hacen lo mismo con algunas diferencias.</p>
+        <pre>
+          <code>
+            const saludo = function saludar(){
+              return "hola";
+            };
+
+            saludo(); // 'Hola'
+          </code>
+        </pre>
+        <p>Así creamos una función dentro de una variable, lo que nos permitirá posteriormente ejecutar la variable (como si fuera una función). El nombre de la función (en este caso: saludar) pasa a ser inútil, ya que si intentamos ejecutar saludar() nos dirá que no existe y si intentamos ejecutar saludo() funciona correctamente.</p>
+        <p>El nombre de la función pasa a ser el nombre de la variable, mientras que el nombre de la función desaparece y se omite, dando paso a lo que se llaman las <b>funciones anónimas</b>.</p>
+        <h3>Funciones como objetos</h3>
+        <p>Se pueden declarar funciones como si fueran <b>objetos</b>. Es un enfoque que no se suele utilizar en producción.</p>
+        <h3>Funciones anónimas</h3>
+        <p>Son funciones que se declaran si nombre de función y se alojan en el interior de una variable y haciendo referencia a ella cada vez que queramos utilizarla.</p>
+        <p>La diferencia entre las funciones por declaración y las de expresión es que estás últimas sólo estarán disponibles a partir de la inicialización de la variable. Si ejecutamos la variable antes de declararla, nos dará un error.</p>
+        <h3>Callbacks</h3>
+        <p>Las callbacks o retrollamadas, son una llamada hacia atrás, es pasar una función B por parámetro a una función A, de modo que la función A puede ejecutar esa función B de forma genérica desde su código, y nosotros podemos definirlas desde fuera de dicha función.</p>
+        <pre>
+          <code>
+            const fb = function(){
+              console.log("Función B ejecutada");
+            };
+
+            const fa = function(){
+              callback();
+            }
+
+            fa(fb);
+          </code>
+        </pre>
+        <p>Esto nos podría permitir crear varias funciones para utilizar a modo del callbacks y reutilizarlas posteriormente con diferentes propositos. Suelen ser la primera estrategia para trabajar con la asincronía.</p>
+        <pre>
+          <code>
+            const fb = function(){
+              console.log("Función B ejecutada");
+            };
+
+            const fError = function(){
+              console.error("Error");
+            }
+
+            const fa = function(callback, callbackError){
+              const n = ~~(Math.random()*5);
+              if (n > 2) callback();
+              else callbackError();
+            };
+
+            fa(fb, fError);
+          </code>
+        </pre>
+        <p>Podemos planear ejecutarla funcion fa() cambiando los callback segun nos interese, sin necesidad de crear funciones con el mismo código repetido una y otra vez. En el caso de que las funciones callbacks sean muy cortas, utilizaremos directamente la función anónima, sin necesidad de guardarla en una variable.</p>
+        <pre>
+          <code>
+            const fa = function(callback, callbackError){
+              const n = ~~(Math.random()*5);
+              if (n > 2) callback();
+              else callbackError();
+            };
+
+            fa(
+              function(){
+                console.log("Función B ejecutada.");
+              }
+              function(){
+                console.log("Error");
+              }
+            );
+          </code>
+        </pre>
+        <p>Se suele evitar para facilitar el código, y sólo se utiliza cuandoo se esta seguro que no se va a reutilizar la función callback o no te interesa guardarla en una variable.</p>
+        <h3>Funciones Autoejecutables</h3>
+        <p>Existen casos en los que necesitamos crear una función y ejecutarla sobre la marcha. En las funciones ejecutables tenemos que envolver entre paréntesis la función anónima en cuestión y ejecutarla.</p>
+        <pre>
+          <code>
+            // Función autoejecutable
+            (function () {
+              console.log("Hola!!");
+            })();
+
+            // Función autoejecutable con parámetros
+            (function (name) {
+              console.log(`¡Hola, ${name}!`);
+            })("Saphery");
+          </code>
+        </pre>
+        <p>Podemos utilizar parámetros en dichas funciones, sólo hay que pasar dichos parámetros al final de la función.</p>
+        <p>Si la función devuelve algún valor con <b>return</b>, a diferencia de las funciones por expresión, en este caso lo que se almacena en la variable es el valor que devuelve la función autoejecutada.</p>
+        <pre>
+          <code>
+            const f = (function (name) {
+              return `¡Hola, ${name}!`;
+            })("Saphery");
+            
+            f; // '¡Hola, Saphery!`
+            typeof f; // 'string'
+          </code>
+        </pre>
+        <h3>Clausuras</h3>
+        <p>Las <b>clausuras</b> o cierres, es un concepto relacionado con las funciones y los ámbitos. Se define como una función que "encierra" variables en su propio ámbito (y que continúan existiendo aún habiendo terminado la función).</p>
+        <pre>
+          <code>
+            // Clausura: Función incr()
+            const incr = (function () {
+              let num = 0;
+              return function () {
+                num++;
+                return num;
+              };
+            })();
+
+            typeof incr; // 'function'
+            incr(); // 1
+            incr(); // 2
+            incr(); // 3
+          </code>
+        </pre>
+        <p>Tenemos una <b>función anónima</b> que es también una función autoejecutable. Parece una función por expresión, no lo es, ya que la varible <b>incr</b> está guardando lo que devuelve la función anónima autoejecutable, que a su vez, es otra función diferente.</p>
+        <p>Las clausuras en el interior d ela función autoejecutable estamos creando una variable <b>num</b> que se guardará en el ámbito de dicha función, por lo tanto existirá con valor declarado 0.</p>
+        <p>En la variable <b>incr</b> tenemos una función por expesión que además conoce el valor de una variable <b>num</b>, que sólo existe dentro de <b>incr</b>. Si nos fijamos en la función que devolvemos, lo que hace es incrementar el valor de <b>num</b> y devolverlo. Como la variable <b>incr</b> es una clausura y mantiene la variable en su propio ámbito, veremos que a medida que ejecutamos <b>incr()</b>, los valores de <b>num</b> (que estamos devolviendo) conservan su valor y se van incrementando.</p>
+        <h3>Arrow functions</h3>
+        <p>Las <b>funciones flecha</b> son una forma corta de escribir funciones. Se trata de reemplazar eliminar la palabra <b>function</b> y añadir => antes de abrir las llaves.</p>
+        <pre>
+          <code>
+            const func = function () {
+              return "Función tradicional.";
+            };
+            
+            const func = () => {
+              return "Función flecha.";
+            };
+          </code>
+        </pre>
+        <p>Las <b>funciones flechas</b> tienen algunas ventajas a la hora de simplificar código bastante interesante:</p>
+        <ul>
+          <li>Si el cuerpo de la función sólo tiene una línea, podemos omitir las llaves({})</li>
+          <li>Además, en ese caso, automáticamente se hace un <b>return</b> de esa única línea, por lo que podemos omitir también el <b>return</b></li>
+          <li>En el caso de que la función no tenga parámetros, se indica como en el ejemplo anterior <b>() =></b></li>
+          <li>En el caso de que la función tenga un solo parámetro, se puede indicar simplemente el nombre del mismo: <b>e =></b></li>
+          <li>En el caso de que la función tenga 2 ó más parámetros, se indican entre paréntesis: <b>(a, b) =></b></li>
+          <li>Si queremos devolver un objeto, que coincide con la sintaxis de las llaves, se puede englobar con paréntesis: <b>({name: 'Saphery'})</b></li>
+        </ul>
+        <pre>
+          <code>
+            const func = () => "Función flecha."; // 0 parámetros: Devuelve "Función flecha"
+            const func = (e) => e + 1; // 1 parámetro: Devuelve el valor de e + 1
+            const func = (a, b) => a + b; // 2 parámetros: Devuelve el valor de a + b
+          </code>
+        </pre>
+        <p>Hacen que el código sea mucho más legible y claro de escribir, mejorando la productividad y la claridad a la hora de escribr código.</p>
+        <h3>Ámbito léxico de this</h3>
+        <p>Una de las principales diferencias de las <b>funciones flecha</b> es el valor de la palabra clave <b>this</b>, que no siempre es la misma.</p>
+        <p>Si utilizamos una función de forma global en nuestro programa, no notaremos ninguna diferencia.</p>
+        <pre>
+          <code>
+            // Si son funciones globales
+            const a = function () {
+              console.log(this);
+            };
+            const b = () => {
+              console.log(this);
+            };
+
+            a(); // Window
+            b(); // Window
+          </code>
+        </pre>
+        <p>Si utilizamos una función en el interior de un objeto, como suele ser el caso más habitual, si encontraremos diferencias. Observa que en la primera función, donde se utiliza una función tradicional, el <b>this</b> devuelve el objeto padre de la función.</p>
+        <p>En la segunda función, donde se utiliza una función flecha, el <b>this</b> no devuelve el objeto padre de la función, sino que devuelve <b>Window</b>.</p>
+        <pre>
+          <code>
+            padre = {
+              a: function () {
+                console.log(this);
+              },
+              b: () => {
+                console.log(this);
+              },
+            };
+            
+            padre.a(); // padre
+            padre.b(); // Window
+          </code>
+        </pre>
+        <p>Esta es una diferencia clave que hay que tener bien en cuenta a la hora de trabajar con las <b>funciones flecha</b>. Una buena práctica es utilizar funciones tradicionales como las funciones de primer nivel y, luego, en su interior o en callbacks, utilizar funciones flecha.</p>
+        <div class="botonVolver"><a href="indice.html"><<< Indice</a></div>
+    </div>
+</body>
+</html>

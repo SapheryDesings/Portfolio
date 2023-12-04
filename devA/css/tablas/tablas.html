@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tablas</title>
+</head>
+    <body>
+        <section class="cabecera">
+            <h2>Tablas</h2>
+        </section>
+        <section>
+            <table class="teoria">
+                <caption>Etiquetas principales</caption>
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>table</td>
+                        <td>Etiqueta contenedora que tendrá en su interior toda la tabla.</td>
+                    </tr>
+                    <tr>
+                        <td>th</td>
+                        <td>Table Header. Cada una de las celdas de cabecera de la tabla.</td>
+                    </tr>
+                    <tr>
+                        <td>tr</td>
+                        <td>Table Row. Etiqueta contenedora de cada fila de la tabla.</td>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>Table Data. Cada una de las celdas de la tabla.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="teoria">
+                <caption>Organización de tablas</caption>
+                <thead>
+                    <th>Etiqueta</th>
+                    <th>Descripción</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>thead</td>
+                        <td>Etiqueta contenedora de la cabecera de la tabla. Generalmente, parte superior.</td>
+                    </tr>
+                    <tr>
+                        <td>tbody</td>
+                        <td>Etiqueta contenedora del cuerpo de la tabla. Generalmente, parte central.</td>
+                    </tr>
+                    <tr>
+                        <td>tfoot</td>
+                        <td>Etiqueta contenedora del pie de la tabla. Generalmente, parte inferior.</td>
+                    </tr>
+                    <tr>
+                        <td>caption</td>
+                        <td>Establece un título de la tabla, independientemente de su posición.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <table class="teoria">
+                <caption>Celdas irregulares - Atributos para th</caption>
+                <thead>
+                    <th>Etiqueta</th>
+                    <th>Descripción</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>scope</td>
+                        <td>Indica a que celdas se aplica la cabecera.</td>
+                    </tr>
+                    <tr>
+                        <td>abbr</td>
+                        <td>Abreviatura o información alternativa sobre la cabecera.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="teoria">
+                <caption>Los valores del atributo scope</caption>
+                <thead>
+                    <th>Etiqueta</th>
+                    <th>Descripción</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>row</td>
+                        <td>La cabecera se aplica a alguna de las filas adyacentes.</td>
+                    </tr>
+                    <tr>
+                        <td>col</td>
+                        <td>La cabecera se aplica a alguna de las columnas adyacentes.</td>
+                    </tr>
+                    <tr>
+                        <td>rowgroup</td>
+                        <td>La cabecera se aplica a todas las celdas restantes de la fila.</td>
+                    </tr>
+                    <tr>
+                        <td>colgroup</td>
+                        <td>La cabecera se aplica a todas las celdas restantes de la columna.</td>
+                    </tr>
+                    <tr>
+                        <td>auto</td>
+                        <td>La cabecera se aplica a las celdas de forma automática.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="teoria">
+                <caption>Atributos para th y td</caption>
+                <thead>
+                    <th>Etiqueta</th>
+                    <th>Descripción</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>colspan</td>
+                        <td>Número de columnas que la celda abarcará.</td>
+                    </tr>
+                    <tr>
+                        <td>rowspan</td>
+                        <td>Número de filas que la celda abarcará.</td>
+                    </tr>
+                    <tr>
+                        <td>headers</td>
+                        <td>Id de los elementos th con los que tiene relación la celda.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Ejemplos de colspan y rowspan</caption>
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                        <th>Titulo 4</th>
+                        <th>Titulo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celda 1x1</td>
+                        <td>Celda 2x1</td>
+                        <td>Celda 3x1</td>
+                        <td>Celda 4x1</td>
+                        <td>Celda 5x1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Combinación</td>
+                        <td>Celda 3x2</td>
+                        <td rowspan="2">Combinación</td>
+                        <td>Celda 5x2</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x3</td>
+                        <td>Celda 2x3</td>
+                        <td>Celda 3x3</td>
+                        <td>Celda 5x3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <table class="teoria">
+                <caption>Etiquetas para agrupar o seleccionar columnas</caption>
+                <thead>
+                    <th>Etiqueta</th>
+                    <th>Descripción</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>colgroup</td>
+                        <td>Etiqueta contenedora de columnas. Crea una agrupación de columnas.</td>
+                    </tr>
+                    <tr>
+                        <td>col</td>
+                        <td>Etiqueta que representa a una columna de la tabla.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+        <section>
+            <h4>Tablas Css</h4>
+            <table>
+                <caption>Propiedades Css</caption>
+                <thead>
+                    <th>Propiedad</th>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>border-collapse</td>
+                        <td>separate | collapse</td>
+                        <td>Aplicado sobre la tabla, elimina el espacio de relleno entre celdas.</td>
+                    </tr>
+                    <tr>
+                        <td>border-spacing</td>
+                        <td>0 | size</td>
+                        <td>Amplia el espacio de relleno entre tabla y celdas.</td>
+                    </tr>
+                    <tr>
+                        <td>caption-side</td>
+                        <td>top | bottom</td>
+                        <td>Mueve el elemento caption del interior de una tabla.</td>
+                    </tr>
+                    <tr>
+                        <td>empty-cells</td>
+                        <td>show | hide</td>
+                        <td>Hace desaparecer visualmente una celda vacía (sin contenido).</td>
+                    </tr>
+                    <tr>
+                        <td>table-layout</td>
+                        <td>auto | fixed</td>
+                        <td>Indica si las celdas deben ajustarse o tener un tamaño fijo.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Tabla incial</h4>
+            <table>
+                <caption>Título de la tabla</caption>
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                        <th>Titulo 4</th>
+                        <th>Titulo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celda 1x1</td>
+                        <td>Celda 2x1</td>
+                        <td>Celda 3x1</td>
+                        <td>Celda 4x1</td>
+                        <td>Celda 5x1</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x2</td>
+                        <td>Celda 2x2</td>
+                        <td>Celda 3x2</td>
+                        <td>Celda 4x2</td>
+                        <td>Celda 5x2</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x3</td>
+                        <td>Celda 2x3</td>
+                        <td>Celda 3x3</td>
+                        <td>Celda 4x3</td>
+                        <td>Celda 5x3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>border-collapse:</b> Elimina el espacio de relleno entre las celdas (collapse). (Separate) por defecto.</p>
+            <table class="bcollapse">
+                <caption>Título de la tabla</caption>
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                        <th>Titulo 4</th>
+                        <th>Titulo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celda 1x1</td>
+                        <td>Celda 2x1</td>
+                        <td>Celda 3x1</td>
+                        <td>Celda 4x1</td>
+                        <td>Celda 5x1</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x2</td>
+                        <td>Celda 2x2</td>
+                        <td>Celda 3x2</td>
+                        <td>Celda 4x2</td>
+                        <td>Celda 5x2</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x3</td>
+                        <td>Celda 2x3</td>
+                        <td>Celda 3x3</td>
+                        <td>Celda 4x3</td>
+                        <td>Celda 5x3</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+
+            <p><b>border-spacing:</b> Amplia el espacio e relleno entre tabla y celdas.</p>
+            <table class="bspacing">
+                <caption>Título de la tabla</caption>
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                        <th>Titulo 4</th>
+                        <th>Titulo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celda 1x1</td>
+                        <td>Celda 2x1</td>
+                        <td>Celda 3x1</td>
+                        <td>Celda 4x1</td>
+                        <td>Celda 5x1</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x2</td>
+                        <td>Celda 2x2</td>
+                        <td>Celda 3x2</td>
+                        <td>Celda 4x2</td>
+                        <td>Celda 5x2</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x3</td>
+                        <td>Celda 2x3</td>
+                        <td>Celda 3x3</td>
+                        <td>Celda 4x3</td>
+                        <td>Celda 5x3</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+
+            <p><b>empty-cells:</b> Hace desaparecer visualmente una celda vacia (hide). (show) por defecto.</p>
+            <table class="emptyC">
+                <caption>Título de la tabla</caption>
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th></th>
+                        <th>Titulo 4</th>
+                        <th>Titulo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celda 1x1</td>
+                        <td></td>
+                        <td>Celda 3x1</td>
+                        <td>Celda 4x1</td>
+                        <td>Celda 5x1</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x2</td>
+                        <td>Celda 2x2</td>
+                        <td>Celda 3x2</td>
+                        <td>Celda 4x2</td>
+                        <td>Celda 5x2</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x3</td>
+                        <td>Celda 2x3</td>
+                        <td>Celda 3x3</td>
+                        <td></td>
+                        <td>Celda 5x3</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+
+            <p><b>table-layout:</b> Indica si las celdas deben ajustarse o tener un tamaño fijo(fixed). (auto) por defecto.</p>
+            <table class="tlayout">
+                <caption>Título de la tabla</caption>
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                        <th>Titulo 4</th>
+                        <th>Titulo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Celda 1x1</td>
+                        <td>Celda 2x1</td>
+                        <td>Celda 3x1</td>
+                        <td>Celda 4x1</td>
+                        <td>Celda 5x1</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x2</td>
+                        <td>Celda 2x2</td>
+                        <td>Celda 3x2</td>
+                        <td>Celda 4x2</td>
+                        <td>Celda 5x2</td>
+                    </tr>
+                    <tr>
+                        <td>Celda 1x3</td>
+                        <td>Celda 2x3</td>
+                        <td>Celda 3x3</td>
+                        <td>Celda 4x3</td>
+                        <td>Celda 5x3</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+    </body>
+</html>

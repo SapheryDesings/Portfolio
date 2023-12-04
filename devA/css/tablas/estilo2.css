@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.1rem;
+}
+
+table {
+    margin: 2rem;
+    border: 1px dashed black;
+
+    & td, th {
+        border: 1px solid black;
+        text-align: center;
+        padding: .2rem .5rem;
+    }
+
+    & thead {
+        background-color: violet;
+    }
+
+    & tbody {background-color: wheat;}
+
+    .th {background-color: cadetblue;}
+    .tr {background-color: olivedrab;}
+    .td {background-color: cyan;}
+}
+
+.leyenda {
+    margin: 1rem;
+    background-color: lightgreen;
+}
+
+.info {
+    margin: 0 1rem;
+    padding: .5rem;
+
+    .color {
+        width: 22px;
+        height: 12px;
+        margin: 0 .5rem;
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    .thead {background-color: violet;}
+    .tbody {background-color: wheat;}
+    .th {background-color: cadetblue;}
+    .tr {background-color: olivedrab;}
+    .td {background-color: cyan;}
+}

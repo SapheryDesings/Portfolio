@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="" class="formulario">
+            <input type="text" name="Descripción" placeholder="Nombre" required>
+            <input type="text" name="Fecha Fin" placeholder="Fecha 00/00/0000">
+            <button>Nueva</button>
+        </form>
+        <div class="controles">
+            <button class="boton" id="btnNueva">Nueva</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Fecha Fin</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+                <tr>
+                    <td>001</td>
+                    <td>Trabajo Phyton</td>
+                    <td>12/03/2024</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Revisión diseño parsec</td>
+                    <td>05/02/2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

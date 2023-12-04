@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    min-height: 50vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    width: 50%;
+    min-height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+    border: 1px solid black;
+
+    & input {
+        border: none;
+        border-bottom: 2px solid lightslategray;
+    }
+}
+
+.controles {
+    width: 50%;
+    margin: .5rem;
+    display: flex;
+    gap: .5rem;
+    flex-flow: row;
+    justify-content: left;
+    align-items: center;
+
+    & .boton {
+        padding: .2rem 1rem;
+        background-color: lightgreen;
+        border: none;
+        font-weight: bold;
+        box-shadow: 1px 1px 3px lightslategray;
+    }
+}
+
+table {
+    width: 50%;
+    border: 2px solid black;
+
+    & thead {background-color: lightgrey;}
+
+    & th {text-align: left;}
+
+    & th, td {
+        padding: .2rem 1rem;
+    }
+}

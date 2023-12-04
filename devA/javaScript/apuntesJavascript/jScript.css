@@ -25,8 +25,8 @@ a {
 .botonVolver {
     display: inline-block;
     margin: 1rem 0;
-    padding: .1rem 1.5rem;
-    
+    padding: .2rem 1.2rem;
+    font-weight: bold;
     background-color: #4A235A;
 
     & a {color: orange;}
@@ -57,28 +57,42 @@ a {
     }
 }
 /*****************/
-.contenedor {
+.contenedorJs {
     margin: 0 2rem 2rem;
     font-family: 'Montserrat', sans-serif;
-}
 
-p, h2, h3, h4 {
-    margin: 1rem 0;
-}
+    & h2 {
+        margin: 1rem 0 2rem;
+        border-bottom: 5px solid orange;
+    }
 
-table {
-    background-color: #4A235A;
-    & th, td {
-        padding: .5rem 1rem;
+    & h3 {
+        padding: .5rem;
+        border-left: 8px solid orange;
     }
-    & th {
-        background-color: #F4ECF7;
-    }
-    & td {
-        background-color: white;
-    }
-}
 
-pre {
-    white-space: pre-line;
+    & p, h3, h4 {
+        margin: 1rem 0;
+    }
+    
+    & table {
+        margin: 1rem 0;
+        background-color: #4A235A;
+        & th, td {
+            padding: .5rem 1rem;
+        }
+        & th {
+            background-color: #F4ECF7;
+        }
+        & td {
+            background-color: white;
+        }
+    }
+    
+    & pre {
+        white-space: pre-line;
+        width: fit-content;
+        padding-right: 2rem;
+        box-shadow: 2px 2px 5px 2px #F4ECF7;
+    }
 }

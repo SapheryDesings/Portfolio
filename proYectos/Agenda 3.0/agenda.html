@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosAgenda.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="list">
+    <div class="date">
+      <div class="dateRight">
+        <div id="dateNumber"></div>
+        <div>
+          <div id="dateMonth"></div>
+          <div id="dateYear"></div>
+        </div>
+      </div>
+      <div id="dateText"></div>
+    </div>
+  </div>
+  <section>
+    <header>
+      <h1>Lista de tareas</h1>
+      <form id="formulario-nueva-tarea">
+        <input 
+          type="text" 
+          id="input-nueva-tarea"
+          placeholder="Añade nueva tarea" />
+          <input 
+            type="submit"
+            id="submit-nueva-tarea"
+            value="Añadir tarea"  />
+      </form>
+    </header>
+    <main>
+      <section class="lista-tareas">
+        <div id="tareas">
+          <!-- ************************************* -->
+          <div class="tarea">
+            <div class="contenedor">
+              <input 
+                type="text"
+                class="text"
+                value="Mí tarea"
+                readonly  />
+            </div>
+            <div class="controles">
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </div>
+          </div>
+          <!-- ************************************* -->
+        </div>
+      </section>
+    </main>
+  </section>
+  <script src="agenda.js" type="text/javascript"></script>
+</body>
+</html>

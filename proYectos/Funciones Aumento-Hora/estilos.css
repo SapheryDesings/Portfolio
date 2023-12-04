@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* FUENTES *//*
+font-family: 'Electrolize', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Teko', sans-serif;
+font-family: 'Zen Dots', sans-serif;
+*/
+
+.informacion {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  padding: 2rem;
+  color: white;
+  background-color: #0D47A1;
+  font-size: 1.5rem;
+  font-family: 'Teko', sans-serif;
+}
+
+.hora {
+  width: 150px;
+  text-align: center;
+  padding: .1rem .5rem;
+}
+
+.recurso {
+  min-width: 150px;
+  text-align: end;
+  padding: .1rem .5rem .1rem 0;
+  border: 2px solid #BDBDBD;
+  
+}

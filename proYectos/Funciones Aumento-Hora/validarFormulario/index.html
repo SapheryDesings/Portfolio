@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="contact-form">
+      <legend>Formularios</legend>
+      <input id="nombre" type="text" name="name" placeholder="Nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+      <input id="email" type="text" name="email" placeholder="Email" title="Email incorrecto" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required>
+      <input id="password" type="text" name="password" placeholder="Contraseña" title="Contraseña incorrecta" required>
+      <input type="submit" value="Enviar">
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>

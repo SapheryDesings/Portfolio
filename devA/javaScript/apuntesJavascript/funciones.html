@@ -11,12 +11,111 @@
 </head>
 <body>
     <header><h1>Sintáxis Básica</h1></header>
-    <div class="contenedor">
-        <div class="botonVolver"><h4><a href="indice.html"><<< Indice</a></h4></div>
-        <div class="indice">
-            
-        </div>
-        <div class="botonVolver"><h4><a href="indice.html"><<< Indice</a></h4></div>
+    <div class="contenedorJs">
+        <div class="botonVolver"><a href="indice.html"><<< Indice</a></div>
+        <h2>Funciones</h2>
+        <p>Cuando nuestro código se va haciendo más grande, necesitamos organizarlo y prepararnos para reutilizarlo y no repetir lo mismo innecesariamente. Por ello, un recurso muy útil son las <b>funciones</b>.</p>
+        <p>Las <b>funcines</b> nos permiten agrupar líneas en tareas con un nombre, que posteriormente, podamos hacer referencia a ese nombre para realizar todo lo que se agrupe en dicha tarea. Haremos dos cosas:</p>
+        <ul>
+          <li><b>Declarar la función:</b> Preparar la función, darle un nombre y decirle las tareas que realizará.</li>
+          <li><b>Ejecutar la función:</b>"Llamar" a la función para que realice las tareas de su contenido.</li>
+        </ul>
+        <h3>Declaración</h3>
+        <pre>
+          <code>
+            // Declaración función "saludar"
+            function saludar() {
+              // Contenido
+              console.log("Hola");
+            }
+          </code>
+        </pre>
+        <p>Con esto solo hemos declarado la función, no mostrará nada por pantalla. Nos falta el segundo paso, <b>ejecutarla</b>, que realiza las tareas de su contenido.</p>
+        <h3>Ejecución</h3>
+        <pre>
+          <code>
+            // Declaración función "saludar"
+            function saludar() {
+              // Contenido
+              console.log("Hola");
+            }
+
+            // Ejecución de la función
+            saludar();
+          </code>
+        </pre>
+        <p>Declaramos y "llamamos" a la función por su nombre seguida de paréntesis, que indican que es un función. Mostrará por consola el mensaje de saludo.</p>
+        <h3>Parámetros</h3>
+        <p>Una de las virturdes más interesantes de una función es la de poder reutilizarla para múltiples taras. Para ello, tenemos que saber que son los parámetros de entrada y de salida de una función.</p>
+        <p>Las funciones son flexibles y potentes, los parámetros son variables que les pasamos desde fuera hacia dentro de la función. También podemos hacer que la función realice sus tareas y nos devuelva un resultado hacia el exterior de la función.</p>
+        <p>Ejemplo, donde utilizamos el parámetro "hasta" para indicar hasta donde debe llegar.</p>
+        <pre>
+          <code>
+            // Declaración
+            function tablaDelUno(hasta) {
+              for (let i = 0; i <= hasta; i++) {
+                console.log("1 x", i, "=", 1 * i);
+              }
+            }
+
+            // Ejecución
+            tablaDelUno(10); // Tabla del 1
+            tablaDelUno(5);  // Tabla del 1
+          </code>
+        </pre>
+        <p>En el interior de los paréntesis  se ha indicado una variable llamada "hasta". Esta contiene el valor a la hora de ejecutar la función, que se ejecuta dos veces, una con el valor 10 y otra con el valor 5.</p>
+        <p>En la primera llamada (valor 10), se muestra la tabla de multiplicar del uno hasta el valor 10. En la segunda (valor 5), se mostrará hasta el 5.</p>
+        <p>La idea de las funciones es enfocarnos en el código de la declaración, y una vez los tengamos funcionando, nos podemos olvidar de él porque está <b>encapsulado</b> dentro de la función. Simplemente tendremos que recordar el nombre de la función y los parámetros que hay que pasarle. Esto hace mucho más fácil trabajar con el código.</p>
+        <h3>Múltiples parámetros</h3>
+        <p>Ampliando nuestro ejemplo veremos como se pueden aplicar más parámetros a una función.</p>
+        <pre>
+          <code>
+            // Declaración
+            function tablaMultiplicar(tabla, hasta) {
+              for (let i = 0; i <= hasta; i++) {
+                console.log(tabla, "x", i, "=", tabla * i);
+              }
+            }
+
+            // Ejecución
+            tablaMultiplicar(1, 10); // Tabla del 1
+            tablaMultiplicar(5, 10); // Tabla del 5
+          </code>
+        </pre>
+        <p>Hemos modificado la función para que finalmente podamos decidir en el primer parámetro que tabla queremos ver y con el segundo parámetro hasta que número.</p>
+        <p>Podemos añadir más parámetros a la función según nuestras necesidades. Es importante recordar que el orden de los parámetros es importante y que los nombres de cada parámetro no se pueden repetir en una misma función.</p>
+        <h3>Parámetros por defecto</h3>
+        <p>Es posible que en algunos caso queramos que cierto parámetros tengan un valor sin necesidad de escribirlos en la ejecución. Se llaman valor por defecto.</p>
+        <p>En el ejemplo anterior, nos interesa que siempre llegue hasta el 10, ya que es la forma en la que se representan las tablas.</p>
+        <pre>
+          <code>
+            function tablaMultiplicar(tabla, hasta = 10){
+              for (let i = 0; i<= hasta; i++){
+               console.log(tabla, "x", i, "=", tabla * i);
+              }
+            }
+            // Ejecución
+            tablaMultiplicar(2);      // Tabla del 2 hasta el 10
+            tablaMultiplicar(2, 15);  // Tabla del 2 hasta el 15
+          </code>
+        </pre>
+        <p>Así nos ahorramos tener que escribir los valores en la ejecución de la función, si la mayoría de los casos tiene ese mismo valor.</p>
+        <h3>Devolución de valores</h3>
+        <p>Habitualmente lo que buscamos es que esa función realice una tarea y nos devuelva la información al exterior de la función, para así utilizarla o guardarla en una variable, que utilizaremos posteriormente.</p>
+        <p>Para ello, se utiliza la palabra <b>return</b>, que suele colocarse al final de la función, ya que con dicha devolución terminamos la ejecución (si existe código después, nunca será ejecutado).</p>
+        <pre>
+          <code>
+            function sumar(a, b){
+              return a + b;                   // Devolvemos la suma
+              console.log("suma realizada");  // No se ejecuta
+            }
+
+            // Ejecución
+            const resultado = sumar(3, 2);  // Guarda 5 en la constante resultado
+          </code>
+        </pre>
+        <p>Esto nos permite crear funciones más modulares y reutilizables que podremos utilizar en multitud de casos, ya que la información se puede enviar al exterior de la función y utilizarla junto a otras funciones o para otros objetivos.</p>
+        <div class="botonVolver"><a href="indice.html"><<< Indice</a></div>
     </div>
 </body>
 </html>
