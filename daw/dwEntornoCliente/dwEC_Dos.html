@@ -22,51 +22,681 @@
             <h2 class="tituloTema" id="subUno">Tema 2. - Aplicación y verificación de la sintaxis del lenguaje</h2>
             
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Selección de lenguaje de programación de clientes web</h3>
-          
+            <h3 class="subTitulo">2.1.- Selección de lenguaje de programación de clientes web</h3>
+            <p>Estudiaremos el lenguaje JavaScript, Jscript, es una variante de JavaScript pero desarrollada por otra empresa(Microsoft).</p>
+            <p>El lenguaje  <b>JavaScript</b> toma como referencia el <b>lenguaje C</b>. Los lenguajes de la programación moderna de alto nivel parten de la misma base. Esto facilita la adaptación, la conversión y la compatibilización de JavaScript con lenguajes de la misma base.</p>
+            <p>La sintaxis de las sentencias tiene un formato parecido.</p>
+            <p>JavaScript fue desarrollado por la empresa Netscape, con el nombre inicial de <b>Mocha</b>. Seguidamente pasó a llamarse <b>LiveScript</b>.</p>
+            <p>Pertenece actualmente a la empresa Oracle Corporation (propietaria también de Java), aunque usa licencias de productos Netscape.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Tipos de datos</h3>
-          
+            <h3 class="subTitulo" id="subDos">2.2.- Tipos de datos</h3>
+            <p><b>En JavaScript no es necesario almacenar el mismo tipo de datos en una misma variable, ya que en su declaración no se especifica el tipo.</b></p>
+            <p>Los tres tipos de datos primitivos son los números, las cadenas de texto y los valores booleanos. Existen otro tipo de datos compuesto llamado Object.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>String</td>
+                        <td>Caracteres de texto</td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>Tipo numérico(decimal o entero)</td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>Es una entidad lógica que puede tener dos valores: true o false.</td>
+                    </tr>
+                    <tr>
+                        <td>Null</td>
+                        <td>Tiene exactamente el valor: null</td>
+                    </tr>
+                    <tr>
+                        <td>Object</td>
+                        <td>Variable que pertenece a un objeto de una clase</td>
+                    </tr>
+                    <tr>
+                        <td>Undefined</td>
+                        <td>Variable que no han sido inicializadas</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Conversiones de tipos de datos</h4>
+            <p>Existe la posibilidad de convertir los tipos de datos en el tipo de dato deseado por el desarrollador.</p>
+            <p>Las funciones para la conversión de cadenas de caracteres en datos numéricos son: <b>parseInt()</b> y <b>parseFloat()</b>.</p>
+            <p>El proceso contrario es mucho más sencillo, ya que lo ejecuta el compilador al detectar las cadenas de caracteres como tipo por defecto. Pasar un tipo entero a cadena de caracteres, lo único que debemos hacer es concatenar una cadena vacía al principio de la variable.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Variables</h3>
-          
+            <h3 class="subTitulo" id="subTres">2.3.- Variables</h3>
+            <p class="nota">Definimos <b>variable</b> como una zona de memoria identificada con un nombre y en la cual se almacenan ciertos datos.</p>
+            <p>En el momento en que el navegador limpia la ventana, cualquier variable conocida será eliminada.</p>
+            <p><b>El primer paso para hacer uso de una variable es la creación o declaración en el código.</b> Dos formas:</p>
+            <p>La palabra reservada <b>var</b> seguida del nombre de la variable o identificador.</p>
+            <pre>
+                <code>
+                    var numero;
+                </code>
+            </pre>
+            <p>También podemos asignar un valor durante la operación.</p>
+            <pre>
+                <code>
+                    var numero = 14;
+                </code>
+            </pre>
+            <p>En la declaración de la variable no hay que indicar el tipo de datos que va a contener. <b>Una variable de JavaScript podrá almacenar diferentes tipos de valores.</b></p>
+            <p>Para identificar una variable:</p>
+            <ul>
+                <li>El nombre que identifica una variable debe estar relacionado con el dato que almacena.</li>
+                <li>No se pueden utilizar palabras reservadas por el compilador del lenguaje para identificar la variable.</li>
+                <li>El nombre de una variable no puede contener espacios en blanco ni símbolos de puntuación, solo cacacteres alfanuméricos y el guión bajo( _ ).</li>
+                <li>La identificación de una variable no puede comenzar por un número.</li>
+            </ul>
+            <h4 class="apartado">Palabras reservadas</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>break</td>
+                        <td>default</td>
+                        <td>for</td>
+                        <td>new</td>
+                        <td>typeof</td>
+                    </tr>
+                    <tr>
+                        <td>case</td>
+                        <td>delete</td>
+                        <td>function</td>
+                        <td>return</td>
+                        <td>var</td>
+                    </tr>
+                    <tr>
+                        <td>class</td>
+                        <td>do</td>
+                        <td>if</td>
+                        <td>super</td>
+                        <td>void</td>
+                    </tr>
+                    <tr>
+                        <td>catch</td>
+                        <td>else</td>
+                        <td>import</td>
+                        <td>switch</td>
+                        <td>while</td>
+                    </tr>
+                    <tr>
+                        <td>const</td>
+                        <td>export</td>
+                        <td>in</td>
+                        <td>this</td>
+                        <td>with</td>
+                    </tr>
+                    <tr>
+                        <td>continue</td>
+                        <td>extends</td>
+                        <td>instanceof</td>
+                        <td>throw</td>
+                        <td>yield</td>
+                    </tr>
+                    <tr>
+                        <td>debugger</td>
+                        <td>finally</td>
+                        <td>let</td>
+                        <td>try</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Palabras reservadas futuras:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>enum</td>
+                        <td>implements</td>
+                        <td>package</td>
+                        <td>protected</td>
+                        <td>static</td>
+                    </tr>
+                    <tr>
+                        <td>interface</td>
+                        <td>private</td>
+                        <td>public</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Las siguientes palabras están reservadas como futuras palabras por la antigua especificación, para una buena praxis de programación, las valoraremos como palabras reservadas:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>abstract</td>
+                        <td>boolean</td>
+                        <td>byte</td>
+                        <td>char</td>
+                        <td>double</td>
+                    </tr>
+                    <tr>
+                        <td>final</td>
+                        <td>float</td>
+                        <td>goto</td>
+                        <td>int</td>
+                        <td>long</td>
+                    </tr>
+                    <tr>
+                        <td>native</td>
+                        <td>short</td>
+                        <td>synchronized</td>
+                        <td>transient</td>
+                        <td>volatile</td>
+                    </tr>
+                </tbody>
+            </table>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Asignaciones</h3>
-          
+            <h3 class="subTitulo" id="subCuatro">2.4.- Asignaciones</h3>
+            <p>Esta operación almacena el valor en la variable correspondiente. Se lleva a cabo mediante el operador (=).</p>
+            <pre>
+                <code>
+                    // Operaciones de asignación.
+                    var a = 1;
+                    var z = 10;
+                    z = a;
+                    //Primero se incrementa el valor de a. A continuación,
+                    se asigna a z.
+                    z = ++a;
+                    //Primero se asigna el valor de a (2) a z. A continuación,
+                    se incrementa a (3).
+                    z = a++;
+                </code>
+            </pre>
+            <p class="nota">Los operadores para realizar la operación de asignación son: = += -= *= /= %= <<= >= >>= >>>= &=
+                |= ˆ= []</p>
+            <p>Asigna el valor a la derecha de la expresión a la variable que está a la izquierda.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Operadores</h3>
-          
+            <h3 class="subTitulo" id="subCinco">2.5.- Operadores</h3>
+            <p>Las <b>operaciones que se pueden realizar con ellas</b>. Estas operaciones se llevan a cabo mediante los operadores.</p>
+            <p><b>Cualquier variable o valor sobre el que se realiza una operación se denomina operando.</b></p>
+            <p>Presentamos los distintos <b>tipos de operaciones:</b></p>
+            <h4 class="apartado">2.5.1. - Comparación</h4>
+            <p>Podemos comparar los valores de los dos operandos que intervienen en la operación, devolviendo una condición como resultado (true o false).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><</td>
+                        <td>Menor que</td>
+                        <td>Verifica si el operando a la izquierda del operador es menor que el operando de la derecha. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>Menor o igual que</td>
+                        <td>Verifica si el operando a la izquierda del operador es menor o igual que el operando de la derecha. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>Igual</td>
+                        <td>Verifica si los dos operandos son iguales. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>Mayor que</td>
+                        <td>Verifica si el operando a la izquierda del operador es mayor que el operando de la derecha. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>Mayor o igual que</td>
+                        <td>Verifica si el operando a la izquierda del operador es mayor o igual que el operando de la derecha. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Diferente</td>
+                        <td>Verifica si los dos operandos son diferentes. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>Estrictamente igual</td>
+                        <td>Verifica si el operando a la izquierda del operador es igual y del mismo tipo de datos que el operando de la derecha. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>!==</td>
+                        <td>Estrictamente diferente</td>
+                        <td>Verifica si el operando a la izquierda del operador es diferente y/o de tipo diferente que el operando de la derecha. Devuelve true en ese caso o false en caso contrario</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">2.5.2.- Aritméticos</h4>
+            <p>Realiza las operaciones de suma, resta, multiplicación, división y resto de la división entre operandos. Devuelven como resultado un tipo numérico.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+</td>
+                        <td>Suma</td>
+                        <td>Efectúa la suma entre dos operandos</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Resta</td>
+                        <td>Efectúa la resta entre dos operandos</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplicación</td>
+                        <td>Efectúa la multiplicación entre dos operandos</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>División</td>
+                        <td>Efectúa la división entre dos operandos</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Módulo</td>
+                        <td>Extrae el resto del resultado de la división entre los operandos</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Incremento</td>
+                        <td>Permite incrementar un valor</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decremento</td>
+                        <td>Permite decrementar un valor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Booleano</h4>
+            <p>Operaciones de conjunción entre los operandos. Devuelve una condición a partir de dos condiciones. Lógicos tienen la utilidad de combinar o manipular diferentes expresiones lógicas, con el fin de evaluar si el resultado de esta combinación es verdadero o falso.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&&</td>
+                        <td>Y</td>
+                        <td>Ejecuta la operación booleana AND sobre los valores. Devuelve true solo si todos los valores son true. Devuelve false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>||</td>
+                        <td>O</td>
+                        <td>Ejecuta la operación booleana OR sobre los valores. Devuelve true en el caso de que al menos uno de los valores sea true. Devuelve false en caso contrario</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>No</td>
+                        <td>Invierte el valor booleano de su operando</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">2.5.4.- Asignación</h4>
+            <p>Además del operador de asignación(=), cuenta con otros operadores de asignación que tienen una característica común, ahorrarnos tiempo y disminuir la cantidad de código escrito. Evitaremos escribir dos veces el nombre de la variable.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+=</td>
+                        <td>Suma y asigna</td>
+                        <td>Ejecuta una suma y asigna el valor al operando de la izquierda</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>Resta y asigna</td>
+                        <td>Ejecuta una resta y asigna el valor al operando de la izquierda</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>Multiplica y asigna</td>
+                        <td>Ejecuta una multiplicación y asigna el valor al operando de la izquierda</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>Divide y asigna</td>
+                        <td>Ejecuta una división y asigna el valor al operando de la izquierda</td>
+                    </tr>
+                    <tr>
+                        <td>%=</td>
+                        <td>Módulo y asigna</td>
+                        <td>Ejecuta el módulo y asigna el valor al operando de la izquierda</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">2.5.5.- Condicionales</h4>
+            <p>Son un tipo de operadores algo más complejos, pero bastante útiles a la hora de tomar decisiones, podemos indicarle al navegador que ejecute una acción en concreto después de evaluar una expresión.</p>
+            <p>Consta de tres partes: la primera es la expresión que evaluar, la segunda es la acción que realizar si la expresión es verdadera y la tercera es la acción que ejecutar si la expresión es falsa.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>?:</td>
+                        <td>Condicional</td>
+                        <td>Si la expresión antes del operador es verdadera, se utiliza el primer valor a la derecha. En caso contrario, se utiliza el segundo valor a la derecha.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre>
+                <code>
+                    //Sintaxis
+                    condición ? valor1 : valor2
+                    //Ejemplo
+                    var estado = (edad >= 18) ? “adulto” : “menor”;
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSeis">Sentencias</h3>
-          
+            <h3 class="subTitulo" id="subSeis">2.6.- Sentencias</h3>
+            <p>Las aplicaciones están compuestas por sentencias con sintaxis propia. Puede formarse por múltiples líneas y contener varias sentencias en una sola línea si están separadas por un punto y coma. No es una sola palabra clave, sino un grupo de palabras clave.</p>
+            <p>Control de flujo</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>block</td>
+                        <td>Un bloque de sentencias es utilizado para agrupar sentencias. El bloque está delimitado por llaves</td>
+                    </tr>
+                    <tr>
+                        <td>break</td>
+                        <td>Finaliza una sentencia loop, switch, o label y transfiere el control a la siguiente sentencia</td>
+                    </tr>
+                    <tr>
+                        <td>continue</td>
+                        <td>Finaliza la ejecución de la sentencias en el interior del actual bucle y continúa la ejecución del bucle con la siguiente iteración</td>
+                    </tr>
+                    <tr>
+                        <td>empty</td>
+                        <td>Una sentencia vacía se utiliza para proveer una "no sentencia", aunque la sintaxis de JavaScript esperaba una</td>
+                    </tr>
+                    <tr>
+                        <td>if...else</td>
+                        <td>Si la condición indicada es true, ejecutará la sentencia, en cambio, si la condición es false, es posible ejecutar otra sentencia diferente.</td>
+                    </tr>
+                    <tr>
+                        <td>switch</td>
+                        <td>Evalúa una expresión, igualando el valor obtenido en la expresión a una cláusula case y ejecutando las sentencias pertinentes</td>
+                    </tr>
+                    <tr>
+                        <td>throw</td>
+                        <td>Lanza una excepción predefinida por el usuario</td>
+                    </tr>
+                    <tr>
+                        <td>try...catch</td>
+                        <td>Prueba un bloque se sentencias (try) y especifica una respuesta en caso de lanzarse una excepción</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Declaraciones</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>var</td>
+                        <td>Declara una variable</td>
+                    </tr>
+                    <tr>
+                        <td>let</td>
+                        <td>Declara una variable local de ámbito de bloque</td>
+                    </tr>
+                    <tr>
+                        <td>const</td>
+                        <td>Declara una constante solamente de lectura</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Funciones</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>function</td>
+                        <td>Declara una función con unos parámetros especificados</td>
+                    </tr>
+                    <tr>
+                        <td>function*</td>
+                        <td>Los generadores de funciones permiten escribir iteradores de una manera más fácil</td>
+                    </tr>
+                    <tr>
+                        <td>return</td>
+                        <td>Especifica el valor que será devuelto por una función</td>
+                    </tr>
+                    <tr>
+                        <td>class</td>
+                        <td>Declara una clase</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Iteraciones</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>do...while</td>
+                        <td>Crea un bucle que ejecutará una instrucción especifica hasta que la condición se evalúe como falsa. La condición es evaluada después de ejecutar la instrucción, por lo que, como mínimo, la instrucción especificada se ejecuta una vez</td>
+                    </tr>
+                    <tr>
+                        <td>for</td>
+                        <td>Crea un bucle con tres expresiones opcionales, situadas entre paréntesis y separadas por punto y coma. Mientras se cumpla la condición, se ejecutarán las condiciones</td>
+                    </tr>
+                    <tr>
+                        <td>for...in</td>
+                        <td>Itera sobre las propiedades numerables de un objeto, en orden arbitrario. Para cada propiedad distinta, las instrucciones pueden ser ejecutadas</td>
+                    </tr>
+                    <tr>
+                        <td>while</td>
+                        <td>Crea un bucle que ejecutará la instrucción especificada siempre y cuando la condición de prueba se evalúe como verdadera. La condición es evaluada antes de ejecutar la instrucción</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Otros</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>debugger</td>
+                        <td>Invoca una funcionalidad de depuración disponible. Si no hay ninguna disponible, esta instrucción no tendrá efecto</td>
+                    </tr>
+                    <tr>
+                        <td>export</td>
+                        <td>Se utiliza para permitir a un script implementar propiedades, funciones y objetos a otros scripts</td>
+                    </tr>
+                    <tr>
+                        <td>import</td>
+                        <td>Usada para permitir a un script obtener propiedades, funciones y objetos desde otro script</td>
+                    </tr>
+                    <tr>
+                        <td>label</td>
+                        <td>Proporciona una instrucción con un identificador que se puede referir usando una instrucción break o continue</td>
+                    </tr>
+                    <tr>
+                        <td>with</td>
+                        <td>Extiende la cadena de alcance para una instrucción</td>
+                    </tr>
+                </tbody>
+            </table>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSiete">Estructuras de control</h3>
-          
+            <h3 class="subTitulo" id="subSiete">2.7.- Estructuras de control</h3>
+            <p>Instrucciones que hemos implementado se ejecutan de forma secuencial, si leemos el programa de arriba abajo y de izquierda a derecha, podemos saber qué está haciendo el programa. Hay tres tipos de sentencias condicionales:</p>
+            <ul>
+                <li>if</li>
+                <li>switch</li>
+                <li>while y for</li>
+            </ul>
+            <h4 class="apartado">Sentencia if</h4>
+            <h5>Condicional Simple</h5>
+            <p>Tras evaluar una expresión lógica, ejecuta una serie de instrucciones siempre y cuando la expresión lógica sea verdadera. Si la expresión no es verdadera, no ejecutará dichas instrucciones.</p>
+            <pre>
+                <code>
+                    if (expresión lógica) {
+                        Instrucciones
+                        ...
+                    }
+                </code>
+            </pre>
+            <p>Las llaves de apertura y cierre de la sentencia {y} se utilizan cuando tenermos más de una instrucción. En otro caso, es posible crear la sentencia sin llaves.</p>
+            <pre>
+                <code>
+                    if (expresión lógica) instrucción;
+                </code>
+            </pre>
+            <p>Ejemplo</p>
+            <pre>
+                <code>
+                    if (nota >= 5) {
+                        console.log(“Aprobado”)
+                        alumnos_aprobados++;
+                    }
+                </code>
+            </pre>
+            <h5>Condicional compuesta</h5>
+            <p>Se añade un apartado <b>else</b> que contiene instrucciones que se ejecutarán si la instrucción no es verdadera.</p>
+            <pre>
+                <code>
+                    if (nota >= 5) {
+                        console.log(“Aprobado”)
+                        alumnos_aprobados++;
+                    }
+                    else {
+                        console.log(“Suspenso”)
+                        alumnos_suspendidos++;
+                    }
+                </code>
+            </pre>
+            <h5>Anidación</h5>
+            <p>Dentro de las sentencias if es posible colocar otra sentencia if. Esto es conocido como anidación, puede ir en el interior del if o del else.</p>
+            <p>Esta sintaxis es conocida como <b>if-else-if</b></p>
+            <pre>
+                <code>
+                    if (x==1) {
+                        Instrucciones
+                    }
+                    else if (x==2) {
+                        Instrucciones
+                    }
+                    else if (x==3) {
+                        Instrucciones
+                    }
+                    else {
+                        Instrucciones
+                    }
+                </code>
+            </pre>
+            <h4 class="apartado">2.7.2.- Sentencia Switch</h4>
+            <p>En ocasiones, es necesario comparar el valor de una variable. Tiene una expresión que evaluar y diferentes posibles valores de dicha expresión, conocidos como casos, en los que se incluyen una serie de instrucciones que se ejecutarán cuando coincida el valor de la expresión y el valor del caso.</p>
+            <pre>
+                <code>
+                    switch (expresión) {
+                    case valor1:
+                        Instrucciones
+                        break;
+                    case valor2:
+                        Instrucciones
+                        break;
+                    case valor3:
+                        Instrucciones
+                        break;
+                    default:
+                        Instrucciones
+                    }
+                </code>
+            </pre>
+            <p>Cada uno de los diferentes casos debe finalizar con la palabra reservada break. Esta palabra detiene la ejecución de la sentencia switch en el momento que uno de los casos es verdadero. No se pierde el tiempo evaluando el resto de los casos.</p>
+            <p>En el interior de la sentencia default se ejecutarán cuando ninguno de los casos haya coincidido con el valor de la expresión.</p>
+            <h4 class="apartado">2.7.3.- Bucle For</h4>
+            <p>Este tipo de bucle se repartirá un bloque de instrucciones un número limitado de veces. Permite al navegador ejecutar las instrucciones que se encuentran en el interior de la sentencia hasta que la expresión condicional devuelva el valor de false.</p>
+            <pre>
+                <code>
+                    for (expresión inicial; condición; incremento)
+                    {
+                    //Instrucciones a ejecutar dentro del bucle.
+                    }
+                </code>
+            </pre>
+            <h4 class="apartado">2.7.4.- Bucle While</h4>
+            <p>En este tipo de bucles no podemos gestionar la cantidad de veces que se pueden ejecutar, pero disponemos de una serie de bloques de ejecución para repetirse un número definido de veces, siempre que se cumpla una condición.</p>
+            <pre>
+                <code>
+                    while (condición)
+                    {
+                    //Instrucciones a ejecutar dentro del bucle.
+                    }
+                </code>
+            </pre>
+            <p>Tipo de bucle <b>do...while</b> y es una variación del bucle <b>while()</b>, se utiliza cuando no sabemos el número de veces que se habrá de ejecutar el bucle. La diferencia es que sabemos con seguridad que este se ejecutará al menos una vez.</p>
+            <pre>
+                <code>
+                    do {
+                        //Instrucciones a ejecutar dentro del bucle.
+                    }while (condición);
+                </code>
+            </pre>
+            <p>Ejemplo</p>
+            <pre>
+                <code>
+                    //Ejemplo de un bucle FOR
+                    for (var i = 1; i <= 40; i++)
+                    {
+                    //Instrucciones que se ejecutarán 40 veces.
+                    console.log(i);
+                    }
+                    //Ejemplo de un bucle WHILE
+                    var i = 0;
+                    while (i <= 10)
+                    {
+                    //Instrucciones a ejecutar dentro del bucle
+                    hasta que i sea mayor que 10 y no se cumpla la
+                    condición.
+                    console.log(i);
+                    i++;
+                    }
+                    //Ejemplo de un bucle DO-WHILE
+                    var a = 1;
+                    do{
+                    //Mostrará por consola 2 veces.
+                    console.log(“El valor de a es: “ + a);
+                    a++;
+                    }while (a < 3);
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
@@ -74,7 +704,18 @@
             </div>
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subOcho">Comentarios al código</h3>
-          
+            <p><b>Los comentarios son sentencias que el compilador del lenguaje no tiene en cuenta</b>. Permiten a los programadores dejar <b>anotaciones sobre las diferentes decisiones que se han ido tomando a la hora de desarrollar el código</b>. Ocupan espacio dentro de tu código y forman parte permanente en el código para que siempre se puedan consultar.</p>
+            <p><b>JavaScript tiene disponible dos tipos de comentarios</b>. En el caso de que ocupen <b>una sola línea</b>, empezamos el comentario <b>//</b>, <b>para tener un comentario multilínea</b>, que va a ocupar varias líneas, debe ir entre los caracteres <b>/*</b> y <b>*/</b>.</p>
+            <pre>
+                <code>
+                    //Comentario de una sola línea
+                    /*
+                    Comentarios de varias líneas
+                    1.
+                    2.
+                    */
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
@@ -82,7 +723,34 @@
             </div>
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subNueve">Herramientas para programar, probar y depurar el código</h3>
-          
+            <p><b>La herramienta para poder implementar el lenguaje JavaScript puede ser un editor cualquiera</b>.</p>
+            <p>Características que nos ofrecen estos editores:</p>
+            <ul>
+                <li><b>Colorear el código:</b> Al distinguir las palabras clave y los valores de una variable en diferentes colores, facilita la escritura/lectura del código. Es posible modificar estos temas y predefinir nuestras preferencias.</li>
+                <li><b>Facilitar la selección del texto:</b>Existen combinaciones de teclado que nos facilitan la selección del texto y por otro lado distinguen las partes del código o texto normal.</li>
+                <li><b>Navegación avanzada:</b> En documentos con cientos de líneas de código, nos permiten agrupar o expandir bloques de código, miniaturas para acceder más rápido a la zona que nos interesa, ir directamente a una línea de código específica.</li>
+                <li><b>Búsqueda y reemplazo:</b> Operaciones fundamentales, buscar y modificar un texto entre diferentes archivos. Podemos modificar el nombre de una variable en todos los archivos en lo que aparezca de una manera rápida y cómoda.</li>
+                <li><b>Autocorrección a la hora de escribir:</b> Se han incorporado correctores que indiquen la palabra incorrecta.</li>
+                <li><b>Uso de abreviaturas:</b> Son trozos de código que se utilizan y se asocian a una abreviatura. Si escribimos <b>"cl"</b>, al pulsar el tabulador nos lo cambia por <b>"console.log"</b>.</li>
+                <li><b>Añadir extensiones o plugins:</b> Permiten añadir funcionalidades que normalmente no están incluidas en un editor.</li>
+            </ul>
+            <h4 class="apartado">2.9.1.- Tipo de editores</h4>
+            <ul>
+                <li><b>Editores de texto multipropósito:</b> Estos editores están especializados en facilitar la escritura en código en cualquier lenguaje. Son capaces de adaptarse al código que se está introduciendo.
+                <p>Son editores rápidos y ligeros. Ofrecen la posibilidad de incorporar plugins y extensiones para incorporar nuevas herramientas.</p>
+                <p><b>Sublime Text, Notepad++, Geany y TexMate.</b></p></li>
+                <li><b>Editores específicos para el desarrollo web:</b> La diferencia es que ya vienen preparados con herramientas y elementos para facilitarnos el desarrollo del código de las aplicaciones web (HTML, CSS, JavaScript).
+                <p><b>Visual Studio Code, Atom, CodeKit y Brackets.</b></p></li>
+                <li><b>Entornos de desarrollo integrados(IDE):</b> Son softwares más completos e incorporan todas las herramientas que se necesitan. Son entornos de trabajo más pesados que los anteriores, tardan en ejecutarse y normalmente son de pago.
+                <p><b>WebStorm, NetBeans, Komodo y VisualStudio.</b></p></li>
+                <li><b>Editores WYSIWYG:</b> Es el acrónimo de "lo que ves es lo que obtienes". No son ideales.
+                <p><b>Adobe Dreamweaver, SeaMonkey, Coffee Cup y Mobirise.</b></p></li>
+                <li><b>Editores online:</b> Son editores que permiten escribir y visualizar el contenido al instante. Su ventaja es que no requieren una instalación en nuestra máquina para comprobar su funcionamiento.
+                <p><b>CodePen, Webmakerapp o CSS Deck.</b></p></li>
+            </ul>
+            <h4 class="apartado">2.9.2.- Gestores de lenguajes HTML</h4>
+            <p class="nota">Para crear cualquier página web, solo necesitaremos un editor de texto y un navegador web.</p>
+            <p>Existen distintos navegadores, Internet Explorer, Mozilla FireFox y Google Chrome.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
