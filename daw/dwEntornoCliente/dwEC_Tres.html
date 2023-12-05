@@ -20,21 +20,797 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 3. - Identificación y aplicación de los objetos predefinidos del lenguaje</h2>
-            
+            <p>Mediante el <b>modelo de objetos del documento(DOM)</b> es posible visualizar el documento de una forma diferente, ya que define el contenido de un determinado documento como un conjunto de objetos sobre los que JavaScript puede interactuar.</p>
+            <p class="nota">El <b>modelo de objetos del documento(DOM)</b> como una interfaz de programación de aplicaciones (API) para aquellos documentos HTML válidos y para los XML que estén bien construidos. Además, el DOM puede definir la estrucutra lógica de estos documentos junto con la forma para poder acceder a ellos y manipularlos.</p>
+            <p>Un <b>objeto</b> es una <b>colección de propiedades</b> que, para definir un estado, van a utilizar una serie de <b>funciones o métodos</b> que harán funcionar a esas propiedades.</p>
+            <p>Para la creación de un objeto se utiliza la palabra clave <b>new</b>.</p>
+            <pre>
+                <code>
+                    var nombreobjeto = new Object();
+                </code>
+            </pre>
+            <p>Para poder acceder a las propiedades de un objeto, utilizaremos el punto(.) y el nombre de la propiedad a la cual queremos acceder:</p>
+            <pre>
+                <code>
+                    nombreobjeto.propiedad
+                </code>
+            </pre>
+            <p>En cambio, para acceder a un método concreto de un objeto:</p>
+            <pre>
+                <code>
+                    nombreobjeto.metodo([parámetros ocionales])
+                </code>
+            </pre>
+            <p>Cuando necesitaremos referenciar alguna propiedad por su índice, siempre comienza por <b>0</b>.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Utilización de objetos. Objetos nativos del lenguaje</h3>
-        
+            <h3 class="subTitulo">3.1.- Utilización de objetos. Objetos nativos del lenguaje</h3>
+            <p>Los objetos nativos del lenguaje JavaScript, aquellos de que disponemos para poder utilizarlos en diferentes aplicaciones. <b>String, Math, Number y Date.</b></p>
+            <h4 class="apartado">3.1.1.- El objeto String</h4>
+            <p>Permite la manipulación de cadenas de texto. Dispone de una propiedad que muestra el tamaño de la cadena. Posee diferentes métodos que nos permiten aplicar a toda variable a la que queramos asignar como valor una cadena de texto.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Length</td>
+                        <td>Muestra la longitud de una cadena de texto</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>charAt()</td>
+                        <td>Devuelve el carácter que se especifique en la posición pasada por parámetro.</td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>Concatena varias cadenas</td>
+                    </tr>
+                    <tr>
+                        <td>fontcolor()</td>
+                        <td>Modifica el color de la fuente de la cadena</td>
+                    </tr>
+                    <tr>
+                        <td>fontsize()</td>
+                        <td>Modifica el tamaño de la fuente de la cadena</td>
+                    </tr>
+                    <tr>
+                        <td>indexOf()</td>
+                        <td>Devuelve la primera ocurrencia del carácter que busque en la cadena</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.1.2.- El objeto Math</h4>
+            <p>Permite una serie de <b>operaciones matemáticas</b>. No actúa como constructor, cada vez que deseemo llamar a alguna de sus propiedades o métodos, debemos hacerlo anteponiendo Math a dicha propiedad u objeto.</p>
+            <pre>
+                <code>
+                    var num1 = Math.PI; //Devuelve el valor del número
+                    Pi
+                    var num2 = Math.sqrt(16); //Devuelve la raíz cuadrada
+                    del número 16
+                </code>
+            </pre>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>abs(x)</td>
+                        <td>Devuelve el valor absoluto de x</td>
+                    </tr>
+                    <tr>
+                        <td>ceil(x)</td>
+                        <td>Devuelve el valor x, redondeando al alza hasta el siguiente entero</td>
+                    </tr>
+                    <tr>
+                        <td>floor(x)</td>
+                        <td>Devuelve el número x, redondeando a la baja hasta el anterior entero.</td>
+                    </tr>
+                    <tr>
+                        <td>pow(x,y)</td>
+                        <td>Devuelve el resultado del número x elevado al valor indicado por y</td>
+                    </tr>
+                    <tr>
+                        <td>random()</td>
+                        <td>Devuelve un valor numérico al azar entre 0 y 1</td>
+                    </tr>
+                    <tr>
+                        <td>sqrt(x)</td>
+                        <td>Devuelve la raíz cuadrada de x</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.1.3.- El objeto Number</h4>
+            <p>Poco utilizado, Number dispone de una información utilizada por programadores más específicos.</p>
+            <p><b>Las propiedades del objeto Number se refieren al rango de valores de números que soporta el propio lenguaje</b>, siendo el más alto el 1.79E + 308 y el más bajo, 2.22E - 308.</p>
+            <p>Los números más altos que el número mayor se considera como infinito positivo, y los más pequeños que el menor, como infinito negativo.</p>
+            <p>Todos los números junto con sus correspondientes valores se definen como <b>valores de doble precisión de 64 bits</b>.</p>
+            <p>Entre las principales <b>propiedades:</b></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MAX_VALUE</td>
+                        <td>Devuelve el mayor número disponible en JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>MIN_VALUE</td>
+                        <td>Devuelve el menor número disponible en JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>NEGATIVE_INFINITY</td>
+                        <td>Representa el infinito negativo</td>
+                    </tr>
+                    <tr>
+                        <td>POSITIVE_INFINITY</td>
+                        <td>Representa el infinito positivo</td>
+                    </tr>
+                    <tr>
+                        <td>NaN</td>
+                        <td>Representa el valor especial Not a Number</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Método</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>toExponential()</td>
+                        <td>Convierte el número en una notación exponencial</td>
+                    </tr>
+                    <tr>
+                        <td>toFixed()</td>
+                        <td>Formatea el número con la cantidad de dígitos decimales que pasemos como parámetro</td>
+                    </tr>
+                    <tr>
+                        <td>toPrecision()</td>
+                        <td>Formatea el número con la longitud que pasemos como parámetro</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.1.4.- El objeto Date</h4>
+            <p>Permite realizar operaciones con el tiempo en las aplicaciones web. Se utiliza para trabajar con fechas y horas.</p>
+            <p>Se van a crear mediante <b>new Date()</b> y lo podemos hacer de cuatro formas diferentes:</p>
+            <pre>
+                <code>
+                    1. var d = new Date();
+                    2. var d = new Date(milisegundos);
+                    3. var d = new Date(cadena de Fecha);
+                    4. var d = new Date(año, mes, día, horas, minutos,
+                    segundos, milisegundos);
+                </code>
+            </pre>
+            <p>No presenta ninguna propiedad, tiene una serie de métodos que podemos dividirlos en tres subconjuntos:</p>
+            <ul>
+                <li><b>Métodos de lectura:</b> aquellos que empiezan con el prefijo get. La principal función de estos métodos es consultar las diferentes partes de una instancia del objeto Date.</li>
+                <li><b>Métodos de escritura:</b> empiezan con el prefijo set. La utilidad de estos métodos es inicializar las diferentes partes de una instancia del objeto Date.</li>
+                <li><b>Métodos de conversión:</b> convierten objetos de tipo Date en cadenas de texto o en milisegundos según los diferentes criterios que veremos a continuación.</li>
+            </ul>
+            <table>
+                <caption>Métodos del objeto Date</caption>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>getDate()</td>
+                        <td>Devuelve el número correspondiente al día del mes entre 1 y 31</td>
+                    </tr>
+                    <tr>
+                        <td>getDay()</td>
+                        <td>Devuelve el número correspondiente al día de la semana entre 0 (domingo) y 6 (sábado)</td>
+                    </tr>
+                    <tr>
+                        <td>getFullYear()</td>
+                        <td>Devuelve un número de 4 cifras correspondiente al año</td>
+                    </tr>
+                    <tr>
+                        <td>getHours()</td>
+                        <td>Devuelve la hora entre 0 y 23</td>
+                    </tr>
+                    <tr>
+                        <td>getMiliseconds()</td>
+                        <td>Devuelve los milisegundos entre 0 y 9999</td>
+                    </tr>
+                    <tr>
+                        <td>getMinutes()</td>
+                        <td>Devuelve los minutos entre 0 y 59</td>
+                    </tr>
+                    <tr>
+                        <td>getMonth()</td>
+                        <td>Devuelve el mes entre 0 (enero) y 11 (diciembre)</td>
+                    </tr>
+                    <tr>
+                        <td>getSeconds()</td>
+                        <td>Devuelve los segundos entre 0 y 59</td>
+                    </tr>
+                    <tr>
+                        <td>getTime()</td>
+                        <td>Devuelve el número de milisegundos transcurridos desde el 1 de enero de 1970</td>
+                    </tr>
+                    <tr>
+                        <td>parse()</td>
+                        <td>Analiza la fecha y devuelve el número de milisegundos pasados desde el 1 de enero de 1970 hasta la fecha analizada</td>
+                    </tr>
+                    <tr>
+                        <td>setDate()</td>
+                        <td>Establece el valor del día del mes</td>
+                    </tr>
+                    <tr>
+                        <td>setFullYear()</td>
+                        <td>Establece el valor del año</td>
+                    </tr>
+                    <tr>
+                        <td>setHours()</td>
+                        <td>Establece el valor de la hora</td>
+                    </tr>
+                    <tr>
+                        <td>setMiliseconds()</td>
+                        <td>Establece el valor de los milisegundos</td>
+                    </tr>
+                    <tr>
+                        <td>setMinutes()</td>
+                        <td>Establece el valor de los minutos</td>
+                    </tr>
+                    <tr>
+                        <td>setMonth()</td>
+                        <td>Establece el valor del mes</td>
+                    </tr>
+                    <tr>
+                        <td>setSeconds()</td>
+                        <td>Establece el valor de los segundos</td>
+                    </tr>
+                    <tr>
+                        <td>setTime()</td>
+                        <td>Establece una fecha, agregando o sustrayendo un número específico de milisegundo hasta o desde la medianoche del 1 de enero de 1970</td>
+                    </tr>
+                    <tr>
+                        <td>toDateString()</td>
+                        <td>Convierte la fecha del objeto Date en una cadena de caracteres</td>
+                    </tr>
+                    <tr>
+                        <td>toTimeString()</td>
+                        <td>Convierte la parte de tiempo de un objeto Date en una cadena</td>
+                    </tr>
+                </tbody>
+            </table>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Objetos predefinidos asociados al navegador</h3>
-          
+            <h3 class="subTitulo" id="subDos">3.2.- Objetos predefinidos asociados al navegador</h3>
+            <h4 class="apartado">3.2.1.- Navigator</h4>
+            <p>Contiene información relativa al navegador que se está utilizando. Compuesto por las propiedades y métodos. <b>Las propiedades corresponden a las características de dicho objeto, mientras que los métodos son acciones que el objeto puede realizar</b> y que, están implementadas y listas para su uso.</p>
+            <table>
+                <caption>Propiedades del objeto Navigator</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>appCodeName</td>
+                        <td>Cadena con el nombre del código del navegador</td>
+                    </tr>
+                    <tr>
+                        <td>appName</td>
+                        <td>Cadena cuyo valor es el nombre del cliente</td>
+                    </tr>
+                    <tr>
+                        <td>appVersion</td>
+                        <td>Cadena que contiene la versión del cliente</td>
+                    </tr>
+                    <tr>
+                        <td>cookieEnabled</td>
+                        <td>Determina si están habilitadas las cookies en el navegador</td>
+                    </tr>
+                    <tr>
+                        <td>userAgent</td>
+                        <td>Contiene la cabecera completa de la petición HTTP enviada</td>
+                    </tr>
+                    <tr>
+                        <td>platform</td>
+                        <td>Devuelve la plataforma sobre la cual se está ejecutando el navegador</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Métodos del objeto Navigator</caption>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>javaEnable()</td>
+                        <td>Devuelve un booleano indicativo si el navegador permite la utilización de Java</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.2.2.- Document</h4>
+            <p>Dentro de una ventana del navegador cargamos los documentos. Cada documento será un objeto de tipo <b>Document</b>. Podemos acceder mediante el atributo <b>Document</b> del objeto <b>Windows</b>.</p>
+            <table>
+                <caption>Ojetos que derivan de Document</caption>
+                <thead>
+                    <tr>
+                        <th>Colección</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>anchors[]</td>
+                        <td>Array que contiene todos los hiperenlaces del documento</td>
+                    </tr>
+                    <tr>
+                        <td>applets[]</td>
+                        <td>Array que contiene todos los applets del documento</td>
+                    </tr>
+                    <tr>
+                        <td>forms[]</td>
+                        <td>Array que contiene todos los formularios del documento</td>
+                    </tr>
+                    <tr>
+                        <td>images[]</td>
+                        <td>Array que contiene todas las imágenes del documento</td>
+                    </tr>
+                    <tr>
+                        <td>links[]</td>
+                        <td>Array que contiene todos los enlaces del documento</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Propiedades del objeto Document</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cookie</td>
+                        <td>Devuelve todos los nombres/valores de la cookies en el documento</td>
+                    </tr>
+                    <tr>
+                        <td>domain</td>
+                        <td>Cadena que contiene el nombre de dominio del servidor que cargó el documento</td>
+                    </tr>
+                    <tr>
+                        <td>lastModified</td>
+                        <td>Devuelve la fecha y la hora de la última modificación del documento</td>
+                    </tr>
+                    <tr>
+                        <td>readyState</td>
+                        <td>Devuelve el estado de carga del documento actual</td>
+                    </tr>
+                    <tr>
+                        <td>referrer</td>
+                        <td>Cadena que contiene la URL del documento desde el que llegamos al documento actual</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>Devuelve o ajusta el título del documento</td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>Devuelve la URL completa del documento</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Métodos del objeto Document</caption>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>close()</td>
+                        <td>Cierra el flujo abierto previamente con document.open()</td>
+                    </tr>
+                    <tr>
+                        <td>getElementById()</td>
+                        <td>Para acceder a un elemento identificado por el ID escrito entre paréntesis</td>
+                    </tr>
+                    <tr>
+                        <td>getElementByName()</td>
+                        <td>Para acceder a los elementos identificados por el atributo name escrito entre paréntesis</td>
+                    </tr>
+                    <tr>
+                        <td>getElementByTagName()</td>
+                        <td>Para acceder a los elementos identificados por el tag o la etiqueta escrita entre paréntesis</td>
+                    </tr>
+                    <tr>
+                        <td>open()</td>
+                        <td>Abre el flujo de escritura para poder utilizar document.write() o document.writeIn() en el documento</td>
+                    </tr>
+                    <tr>
+                        <td>write()</td>
+                        <td>Para poder escribir expresiones HTML o código de JavaScript dentro de un documento</td>
+                    </tr>
+                    <tr>
+                        <td>writeIn()</td>
+                        <td>Igual que Write, pero añade un salto de línea al final de cada instrucción</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.2.3.- Screen</h4>
+            <p>Screen corresponde a la pantalla que el usuario utiliza. Posee seis propiedades, pero no cuenta con ningún método. Sus propiedades únicamente son de lectura, por lo que podemos consultar los valores de las propiedades del objeto, pero no modificarlas.</p>
+            <table>
+                <caption>Propiedades del objeto Screen</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>availHeight</td>
+                        <td>Altura disponible de la pantalla para el uso de ventanas</td>
+                    </tr>
+                    <tr>
+                        <td>availWidth</td>
+                        <td>Anchura disponible de la pantalla para el uso de ventanas</td>
+                    </tr>
+                    <tr>
+                        <td>colorDepth</td>
+                        <td>Número de colores que puede representar la pantalla</td>
+                    </tr>
+                    <tr>
+                        <td>pixelDepth</td>
+                        <td>Resolución de la pantalla expresada en bits por píxel</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>Altura total de la pantalla</td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>Anchura total de la pantalla</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.2.4.- Window</h4>
+            <p>El objeto Window se considera el objeto más importante del lenguaje JavaScript. Se podrán administrar las ventajas del navegador y emplear unas propiedades y métodos que se presentarán en las siguientes tablas.</p>
+            <p>Es considerado un objeto implícito, porque para acceder a los objetos que están ubicados en el nivel bajo su nivel de jerarquía no es necesario nombrarlo.</p>
+            <table>
+                <caption>Propiedades del objeto Window</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>closed</td>
+                        <td>Valor booleano que indica si la ventana está cerrada o no</td>
+                    </tr>
+                    <tr>
+                        <td>document</td>
+                        <td>Documento actual de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>frames</td>
+                        <td>Conjunto de marcos de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>history</td>
+                        <td>Conjunto de elementos que representan las URL visitadas</td>
+                    </tr>
+                    <tr>
+                        <td>innerHeight</td>
+                        <td>Altura utilizable de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>innerWidth</td>
+                        <td>Anchura utilizable de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>length</td>
+                        <td>Número de frames de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>location</td>
+                        <td>URL de la barra de direcciones</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Nombre de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>opener</td>
+                        <td>Referencia al objeto Window que haya abierto una ventana nueva</td>
+                    </tr>
+                    <tr>
+                        <td>parent</td>
+                        <td>Referencia al objeto Window que contiene los marcos de una página de marcos</td>
+                    </tr>
+                    <tr>
+                        <td>self</td>
+                        <td>Ventana actual</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>Cadena con el mensaje que contiene la barra de estado</td>
+                    </tr>
+                    <tr>
+                        <td>top</td>
+                        <td>Ventana de nivel superior</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Métodos del objeto Window</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>alert()</td>
+                        <td>Genera un cuadro de diálogo con un mensaje y un botón Aceptar</td>
+                    </tr>
+                    <tr>
+                        <td>confirm()</td>
+                        <td>Genera un cuadro de dialogo con los botones Aceptar y Cancelar</td>
+                    </tr>
+                    <tr>
+                        <td>find()</td>
+                        <td>Realiza una búsqueda de texto en una página</td>
+                    </tr>
+                    <tr>
+                        <td>focus()</td>
+                        <td>Activa una ventana</td>
+                    </tr>
+                    <tr>
+                        <td>open()</td>
+                        <td>Abre una nueva ventana</td>
+                    </tr>
+                    <tr>
+                        <td>print()</td>
+                        <td>Imprime una página</td>
+                    </tr>
+                    <tr>
+                        <td>prompt()</td>
+                        <td>Genera un cuadro de diálogo con un cuadro de texto para que el usuario introduzca valores</td>
+                    </tr>
+                    <tr>
+                        <td>setTimeOut()</td>
+                        <td>Indica un registro de tiempo</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.2.5.- History</h4>
+            <p>History almacena las referencias de todos los sitios web visitados. Se guardan en una lista y sus propiedades y métodos se utilizan principalmente para que el usuario de una aplicación pueda desplazarse para delante y para atrás. Al ser una lista de referencias, no podemos acceder a los nombres de las direcciones URL visitadas.</p>
+            <table>
+                <caption>Propiedades del objeto History</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>current</td>
+                        <td>Cadena que contiene la URL de la entrada actual del historial</td>
+                    </tr>
+                    <tr>
+                        <td>length</td>
+                        <td>Número de páginas que han sido visitadas</td>
+                    </tr>
+                    <tr>
+                        <td>next</td>
+                        <td>Cadena que contiene la siguiente entrada del historial</td>
+                    </tr>
+                    <tr>
+                        <td>previous</td>
+                        <td>Cadena que contiene la anterior entrada de historial</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Métodos del objeto History</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>back()</td>
+                        <td>Carga la URL del documento anterior del historial</td>
+                    </tr>
+                    <tr>
+                        <td>foward()</td>
+                        <td>Carga la URL del documento siguiente del historial</td>
+                    </tr>
+                    <tr>
+                        <td>go()</td>
+                        <td>Carga la URL del documento especificado por el índice que pasamos como parámetro dentro del historial</td>
+                    </tr>
+                </tbody>
+            </table>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Clases</h3>
-          
+            <h3 class="subTitulo" id="subTres">3.3.- Clases</h3>
+            <p>El lenguaje JavaScript está basado en prototipos y cada uno de sus objetos tiene una propiedad interna oculta nombrada [[Prototype]] que puede tener propiedades y métodos de objetos.</p>
+            <p>Las clases surgen como una mejora sobre la herencia basada en estos prototipos. No introducen un nuevo modelo, sino que aportan una sintaxis mucho más simple y clara para crear objetos y lidiar con la herencia.</p>
+            <p>Las clases son <b>funciones especiales</b>. La sintaxis de la clase tiene dos componentes:</p>
+            <ul>
+                <li>Expresiones de clases</li>
+                <li>Declaraciones de clases</li>
+            </ul>
+            <p>Para la declaración, utilizaremos la palabra reservada <b>class</b> junto a un nombre.</p>
+            <pre>
+                <code>
+                    class Alumno {
+                        constructor(nombre, apellido, edad) {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad;
+                        }
+                    }
+                </code>
+            </pre>
+            <p>Una diferencia entre declarar funciones y clases es que las declaraciones de funciones son izadas y las declaraciones de clases no lo son, tenemos que declarar la clase antes de realizar una llamada para crear objetos de esta.</p>
+            <pre>
+                <code>
+                    var a = new Alumno (); // ReferenceError
+                    class Alumno {}
+                </code>
+            </pre>
+            <p>También podemos definir las clases con una expresión de clase. Pueden ser nombradas o anónimas. El nombre dado a la expresión de clase nombrada es local dentro del cuerpo de esta.</p>
+            <pre>
+                <code>
+                    // Anónima
+                    var Alumno = class {
+                        constructor(nombre, apellido, edad) {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad;
+                        }
+                    };
+                    // Nombrada
+                    var Alumno = class Alumno {
+                        constructor(nombre, apellido, edad) {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad;
+                        }
+                    };
+                </code>
+            </pre>
+            <p>El <b>cuerpo de una clase</b> es la parte ubicada entre las llaves {}, donde se definen los miembros de clase, los métodos o contructores y todas las funcionalidades que queremos que realice la clase.</p>
+            <p>El método <b>constructor</b> es un método especial utilizado para crear e inicializar un objeto creado con una clase. Solamente puede haber un método especial con el nombre constructor en una clase. Si una clase contiene más de un método constructor, se lanzará un error SyntaxError.</p>
+            <p>Un constructor, para llamar al constructor de su superclase, utilizará la palabra super.</p>
+            <pre>
+                <code>
+                    class Alumno {
+                        constructor(nombre, apellido, edad) {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad;
+                        }
+
+                        get Nombre() {
+                            return this.NombreCompleto();
+                        }
+
+                        NombreCompleto() {
+                            return this.nombre + ‘ ‘ + this.apellido;
+                        }
+                    }
+                    
+                    function MostrarAlumno(){
+                        const alumno = new Alumno(‘Ilerna’, ‘Online’,
+                        23);
+                        alert(‘El nombre completo del alumno es: ‘
+                        + alumno.Nombre);
+                    }
+                </code>
+            </pre>
+            <p>Es posible llamar a los <b>métodos estáticos</b> sin instanciar la clase. Para definir un método como estático, utilizaremos la palabra clave static. Los métodos estáticos se utilizan a menudo para crear funciones de utilidad en una aplicación.</p>
+            <pre>
+                <code>
+                    class Calculo {
+                        static multiplicacion(a, b) {
+                            return a * b;
+                        }
+                    }
+                    function MostrarMult(){
+                        alert(Calculo.multiplicacion(5,10));
+                    }
+                </code>
+            </pre>
+            <p>Para crear clases hijas de una clase genérica que tengamos (clase padre), utilizaremos la palabra clave extends.</p>
+            <pre>
+                <code>
+                    class Persona {
+                        constructor(nombre) {
+                            this.nombre = nombre;
+                        }
+
+                        Situacion() {
+                            return this.nombre + ‘ tiene relación
+                            con Ilerna Online.’;
+                        }
+                    }
+
+                    class Profesor extends Persona {
+                        Situacion() {
+                            return this.nombre + ‘ imparte clases
+                            en Ilerna Online.’;
+                        }
+                    }
+
+                    class Alumno extends Persona {
+                        Situacion() {
+                            return this.nombre + ‘ recibe clases
+                            en Ilerna Online.’;
+                        }
+                    }
+
+                    function mostrarPersona(){
+                        var nombre = document.getElementById(‘nombrePersona’).value;
+                        if(document.getElementById(‘profesor’).checked){
+                            const profesor = new Profesor(nombre);
+                            alert(profesor.Situacion());
+                    }   else if(document.getElementById(‘alumno’).checked){
+                            const alumno = new Alumno(nombre);
+                            alert(alumno.Situacion());
+                    }   else{
+                            const persona = new Persona(nombre);
+                            alert(persona.Situacion());
+                        }
+                    }
+                </code>
+            </pre>
+            <p>Las clases tradicionales basadas en funciones también podemos extenderlas a otras subclases.</p> <!-- PAGINA 53 -->
+
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
