@@ -809,56 +809,379 @@
                     }
                 </code>
             </pre>
-            <p>Las clases tradicionales basadas en funciones también podemos extenderlas a otras subclases.</p> <!-- PAGINA 53 -->
-
+            <p>Las clases tradicionales basadas en funciones también podemos extenderlas a otras subclases.</p>
+            <pre>
+                <code>
+                    function Persona (nombre){
+                        this.nombre = nombre;
+                    }
+                    Persona.prototype.Situacion = function(){
+                        return this.nombre + ‘ tiene relación con Ilerna Online.’;
+                    }
+                    class Profesor extends Persona {
+                        Situacion() {
+                            super.Situacion();
+                        return this.nombre + ‘ imparte clases en
+                        Ilerna Online.’;
+                        }
+                        }
+                        class Alumno extends Persona {
+                        Situacion() {
+                        super.Situacion();
+                        return this.nombre + ‘ recibe clases en
+                        Ilerna Online.’;
+                        }
+                        }
+                        function mostrarPersona(){
+                        var nombre = document.getElementById(‘nombrePersona’).
+                        value;
+                        if(document.getElementById(‘profesor’).
+                        checked){
+                        const profesor = new Profesor(nombre);
+                        alert(profesor.Situacion());
+                        }else if(document.getElementById(‘alumno’).
+                        checked){
+                        const alumno = new Alumno(nombre);
+                        alert(alumno.Situacion());
+                        }else{
+                        const persona = new Persona(nombre);
+                        alert(persona.Situacion());
+                        }
+                        }
+                </code>
+            </pre>
+            <p>La palabra clave <b>super</b> es usada para llamar funciones del objeto padre.</p>
+            <pre>
+                <code>
+                    class Alumno extends Persona {
+                        Situacion() {
+                            super.Situacion();
+                            return this.nombre + ‘ recibe clases en Ilerna Online.’;
+                        }
+                    }
+                </code>
+            </pre>
+            <p>Las clases no pueden extender objetos regulares (literales). Si se quiere heredar de un objeto regular, se debe usar <b>Object.setPrototypeOf()</b></p>
+            <pre>
+                <code>
+                    var Persona = {
+                        Situacion() {
+                        return this.nombre + ‘ tiene relación con
+                        Ilerna Online.’;
+                        //alert(this.nombre + ‘hace ruido.’);
+                        }
+                        };
+                        class Alumno {
+                        constructor(nombre) {
+                        this.nombre = nombre;
+                        }
+                        Situacion() {
+                        return this.nombre + ‘ recibe clases en
+                        Ilerna Online.’;
+                        }
+                        }
+                        function mostrarPersona(){
+                        Object.setPrototypeOf(Alumno.prototype, Persona);
+                        var a = new Alumno(‘Alejandro’);
+                        alert(a.Situacion());
+                        }
+                </code>
+            </pre>
+            <p>El objeto Array es un objeto global que es usado en la construcción de <b>arrays</b>, estos son objetos tipo lista de alto nivel.</p>
+            <p>Si queremos devolver objetos Array derivados de la clase array MyArray, lo haremos con el patrón species, el cual nos permite sobrescribir constructores por defecto.</p>
+            <p>Cuando se usan métodos de tipo map() los cuales devuelven el constructor por defecto, devolverán el objeto padre Array en vez de MyArray.</p>
+            <pre>
+                <code>
+                    class MyArray extends Array {
+                        //Sobrescribe species sobre el constructor padre
+                        Array
+                        static get [Symbol.species]() { return Array; }
+                        }
+                        function mostrarArray(){
+                        var array = new MyArray(1,2,3);
+                        var mapa = array.map(x => x * x);
+                        alert(mapa instanceof MyArray);
+                        alert(mapa instanceof Array);
+                        }
+                </code>
+            </pre>
+            <p>El primer alert nos devolverá false, ya que la variable mapa devolverá array, como comprobamos en el segundo alert, el cual nos devuelve true.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Creación de nuevas ventanas</h3>
-          
+            <h3 class="subTitulo" id="subCuatro">3.4.- Creación de nuevas ventanas</h3>
+            <p>El elemento u objeto ventana <b>(window)</b> está muy presente. <b>Su filosofía es trabajar con colecciones/contenedores de datos referidos a un mismo concepto</b>.</p>
+            <p><b>Es el contenedor principal del contenido que es visualizado en el navegador</b>. A la hora de cargar una ventana, ya queda definido el objeto window en la memoria. El área de influencia de este objeto abarca toda la ventana y la barra de herramientas, inlcuidas la barra de desplazamiento y la barra de estado.</p>
+            <p>Los principales objetos que nos permitirán manipular y gestionar las diferentes carácterísticas del navegador: location, navigator, screen, history, document y window. <b>Estos objetos tienen diferentes propiedades y métodos, los cuales nos permitirán acceder y modificar distintas partes de nuestra página HTML</b>.</p>
+            <h4 class="apartado">3.4.1. Acceso a propiedades y métodos</h4>
+            <p>Para poder acceder a las propiedades y métodos del objeto debemos introducir el carácter "." seguido del nombre de propiedad o método. Debe continuar con paréntesis e incluir en su interior todos los parámetros.</p>
+            <p>Mediante la cláusula <b>self</b>, hacemos referencia al objeto window. Como este objeto siempre está activo, podemos omitir la referencia a él.</p>
+            <p><b>Desde JavaScript no es posible crear la ventana principal de un programa. Una vez ejecutado el script, se podrá crear o abrir nuevas subventanas.</b> Debemos utilizar el método open que está dentro del contenedor window. Contiene hasta <b>tres parámetros</b> que definen las características de esta nueva ventana: la <b>URL</b> del documento que se abrirá, el <b>nombre</b> de la ventana y la <b>apariencia física</b> (color, tamaño, etcétera).</p>
+            <pre>
+                <code>
+                    // Abrir una ventana con un tamaño determinado y
+                    se añadirá el contenido del documento new.html
+                    var subVent = window.open(“new.html”,”new”,”height
+                    =800,width=600”);
+                </code>
+            </pre>
+            <p>La cláusula windows.open la hemos asignado a la variable subVent. Podremos referenciar a la nueva ventana desde el script original de la ventana principal a lo largo de nuestro código. Para cerrar utilizaremos el método close().</p>
+            <pre>
+                <code>
+                    subVent.close();
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Gestión de la apariencia de ventanas</h3>
-          
+            <h3 class="subTitulo" id="subCinco">3.5.- Gestión de la apariencia de ventanas</h3>
+            <p>Las ventanas cuentan con unas propiedades que pueden ser modificadas.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>directories</td>
+                        <td>Botones del directorio estándar del navegador</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>Altura de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>menubar</td>
+                        <td>Barra de menú</td>
+                    </tr>
+                    <tr>
+                        <td>resizable</td>
+                        <td>Opción de modificar el tamaño de la ventana</td>
+                    </tr>
+                    <tr>
+                        <td>scrollbars</td>
+                        <td>Barras de desplazamiento laterales</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>Barra de estado</td>
+                    </tr>
+                    <tr>
+                        <td>toolbar</td>
+                        <td>Barra de herramientas</td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>Ancho de la ventana</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Los valores height y width se indican en píxeles. Para el resto de los elementos, utilizaremos el 0 o el 1 para tomar estas decisiones.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSeis">Comunicación entre ventanas</h3>
-          
+            <h3 class="subTitulo" id="subSeis">3.6.- Comunicación entre ventanas</h3>
+            <p>Una ventana principal puede abrir y cerrar ventanas secundarias, pero, por motivos de seguridad, no es posible realizar lo contrario.</p>
+            <p>Las nuevas ventanas se declaran como objetos y se les asigna un nombre. Desde la ventana principal podemos acceder a ellas y establecer una comunicación e interacción con sus elementos y propiedades, además de aplicar métodos.</p>
+            <p>Desde la ventana secundaria podemos acceder a los métodos y propiedades de la ventana principal.</p>
+            <pre>
+                <code>
+                    var ventanaSecundaria = window.open(“”, “Ventana
+                    Sec.”, “width=500, height=500”);
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSiete">Generación de texto y elementos HTML desde código JavaScript</h3>
-          
+            <h3 class="subTitulo" id="subSiete">3.7.- Generación de texto y elementos HTML desde código JavaScript</h3>
+            <p>Uno de los principales objetivos, es convertir una página web estática en una aplicación dirámica. Un ejemplo es el reconocimiento del navegador que se está utilizando por parte de los scripts para así trabajar con las etiquetas adecuadas para ese navegador.</p>
+            <p>Las ventanas de un navegador presentan un documento HTML y se representan mediante un objeto window que contiene un subojeto document.</p>
+            <p>Permite manipular y acceder a los objetos que representan al contenido. Es posible crear documentos dinámicos en lugar de estáticos. Se puede realizar gracias al método document.write(), el cual nos premite escribir resultados por pantalla.</p>
+            <p>Es posible utilizar este generador de contenido de dos formas:</p>
+            <ul>
+                <li>Mostrar resultados en la ventana actual del navegador a través de secuencias de intrucciónes.</li>
+            </ul>
+            <pre>
+                <code>
+                    < script type = “text/javascript”>
+                        var SO = navigator.platform;
+                        document.write(“< h1>Se ha abierto con el navegador:
+                        ” + SO + ”< /h1>”);
+                    < /script>
+                </code>
+            </pre>
+            <ul>
+                <li>La otra posibilidad el método document.write()</li>
+            </ul>
+            <pre>
+                <code>
+                    < script type = “text/javascript”>
+                        var texto = “Título nueva página”;
+                        var ventana = window.open();
+                        ventana.document.write(“< h1>” + texto + ”</
+                        h1>”);
+                    < /script>
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subOcho">Aplicaciones prácticas de los marcos</h3>
-          
+            <h3 class="subTitulo" id="subOcho">3.8.- Aplicaciones prácticas de los marcos</h3>
+            <p>Un marco es un elemento web cuyo objetivo es independizar dentro de una misma web distintas secciones que muestran archivos HTML distintos.</p>
+            <p>Un objeto frame representa un marco HTML. Cada objeto frame se refiere a un marco en cuestión, debe estar dentro de la marca frameset, que define la estructura de marcos HTML.</p>
+            <p>Las propiedades:</p>
+            <table>
+                <caption>Propiedades del objeto frame e iframe</caption>
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Align</td>
+                        <td>Cadena que contiene el valor del atributo align en un iframe</td>
+                    </tr>
+                    <tr>
+                        <td>contentDocument</td>
+                        <td>Devuelve el objeto documento contenido en un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>contentWindow</td>
+                        <td>Devuelve el objeto window generado por un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>frameBorder</td>
+                        <td>Cadena que contiene el valor del atributo fremeborder de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>Height</td>
+                        <td>Cadena que contiene el valor del atributo heigth de un iframe</td>
+                    </tr>
+                    <tr>
+                        <td>longDesc</td>
+                        <td>Cadena que contiene el valor del atributo longdesc de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>marginHeight</td>
+                        <td>Cadena que contiene el valor del atributo marginHeight de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>marginWidth</td>
+                        <td>Cadena que contiene el valor del atributo marginWidth de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Cadena que contiene el valor del atributo name de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>noResize</td>
+                        <td>Cadena que contiene el valor de un atributo noresize de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>Scrolling</td>
+                        <td>Cadena que contiene el valor del atributo scrolling de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>Src</td>
+                        <td>Cadena que contiene el valor del atributo src de un frame o iframe</td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>Cadena que contiene el valor del atributo width de un iframe</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Cabe destacar que el uso de los marcos en HTML no se recomienda. Por eso este <b>elemento está en deshuso</b>.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subNueve">Cookies</h3>
-          
+            <h3 class="subTitulo" id="subNueve">3.9.- Cookies</h3>
+            <p>Las cookies son una serie de archivos de texto que las aplicaciones almacenan en el ordenador del usuario y que guardan datos que la aplicación puede recuperar. El protocolo HTTP no tiene ningún estado, por lo que cada petición es independiente de la anterior.</p>
+            <p>Se envían de forma automática en la cabecera de cada petición de forma que permiten a las aplicaciones obtener peticoines anteriores gracias a los datos almacenados en ellas.</p>
+            <p>El tamaño máximo que puede almacenar una cookie es de 4KB de datos y se permiten hasta 20 cookies por dominio.</p>
+            <h4 class="apartado">Lectura y grabación de las cookies</h4>
+            <p>Para leer y grabar contenido en las cookies, haremos uso del objeto document. A esta propiedad se le asigna un texto que se almacena en la cookie.</p>
+            <pre>
+                <code>
+                    document.cookie = “nombreCookie = valor”;
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    document.cookie = “usuario = ilerna”;
+                </code>
+            </pre>
+            <p>Cada nueva cookie puede utilizar este mismo formato, tener el mismo nombre y cambiar su valor.</p>
+            <p>Si se quiere modificar el valor de una cookie, se indica el mismo nombre y se cambia el valor.</p>
+            <pre>
+                <code>
+                    document.cookie = “usuario = online”;
+                </code>
+            </pre>
+            <p>Se puede leer el contenido de una cookie visualizando el contenido de esa propiedad:</p>
+            <pre>
+                <code>
+                    console.log(document.cookie);
+                </code>
+            </pre>
+            <p>Posible resultado:</p>
+            <pre>
+                <code>
+                    nombre=online; lenguaje=es; fechaUltimaSesion=
+                    15/09/2020;
+                </code>
+            </pre>
+            <h4 class="apartado">Fecha de expiración</h4>
+            <p>Por defecto, las cookies son eliminadas cuando un usuario finaliza la sesión. Este fin de sesión se produce cuando se cierra el navegador.</p>
+            <p>En ocasiones, se busca que las cookies sean <b>persistentes</b>, que los valores se mantengan entre sesión y sesión. Para conseguir esto, es necesario indicar que una fecha de expiración futura, es decir, indicar el tiempo máximo que vivirá esa cookie.</p>
+            <p>La forma en que se graba la fecha de expiración es obteniendo la fecha actual y posteriormente añadiendo el tiempo de duración de la cookie. Se consigue a través del objeto de tipo Date en milisegundos y posteriormente pasarlo a UTC.</p>
+            <pre>
+                <code>
+                    //Crear objeto tipo fecha
+                    let hoy = new Date();
+                    //Crear variable obteniendo los milisegundos de
+                    hoy
+                    //Sumar los milisegundos correspondientes a una
+                    semana
+                    let caducidadMs = hoy.getTime() + 1000 * 60 * 60 *
+                    24 * 7;
+                    let caducidad = new Date(caducidadMs);
+                    //Colocamos la fecha en formato UTC
+                    document.cookie = “usuario=ilerna;expires=${caducidad.
+                    toUTCString()}”;
+                </code>
+            </pre>
+            <h4 class="apartado">Borrar cookies</h4>
+            <p>Para borrar una cookie se debe indicar una fecha de expiración del pasado.</p>
+            <pre>
+                <code>
+                    document.cookie = “usuario=ilerna;
+                    expires=Sat, 01 Jan 2000 00:00:01 GMT”;
+                </code>
+            </pre>
+            <p>Al indicar una fecha anterior a la actual, la cookie queda caducada y el navegador automáticamente la eliminará.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>

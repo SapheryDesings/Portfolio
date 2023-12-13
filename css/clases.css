@@ -41,6 +41,8 @@
   font-family: 'Titan One', cursive;
 */
 
+
+
 .main--Principal, .main--Indice {
   display: flex;
   flex-flow: column wrap;
@@ -48,10 +50,50 @@
   align-items: center;
   gap: 2rem;
 
-  background-color: var(--azulPrincipal);
+  /*background-color: var(--azulPrincipal);*/
   color: var(--blancoTipologia);
   font-family: 'Montserrat', sans-serif;
   font-size: large;
+}
+
+.main--Principal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(to top, #4481eb, #04befe 75%);
+}
+
+header {
+  width: 80%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem auto 0;
+  padding: .5rem;
+  font-style: italic;
+  font-weight: bold;
+
+  & .navegacion {
+      display: flex;
+      flex-direction: row;
+      gap: .5rem;
+  }
+
+  & button {
+      all: inherit;
+      padding: .4rem 1.2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+  }
+
+  & button:hover {
+      background-color: #4481eb25;
+      transition: 1s;
+  }
 }
 
 /* Barra superior - Indices y apuntes, se incluye botón hacia principal y nombre asignatura */
@@ -137,20 +179,30 @@
 /*        Card - Prototipo de tarjeta */
 .card {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  width: 300px;
-  height: 200px;
-  background-color: rgba(2, 119, 189, .4);
-  background-color: var(--cyanIlumina);
-  font-size: 1rem;
-} 
-  .card div { margin: auto; text-align: center;}
-  .card div h5 { font-family: 'Montserrat', sans-serif; font-weight: 600;}
-  .segundoT { background-color: var(--magentaIlumina);}
-  .tercerT { background-color: var(--verdemarIlumina);}
-  .inactiva { background-color: rgba(0, 0, 0, .5); color: rgba(0, 0, 0, .5);}
-/*      Fin Card      */
+  flex-flow: column nowrap;
+  justify-content: start;
+  height: max-content;
+  max-width: 350px;
+  gap: .5rem;
+  border: 3px solid #ffffff50;
+  border-radius: 1rem;
+
+  & .cardTitulo {
+    text-align: center;
+    padding: .5rem;
+  }
+
+  & .cardTema {
+    text-align: start;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+
+  & .cardTema:hover {
+    background-color: #4481eb50;
+    transition: 1s;
+  }
+}
 
 /* ______________________________________ */
 
