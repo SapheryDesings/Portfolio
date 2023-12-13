@@ -278,8 +278,8 @@ header {
     background-color: var(--azulDetalles);
   }
   .nota {
-    width: 92%;
-    margin: 1rem auto;
+    width: 90%;
+    margin: 2rem auto;
     padding: 1rem;
     background-color: var(--amarilloNota);
     font-weight: bold;
@@ -310,7 +310,7 @@ header {
   
   /* ____ TABLAS ____*/
   .contenedorApuntes table { 
-    margin: 2rem auto;
+    margin: 2rem 0;
     padding: .5rem;
     background-color: var(--azulPapuntes);
 
@@ -370,10 +370,12 @@ header {
 }
 
 pre {
+  display: inline-block;
   padding: .5rem;
   white-space: pre-line;
   background-color: var(--azulDetalles);
   color: var(--blancoTipologia);
+  border: 5px solid var(--azulPapuntes);
 }
 
 
