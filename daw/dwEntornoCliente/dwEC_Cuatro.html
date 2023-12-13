@@ -23,20 +23,501 @@
             <p>Variable capaz de gestionar conjuntos de datos. Son los arrays de datos, también conocidos como listas, vectores o matrices.</p>
             <p>Los arrays son variables que nos permiten almacenar en una misma estructura un conjunto de valores. Para poder acceder a un dato dentro del array es necesario indicar su posición, que es un número entero conocido como <b>índice</b>.</p>
             <p>El primer elemento del array tiene índice O.</p>
+            <h4 class="apartado">Declaración e incicialización de arrays</h4>
+            <p>Para crear los arrays:</p>
+            <pre>
+                <code>
+                    var marca = []; //Declarar un array vacío
+                    var marca = new Array(); //Declarar un array con
+                    el operador new con longitud 0
+                    var marca = new Array(100); //Declarar un array
+                    con el operador new de tamaño 100
+                    //Colocar un valor en la primera posición
+                    marca[0] = “Seat”;
+                </code>
+            </pre>
+            <p>Para seguir añadiendo valores:</p>
+            <pre>
+                <code>
+                    marca[1] = “BMW”;
+                    marca[2] = “Audi”;
+                    marca[3] = “Ford”;
+                </code>
+            </pre>
+            <p>Si queremos mostrar un elemento en concreto de la lista:</p>
+            <pre>
+                <code>
+                    console.log(marca[1]); //Muestra: BMW
+                </code>
+            </pre>
+            <p>Añadir valores en la misma declaración:</p>
+            <pre>
+                <code>
+                    var marca = [“Seat”, “BMW”, “Audi”, “Ford”];
+                </code>
+            </pre>
+            <p>Hacer la inicialiazción con el operador new:</p>
+            <pre>
+                <code>
+                    var marca = new Array(“Seat”, “BMW”, “Audi”,
+                    “Ford”);
+                </code>
+            </pre>
+            <h4 class="apartado">Uso de los arrays mediante bucles</h4>
+            <p>Las ventajas que supone trabajar con arrays, podemos mezclar los bucles y los arrays, de esta forma podemos trabajar con muchas variables.</p>
+            <p>Si pretendemos crear un array que almacene códigos de determinados productos:</p>
+            <pre>
+                <code>
+                    var codigos = new Array();
+                    for (var i = 0; i < 10; i++) {
+                    codigos[i] = “Código” + i;
+                    }
+                </code>
+            </pre>
+            <p>Utilizará la variable i para acceder a cada uno de los índices del array y asignarle un valor.</p>
+            <p>Aparte de la inserción de valores en un array, también nos aporta mostrar los datos o trabajar sobre ellos.</p>
+            <p>Al utilizar el bucle for evitamos escribir una a una las líneas de código y optimizar el código:</p>
+            <pre>
+                <code>
+                    for (var i = 0; i < 10; i++) {
+                        document.write( codigos[i] + “< br >);
+                    }
+                </code>
+            </pre>
+            <h4 class="apartado">Propiedades de los arrays</h4>
+            <p>Este objeto tiene definidas una serie de propiedades y métodos. Tiene dos propiedades:</p>
+            <ul>
+                <li>lenght: devuelve el número de elementos que contiene el array.</li>
+                <li>prototype: con esta propiedad es posible agregar nuevas propiedades y métodos al objeto array.</li>
+            </ul>
+            <pre>
+                <code>
+                    nombreArray.lenght;
+                </code>
+            </pre>
+            <h4 class="apartado">Métodos de los arrays</h4>
+            <p>Poseen métodos muy útiles:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                        <th>Sintaxis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>push()</td>
+                        <td>Añadir nuevos elementos y devolver la longitud del array</td>
+                        <td>array.push(valor1, valor2,...)</td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>Concatenar elementos de un array en un nuevo array</td>
+                        <td>array.concat(valor1, valor2,...)</td>
+                    </tr>
+                    <tr>
+                        <td>join()</td>
+                        <td>Concatenar elementos de un array en una cadena de texto separada por un carácter (opcional)</td>
+                        <td>array.join([separador])</td>
+                    </tr>
+                    <tr>
+                        <td>reverse()</td>
+                        <td>Invertir el orden de los elementos de un array</td>
+                        <td>array.reverse()</td>
+                    </tr>
+                    <tr>
+                        <td>unshift()</td>
+                        <td>Añadir nuevos elementos al inicio y devolver el numero de elemento del array</td>
+                        <td>array.unshift(valor1, valor2,...)</td>
+                    </tr>
+                    <tr>
+                        <td>shift()</td>
+                        <td>Eliminar el primer elemento de un array</td>
+                        <td>array.shift()</td>
+                    </tr>
+                    <tr>
+                        <td>pop()</td>
+                        <td>Eliminar el último elemento de un array</td>
+                        <td>array.pop()</td>
+                    </tr>
+                    <tr>
+                        <td>sort()</td>
+                        <td>Ordenar alfabéticamente los elementos de un array</td>
+                        <td>array.sort([función])</td>
+                    </tr>
+                    <tr>
+                        <td>splice()</td>
+                        <td>Eliminar, sustituir o añadir elementos a un array dependiendo de los argumentos del método</td>
+                        <td>array.splice(inicio,[num_elem_borrar],[valor1, valor2,...])</td>
+                    </tr>
+                </tbody>
+            </table>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Funciones predefinidas del lenguaje</h3>
-          
+            <h3 class="subTitulo">4.1.- Funciones predefinidas del lenguaje</h3>
+            <p>Dispone de una serie de funciones predefinidas, tiene funciones que están integradas en el propio lenguaje. Las podemos utilizar sin necesidad de declararlas ni conocer todas sus funcionalidades. Para el uso de estas solo tenemos que saber el nombre de la función y el resultado que vamos a obtener.</p>
+            <p>Muchas funciones pueden realizar su tarea sin necesidad de información extra.</p>
+            <p>La mayor parte de estas funciones requerirán acceder a los valores de las variables para poder producir sus resultados, estas variables que reciben las funciones se denominan argumentos o parámetros de la función.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Función predefinida</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>escape()</td>
+                        <td>Recibe una cadena de caracteres como argumento y devuelve esa misma cadena sustituida con codificación de caracteres ASCII</td>
+                    </tr>
+                    <tr>
+                        <td>eval()</td>
+                        <td>Convierte una cadena que pasamos como argumento en código JavaScript ejecutable</td>
+                    </tr>
+                    <tr>
+                        <td>isFinite()</td>
+                        <td>Verifica si el número que pasamos como argumento es o no un número finito</td>
+                    </tr>
+                    <tr>
+                        <td>inNaN()</td>
+                        <td>Comprueba si el valor que pasamos como argumento es de tipo numérico</td>
+                    </tr>
+                    <tr>
+                        <td>Number()</td>
+                        <td>Convierte el objeto pasado como argumento en un número que represente el valor de dicho argumento</td>
+                    </tr>
+                    <tr>
+                        <td>String()</td>
+                        <td>Convierte el objeto pasado como argumento en una cadena que represente el valor de dicho objeto</td>
+                    </tr>
+                    <tr>
+                        <td>parseInt()</td>
+                        <td>Convierte la cadena que pasamos como argumento en un valor numérico de tipo entero</td>
+                    </tr>
+                    <tr>
+                        <td>parseFloat()</td>
+                        <td>Convierte la cadena que pasamos como argumento en un valor numérico de tipo flotante</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">escape()</h4>
+            <p>Unescape() es la función opuesta a escape(), es decir, esta función decodifica las caracteres que estén codificados.</p>
+            <pre>
+                <code>
+                    var input = prompt(“Introduce una cadena de texto:
+                    “);
+                    var inputCodigo = escape(input);
+                    alert(“Cadena codificada: “) + inputCodigo;
+                </code>
+            </pre>
+            <h4 class="apartado">eval()</h4>
+            <p>Este ejemplo permite ingresar al usuario una operación numérica y muestra el resultado de esta.</p>
+            <pre>
+                <code>
+                    var input = prompt(“Introduce una operación numérica:
+                    “);
+                    var resultado = eval(input);
+                    alert(“El resultado de la operación es: “ + resultado);
+                </code>
+            </pre>
+            <h4 class="apartado">isFinite()</h4>
+            <p>Comprueba si el valor pasado como argumento corresponde a un número finito.</p>
+            <p>Si el argumento no se encuentra en el rango o no es un valor numérico, la función devuelve false, en caso contrario, devuelve true.</p>
+            <pre>
+                <code>
+                    if(isFinite(argumento)){
+                        //instrucciones si el argumento es un número
+                        finito
+                        }else{
+                        //instrucciones si el argumento no es un número
+                        finito
+                        }
+                </code>
+            </pre>
+            <h4 class="apartado">isNaN()</h4>
+            <p>Comprueba si el valor pasado como argumento es numérico. Si no es numérico, devuelve false, de lo contrario, devuelve true.</p>
+            <pre>
+                <code>
+                    var input = prompt(“Introduce un valor numérico:
+                    “);
+                    if(isNaN(input)){
+                    alert(“El dato introducido es numérico”);
+                    }else{
+                    alert(“El dato introducido no es numérico”);
+                    }
+                </code>
+            </pre>
+            <h4 class="apartado">Number()</h4>
+            <p>Comprueba si el valor pasado como argumento es numérico. Si no es numérico, devuelve false, en caso contrario, devuelve true.</p>
+            <pre>
+                <code>
+                    var input = prompt(“Introduce un valor:”);
+                    var inputNumber = Number(input);
+                    alert(“El valor introducido: “ + inputNumber);
+                </code>
+            </pre>
+            <h4 class="apartado">String()</h4>
+            <p>String() convierte el objeto pasado como parámetro en una cadena de texto.</p>
+            <pre>
+                <code>
+                    var fecha = new Date();
+                    var fechaString = String(fecha);
+                    alert(“La fecha actual es: “ + fechaString);
+                </code>
+            </pre>
+            <h4 class="apartado">parseInt()</h4>
+            <p>Intenta convertir una cadena de caracteres pasada como argumento en número entero con una base especificada. Si no especificamos la base, se utiliza automáticamente la base decimal(10).</p>
+            <p>La base puede ser binaria (2), octal (8), decimal (10), o hexadecimal (16).</p>
+            <p>Si la función encuentra un valor que no sea numérico, devuelve el valor encontrado hasta ese punto; si el primer valor no es numérico, devuelve NaN.</p>
+            <pre>
+                <code>
+                    var input = prompt(“Introduce un valor: “);
+                    var inputParsed = parseInt(input);
+                    alert(“parseInt (“ + input + “): “ + inputParsed);
+                </code>
+            </pre>
+            <h4 class="apartado">parseFloat()</h4>
+            <p>Similar a la anterior, en lugar de convertir el argumento a un número entero, lo convierte en un número flotante.</p>
+            <p>Si encuentra un valor que no sea numérico, devuelve el valor encontrado hasta ese punto; si el primer valor no es numérico, devuelve NaN.</p>
+            <pre>
+                <code>
+                    var input = prompt(“Introduce un valor: “);
+                    var inputParsed = parseFloat(input);
+                    alert(“parseFloat (“ + input + “): “ + inputParsed);
+                </code>
+            </pre>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Definición y llamadas de funciones</h3>
-          
+            <h3 class="subTitulo" id="subDos">4.2.- Definición y llamadas de funciones</h3>
+            <p class="nota">Podemos definir las <b>funciones</b> como un conjunto de instrucciones relacionadas para realizar una tarea específica.</p>
+            <p><b>Es conveniente, diseñar funciones que podamos reutilizar en otras aplicaciones.</b> Las funciones se convertirán en pequeños bloques constructivos que permitirán desarrollar los nuevos programas de una forma más rápida.</p>
+            <p>En algunos lenguajes, se utiliza mucho el término <b>procedimiento</b> o <b>subrutina</b>, en JavaScript no vamos a diferenciar entre procedimientos (los que ejecutan acciones y devuelven algún valor), ya que siempre se van a definir como funciones mediante la palabra reservada function.</p>
+            <pre>
+                <code>
+                    Sintaxis
+                    function nombreFuncion([parametro1, parametro2, …
+                    parametroN])
+                    {
+                    //desarrollo del código
+                    }
+                </code>
+            </pre>
+            <p>Una función siempre debe ir desarrollada entre los símbolos {}.</p>
+            <p>Para invocar a la función, lo hacemos a través de su identificador seguido de los parámetros de entrada separados por comas y entre paréntesis. De no tener parámetros de entrada, también debe llevar los paréntesis a la hora de realizar su llamada.</p>
+            <pre>
+                <code>
+                    //Función JavaScript
+                    function miPrimeraFuncion(){
+                    return “Mi primera función con Ilerna Online”;
+                    }
+                    //Llamada a la función
+                    alert(miPrimeraFuncion());
+                </code>
+            </pre>
+            <p>También podemos llamar a una función dentro de una etiqueta de HTML. Debe ir acotado entre las etiquetas <b>script</b>.</p>
+            <p>Las funciones siempre van a devolver una respuesta mediante el comando <b>return</b>. En el supuesto de que devuelva un valor no especificado, devolverá <b>undefined</b>.</p>
+            <p>En una función, una vez llegemos al return, este devolverá un determinado valor, si existe código detrás del return, no se va a ejecutar nunca.</p>
+            <pre>
+                <code>
+                    //Función JavaScript
+                    function miPrimeraFuncion(){
+                    return “Mi primera función con Ilerna Online”;
+                    //Este código no se va a ejecutar nunca
+                    var miVariable = 5;
+                    var resultado = 3 + miVariable;
+                    alert(resultado);
+                    }
+                </code>
+            </pre>
+            <h4 class="apartado">4.2.1. Argumentos</h4>
+            <p>No existe ninguna regla que determine el número de parámetros que se debe representar. Una función espera tres argumentos: tenemos la posibilidad de poder facilitarle uno, cinco o incluso más, ya que los parámetros que recibe una función se van a gestionar de manera interna como si se tratara de un array.</p>
+            <p><b>En JavaScript, los parámetros siempre se pasan por valor, es decir, crea una copia en memoria del valor que recibe o del conjunto de valores</b>. Esta forma de pasar los parámetros resulta confusa, ya que, cuando el parámetro recibe un dato primitivo o un tipo de referencia, se va a comportar de manera diferente. <b>Es conveniente tener un paso por valor y otro por referencia, aunque JavaScript solo los realice por valor</b>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo Valor</th>
+                        <th>Tipo de dato</th>
+                        <th>Comportamiento frente a cambios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Valores por valor</td>
+                        <td>Primitivo</td>
+                        <td>
+                            <ul>
+                                <li>Copia en una <b>variable local</b> del parámetro recibido</li>
+                                <li>Apunta a una dirección de memoria <b>distinta</b></li>
+                                <li>Los cambios en el interior de la función <b>no</b> se trasladan fuera de esta</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Valores por referencia</td>
+                        <td>Referencia</td>
+                        <td>
+                            <ul>
+                                <li>Copia en una <b>variable local</b> del parámetro recibido</li>
+                                <li>Apunta a la <b>misma dirección</b> de memoria</li>
+                                <li>Los cambios en el interior de la función <b>sí</b> se trasladan fuera de esta</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre>
+                <code>
+                    function miPrimeraFuncion(texto){
+                        return texto + “ con Ilerna Online”;
+                    }
+                    alert(miPrimeraFuncion(“Mi primera función”));
+                </code>
+            </pre>
+            <h4 class="apartado">4.2.2. Otras declaraciones</h4>
+            <p>También se puede hacer declarar de otras formas aparte de con la palabra function.</p>
+            <h4 class="apartado">Declaración de funciones mediante una expresión</h4>
+            <p>Utilizando una expresión que después invocaremos:</p>
+            <pre>
+                <code>
+                    var mifuncion = function ejemplo (texto){
+                        return texto + texto;
+                    };
+                    function llamadaFuncion (){
+                        alert(mifuncion(‘Hola Mundo ‘));
+                    };
+                </code>
+            </pre>
+            <p>La variable mifuncion contiene una función junto con el comportamiento de esta. A la hora de realizar la llamada a la función, no debemos utilizar el identificador, ya que no sabe cómo debe interpretar este identificador.</p>
+            <p>La única manera de poder acceder a la función va a ser utilizando la variable mifuncion.</p>
+            <pre>
+                <code>
+                    var mifuncion = function ejemplo (texto){
+                        return texto + texto;
+                    };
+                    function llamadaFuncion(){
+                        alert(ejemplo(‘Esto es un mensaje para el
+                        ejemplo ‘)); //error
+                    };
+                </code>
+            </pre>
+            <h4 class="apartado">Objeto función</h4>
+            <p>Cuando se crean funciones dinámicas, podemos hacerlo mediante la palabra reservada <b>function</b>, junto con su declaración, utilizando una cadena de texto de las diferentes sentencias y los valores que devuelva.</p>
+            <p>Esta forma de definir una función hace uso del objeto <b>Function</b>. El constructor que se proporciona tiene <b>dos parámetros:</b> uno que permite definir los atributos de la función y otro para definir el cuerpo de la función, para el bloque de sentencias.</p>
+            <pre>
+                <code>
+                    //Objeto función
+                    var miFuncion = new Function(‘texto,lugar’,’alert(texto
+                    + “ “ + lugar)’);
+                    function llamada(){
+                    miFuncion(‘Prueba de ejecucción función objeto en:’,
+                    window.
+                </code>
+            </pre>
+            <h4 class="apartado">4.2.3. Funciones anidadas</h4>
+            <p>Tenemos la posibilidad de poder crear funciones anidadas, <b>funciones que tengan en su contenido otra función</b>.</p>
+            <p>Es fundamental la importancia que va a tener el ámbito de una variable. <b>Es posible que cualquier función interna pueda tener acceso a todo el contexto de ejecución de la externa</b>. No sucede lo mismo en caso contrario, ya que, desde la externa, solo se puede llamar a la función interna por su nombre.</p>
+            <pre>
+                <code>
+                    //Funciones Anidadas
+                    function calcular(){
+                    var x = 7;
+                    //Función anidada
+                    function incrementar(valor){
+                    return ++valor;
+                    }
+                    return incrementar(numero) + x;
+                    }
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Objetos definidos por el usuario</h3>
-          
+            <h3 class="subTitulo" id="subTres">4.3.- Objetos definidos por el usuario</h3>
+            <p>Es muy útil poder crear nuevos objetos definidos por el usuario, son sus propios métodos y propiedades.</p>
+            <h4 class="apartado">Declaración e inicialización de objetos</h4>
+            <p>Un <b>objeto</b> lo podríamos definir como una entidad que posee unas propiedades y unos métodos que actúan sobre estas propiedades.</p>
+            <p>Para declararlos:</p>
+            <pre>
+                <code>
+                    function mi_objeto (valor1, valor2, valorx) {
+                        this.propiedad1 = valor1;
+                        this.propiedad2 = valor2;
+                        this.propiedadx = valorx;
+                    }
+                </code>
+            </pre>
+            <p>Se crea del mismo modo que creamos una función, empleando la palabra clase function. Es posible dar un nombre a este nuevo objeto y asignarle unos valores iniciales a cada una de sus propiedades definidas.</p>
+            <pre>
+                <code>
+                    function Coche (marca_in, modelo_in, año_in) {
+                        this.marca = marca_in;
+                        this.modelo = modelo_in;
+                        this.anyo = año_in;
+                    }
+                </code>
+            </pre>
+            <p>Declarado el objeto Coche, es posible crear instancias de este a través de la palabra clave new.</p>
+            <pre>
+                <code>
+                    var coches = new Array(3);
+                    coches[0] = new Coche(“Seat”, “León”, “2018”);
+                    coches[1] = new Coche(“Ford”, “Focus”, “2019”);
+                    coches[2] = new Coche(“Hyundai”, “i30”, “2019”);
+                </code>
+            </pre>
+            <h4 class="apartado">Definición de propiedades y métodos</h4>
+            <p>A la hora de la creación de sus propiedades utilizamos la palabra clave this seguida del nombre de la propiedad y su valor. Esta palabra hace referencia al objeto en el que utilizamos esa palabra. Sin embargo, es posible crear nuevas propiedades sin que estas hayan sido declaradas en el mismo objeto.</p>
+            <p>Todas las instancias a este objeto deben contener estas propiedades. Es posible añadir nuevas propiedades a estos objetos.</p>
+            <pre>
+                <code>
+                    function mi_objeto (valor1, valor2, valorx) {
+                        this.propiedad1 = valor1;
+                        this.propiedad2 = valor2;
+                        this.propiedadx = valorx;
+                    }
+                    var mi_coche1 = new Coche(“Volkswagen”, “Golf”,
+                    “2007”);
+                    mi_coche1.color = “Gris”;
+                </code>
+            </pre>
+            <p>La instancia mi_coche1 tendrá una nueva propiedad que nos informará del color.</p>
+            <p>Otra de las características que debemos tener en cuenta es la posibilidad de establecer objetos como propiedad de otro objeto. Los objetos Coche que hemos creado pueden pertenecer a otro objeto que llamaremos Concesionario. Este último objeto tendrá sus propias características, como pueden ser el código de oficina y la ciudad.</p>
+            <pre>
+                <code>
+                    function Concesionario (cod_oficina_in, ciudad_in) {
+                        this.cod_oficina= cod_oficina_in;
+                        this.ciudad = ciudad_in;
+                    }
+                    var concesionario1 = new Concesionario(“0250405”,
+                    “Lleida”);
+                    var mi_coche1 = new Coche(“Volkswagen”, “Golf”,
+                    “2007”, concesionario1);
+                </code>
+            </pre>
+            <p>Para poder mostrar el contenido del objeto Coche, se creará una función que imprima por pantalla los datos.</p>
+            <pre>
+                <code>
+                    function imprimirDatos() {
+                        document.write(“< p> Marca: “ + this.marca +
+                        “< /p>”);
+                        document.write(“< p> Modelo: “ + this.modelo +
+                        “< /p>”);
+                        document.write(“< p> Año: “ + this.anyo + “</
+                        p>”);
+                    }
+                    function Coche (marca_in, modelo_in, año_in) {
+                        this.marca = marca_in;
+                        this.modelo = modelo_in;
+                        this.anyo = año_in;
+                        this.imprimirDatos = imprimirDatos;
+                    }
+                    var mi_coche1 = new Coche(“Volkswagen”, “Golf”,
+                    “2007”);
+                    mi_coche1.imprimirDatos();
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
