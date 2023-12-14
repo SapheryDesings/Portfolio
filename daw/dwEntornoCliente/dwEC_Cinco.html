@@ -20,12 +20,402 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 5. - Integración al código de la gestión de eventos y formularios</h2>
-            
+            <p>La interacción entre usuario y aplicación web consiste en que el usuario utiliza mecanismos de entrada, y la aplicación muestra la información que debe ser tratada.</p>
+            <p>Existen eventos que materializan los cambios que realiza el usuario sobre un determinado objeto. A estos cambios se los conoce como eventos.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Modelo de gestión de eventos</h3>
-          
+            <h3 class="subTitulo">5.1.- Modelo de gestión de eventos</h3>
+            <p>Cuando un usuario realiza un cambio sobre una página web, se accionan los eventos.</p>
+            <p>El DOM es el encargado de crear la jerarquía entre estos objetos, es el encargado de gestionar los eventos.</p>
+            <p>Los eventos se encuentran situados en componentes de la página HTML, es posible desencadenar una acción interactuando con un botón de la página. Para controlar un determinado evento, necesitamos un manejador, podría ser la palabra onClick. Desencadenará la función que le asociemos en cuanto hagamos clic en el elemento que lo contenga.</p>
+            <p>Una vez asociado el manejador al elemento, necesitamos desencadenar alguna acción. Con el cual podemos referirnos a los objetos del DOM sin necesidad de recargar la página.</p>
+            <pre>
+                <code>
+                    < img src=”Ilerna.jpeg” onclick=”alert(‘Click en la
+                    imagen’);”>
+                </code>
+            </pre>
+            <h4 class="apartado">5.1.1. Eventos de ratón</h4>
+            <p>Estos eventos se activan en el momento en que el usuario hace uso del ratón para realizar una determinada acción. Cualquier movimiento de la flecha del ratón o acción sobre algunos de sus botones puede desencadenar un evento.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Manejador</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Click</td>
+                        <td>onclick</td>
+                        <td>Este evento se produce cuando pulsamos sobre el botón izquierdo del ratón</td>
+                    </tr>
+                    <tr>
+                        <td>Dblclick</td>
+                        <td>ondblclick</td>
+                        <td>Este evento se produce cuando hacemos doble clic sobre el botón iquierdo del ratón</td>
+                    </tr>
+                    <tr>
+                        <td>Mousedown</td>
+                        <td>onmousedown</td>
+                        <td>Este evento se produce cuando pulsamos un botón del ratón</td>
+                    </tr>
+                    <tr>
+                        <td>Mouseout</td>
+                        <td>onmouseout</td>
+                        <td>Este evento se produce cuando el puntero del ratón está enciam de un elemento y es desplazado fuera de este</td>
+                    </tr>
+                    <tr>
+                        <td>Mouseover</td>
+                        <td>onmouseover</td>
+                        <td>Este evento se produce cuando el puntero está fuera de un elemento y es desplazado dentro de este</td>
+                    </tr>
+                    <tr>
+                        <td>Mouseup</td>
+                        <td>onmouseup</td>
+                        <td>Este evento se produce cuando soltamos el botón del ratón que previamente habíamos pulsado</td>
+                    </tr>
+                    <tr>
+                        <td>Mousemove</td>
+                        <td>onmousemove</td>
+                        <td>Este evento se produce cuando el puntero del ratón está dentro de un elemento</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">5.1.2. Eventos de teclado</h4>
+            <p>Estos eventos se originan cuando el usuario pulsa alguna tecla del teclado</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Manejador</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Keydown</td>
+                        <td>onkeydown</td>
+                        <td>Este evento se produce cuando pulsamos alguna tecla del teclado</td>
+                    </tr>
+                    <tr>
+                        <td>Keypress</td>
+                        <td>onkeypress</td>
+                        <td>Este evento se produce si pulsamos una tecla de un carácter alfanumérico</td>
+                    </tr>
+                    <tr>
+                        <td>Keyup</td>
+                        <td>onkeyup</td>
+                        <td>Este evento se produce cuando soltamos una tecla</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">5.1.3. Eventos HTML</h4>
+            <p>Estos eventos se producen cuando se origina un cambio en la página del navegador. También pueden ocurrir cuando existe alguna interacción entre el cliente y el servidor.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Manejador</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Load</td>
+                        <td>onload</td>
+                        <td>El evento Load hace referencia a la carga de diferentes partes de la página. Este actúa sobre el objeto Window cuando la página se ha cargado completamente. En el objeto < img> se produce cuando se ha cargado la imagen, y en el elemento < object> se acciona al cargar el objeto por completo</td>
+                    </tr>
+                    <tr>
+                        <td>Unload</td>
+                        <td>onunload</td>
+                        <td>El evento Unload actúa sobre el objeto Window cuando la página ha desaparecido por completo. También se acciona en el elemento < object> cuando desaparece el objeto</td>
+                    </tr>
+                    <tr>
+                        <td>Abort</td>
+                        <td>onabort</td>
+                        <td>Este evento se produce en el momento en que el usuario detiene la descarga de un elemento antes de que haya finalizado, actúa sobre un elemento < object></td>
+                    </tr>
+                    <tr>
+                        <td>Error</td>
+                        <td>onerror</td>
+                        <td>El evento Error actúa sobre un objeto Window cuando se produce un error JavaScript, en el elemento < img> en el caso de que la imagen no se cargue y en el elemento < object> en el caso de que no se cargue correctamente.</td>
+                    </tr>
+                    <tr>
+                        <td>Select</td>
+                        <td>onselect</td>
+                        <td>Se acciona cuando seleccionamos textos de las cajas de texto (< input> o < textarea>).</td>
+                    </tr>
+                    <tr>
+                        <td>Change</td>
+                        <td>onchange</td>
+                        <td>El evento se produce cuando los cuadros de texto < input> y < textarea> pierden el foco y el contenido que tenían ha variado. También se produce cuando el elemento < select> cambia de valor.</td>
+                    </tr>
+                    <tr>
+                        <td>Submit</td>
+                        <td>onsubmit</td>
+                        <td>Este evento se produce cuando pulsamos sobre un botón tipo submit</td>
+                    </tr>
+                    <tr>
+                        <td>Reset</td>
+                        <td>onreset</td>
+                        <td>Este evento se produce cuando pulsamos sobre un botón tipo reset</td>
+                    </tr>
+                    <tr>
+                        <td>Resize</td>
+                        <td>onresize</td>
+                        <td>Este evento se produce cuando redimensionamos el navegador, actúa sobre el objeto Window</td>
+                    </tr>
+                    <tr>
+                        <td>Scroll</td>
+                        <td>onscroll</td>
+                        <td>Se produce cuando varía la posición de la barra de desplazamiento o scroll en cualquier elemento que la tenga</td>
+                    </tr>
+                    <tr>
+                        <td>Focus</td>
+                        <td>onfocus</td>
+                        <td>Este evento se produce cuando un elemento tiene el foco</td>
+                    </tr>
+                    <tr>
+                        <td>Blur</td>
+                        <td>onblur</td>
+                        <td>Este evento se produce cuando un elemento pierde el foco</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">5.1.4. Eventos DOM</h4>
+            <p>Los eventos DOM, o eventos de mutación, son los que se originan cuando existe algún cambio en la estructura DOM de la página.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DOMSubtreeModified</td>
+                        <td>Este evento se produce cuando se añaden o se eliminan nodos en el subárbol de un elemento o documento</td>
+                    </tr>
+                    <tr>
+                        <td>DOMNodeInserted</td>
+                        <td>Este evento se produce cuando añadimos un nodo hijo a un nodo padre</td>
+                    </tr>
+                    <tr>
+                        <td>DOMNodeRemoved</td>
+                        <td>Este evento se produce cuando eliminamos un nodo que tiene nodo padre</td>
+                    </tr>
+                    <tr>
+                        <td>DOMNodeRemovedFronDocument</td>
+                        <td>Este evento se produce cuando eliminamos un nodo del documento</td>
+                    </tr>
+                    <tr>
+                        <td>DOMNodeInsertedIntoDocument</td>
+                        <td>Este evento se produce cuando añadimos un nodo al documento</td>
+                    </tr>
+                </tbody>
+            </table>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Captura y uso de eventos</h3>
+            <h3 class="subTitulo" id="subDos">5.2.- Captura y uso de eventos</h3>
+            <div class="nota">Llegado el momento de la integración de códigos, es muy importante tener en cuenta que, si no existen eventos, no hay scripts.</div>
+            <p>En la mayoría de las páginas existen una serie de eventos ya programados que van a disparar la ejecución de estos scripts. Esto sucede por que fue diseñado para incluir interactividad en las distintas páginas cuando el usuario <b>realiza</b> una acción determinada en la página y esta <b>reacciona</b>.</p>
+            <p>En el momento en que el usuario realiza alguna acción, se produce un determinado evento. Existe una serie de eventos que no están relacionados de forma directa con las distintas acciones del usuario.</p>
+            <p>La técnica de gestión de eventos pueda variar con tal de hacer un código más independiente de la estructura HTML.</p>
+            <p>En versiones anteriores, los <b>eventos (interacciones entre usuario y sistema)</b> eran capturados en casi todos los casos por gestores de eventos definidos como atributos en etiquetas HTML.</p>
+            <p>Actualmente, este modelo sigue en activo, aunque los navegadores incorporan un modelo propio, que permite que se puedan programar respuestas más inteligentes a las distintas interacciones que puede tener el usuario con los objetos que formen parte del documento.</p>
+            <h4 class="apartado">5.2.1. Modelo de registros de eventos en línea</h4>
+            <p>En el modelo de registros de eventos en línea, se puede añadir un determinado evento como si fuera un atributo más a la etiqueta HTML correspondiente.</p>
+            <pre>
+                <code>
+                    function alertar(){
+                        alert(“Ha pulsado el enlace”);
+                    }
+                </code>
+            </pre>
+            <p>En el lenguaje <b>HTML es posible utilizar caracteres en mayúsculas y minúsculas en los nombre de los eventos onClick y onMouseOver</b>. Sin embargo, <b>en XHTML</b> los atributos <b>deben ir obligatoriamente siempre en minúsculas:</b> debemos escribir onclick y onmouseover.</p>
+            <h4 class="apartado">5.2.2. Modelo de registro de eventos tradicional</h4>
+            <p>Los navegadores antiguos utilizaban el modelo en línea, <b>en el modelo de registro tradicional, el evento pasa a convertirse en una propiedad del elemento</b>.</p>
+            <p>Sigue siendo válida hoy en día, su principal ventaja es que permite asignar un determinado evento a un objeto, <b>separa el código de la estructura</b>. Los nombres de los eventos se escriben siempre en minúsculas.</p>
+            <p>Si deseamos eliminar un gestor de eventos de un determinado elemento, asignarle el valor de null.</p>
+            <p>Otra de sus ventajas  es que el gestor de eventos es una función, es posible realizar una llamada directa a ese gestor, de modo que podemos disparar el evento de manera manual.</p>
+            <h4 class="apartado">Sin paréntesis</h4>
+            <p>En el registro de eventos no utilizamos paréntesis(). Cabe destacar que este no es el procedimiento ideal, porque queremos que se pueda ejecutar una función al disparar un determinado evento.</p>
+            <h4 class="apartado">Uso de la palabra reservada This</h4>
+            <p>El uso de esta palabra reservada en el modelo de línea es bastante frecuente cuando deseamos programar un gestor de eventos.</p>
+            <h4 class="apartado">5.2.3. Modelo de registro avanzado de eventos W3C</h4>
+            <p>En la especificación del DOM de nivel 2, cuenta con una forma sencilla de poder dar registro a los distintos eventos que deseemos sobre un determinado evento.</p>
+            <p>Es fundamental utilizar el método <b>addEventListener()</b>.</p>
+            <p>Este método cuenta con tres argumentos diferentes: el tipo de evento, la función que se desea ejecutar y un valor booleano que puede ser true o false y que va a servir para indicar si podemos capturar o no un evento.</p>
+            <p>Entre las ventajas de este método, destaca que permite añadir los eventos que deseemos.</p>
+            <pre>
+                <code>
+                    document.getElementById(“mienlaceuno”).addEvent-
+                    Listener(‘click’, alertar,false);
+                    document.getElementById(“mienlaceuno”).addEvent-
+                    Listener(‘click’, avisar,false);
+                    document.getElementById(“mienlaceuno”).addEvent-
+                    Listener(‘click’, chequear,false);
+                </code>
+            </pre>
+            <h4 class="apartado">Palabra reservada This</h4>
+            <p>La palabra reservada This se comporta igual que en el modelo tradicional.</p>
+            <p>Entre los inconvenientes, debemos señalar que no es posible saber con antelación cuáles son los eventos que han sido registrados en un elemento.</p>
+            <p>En el modelo tradicional, podemos hacer lo siguiente.</p>
+            <pre>
+                <code>
+                    alert(elemento.onclick)
+                </code>
+            </pre>
+            <p>Este método va a devolver el valor undefined siempre que no existan funciones registradas en ese determinado evento, o bien el nombre correspondiente a la función registrada para ese evento, aunque en este modelo no tenemos esa opción.</p>
+            <p>Nivel 3 del DOM ya introdujo un nuevo método denominado <b>enetListenerList</b> que permite almacenar una lista de las distintas funciones que se han asignado a un determinado elemento. No lo soportan todos los navegadores.</p>
+            <p>Una vez eliminado un determinado evento, podemos utilizar el método:</p>
+            <pre>
+                <code>
+                    removeEventListener(): elemento.removeEventListener(‘
+                    evento’, función, false|true);
+                </code>
+            </pre>
+            <p>Si deseamos cancelar un evento, usaremos el método preventDefault().</p>
+            <h4 class="apartado">5.2.4. Modelo de registro de eventos según Microsoft</h4>
+            <p>Microsoft también ha desarrollado un modelo de registro de eventos.</p>
+            <ul>
+                <li>Cuando deseemos registrar un evento, es necesario que lo enlacemos</li>
+            </ul>
+            <pre>
+                <code>
+                    attachEvent(): elemento.attachEvent(‘onclick’, hacerAlgo);
+                </code>
+            </pre>
+            <ul>
+                <li>Si, se necesitan dos gestores distintos de un mismo evento</li>
+            </ul>
+            <pre>
+                <code>
+                    elemento.attachEvent(‘onclick’,hacerUnaCosa);
+                    elemento.attachEvent(‘onclick’, hacerOtraCosa);
+                </code>
+            </pre>
+            <ul>
+                <li>En el caso de que deseemos eliminar un determinado evento</li>
+            </ul>
+            <pre>
+                <code>
+                    detachEvent(): elemento.detachEvent(‘onclick’, hacerAlgo);
+                </code>
+            </pre>
+            <p>Si comparamos este método</p>
+            <ul>
+                <li>No es posible capturar los eventos porque siempre van a burbujear</li>
+                <li>Al estar referenciada en vez de copiada la función que gestiona el evento, la palabra reservada This siempre va a hacer referencia a Window, por lo que va a resultar completamente inútil</li>
+            </ul>
+            <p>Según estas dos debilidades, cuando un evento esté burbujeando hacia arriba, no podremos conocer qué elemento HTML ha gestionado ese evento.</p>
+            <h4 class="apartado">5.2.5. Orden de disparo de los eventos</h4>
+            <p>En el supuesto de que tengamos un elemento que se encuentre contenido dentro de otro elemento, deberemos programar el mismo tipo de evento para ambos.</p>
+            <p>Tenemos dos modelos diferentes</p>
+            <ul>
+                <li>Netscape afirmó que el evento en el elemento 1 va a suceder primero, denominándolo <b>captura de eventos</b>.</li>
+                <li>Sin embargo, Microsoft mantenía que el evento en el elemento 2 tiene precedencia ante el otro. A este hecho se lo denomina <b>burbujeo de eventos</b>.</li>
+            </ul>
+            <p>Los dos modelos son totalmente opuestos.</p>
+            <h4 class="apartado">5.2.6. Modelo W3C</h4>
+            <p>Este modelo se decanta por una posición intermedia en la que se supone que, al producirse un evento en su modelo de eventos, primero se producirá una fase de captura hasta que consiga llegar al elemento de destino.</p>
+            <p>Ya se puede producir la fase de burbujeo hacia arriba. Este modelo está definido como estándar, por lo que todos los navegadores lo deberían seguir para ser compatibles entre ellos.</p>
+            <div class="menuOpcional">
+                <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
+                <a href="../../index.html"><div class="botonO">Principal</div></a>
+                <a href="#subUno"><div class="botonO">Arriba</div></a>
+            </div>
+            <!--*********************************************************************-->
+            <h3 class="subTitulo" id="subTres">5.3.- Utilización de formularios desde código</h3>
+            <p>Un formulario web es una herramienta que se utiliza para enviar, recibir o gestionar datos que se transmiten entre el cliente y un servidor web. Cada uno de los elementos se utiliza para almacenar un tipo de dato o para activar funcionalidades del formulario.</p>
+            <p>Los formularios están enmarcados en HTML y su función es dar la posibilidad a los usuarios para que interactúen con los datos, convirtiendo una simple página web en una aplicación web.</p>
+            <h4 class="apartado">Estructura de un formulario</h4>
+            <p>Los formularios se definen con etiquetas. Dentro de cada una de las etiquetas, es posible acceder a su atributo.</p>
+            <p>La etiqueta principal del formulario es form, la cual indica el comienzo y el final del formulario.</p>
+            <p>Para hacer que el formulario sea funcional, necesita inicializar dos atributos:</p>
+            <ul>
+                <li><b>action:</b> donde se indicará la URL para el envío de los datos</li>
+                <li><b>method:</b> indica el método de envío de los datos. Existen dos opciones, POST o GET. En el caso de POST, los datos se enviarán ocultos, mientras que GET hace que los datos viajen a través de la URL.</li>
+            </ul>
+            <p>Nos podemos encontrar son enctype, que define el tipo de codificación que utilizaremos a la hora de enviar el formulario, y el atributo accept, que indica el tipo de archivos que acepta el servidor.</p>
+            <p>Dentro de las etiquetas de body se han introducido las etiquetas form. En el atributo action, le indicamos que los datos del formulario se enviarán al archivo form.php y su método de envío es POST.</p>
+            <h4 class="apartado">Elementos de un formulario</h4>
+            <p>Para indicar este formulario qué datos queremos enviar y cuándo los enviaremos, utilizaremos los elementos de formulario. El primer elemento que nos encontramos es el input. A estos inputs se los conoce como <b>controles de formulario</b> y <b>campos de formulario</b>. Son los encargados de almacenar los datos que vamos a enviar en el formulario.</p>
+            <p>Atributos de los que dispone input.</p>
+            <h4 class="apartado">Estructura de la etiqueta input</h4>
+            <p>Al tratarse de una etiqueta unaria, se utiliza la barra / para finalizarla.</p>
+            <ul>
+                <li><b>Type:</b> nos indica el tipo de elemento que se va a definir. Los valores que acepta este atributo son: text (cuadro de texto), password (cuadro de contraseñas, ocultando los valores introducidos), checkbox (casillas de verificación), radio (opciones entre valores), submit (botón de envío de formulario), reset (botón que vacía los campos), file (botón de imagen de formulario), button (botón del formulario)</li>
+                <li><b>Name:</b> asigna un nombre al elemento. Si no se le asigna un nombre al elemento, el servidor no lo podrá identificar y no podrá acceder a él</li>
+                <li><b>Value:</b> inicializa el valor del elemento</li>
+                <li><b>Size:</b> tamaño inicial del elemento. En los campos de text y password, hace referencia al número de caracteres</li>
+                <li><b>Maxlength:</b> indica el número máximo de caracteres. Se utiliza para los campos de text y password</li>
+                <li><b>Checked:</b> elemento exclusivo para los elementos checbox y radio. Se indica que para definir qué elemento queremos seleccionar</li>
+                <li><b>Disable:</b> deshabilita el elemento. Sus datos no serán enviados al servidor</li>
+                <li><b>Readonly:</b> evita la modificación del valor del elemento</li>
+                <li><b>Src:</b> permite asignar una URL donde se encontrará la imagen del botón del formulario</li>
+                <li><b>Alt:</b> descripción del elemento. Al posicionar el ratón encima del elemento, nos mostrará un texto alternativo</li>
+            </ul>
+            <h4 class="apartado">Tipos de input</h4>
+            <p>El objetivo de los tipos de input es facilitar la gestión de los datos (envío, recepción y manejo) a través del formulario. Tipos de input:</p>
+            <ul>
+                <li><b>Cuadro de texto:</b> se muestra un cuadro de texto en el que el usuario podrá introducir los datos en formato texto. Se tiene que indicar que es un campo de texto: type="text"</li>
+                <li><b>Cuadro de contraseña:</b> es similar al cuadro de texto, con la diferencia de que los caracteres introducidos por parte del usuario no se muestran por pantalla. Se utiliza especialmente para introducir contraseñas. Es necesario indicarlo de la siguiente forma: type="password"</li>
+                <li><b>Casillas de verificación:</b> permiten al usuario seleccionar diferentes opciones. Se indicarán de la siguiente forma: type="checkbox"</li>
+                <li><b>Opciones de radio:</b> este tipo de elemento permite seleccionar una serie de opciones excluyentes entre sí, es decir, solamente permite seleccionar una opción entre todas las opciones disponibles. Se indica de la siguiente forma: type="radio"</li>
+                <li><b>Botón de envío:</b> este elemento se encarga de enviar los datos del formulario al servidor. Se indicará de la siguiente forma: type="submit"</li>
+                <li><b>Botón de reset:</b> sirve para vaciar los campos del formulario. Se indica con type="reset"</li>
+                <li><b>Ficheros adjuntos:</b> este elemento permite adjuntar archivos al formulario. Se deberá implementar un control de este elemento, ya que no se han indicado las limitaciones de los archivos de forma predeterminada. Se indica mediante type="file"</li>
+            </ul>
+            <h4 class="apartado">Manipulación de formularios</h4>
+            <p>Podemos acceder a un formulario puesto que cuenta con una serie de características y métodos del objeto Document. Podemos acceder a través del atributo <b>id</b>.</p>
+            <pre>
+                <code>
+                    //Sintaxis
+                    var miFormulario = document.getElementById(‘FormularioDatos’);
+                </code>
+            </pre>
+            <p>El método <b>getElementByTagName() permite buscar a través de la etiqueta del formulario.</b></p>
+            <pre>
+                <code>
+                    //Sintaxis
+                    var formularios = document.getElementByTagName(‘form’);
+                </code>
+            </pre>
+            <p>Nos permite acceder al elemento que estemos buscando, accederemos a la colección de formularios del objeto <b>Document</b>. Accederemos al formulario a través del índice o del nombre.</p>
+            <pre>
+                <code>
+                    //Para acceder a través del índice:
+                    var miFormulario = document.getElementById(‘formularioDatos’);
+                    //Para acceder a través del nombre
+                    var otroFormulario = document.forms[‘infoUsuario’];
+                </code>
+            </pre>
+            <h4 class="apartado">Envío de formularios</h4>
+            <p>Enviar un formulario, debemos crear una colección de valores de los diferentes elementos que componen el formulario mediante una colección <b>clave:valor</b>. La clave nos permitirá acceder a través del nombre a una determinada colección.</p>
+            <p>También existe la posibilidad de realizarlo a través del índice. El acceso por índice es bastante más complejo.</p>
+            <p>Si hacemos referencia a los métodos de envío, disponemos del método <b>GET</b>, que combina todos los pares <b>clave:valor</b> en el interior de la URL de la petición. Presenta un gran inconveniente: cuando se realiza algún tipo de envío, se pone en peligro la seguridad de los datos que viajan por la URL del navegador.</p>
+            <p>El método <b>POST</b> almacena en el interior del cuerpo la petición realizada con los pares clave-valor, de esta forma se evita poner en riesgo la seguridad que se comenta con el método de envío GET.</p>
+            <p>Desde el punto de vista del servidor, una vez que se recibe el formulario con todos los datos, se pueden consultar a través del objeto <b>HttpRequest</b>.</p>
+            <p>Podemos llevar a cabo el envío de formularios a través de un control HTML tipo submit, como pueden ser las etiquetas input o button, con un botón tipo imagen, o bien con un atributo submit.</p>
+            <p>Se comenzará realizado el envío a una dirección especificada en el atributo action del formulario. Si nos encontramos con algún caso en el que el formulario no especifique la URL en su atributo <b>action</b>, consideraremos que el envío se va a realizar a la URL que corresponda a la página actual.</p>
+            <h4 class="apartado">Envío mediante código</h4>
+            <p>Para realizar el envío mediante código, utilizaremos el método submit() correspondiente al objeto que va a representar dicho formulario.</p>
+            <p>Deberemos utilizar alguno de estos métodos para conseguir la referencia de un formulario determinado. Una vez que la tengamos, podremos utilizar el método submit del objeto formulario para que se realice el envío del formulario sin que sea necesario añadir los elementos HTML en el propio documento.</p>
+            <pre>
+                <code>
+                    function envio{
+                        document.forms[“formularioDatosEmpresa”].submit();
+                    }
+                </code>
+            </pre>
+            <h4 class="apartado">Validación de envío del formulario</h4>
+            <p>En las aplicaciones de carga es frecuente añadir una serie de reglas de validación en los datos que se introduzcan para evitar que se produzcan peticiones erróneas y así conseguir optimizar la red.</p>
+            <p>Mediante el control del evento <b>onsubmit</b> podemos controlar los diferentes datos antes de que sean enviados.</p>
+            <p><b>Podemos definir este evento como un atributo dentro de la etiqueta form o creando un manejador a través de la instrucción addEventListener.</b></p>
+            <p>Los datos introducidos no sean los correctos, o si comprobamos que alguna de las reglas no se está cumpliendo, podemos cancelar el proceso de envío utilizando el método preventDefault.</p>
+            <h4 class="apartado">Restablecer datos del formulario</h4>
+            <p>Es conveniente restablecer el formulario con los datos que utilizamos inicialmente. El método <b>reset()</b>, o podemos introducir botones HTML tipo <b>reset</b> en el propio objeto formulario.</p>
           
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
@@ -33,31 +423,296 @@
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Utilización de formularios desde código</h3>
-          
+            <h3 class="subTitulo" id="subCuatro">5.4.- Modificación de apariencia y comportamiento</h3>
+            <p>Los formularios tienen una serie de estilos asignados que presentan unos colores y bordes determinados.</p>
+            <h4 class="apartado">Modificar el aspecto de un botón</h4>
+            <p>Es posible que necesitemos modificar el estilo prefijado del botón para integrarlo en nuestra aplicación web.</p>
+            <h4 class="apartado">Suavizar el aspecto de un campo de texto</h4>
+            <p>Se empieza a escribir por defecto justo al principio del elemento, sin ningún margen con respecto a la línea situada en la parte izquierda. Es posible modificar estos márgenes, así como también modificar el tamaño y color de la letra.</p>
+            <h4 class="apartado">Organización de los controles de un formulario</h4>
+            <p>Uno de los principales problemas, es cómo podemos colocar los elementos para que queden ordenados y bien alineados unos con otros. Podemos organizar un formulario en bloques.</p>
+            <p>Se ha creado la estructura en direfentes bloques.</p>
+            <h4 class="apartado">Modificar el comportamiento de un formulario</h4>
+            <p>Los elementos de los formularios tienen unas acciones predeterminadas por defecto. Es posible modificar el comportamiento de estos elementos y evitar que realicen su función habitual.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Modificación de apariencia y comportamiento</h3>
-          
+            <h3 class="subTitulo" id="subCinco">5.5.- Validación y envío</h3>
+            <p>El momento de validar el formulario es un proceso que debe estar centrado en revisar un formulario para comprobar que todos los datos que se han introducido lo estén en forma correcta.</p>
+            <p>Si un formulario cuenta con un campo de tipo texto en el que debemos escribir un email, es conveniente que comprobemos que ese email está escrito correctamente antes de continuar.</p>
+            <p>Existen <b>dos métodos</b>:</p>
+            <ul>
+                <li>Uno en el lado del <b>servidor</b>, mediante la utilización de scripts CGI, PHP, ASP, etcétera.</li>
+                <li>Otro en el lado del <b>cliente</b>, que utiliza generalmente JavaScript</li>
+            </ul>
+            <p>Es bastante más seguro el método utilizado en el lado del servidor, algunas veces también resulta más complicado de programar. <b>La validación en el lado del cliente es más sencilla y rápida de realizar</b>, ya que no es necesario que el navegador se conecte al servidor para poder validar el formulario, el usuario puede recibir la información sobre los posibles errores encontrados.</p>
+            <p>La mejor opción es enviar los datos al servidor para que este los valide correctamente. Existen ocasiones en las que los usuarios insertan una gran cantidad de datos incorrectos y llegan a sobrecargar el servidor. Para solucionar esta sobrecarga, realizaremos en el navegador un primer filtrado de los datos del cliente una vez que ha pulsado el botón enviar. Si existe algún dato incorrecto, esta información no se enviará al servidor y mostrará un feedback al usuario indicando el campo que debe modificar.</p>
+            <p>Se realiza llamando a una función que analizará si los datos introducidos cumplen con las restricciones impuestas.</p>
+            <h4 class="apartado">Estructura de un formulario para la validación</h4>
+            <p>Para indicar al usuario que debe realizar una validación de los datos antes de enviarlos al servidor, se indicará en su misma estructura. Para ello existe el evento onsubmit, que ejecutará una acción una vez que se ha llamado al action del formulario.</p>
+            <p>Para que los datos sean validados, es necesario implementar la función validarForm().</p>
+            <ul>
+                <li><b>Validar un campo obligatorio:</b> hay ciertos campos que son obligatorios y es necesario comprobar que el usuario los ha rellenado antes de que los datos sean enviados al servidor. En este caso, comprobaremos si existen datos introducidos en uno de los campos de texto</li>
+            </ul>
+            <pre>
+                <code>
+                    < script type=”javascript”>
+                        function validarForm() {
+                            valor = document.getElementById(“campo”).value;
+                            if (valor == null || valor.lenght == 0) {
+                                alert(“El campo no puede estar vacío”);
+                                return false;
+                            }
+                            return true;
+                    < /script>
+                </code>
+            </pre>
+            <ul>
+                <li><b>Validar un campo de texto numérico:</b> hay campos en los que solamente nos interesa que inserten números, como son los teléfonos, DNI(sin letra) o el código postal</li>
+            </ul>
+            <pre>
+                <code>
+                    < script type=”javascript”>
+                        function validarForm() {
+                            valor = document.getElementById(“telefono”).value;
+                            if (isNaN(valor)) {
+                                alert(“El campo tiene que ser numérico”);
+                                return false;
+                            }
+                        return true;
+                    < /script>
+                </code>
+            </pre>
+            <ul>
+                <li><b>Validar un checkbox:</b> en ocasiones, nos interesa conocer si un checkbox se ha seleccionado o no, como puede ser la aceptación de las codiciones de uso o de los términos legales</li>
+            </ul>
+            <pre>
+                <code>
+                    < script type=”javascript”>
+                        function validarForm() {
+                            valor = document.getElementById(“condiciones”).value;
+                            if (!valor.checked) {
+                                return false;
+                            }
+                        return true;
+                    < /script>
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Validación y envío</h3>
-          
-            <div class="menuOpcional">
-                <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
-            <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSeis">Expresiones regulares</h3>
+            <h3 class="subTitulo" id="subSeis">5.6- Expresiones regulares</h3>
+            <p>Las expresiones regulares son patrones de búsqueda que se pueden utilizar para encontrar un texto que coincida con un determinado patrón.</p>
+            <p>Existen distintas situaciones en las que tendremos que buscar cadenas que deben cumplir un patrón en vez de una cadena exacta.</p>
+            <p>Es más sencillo hacerlo a través de estas expresiones regulares, aunque tienen una sintaxis un poco compleja.</p>
+            <p>Podemos gestionar estan expresiones a través del objeto RegExp</p>
+            <pre>
+                <code>
+                    var expresion = /expresión regular/;
+                </code>
+            </pre>
+            <p>Esta expresión regular debe ir entre barras / y no lleva comillas. Las comillas solo se utilizarán en la expresión regular cuando se forme el patrón.</p>
+            <table>
+                <caption>Características</caption>
+                <thead>
+                    <tr>
+                        <th>Carácter</th>
+                        <th>Coincidencias</th>
+                        <th>Patrón</th>
+                        <th>Ejemplo de cadena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>^</td>
+                        <td>Al inicio de una cadena</td>
+                        <td>/^Esto/</td>
+                        <td>Coincidencia en “Esto es…”</td>
+                    </tr>
+                    <tr>
+                        <td>$</td>
+                        <td>Al final de la cadena</td>
+                        <td>/final$/</td>
+                        <td>Coincidencia en “Esto es el final”</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Coincide 0 o más veces</td>
+                        <td>/se*/</td>
+                        <td>Que la “e” aparezca 0 o más veces: “seeee” y
+                            también “se”</td>
+                    </tr>
+                    <tr>
+                        <td>¿</td>
+                        <td>Coincide 0 o 1 vez</td>
+                        <td>/ap?</td>
+                        <td>Que la “p” aparezca 0 o 1 vez: “apple” y
+                            “and”</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Coincide 1 o más veces</td>
+                        <td>/ap+/</td>
+                        <td>Que la “p” aparezca 1 o más veces: “apple”,
+                            pero no “and”</td>
+                    </tr>
+                    <tr>
+                        <td>{n}</td>
+                        <td>Coincide exactamente n veces</td>
+                        <td>/ap(2)/</td>
+                        <td>Que la “p” aparezca exactamente dos veces:
+                            “apple”</td>
+                    </tr>
+                    <tr>
+                        <td>{n,}</td>
+                        <td>Coincide n o más veces</td>
+                        <td>/ap(2,)/</td>
+                        <td>Que la “p” aparezca 2 o más veces: “apple” y
+                            “appple”, pero no en “apabullante”</td>
+                    </tr>
+                    <tr>
+                        <td>{n,m}</td>
+                        <td>Coincide al menos n, y máximo m veces</td>
+                        <td>/ap{2,4}/</td>
+                        <td>Que la “p” aparezca al menos 2 veces y
+                            como máximo 4 veces</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>Cualquier carácter excepto nueva línea</td>
+                        <td>/a.e/</td>
+                        <td>Que aparezca cualquier carácter, excepto
+                            nueva línea entre la “a” y la “e”: “ape”, “axe”</td>
+                    </tr>
+                    <tr>
+                        <td>[…]</td>
+                        <td>Cualquier carácter entre corchetes</td>
+                        <td>/a[px]e/</td>
+                        <td>Que aparezca alguno de los caracteres “p” o
+                            “x” entre la “a” y la “e”: “ape”, “axe”, pero no
+                            “ale”</td>
+                    </tr>
+                    <tr>
+                        <td>[^…]</td>
+                        <td>Cualquier carácter excepto los que están entre corchetes</td>
+                        <td>/a[^px]/</td>
+                        <td>Que aparezca cualquier carácter excepto la
+                            “p” o la “x” después de la letra “a”. “ale”, pero
+                            no “axe” o “ape”</td>
+                    </tr>
+                    <tr>
+                        <td>\b</td>
+                        <td>Coincide con el inicio de una palabra</td>
+                        <td>/\bno/</td>
+                        <td>Que “no” esté al comienzo de una palabra:
+                            “novedad”</td>
+                    </tr>
+                    <tr>
+                        <td>\B</td>
+                        <td>Coincide al final de una palabra</td>
+                        <td>/\Bno/</td>
+                        <td>Que “no” esté al final de una palabra “este
+                            invierno”</td>
+                    </tr>
+                    <tr>
+                        <td>\d</td>
+                        <td>Dígitos del 0 al 9</td>
+                        <td>/\d{3}/</td>
+                        <td>Que aparezcan exactamente 3 dígitos:
+                            “Ahora en 456”</td>
+                    </tr>
+                    <tr>
+                        <td>\D</td>
+                        <td>Cualquier carácter que no sea un dígito</td>
+                        <td>/\D{2,4}/</td>
+                        <td>Que aparezcan mínimo 2 y máximo 4
+                            caracteres que no sean dígitos: encontrará
+                            la cadena “Ahor” en “Ahora en 456”</td>
+                    </tr>
+                    <tr>
+                        <td>\w</td>
+                        <td>Coincide con caracteres del tipo (letras, dígitos, subrayados)</td>
+                        <td>/\w/</td>
+                        <td>Que aparezca un carácter (letra, dígito o
+                            subrayado): “J” en “JavaScript”</td>
+                    </tr>
+                    <tr>
+                        <td>\W</td>
+                        <td>Coincide con caracteres que no sean letras, dígitos o subrayados</td>
+                        <td>/\W/</td>
+                        <td>Que aparezca un carácter (que no sea letra,
+                            dígito o subrayado): “%” en “100%”</td>
+                    </tr>
+                    <tr>
+                        <td>\n</td>
+                        <td>Coincide con una nueva línea</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>\s</td>
+                        <td>Coincide con un espacio en blanco</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>\S</td>
+                        <td>Coincide con un carácter que no es un espacio en blanco</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>Un tabulador</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>(x)</td>
+                        <td>Capturando paréntesis</td>
+                        <td></td>
+                        <td>Recuerda los caracteres</td>
+                    </tr>
+                    <tr>
+                        <td>\r</td>
+                        <td>Un retorno de carro</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>?=n</td>
+                        <td>Cualquier cadena que está seguida por la cadena n indicada después del igual</td>
+                        <td>/la(?=mundo)</td>
+                        <td>Hola mundo mundial</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre>
+                <code>
+                    function validarTelefono() {
+                        valor = document.getElementById(“teléfono”).value;
+                            if ( !(/^\d{9}$/.test(valor)) { return false }
+                            return true;
+                        }
+                </code>
+            </pre>
+            <h4 class="apartado">El objeto RegExp</h4>
+            <p>El objeto RegExp lo podemos utilizar tanto como un objeto como una expresión literal. Es posible utilizarlo creando un constructor:</p>
+            <pre>
+                <code>
+                    var expresionregular = new RegExp(“Este es el Texto
+                    Expresión Regular”);
+                </code>
+            </pre>
+            <p>Esta expresión RegExp literal la podemos compilar una vez que se ejecute el determinado script. Es recomendable que utilicemos el literal siempre que sepamos que la función no se va a modificar, ya que siempre es mucho más eficiente una versión compilada.</p>
+            <p>En aquellos casos en que sepamos a ciencia cierta que la expresión regular va a sufrir alguna modificación, utilizaremos el objeto.</p>
+            <p>Este objeto RegExp cuenta con sus propias propiedades y métodos.</p>
           
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
