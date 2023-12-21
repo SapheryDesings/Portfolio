@@ -22,10 +22,203 @@
             <h2 class="tituloTema" id="subUno">Tema 6. - Análisis y aplicación del modelo de objetos del documento (DOM)</h2>
             
             <!--*********************************************************************-->
-            <h3 class="subTitulo">El modelo de objetos del documento (DOM)</h3>
-          
+            <h3 class="subTitulo">6.1.- El modelo de objetos del documento (DOM)</h3>
+            <p>El objetivo es manipular el contenido y la apariencia de una web dinámica. Para ello, los elementos de una página web se deben poder manipular como objetos relacionados. Así apareció el termino DOM (document objects model), el cual define una página web como una estructura organizada de objetos formando entre ellos un árbol de recorrido.</p>
+            <h4 class="apartado">Tipos de modelos DOM</h4>
+            <p>Es posible dividir el modelo DOM en tres partes diferentes:</p>
+            <ul>
+                <li><b>Núcleo del DOM:</b> es un modelo estándar para cualquier documento que esté estructurado.</li>
+                <li><b>XML DOM:</b> es un modelo estándar para documentos XML.</li>
+                <li><b>HTML DOM:</b> es un modelo estándar para documentos HTML.</li>
+            </ul>
+            <h4 class="apartado">El árbol</h4>
+            <p>El último se define mediante una estructura en forma de árbol. Un navegador, transforma de forma automática del contenido en una estructura en árbol, convierte el documento HTML en elementos conocidos como nodos.</p>
+            <p>La estructura DOM no solamente se creó para el lenguaje JavaScript. El lenguaje que más se utiliza para el DOM es JavaScript, aunque es una estructura independiente de todo lenguaje.</p>
+            <p>También funciona para manipular documentos XML.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Objetos del modelo. Propiedades y métodos de los objetos</h3>
+            <h3 class="subTitulo" id="subDos">6.2.- Objetos del modelo. Propiedades y métodos de los objetos</h3>
+            <p>Para acceder a las propiedades o a los métodos de los objetos que se encuentran en el interior de nuestro documento.</p>
+            <pre>
+                <code>
+                    document.getElementById(objetoID).propiedad | metodo([parametros] )
+                </code>
+            </pre>
+            <h4 class="apartado">6.2.1.- Objetos del modelo</h4>
+            <p>En la especificación del DOM se definen doce tipos de nodos, emplearemos solamente cinco tipos:</p>
+            <ul>
+                <li><b>Document</b> es el nodo raíz y del cual derivan todos los nodos del árbol.</li>
+                <li><b>Element</b> abarca cada una de las etiquetas XHTML. Este es el único nodo del que pueden derivar otros nodos y es el único capaz de contener los atributos.</li>
+                <li><b>Attr.</b> Gracias a este tipo de nodos, se representan los atributos de las etiquetas XHTML, un nodo por cada atributo=valor.</li>
+                <li><b>Text</b> es el nodo que contiene el texto entre las etiquetas XHTML.</li>
+                <li><b>Comment</b> representa a los comentarios que se incluyen en la página XHTML.</li>
+            </ul>
+            <p>El resto de tipos de nodos pueden ser: CdataSection, DocumentFragment, DocumentType, EntityReference, Entity, Notation y ProcessingInstruction.</p>
+            <h4 class="apartado">6.2.2.- La interfaz Node</h4>
+            <p>Para poder gestionar la información de los diferentes nodos, crea un objeto que se conoce como Node. En el interior de este objeto se definen propiedades y métodos que procesarán y manipularán estos documentos. Define una serie de constantes que identifican a los tipos de nodos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Tipo de nodo</th>
+                        <th>Constante relacionada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Elemento</td>
+                        <td>Node.ELEMENT_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Atributo</td>
+                        <td>Node.ATTRIBUTE_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Texto</td>
+                        <td>Node.TEXT_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Apartado CDATA</td>
+                        <td>Node.CDATA_SECTION_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Referencia a entidad</td>
+                        <td>Node.ENTITY_REFERENCE_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Entidad</td>
+                        <td>Node.ENTITY_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Instrucción de procesado</td>
+                        <td>Node.PROCESSING_INSTRUCTION_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Comentario</td>
+                        <td>Node.COMENT_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Documento completo</td>
+                        <td>Node.DOCUMENT_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Nodo de tipo documento</td>
+                        <td>Node.DOCUMENT_TYPE_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Nodo de fragmento de código</td>
+                        <td>Node.DOCUMENT_FRAGMENT_NODE</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Nodo de anotación</td>
+                        <td>Node.NOTATION_NODE</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Node nos proporciona unas propiedades y métodos que nos permiten acceder a la jerarquía de elementos del árbol.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propiedad/método</th>
+                        <th>Valor devuelto</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nodeName</td>
+                        <td>String</td>
+                        <td>Nombre nodo</td>
+                    </tr>
+                    <tr>
+                        <td>nodeValue</td>
+                        <td>String</td>
+                        <td>Valor nodo</td>
+                    </tr>
+                    <tr>
+                        <td>nodeType</td>
+                        <td>Number</td>
+                        <td>Una constante definida anteriormente</td>
+                    </tr>
+                    <tr>
+                        <td>ownerDocument</td>
+                        <td>Document</td>
+                        <td>Referencia del documento al cual pertenece el nodo</td>
+                    </tr>
+                    <tr>
+                        <td>firstChild</td>
+                        <td>Node</td>
+                        <td>Referencia al primer nodo de la lista</td>
+                    </tr>
+                    <tr>
+                        <td>lastChild</td>
+                        <td>Node</td>
+                        <td>Referencia al último nodo de la lista</td>
+                    </tr>
+                    <tr>
+                        <td>childNodes</td>
+                        <td>NodeList</td>
+                        <td>Lista de todos los nodos hijos del nodo actual</td>
+                    </tr>
+                    <tr>
+                        <td>parentNodes</td>
+                        <td>Node</td>
+                        <td>Referencia al nodo padre del hijo</td>
+                    </tr>
+                    <tr>
+                        <td>previousSibling</td>
+                        <td>Node</td>
+                        <td>Referencia al nodo hermano anterior</td>
+                    </tr>
+                    <tr>
+                        <td>nextSibling</td>
+                        <td>Node</td>
+                        <td>Referencia al nodo hermano siguiente</td>
+                    </tr>
+                    <tr>
+                        <td>hasChildNodes</td>
+                        <td>Boolean</td>
+                        <td>Devuelve true si el nodo tiene uno o más hijos</td>
+                    </tr>
+                    <tr>
+                        <td>attributes</td>
+                        <td>NamedNodeMap</td>
+                        <td>Se emplean como nodo tipo Element</td>
+                    </tr>
+                    <tr>
+                        <td>appendChild(nodo)</td>
+                        <td>Node</td>
+                        <td>Añade un nuevo nodo al final de la lista</td>
+                    </tr>
+                    <tr>
+                        <td>removeChild(nodo)</td>
+                        <td>Node</td>
+                        <td>Elimina un nodo de la lista</td>
+                    </tr>
+                    <tr>
+                        <td>replaceChild(nuevoNodo, anteriorNodo)</td>
+                        <td>Node</td>
+                        <td>Reemplaza el nodo anterior por un nuevo nodo</td>
+                    </tr>
+                    <tr>
+                        <td>insertBefore(nuevoNodo, anteriorNodo)</td>
+                        <td>Node</td>
+                        <td>Inserta un nuevo nodo antes de la posición del nodo anterior</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Con todas estas propiedades y métodos ya es posible acceder a los nodos del árbol y a la jerarquía, así como crear, modificar o eliminar nodos.</p>
           
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
@@ -33,8 +226,8 @@
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Acceso al documento desde código</h3>
-          
+            <h3 class="subTitulo" id="subTres">6.3.- Acceso al documento desde código</h3>
+            <!-- pag 116 -->
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
