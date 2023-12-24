@@ -20,45 +20,321 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 7. - Reconocimiento y aplicación de mecanismos de comunicación asíncrona</h2>
-            
+            <h3 class="subTitulo">7.1.- Mecanismos de comunicación asíncrona</h3>
+            <p>El término <b>AJAX</b> (JavaScript asíncrono y XML) como técnica de desarrollo web, que nos permite comunicar el navegador con el servidor, en segundo plano. Se podrán realizar las operaciones del servidor sin necesidad de recargar la página y se podrán gestionar las respuestas.</p>
+            <p>Existe desde el año 2005 y son un conjunto de diferentes tecnologías con los siguientes objetivos:</p>
+            <ul>
+                <li>Intentan conseguir una presentación que esté <b>basada en estándares</b> utilizando XHTML, CSS y un conjunto de diferentes técnicas del DOM que nos premitan mostrar la información de forma dinámica.</li>
+                <li><b>Intercambiar y manipular los datos</b> utilizando XML y XSLT.</li>
+                <li><b>Recuperar los datos de manera asíncrona</b> utilizando <i>XMLHT-TPRequest</i>.</li>
+                <li>Utilizando JavaScript para <b>unificar</b> todos los componentes.</li>
+            </ul>
+            <p>Las <b>tecnologías más importantes</b> que forman AJAX:</p>
+            <ul>
+                <li><b>XHTML y CSS:</b> representación basada en estándares.</li>
+                <li><b>DOM:</b> intervención y manipulaición dinámica de la presentación.</li>
+                <li><b>XML, XSLT y JSON:</b> intercambio y manipulación de información.</li>
+                <li><b><i>XMLHTTPRequest:</i></b> intercambio asíncrono de información.</li>
+                <li><b>JavaScript:</b> unifica todos los componentes anteriores.</li>
+            </ul>
+            <p>Las acciones del usuario, disparan las solicitudes HTTP al servidor web. El servidor recopila la información para llevar a cabo las acciones oportunas y termina devolviendo una determinada página HTML al cliente.</p>
+            <p><b>Aunque este modelo esté perfectamente adaptado al uso de la web original, no es el más recomendado para tal fin</b>.</p>
+            <p>Cuando realizamos distintas peticiones al servidor, el usuario tiene que esperar hasta que no muestre el resultado, hasta entonces no va a poder interactuar con el navegador.</p>
+            <div class="nota">Lo que pretende AJAX es evitar esas esperas para que el cliente pueda realizar solicitudes al servidor mientras que el navegador sigue mostrando la misma página web.</div>
+            <p>Entre las ventajas de utilizar AJAX:</p>
+            <ul>
+                <li>Que está basado en estándares abiertos, su usabilidad</li>
+                <li>Que es válido en cualquier plataforma o navegador</li>
+                <li>Que cuenta con numerosos beneficios que se pueden aplicar a las páginas: compatible con flash, la base de web 2.0, etc.</li>
+            </ul>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Mecanismos de comunicación asíncrona</h3>
-          
-            <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Comunicación asíncrona</h3>
-          
+            <h3 class="subTitulo" id="subDos">7.2- Comunicación asíncrona</h3>
+            <p>Las diferentes aplicaciones web deben seguir el siguiente funcionamiento:</p>
+            <ul>
+                <li>El usuario debe solicitar algo al servidor</li>
+                <li>El servidor debe ejecutar los procesos que se han solicitado</li>
+                <li>Una vez que finaliza el servidor, debe devolver los resultados obtenidos al cliente</li>
+            </ul>
+            <p>Las aplicaciones premiten modificar la metodología del funcionamiento de una aplicación, ya que elimina las esperas y bloqueos producidos en el cliente, <b>el usuario puede segir actuando con la página mientras realiza la petición al servidor</b>.</p>
+            <p>Lo ideal es realizar la petición al servidor sin que el navegador se bloquee. Es posible haciendo uso del motor de AJAX.</p>
+            <p>Este motor se va a encargar de la gestión de las peticiones del usuario y poder comunicarse con el servidor. Permitirá que la interacción sea asíncrona para que el usuario no necesite estar pendiente de la carga del navegador.</p>
+            <h3 class="subTitulo" id="subTres">7.3.- Objetos relacionados. Propiedades y métodos de los objetos</h3>
+            <h4 class="apartado">Creación del objeto <i>XMLHttpRequest</i></h4>
+            <p>Es necesario crear un objeto del tipo <b><i>XMLHTTPRequest</i></b> que es el que nos premite las distintas modificaciones en segundo plano hasta el servidor web.</p>
+            <h4 class="apartado">Métodos del objeto <i>XMLHttpRequest</i></h4>
+            <p>Este objeto tiene una serie de métodos que nos permitirán peticiones asíncronas hasta el servidor:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>abort()</td>
+                        <td>Cancela la solicitud actual</td>
+                    </tr>
+                    <tr>
+                        <td>getAllResponseHeaders()</td>
+                        <td>Devuelve la información completa de la cabecera</td>
+                    </tr>
+                    <tr>
+                        <td>getResponseHeader()</td>
+                        <td>Devuelve la información específica de la cabecera</td>
+                    </tr>
+                    <tr>
+                        <td>open(método, url, async, usuario, password)</td>
+                        <td>Especifica el tipo de solicitud, la URL, si la solicitud debe solicitarse de forma asíncrona o no y otros atributos opcionales de la solicitud.
+                            <ul>
+                                <li><b>método:</b> indicamos el tipo de solicitud, GET o POST</li>
+                                <li><b>url:</b> la dirección del fichero al que enviamos las peticiones en el servidor</li>
+                                <li><b>async:</b> true o false</li>
+                                <li><b>usuario y password:</b> si fuese necesaria la autenticación en él</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>send(datos)</td>
+                        <td>Envía la solicitud al servidor:
+                            <ul>
+                                <li><b>datos:</b> se usa en el caso de que estemos usando el método POST como método de envío. Si usamos GET, datos será <i>null</i>.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>setRequestHeader()</td>
+                        <td>Añade el par etiqueta/valor a la cabecera de datos que se enviará al servidor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Atributos del objeto <i>XMLHttpRequest</i></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>readyState</td>
+                        <td>Devuelve el estado del objeto</td>
+                    </tr>
+                    <tr>
+                        <td>responseBody</td>
+                        <td>Devuelve como un array de bytes la respuesta</td>
+                    </tr>
+                    <tr>
+                        <td>responseText</td>
+                        <td>Devuelve como una cadena de texto la respuesta</td>
+                    </tr>
+                    <tr>
+                        <td>responseXML</td>
+                        <td>Devuelve como XML la respuesta</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>Devuelve el estado en formato número</td>
+                    </tr>
+                    <tr>
+                        <td>statusText</td>
+                        <td>Devuelve el estado en formato cadena de texto</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Propiedad del objeto <i>XMLHttpRequest</i></h4>
+            <p>Este objeto dispone de una serie de propiedades que nos van a facilitar distinta información sobre el estado de la petición al servidor.</p>
+            <p>Vamos a poder recibir los datos de la respuesta que ha devuelto:</p>
+            <pre>
+                <code>
+                    //////////////////////////////////////////////////
+                    ////////////////////
+                    ////////FUNCIÓN CROSS-BROWSER PARA CREAR OBJETO
+                    XMLHTTPRequest////////
+                    //////////////////////////////////////////////////
+                    ////////////////////
+                    function objetoXHR(){
+                    if(window.XMLHTTPRequest){
+                    //El navegador implementa la interfaz XHR
+                    de forma nativa
+                    return new XMLHTTPRequest();
+                    }else if(window.ActiveXObject){
+                    var versionesIE = new Array(‘MsXML2.XMLHTTP.
+                    5.0’, ‘MsXML2.XMLHTTP.4.0’,’MsXML2.XMLHTTP.
+                    3.0’,’MsXML2.XMLHTTP’, ‘Microsoft.XMLHTTP’);
+                    for(var i = 0; i < versionesIE.length;
+                    i++){
+                    try{
+                    /* Se intenta crear el objeto en
+                    Internet Explorer comenzando en la versión más moderna
+                    del objeto hasta la primera versión.
+                    En el momento que se consiga crear el objeto, saldrá del bucle devolviendo el
+                    nuevo objeto creado.
+                    */
+                    return new ActiveXObject(versionesIE[
+                    i]);
+                    }catch(errorControlado){} //Capturamos
+                    el error
+                    }
+                    }
+                    /*
+                    Si llegamos aquí es porque el navegador no posee
+                    ninguna forma de crear el objeto.
+                    Emitimos un mensaje de error usando el objeto
+                    Error.
+                    Más información sobre gestión de errores en:
+                    http://www.javascriptkit.com/javatutors/trycatch2.
+                    sHTML
+                    */
+                    throw new Error(“No se pudo crear el objeto
+                    XMLHTTPRequest”);
+                    }
+                    //Para crear un objeto XHR lo podremos hacer con
+                    la siguiente llamada.
+                    var objetoAjax = new objetoXHR();
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Objetos relacionados. Propiedades y métodos de los objetos</h3>
-          
+            <h3 class="subTitulo" id="subCuatro">7.4.- Modificación dinámica del documento utilizando comunicación asíncrona</h3>
+            <p>Cuando trabajamos en modo asíncorono es porque hemos aceptado la primera alerta y muestra ls siguiente. Cuando el navegador realiza una petición asíncrona no espera a que se complete esa solicitud, por lo que continúa ejecutando el resto de las instrucciones.</p>
+            <p>Cuando se realiza una llamada con miXHR.send() en la función cargarAsync(), el navegador puede continuar ejecutando las dos instrucciones sin necesidad de esperar.</p>
+            <p>No va a devolver nada, ya que la propiedad <i>responseText</i> aún no contiene ningún resultado, puesto que la petición al servidor se encuentra todavía ejecutándose.</p>
+            <h4 class="apartado">7.4.1.- Estados de una solicitud asíncrona</h4>
+            <p>Cuando realizamos una petición asíncrona, esta va a pasar por una serie de estados (del 0 al 4, propiedad readyState del objeto XHR), esté o no el fichero que se ha solicitado al servidor.</p>
+            <p>Es conveniente que comprobemos cómo se ha realizado y podremos evaluar la propiedad <i>status</i> que va a contener el estado que ha devuelto el servidor. <b>Cuando el valor de <i>status</i> sea OK, podemos comprobar los datos que ha devuelto la petición en la propiedad responseText o ResponseXML correspondiente al objeto XHR</b>.</p>
+            <h3 class="subTitulo" id="subCinco">7.5.- Formatos para el envío y para la recepción de información</h3>
+            <h4 class="apartado">Formato de la información</h4>
+            <p>Un aspecto importante es el intercambio de los diferentes datos que existen en un proceso de petición asíncrona entre un determinado cliente y el servidor.</p>
+            <p>El objeto XMLHttpRequest nos permite intercambiar información con el servidor en cualquier formato, no únicamente en XML.</p>
+            <p>Los <b>formatos de intercambio más importantes</b> que utiliza <i>XML-HttpRequest</i> son:</p>
+            <ul>
+                <li>XML</li>
+                <li>HTML</li>
+                <li>JSON</li>
+                <li>Texto</li>
+                <li>Datos binarios</li>
+                <li><i>FormData</i></li>
+            </ul>
+            <h4 class="apartado">Petición XML</h4>
+            <p>XML es uno de los formatos más conocidos y utilizados a la hora de intercambiar información.</p>
+            <p>La petición de un recurso va a devolver una respuesta en formato XML, se pueden usar otras propiedades de lectura más específicas, como puede ser la propiedad <b>responseXML</b>.</p>
+            <p>Esta propiedad permite realizar el tratamiento de los documentos XML de forma más sencilla. Consigue obtener un objeto DOM de forma directa, sin que sea necesario procesar una cadena de texto para que lo genere.</p>
+            <h4 class="apartado">JSON(JavaScript Object Notation)</h4>
+            <p>Cabe destacar de JSON la serialización, conocida como <i>marshalling</i>, que consiste en codificar un objeto en un medio de almacenamiento(un buffer o un archivo) con la finalidad de transmitirlo por la red como una serie de bytes o en formato XML o JSON.</p>
+            <p>Entre sus principales <b>ventajas</b> destacar la posibilidad de almacenar el objeto en memoria o en un determinado archivo para conseguir así simplificar su transmisión en la red.</p>
+            <p>JSON se está haciendo cada vez más popular y sencillo, legible y rápido de procesar. Representa la información haciendo uso de una serie predefinida de tipos primitivos junto con dos tipos estructurados de datos:</p>
+            <ul>
+                <li>Tipos <b>primitivos:</b> cadena, numérico, boobleano, nulo</li>
+                <li>Tipos estructurados:
+                    <ul>
+                        <li>Objeto: conjunto de parejas del tipo clave-valor en el que la clave se corresponde con una cadena de caracteres</li>
+                        <li>Array: hace referencia a una secuencia ordenada desde 0 hasta n elementos</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Crear un formato JSON es parecida a la que tiene JavaScript, pero JSON utiliza comillas dobles del par clave-valor.</p>
+            <p>Disponemos de unas librerías que nos ayudarán en proceso y formateo de objetos mediante sintaxis de JSON.</p>
+            <h4 class="apartado"><i>FormData</i></h4>
+            <p>Este objeto permite establecer un conjunto de pares clave-valor para poder enviar una serie de datos complejos para realizar las distintas peticines.</p>
+            <p>Uno de sus principales <b>objetivos</b> es conseguir enviar estos datos complejos más allá de que sean entendidos como valores simples.</p>
+            <p>Entre las <b>características</b> podemos citar la de convertir un determinado formulario de una página en un objeto haciendo el uso del método <i>getFormData()</i>. Así podremos enviar toda la información que exista sin necesidad de ir recurriendo a cada uno de los elementos de forma particular para enviarlos mediante el método <i>send</i>.</p>
+            <pre>
+                <code>
+                    var formulario = document.getElementById(“miFormulario”);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open(“POST”,”index.aspx”);
+                    xhr.send(formulario.getFormData());
+                </code>
+            </pre>
+            <h4 class="apartado">Binario</h4>
+            <p>El envío de información en binario es otra opción bastante utilizada, siempre y cuadno la información que se desea transmitir o recibir disponga de diferentes imágenes o archivos que tengan un formato distinto a XML o si es algún formato no estructurado.</p>
+            <h4 class="apartado">Envío de parámetros</h4><br>
+            <h4 class="apartado">GET</h4>
+            <p>Las diferentes peticiones que hemos ido realizando al servidor no necesitaban ninguna información adicional y, en el caso de que fuera necesaria, hemos usado diferentes parámetros que se han podido incluir en la cadena <i>queryString</i> de la petición correspondiente.</p>
+            <h4 class="apartado">POST</h4>
+            <p>Cuando utilizamos POST, no tenemos la posibilidad de contar con <i>queryString</i>, ya que los datos se encuentran dentro del cuerpo. Utilizaremos una serie de parámetros a través de POST.</p>
+            <h4 class="apartado">JSON</h4>
+            <p>Dispone de una sintaxis que debe formatear los objetos o la información que deseamos enviar, siempre que el servidor esté esperando dicha información.</p>
+            <p>Una de las maneras de formatearla es construyendo una serie de cadenas que tengan ese formato. Es un proceso lento y nos puede llevar a error.</p>
+            <p>La otra manera es utilizando formateadores que ya se hayan creado, como ejemplo, el método <i>stringify</i>. Esta forma es más sencilla de utilizar y más eficiente.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Modificación dinámica del documento utilizando comunicación asíncrona</h3>
-          
-            <div class="menuOpcional">
-                <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
-            <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Formatos para el envío y para la recepción de información</h3>
-          
-            <div class="menuOpcional">
-                <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
-            <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subSeis">Librerías de actualización dinámica</h3>
-          
+            <h3 class="subTitulo" id="subSeis">7.6.- Librerías de actualización dinámica</h3>
+            <p>La <b>programación con AJAX</b> se define como uno de los principales pilares de lo que conocemos como <b>web 2.0</b>. Como las redes sociales, el alojamiento de vídeos, los blogs y las wikis.</p>
+            <p>Las principales ventajas de poder usar una determinada librería es que se <b>ahorra bastante tiempo y código</b> en las diferentes aplicaciones.</p>
+            <p>Es posible realizar peticiones utilizando una simple instrucción de código sin necesidad de crear un determinado objeto XHR. Tampoco va a ser necesario que gestionemos el código de respuesta del servidor, ni los estados de solicitud, etc.</p>
+            <p>Destaca la <b>compatibilidad con los distintos nevegadores</b>.</p>
+            <p>Con el uso de esta API se consigue eliminar las distintas dificultades que encontramos a la hora de desarrollar <i>mashups</i> en JavaScript.</p>
+            <p>Al eliminar el problema de alojar librerías, es posible configurar las distintas cabeceras de caché, etc. Avtravés de esta API es posible acceder a las siguiente librerías <i>open source</i> realizadas con JavaScript: jQuery, Prototype, Scriptaculous, MooTools, Dojo, SWFObject, Chrome-frame, Webfont, etc.</p>
+            <p>Los <i>scripts</i> que podemos encontrar en estas librerías son accesibles a través de la descarga o dle método google.load().</p>
+            <h4 class="apartado">Introducción a jQuery</h4>
+            <p><b>jQuery es un framework que nos permite simplificar considerablemente la parte de programación</b>. Es importante preocuparnos de que los <i>scripts</i> sen compatibles con los navegadores.</p>
+            <p>jQuery facilita esa tarea ya que incorpora una infraestructura que permite crear distintas aplicaciones (complejas) en la parte del cliente. Basado en la filosofía <b>"escribe menos y produce más"</b>.</p>
+            <ul>
+                <li>Crear interfaces de usuario</li>
+                <li>Utilizar efectos dinámicos, AJAX</li>
+                <li>Acceder al DOM</li>
+            </ul>
+            <p>Cuenta con plugins para realizar presentaciones de imágenes, validaciones de formularios, menús dinámicos, etc.</p>
+            <p>Es una <b>librería gratuita</b>, para utilizar en cualquier plataforma. Una vez cargada quedará almacenada en caché para que el resto la puedan utilizar.</p>
+            <h4 class="apartado">Función $.AJAX() en jQuery</h4>
+            <p>Esta función de bajo nivel va a ser equivalente a los diferentes métodos que utilizamos en la programación básica.</p>
+            <pre>
+                <code>
+                    //Sintaxis
+                    $.AJAX(opciones)
+                </code>
+            </pre>
+            <p>Es bastante extensa debido a la gran cantidad de opciones que presenta.</p>
+            <pre>
+                <code>
+                    $.AJAX({
+                        url: [URL],
+                        type: [GET/POST],
+                        success: [function callba ck exito(data)],
+                        error: [function callback error],
+                        ifModified: [bool comprobar E-Tag],
+                        data: [mapa datos GET/POST],
+                        async: [bool que nos indica sincronia/asincronia]
+                    });
+                </code>
+            </pre>
+            <p>Es una función completa que resulta bastante tediosa de utilizar, aunque su uso es recomendable para determinadas operaciones. Para facilitar este proceso, se crean una serie de funciones adicionales de nivel alto que permiten llevar a cabo distintas peticiones para poder gestionar las respuestas obtenidas.</p>
+            <h4 class="apartado">El método .load()</h4>
+            <p>Es el método más sencillo mediante el cual vamos a poder obtener los datos desde el servidor</p>
+            <pre>
+                <code>
+                    .load( url, [datos], [callback] )
+                </code>
+            </pre>
+            <h4 class="apartado">La función $.post()</h4>
+            <p>Esta función permite llevar a cabo las distintas peticiones AJAX al servidor utilizando el método POST.</p>
+            <pre>
+                <code>
+                    $.post( url, [datos], [callback], [tipo] )
+                </code>
+            </pre>
+            <h4 class="apartado">La función $.get() y $.getJSON()</h4>
+            <p>Es muy parecida a POST y, además, tiene los mismos parámetros, aunque con la diferencia de que puede utilizar el método GET para poder enviar los datos al servidor.</p>
+            <p>Cuando recibimos los datos en formato JSON, tenemos la posibilidad de poder emplear $.getJSON() en su lugar.</p>
+            <pre>
+                <code>
+                    //$.get()
+                    $.get( url, [datos], [callback], [tipo] )
+                    //$.getJSON()
+                    $.getJSON( url, [datos], [callback], [tipo] )
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>

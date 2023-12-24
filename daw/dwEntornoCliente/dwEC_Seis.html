@@ -219,7 +219,6 @@
                 </tbody>
             </table>
             <p>Con todas estas propiedades y métodos ya es posible acceder a los nodos del árbol y a la jerarquía, así como crear, modificar o eliminar nodos.</p>
-          
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
@@ -227,23 +226,110 @@
             </div>
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subTres">6.3.- Acceso al documento desde código</h3>
-            <!-- pag 116 -->
+            <p>Una vez construido el árbol de nodos del DOM, ya es posible utilizar sus funciones para acceder a distintos nodos del árbol.</p>
+            <p>Una vez que se ha accedido a esa parte del documento, ya es posible modificar los valores, crear y añadir elementos, moverlos de sitio, etcétera.</p>
+            <p>Para poder acceder a un nodo específico, es posible hacerlo a través de dos métodos:</p>
+            <ul>
+                <li>Partiendo del nodo raíz y a través de los <b>nodos padre</b>, se irá accediendo a los diferentes nodos hijos hasta llegar al elemento deseado.</li>
+                <li>Por otro lado, tenemos el <b>acceso directo</b>, el cual, utilizando las funciones del DOM, nos permite acceder directamente al nodo sin tener que atravesar el resto de los nodos. Es el método más utilizado.</li>
+            </ul>
+            <p>Destacar que, para acceder a todos los nodos de un árbol, este tiene que estar completamente construido, es decir, cuando la página XHTML se haya cargado completamente.</p>
+            <pre>
+                <code>
+                    getElementsByName()
+                </code>
+            </pre>
+            <p>Se obtiene una colección que contiene todos los elementos de la página XHTML cuyo atributo <i>name</i> coincida con el indicado como parámetro</p>
+            <pre>
+                <code>
+                    var elementos = document.getElementsByName(“apellidos”);
+                </code>
+            </pre>
+            <p>Una <b>colección no es un array</b>, aunque se le parezca mucho. Es posible recorrer y referenciar sus elementos como si fuera un array, pero no es posible utilizar métodos de array, como <i>push</i> o <i>pop</i>.</p>
+            <p>Si solo tenemos un elemento con <i>name="apellidos"</i> para acceder a él:</p>
+            <pre>
+                <code>
+                    var elemento = document.getElementsByName(“apellidos”)[0];
+                </code>
+            </pre>
+            <p>Si tuviéramos tres elementos con el atributo <i>name="apellidos"</i>, para acceder al segundo elemento:</p>
+            <pre>
+                <code>
+                    var segundo = document.getElementsByName(“apellidos”)[1];
+                </code>
+            </pre>
+            <div class="nota">Recuerda que los arrays comienzan en la posición 0.</div>
+            <h4 class="apartado">getElementsByTagName()</h4>
+            <p>Esta es una función muy parecida a la anterior, ya que también devuelve una colección de elementos cuya etiqueta XHTML coincida con la que se pasa como parámetro.</p>
+            <h4 class="apartado">getElementById()</h4>
+            <p>Esta función es la más utilizada y nos permite acceder directamente al elemento a través del ID. Entre paréntesis se escribirá la cadena de texto con el ID. Hay que tener en cuenta que el ID debe ser único en una misma página. La función solo nos devolverá el nodo buscado.</p>
+            <pre>
+                <code>
+                    var elemento = document.getElementById(“apellidos”);
+                </code>
+            </pre>
+            <h4 class="apartado">Acceso a los nodos de tipo atributo</h4>
+            <p>Para referenciar a un atributo, como puede ser el atributo <i>type="text"</i> del campo "apellidos", usaremos la colección <i>attributes</i>. Esta colección se cubrirá de diferentes maneras y existirán muchos pares en la colección, tantos como atributos tenga el elemento.</p>
+            <p>Para buscar el par correcto, se usará la propiedad <i>nodeName</i>, la cual nos devolverá el nombre del atributo y usaremos <i>node-Value</i> para acceder a su valor.</p>
+            <h4 class="apartado">Acceso a los nodos de tipo texto</h4>
+            <p>Para ver cómo podemos acceder a la información textual de un nodo.</p>
+            <pre>
+                <code>
+                    p title=”Texto de un párrafo”>Esto es un ejemplo
+                    de texto HTML que puedes tener en tu documento. /p
+                </code>
+            </pre>
+            <p>Con la colección <i>childNodes</i> podremos acceder a los nodos hijo de un elemento, sean de tipo elemento o de tipo texto.</p>
+            <h4 class="apartado">Creación y borrado de nodos</h4>
+            <p>Uno de los objetivos para los que se creó el DOM es para crear y borrar los nodos, Es posible crear elementos e insertarlos después en el DOM, y la actualización quedará automáticamente reflejada por el navegador. Además, es posible mover nodos que ya existen, solo insertándolos en otro lugar cualquiera del árbol del DOM.</p>
+            <p>Cuando estemos creando <b>nodos de elementos</b>, el elemento debe estar <b>en minúsculas</b>. Si bien HTML no es sensible a máyusculas y minúsculas, XHTML sí que lo es y, por lo tanto, el elemento deberá ir en minúsculas.</p>
+            <p>Se utilizarán los métodos createElement(), createTextNode() y appendChild(), que nos permiten crear un elemento, un nodo de texto y añadir un nuevo nodo hijo.</p>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Programación de eventos</h3>
-          
-            <div class="menuOpcional">
-                <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
-            <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Modelos de eventos</h3>
-          
+            <h3 class="subTitulo" id="subCuatro">6.4.- Programación de eventos</h3>
+            <p><b>Sin eventos no hay prácticamente</b> scripts. Los eventos programados son los que disparan la ejecución de dichos scripts. JavaScript fue diseñado para añadir interactividad, el usuario hace algo y la página reacciona.</p>
+            <p>Tiene que detectar las acciones del usuario para saber cuándo reaccionar. También necesita saber las funciones que ejecutar cuando se producen esas acciones.</p>
+            <p>Cuando el usuario realiza algo, se genera un evento. Algunos eventos que no están directamente relacionados con acciones, como la carga de un documento, que se disparará de forma automática.</p>
+            <h3 class="subTitulo" id="subCinco">6.5.- Modelos de eventos</h3>
+            <p>Tenemos cuatro modelos de registro de eventos: en línea, tradicional, según W3C y según Microsoft.</p>
+            <h4 class="apartado">Modelo de registro de eventos en línea</h4>
+            <p>Se añaden los eventos como un atributo más del objeto. No se recomienda ya que JavaScript está integrado en el HTML y lo que queremos es tener separación entre la estructura y la programación.</p>
+            <pre>
+                <code>
+                    a href=”pagina.html” onClick=”alertar()”>Pulsa aquí a
+                </code>
+            </pre>
+            <h4 class="apartado">Modelo de registro de eventos tradicional</h4>
+            <p>Los eventos se asignan como una propiedad del objeto y fuera de la estructura HTML. No es un modelo estándar.</p>
+            <p>La palabra reservada <i>This</i> se utiliza para hacer referencia al objeto donde se programó el evento.</p>
+            <ul>
+                <li>Para asignar un evento se haría: <b>elemento.evento = hacerAlgo;</b></li>
+                <li>En cambio, para eliminar ese evento del objeto: <b>elemento.evento = null;</b></li>
+            </ul>
+            <p>Se puede programar cuando queremos que se dispare el evento, que puede ser en la fase de captura o de burbujeo.</p>
+            <p>La palabra reservada <i>This</i> también se utiliza en este modelo para hacer referencia al objeto donde se programó el evento.</p>
+            <pre>
+                <code>
+                    document.getElementById(“mienlace”).addEventListener(‘click’,alertar,false);
+                </code>
+            </pre>
+            <h4 class="apartado">Modelo de registro de eventos según Microsoft</h4>
+            <p>Se parece al utilizado por el W3C:</p>
+            <ul>
+                <li>Para asignar un evento se usa: <b>attachEvent().</b></li>
+                <li>En cambio, para eliminar un evento se usa: <b>detachEvent().</b></li>
+            </ul>
+            <p>Aquí los eventos siempre burbujean, no hay forma de captura.</p>
+            <p>No puede emplearse la palabra reservada <i>This</i>, porque la función es copiada, no referenciada. El nombre de los eventos empieza por "on" + nombre de evento.</p>
+            <pre>
+                <code>
+                    document.getElementById(“mienlace”).attach-Event(‘onclick’, alertar);
+                </code>
+            </pre>
             <div class="menuOpcional">
                 <a href="../dwEntornoCliente/indice_dwEc.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>

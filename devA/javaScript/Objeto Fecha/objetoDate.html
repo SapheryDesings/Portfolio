@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dateEstilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Objeto Date</title>
+  </head>
+  <!-- ---------------------------- -->
+  <body>
+    <main class="estandar fcolum javascript">
+      <header class="estandar">Objeto Date</header>
+      <section class="estandar fcolum">
+        <h3>El tipo Date</h3>
+        <p>En muchas ocasiones necesitaremos guardar o trabajar con fechas en nuestros programas. Una fecha tiene datos mixtos: día, mes y año, pero también puede ser más precisa y tener hora, minutos y/o segundos. Además, la hora puede estar en varios y múltiples formatos.</p>
+        <p>En principio, toda esta información no sería cómodo guardarla en formato de texto, ya que posteriormente nos gustaría trabajar y realizar operaciones con ellas (sumarle días, obtener el mes, obtener la hora, etc...). Así pues, tenemos un objeto llamado Date que nos vendrá muy bien para operaciones relacionadas con fechas.</p>
+        <h4>¿Qué es el tipo de dato Date?</h4>
+        <p>Javascript nos provee de un tipo de dato llamado Date, con el que podemos trabajar de forma fácil y práctica con fechas. Sin embargo, trabajar con fechas no es fácil y la primera vez que tenemos que hacerlo es muy sencillo equivocarse si no tenemos claros ciertos conceptos.</p>
+        <h4>Crear fechas con Date</h4>
+        <p>Lo primero, vamos a ver los constructores para saber como podemos construir una variable de tipo Date:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Constructor</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>new Date()</td>
+              <td>Obtiene la fecha del momento actual</td>
+            </tr>
+            <tr>
+              <td>new Date(str)</td>
+              <td>Convierte el texto con formato YYYY/MM/DD HH:MM:SS a una fecha</td>
+            </tr>
+            <tr>
+              <td>new Date(numero)</td>
+              <td>Convierte el número (en formato Tiempo UNIX) a una fecha UTC</td>
+            </tr>
+            <tr>
+              <td>new Date(y, m, d, h, min, s, ms)</td>
+              <td>Crea una fecha UTC a partir de componentes numéricos</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Podemos utilizar estas cuatro formas para crear fechas en Javascript. Observa que en algunos casos se menciona fecha UTC. De momento, vamos a obviar esta parte y más adelante profundizaremos en ella. Veamos algunos ejemplos para crear fechas con estos 4 constructores:</p>
+        <pre>
+          <code>
+            // Obtenemos la fecha actual y la guardamos en la variable date
+            const date = new Date();
+
+            // Obtenemos la fecha 30 de Enero de 2018, a las 23h 30m 14seg
+            const date = new Date("2018/01/30 23:30:14");
+
+            // Obtenemos la fecha del juicio final a partir de un timestamp o Tiempo UNIX
+            const date = new Date(872817240000);
+
+            // Creamos una fecha pasando cada uno de sus componentes numéricos*
+            const date = new Date(2018, 0, 30, 23, 30, 14, 0);
+          </code>
+        </pre>
+        <p>Mucho cuidado con los «componentes numéricos» mencionados en el último ejemplo. Si utilizamos el formato new Date(y, m, d, h, min, s, ms), hay que saber que, como mínimo, los parámetros y (año) y m (mes) son obligatorios, el resto son parámetros opcionales.</p>
+        <p>Además, si utilizamos este esquema, hay que tener en cuenta que hay ciertas características especiales:</p>
+        <ul>
+          <li>El parámetro m (mes) se proporciona con valores no reales que se recalcularán. Es decir, si indicamos un 1 nos referimos a febrero y no a enero. Si queremos referirnos a enero tenemos que indicar un 0.</li>
+          <li>Si indicamos valores negativos contabilizamos hacia atrás. Por ejemplo, con 2018, -1 estaríamos indicando diciembre de 2017. De la misma forma, 2018, 12 haría referencia a enero de 2019. Lo mismo ocurre con otros parámetros; 2018, 0, 32 haría referencia al 1 de febrero de 2018.</li>
+        </ul>
+      </section>
+      <section class="estandar fcolum">
+        <h3>Fechas con UNIX Timestamp</h3>
+        <p>El Tiempo UNIX (o UNIX timestamp) es un formato numérico utilizado para calcular una fecha en UNIX. Es una forma poco práctica y legible para humanos, pero muy eficiente en términos informáticos. Se trata de un número que representa la cantidad de segundos transcurridos desde la fecha 1/1/1970, a las 00:00:00.</p>
+        <p>Así pues, siendo números, resulta muy fácil trabajar y operar con ellos. Teniendo una fecha A y una fecha posterior B, si hacemos la operación B - A nos devuelve el número de segundos transcurridos entre ambas fechas, con lo que se podría sacar la diferencia de tiempo.</p>
+        <p>No obstante, ten en cuenta que el Tiempo UNIX sirve para trabajar con fechas a bajo nivel. Si lo deseas, al final del tema encontrarás una tabla con librerías más cómodas y prácticas para trabajar con fechas en Javascript.</p>
+        <p>Existen dos métodos que se pueden utilizar para crear fechas, al margen de los constructores anteriores, sólo que estos devuelven directamente el Tiempo UNIX de la fecha especificada:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date.now()</td>
+              <td>Devuelve el Tiempo UNIX de la fecha actual. Equivalente a +new Date()</td>
+            </tr>
+            <tr>
+              <td>Date.parse(str)</td>
+              <td>Convierte un string de fecha a Tiempo UNIX. Equivalente a +new Date(str)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Veamos algunos ejemplos aplicados para entenderlos:</p>
+        <pre>
+          <code>
+            // Estas tres operaciones son equivalentes
+            const date = Date.now();
+            const date = +new Date();
+            const date = new Date().getTime();
+
+            // Estas tres operaciones son equivalentes
+            const date = Date.parse("2018/10/30");
+            const date = +new Date("2018/10/30");
+            const date = new Date("2018/10/30").getTime();
+          </code>
+        </pre>
+        <ul>
+          <li>En el primer caso, utilizamos directamente los métodos estáticos now() y parse() para obtener el número con el tiempo Unix.</li>
+          <li>En el segundo caso, creamos un objeto Date con new Date(), lo que devuelve una fecha. Sin embargo, en Javascript, podemos preceder a esa fecha con el símbolo +, obligándolo a evaluarlo de forma numérica, lo que hace que obtenga el tiempo Unix a partir de la fecha.</li>
+          <li>En el tercer caso, escribimos en una línea dos acciones: crear la variable de fecha con new Date() y posteriormente, sobre esa fecha, hacemos un getTime(), que nos devuelve el tiempo Unix de un Date, como veremos más adelante.</li>
+        </ul>
+      </section>
+      <section class="estandar fcolum">
+        <h3>Getters: Obtener fechas</h3>
+        <p>Una vez hemos creado una fecha y tenemos el objeto , podemos trabajar muy facilmente con estas variables a través de sus sencillos métodos. Los siguientes son una lista de getters, funciones para obtener información, sobre la fecha almacenada:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.getDay()</td>
+              <td>Devuelve el día de la semana. Domingo = 0 / Sábado = 6</td>
+            </tr>
+            <tr>
+              <td>.getFullYear()</td>
+              <td>Devuelve el año con 4 cifras</td>
+            </tr>
+            <tr>
+              <td>.getMonth()</td>
+              <td>Devuelve la representación interna del mes. Enero = 0 / Diciembre = 11</td>
+            </tr>
+            <tr>
+              <td>.getDate()</td>
+              <td>Devuelve el día del mes</td>
+            </tr>
+            <tr>
+              <td>.getHours()</td>
+              <td>Devuelve la hora. Formato militar 23 en lugar de 11</td>
+            </tr>
+            <tr>
+              <td>.getMinutes()</td>
+              <td>Devuelve los minutos</td>
+            </tr>
+            <tr>
+              <td>.getSeconds()</td>
+              <td>Devuelve los segundos</td>
+            </tr>
+            <tr>
+              <td>.getMilliseconds()</td>
+              <td>Devuelve los milisegundos</td>
+            </tr>
+            <tr>
+              <td>.getTime()</td>
+              <td>Devuelve el UNIX Timestamp. Segundos transcurridos desde 1/1/1970</td>
+            </tr>
+            <tr>
+              <td>.getTimezoneOffset()</td>
+              <td>Diferencia horaria (en min) de la hora local respecto a UTC</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Algunos ejemplos del uso de estos métodos serían los siguientes:</p>
+        <pre>
+          <code>
+            const date = new Date("2018/01/30 15:30:10.999");
+
+            date.getDay();            // 2 (Martes)
+            date.getDate();           // 30
+            date.getMonth();          // 0 (Enero)
+            date.getFullYear();       // 2018
+            date.getHours();          // 15
+            date.getMinutes();        // 30
+            date.getSeconds();        // 10
+            date.getMilliseconds();   // 999
+            date.getTimezoneOffset(); // 0
+            date.getTime();           // 1517326210999 (Tiempo Unix)
+          </code>
+        </pre>
+        <p>Observa que Javascript no tiene forma de devolver, por ejemplo, el día de la semana o el mes en formato de texto. Sin embargo, ello se puede hacer de forma muy sencilla utilizando un array:</p>
+        <pre>
+          <code>
+            const MESES = [
+              "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+            ];
+            const date = new Date();
+
+            MESES[date.getMonth()]; // Devuelve el mes actual en formato de texto
+          </code>
+        </pre>
+        <p>El método getYear() se utilizaba para devolver la fecha con formato de 2 cifras. Se dejó de usar debido a la llegada del efecto 2000, reemplazándose por el método getFullYear() que usa el formato de 4 cifras.</p>
+      </section>
+      <section class="estandar fcolum">
+        <h3>Setters: Cambiar fechas</h3>
+        <p>De la misma forma que en el apartado anterior podemos obtener fechas específicas, con los setters podemos modificarlas o alterarlas.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.setFullYear(year)</td>
+              <td>Altera el año de la fecha, cambiándolo por year. Formato de 4 dígitos</td>
+            </tr>
+            <tr>
+              <td>.setMonth(month)</td>
+              <td>Altera el mes de la fecha, cambiándolo por month.(Ene=0)</td>
+            </tr>
+            <tr>
+              <td>.setDate(day)</td>
+              <td>Altera el día de la fecha, cambiándolo por day</td>
+            </tr>
+            <tr>
+              <td>.setHour(hour)</td>
+              <td>Altera la hora de la fecha, cambiándola por hour</td>
+            </tr>
+            <tr>
+              <td>.setMinutes(min)</td>
+              <td>Altera los minutos de la fecha, cambiándola por min</td>
+            </tr>
+            <tr>
+              <td>.setSeconds(sec)</td>
+              <td>Altera los segundos de la fecha, cambiándolos por sec</td>
+            </tr>
+            <tr>
+              <td>.setMilliseconds(ms)</td>
+              <td>Altera los milisegundos de la fecha, cambiándolos por ms</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Además de cambiar la fecha del objeto  en cuestión, estos métodos devuelven un  en tiempo Unix de la fecha modificada.</p>
+        <p>De la misma forma que mencionamos anteriormente, hay que tener en cuenta que los valores pasados a estos métodos pueden recalcular fechas: setMonth(0) implica Enero, setDate(0) implica último día del mes anterior, setDate(-1) implica penúltimo día del mes anterior, etc...</p>
+        <pre>
+          <code>
+            const date = new Date("2018/01/30 15:30:10.999");
+
+            date.setDate(15);           // Cambia a 15/01/2018 15:30:10.999 (Devuelve 1516030210999)
+            date.setMonth(1);           // Cambia a 15/02/2018 15:30:10.999 (Devuelve 1518708610999)
+            date.setFullYear(2020);     // Cambia a 15/02/2020 15:30:10.999 (Devuelve 1581780610999)
+            date.setHours(21);          // Cambia a 15/02/2020 21:30:10.999 (Devuelve 1581802210999)
+            date.setMinutes(00);        // Cambia a 15/02/2020 21:00:10.999 (Devuelve 1581800410999)
+            date.setSeconds(3);         // Cambia a 15/02/2020 21:00:03.999 (Devuelve 1581800403999)
+            date.setMilliseconds(79);   // Cambia a 15/02/2020 21:00:03.079 (Devuelve 1581800403079)
+            date.setTime(872817240000); // Cambia a 29/08/1997 02:14:00.000 (Devuelve 872817240000)
+          </code>
+        </pre>
+        <p>Ten en cuenta que los mismos métodos anteriores, soportan varios parámetros, para hacer más cómodo su utilización y no tener que estar usándolos uno por uno. Así por ejemplo, se puede usar setFullYear() para cambiar año, año y mes, o año, mes y día:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.setFullYear(y, m, d)</td>
+              <td>Altera el año, mes y día de una fecha</td>
+            </tr>
+            <tr>
+              <td>.setMonth(m, d)</td>
+              <td>Altera el mes y día de una fecha</td>
+            </tr>
+            <tr>
+              <td>.setHour(h, m, s, ms)</td>
+              <td>Altera la hora, minutos, segundos y milisegundos</td>
+            </tr>
+            <tr>
+              <td>.setMinutes(m, s, ms)</td>
+              <td>Altera los minutos, segundos y milisegundos</td>
+            </tr>
+            <tr>
+              <td>.setSeconds(s, ms)</td>
+              <td>Altera los segundos y milisegundos</td>
+            </tr>
+            <tr>
+              <td>.setTime(ts)</td>
+              <td>Establece una fecha a partir del tiempo UNIX ts</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Por último, también tenemos a nuestra disposición el método setter setTime(ts), que nos permite establecer una fecha a partir de un tiempo Unix ts. Es el equivalente a hacer un new Date(ts).</p>
+      </section>
+      <section class="estandar fcolum">
+        <h3>Representación de fechas</h3>
+        <p>Otro detalle más delicado dentro del trabajo con fechas es a la hora de mostrar una fecha en un formato específico. Podemos utilizar el formato por defecto que nos ofrece Javascript, pero lo más habitual es que queramos hacerlo en otro diferente, utilizando nuestra configuración horaria, abreviaturas u otros detalles. En Javascript tenemos varios métodos (muy limitados, eso sí) para representar las fechas:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Formato por defecto</td>
+              <td>Fri Aug 24 2023 00:23:45 GMT+0100</td>
+            </tr>
+            <tr>
+              <td>.toDateString()</td>
+              <td>Devuelve formato sólo de fecha: Fri Aug 24 2023</td>
+            </tr>
+            <tr>
+              <td>.toLocaleDateString()</td>
+              <td>Idem, pero en el formato regional actual: 24/8/2023</td>
+            </tr>
+            <tr>
+              <td>.toTimeString()</td>
+              <td>Devuelve formato sólo de hora: 00:23:45 GMT+0100</td>
+            </tr>
+            <tr>
+              <td>.toLocaleTimeString()</td>
+              <td>Idem, pero en el formato regional actual: 0:23:45</td>
+            </tr>
+            <tr>
+              <td>.toISOString()</td>
+              <td>Devuelve la fecha en el formato ISO 8601: 2023-08-23T23:27:29.3807</td>
+            </tr>
+            <tr>
+              <td>.toJSON()</td>
+              <td>Idem, pero compatible con JSON</td>
+            </tr>
+            <tr>
+              <td>toUTCString()</td>
+              <td>Devuelve la fecha, utilizando UTC</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>El método toISOString() devuelve un formato que intenta ser el estándar a la hora de manejar fechas en Internet o documentos en general. Básicamente, una regla mnemotécnica es pensar que se escriben desde magnitudes más altas (año) hasta las magnitudes más bajas (milisegundos). La fecha y la hora se separa con una T y cada componente con un - o un : dependiendo de si es fecha o es hora. Los milisegundos se separan siempre con .. La Z del final indica que es una fecha UTC.</p>
+        <p>Existen algunas librerías interesantes que permiten trabajar muy fácilmente con la representación de fechas o incluso otros detalles.</p>
+      </section>
+      <section class="estandar fcolum">
+        <h3>UTC y zonas horarias</h3>
+        <p>Para facilitar las cosas, hasta ahora hemos obviado un tema bastante importante: las zonas horarias. Probablemente te habrás percatado de que podría ser necesario trabajar y manejar diferencias horarias, porque por ejemplo necesitamos utilizar diferentes horas locales de distintos lugares del planeta. Para manejar esto, Javascript permite indicar también la diferencia horaria respecto al meridiano Greenwich, indicada como GMT.</p>
+        <p>Por ejemplo, podemos tener una fecha A 2018/01/01 15:30:00 GMT+0000, y una fecha B 2018/01/02 18:30:00 GMT+0200. La fecha A no tiene diferencia horaria (GMT+0000), sin embargo, la fecha B si la tiene (GMT+0200), por lo que en Javascript al hacer un new Date(str) de dicha fecha, se recalcula automáticamente y se guarda la fecha modificada y sin diferencia horaria. En este caso, se le restan 2 horas a la fecha B.</p>
+        <p>Es importante darse cuenta que, en Javascript, cuando usamos new Date() sin parámetros, obtendremos una fecha que puede incluir diferencias horarias:</p>
+        <pre>
+          <code>
+            const date = new Date();    // Mon Aug 27 2018 01:39:21 GMT+0100
+            date.getTimezoneOffset();   // -60 (1 hora menos)
+          </code>
+        </pre>
+        <p>Sin embargo, si hacemos uso de new Date(str), pasándole una fecha como parámetro de texto, automáticamente se recalcula la diferencia horaria, sumando/restando las horas, y se obtiene finalmente la fecha con diferencia horaria cero:</p>
+        <pre>
+          <code>
+            const date = new Date("2018/01/30 23:15:30 GMT+0100");
+            date;   // Tue Jan 30 2018 22:15:30 GMT+0000
+          </code>
+        </pre>
+        <p>En este caso, al recalcular y guardar la fecha/hora sin diferencias horarias, decimos que estamos utilizando el Tiempo Universal Coordinado o UTC. También podemos utilizar el método estático Date.UTC() donde le podemos pasar los parámetros de los componentes numéricos de la fecha, tal cómo lo hacemos en el constructor new Date(y, m, d, h, min, s, ms) anteriormente mencionado.</p>
+        <p>Además de lo anterior, recuerda que también tenemos todos los métodos Getters y Setters mencionados en su versión UTC. Por ejemplo, en el caso de getHours() tenemos una versión getUTCHours() que devuelve las horas de acuerdo al UTC (Tiempo Universal Coordinado).</p>
+      </section>
+      <section class="estandar fcolum">
+        <h3>Librerías para fechas</h3>
+        <p>En muchos casos, el objeto  de Javascript puede quedarse corto para el usuario, que echa mucho de menos algunas funciones específicas, mayor comodidad al trabajar con fechas, o que simplemente necesita un mayor control.</p>
+        <p>Existen múltiples librerías alternativas para trabajar con fechas, citamos algunas de ellas:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Librería</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Day.js</td>
+              <td>Librería inmutable para manejar fechas</td>
+            </tr>
+            <tr>
+              <td>date-fns</td>
+              <td>Moderna librería de fechas</td>
+            </tr>
+            <tr>
+              <td>Luxon</td>
+              <td>Librería moderna y potente para fechas</td>
+            </tr>
+            <tr>
+              <td>js-joda</td>
+              <td>Librería inmutable de fechas para JS</td>
+            </tr>
+            <tr>
+              <td>Datejs</td>
+              <td>Librería alternativa para trabajar con fechas</td>
+            </tr>
+            <tr>
+              <td>fecha</td>
+              <td>Librería ligera para formatear y parsear fechas</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Con ellas, podrás trabajar con mayor comodidad o profundidad con fechas y horas en Javascript.</p>
+        <p>Ten en cuenta que la librería Moment.js está actualmente desaconsejada por los desarrolladores, ya que no va a seguir manteniéndose. Recomiendan utilizar una librería más moderna como Luxon.</p>
+      </section>
+    </main>
+    <script src="appDate.js"></script>
+  </body>
+</html>

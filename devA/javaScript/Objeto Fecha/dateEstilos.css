@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --colorJavascript: #FFEB3B;
+}
+
+body {
+  color: #9E9E9E;
+  background-color: #101010;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.estandar {
+  margin: .5rem;
+  padding: .5rem;
+  /*border: 1px dashed darkred;*/
+}
+
+.fcolum {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.frow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.javascript {
+
+  & header {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: .5rem solid var(--colorJavascript);
+  }
+
+  & h3 {
+    padding-left: .5rem;
+    border-left: .5rem solid var(--colorJavascript);
+  }
+
+  & h4 {
+    padding: .1rem 1rem;
+    border-bottom: .1rem solid var(--colorJavascript);
+  }
+}
+
+pre {
+  width: 100%;
+  padding: .5rem;
+  font-size: 1rem;
+  white-space: pre-line;
+  background-color: #151515;
+}
+
+table { 
+  margin: 2rem 0;
+  padding: .5rem;
+  background-color: #151515; /**/
+
+  & thead {background-color: #202020;}
+  & tbody {background-color: #303030;}
+
+  & caption, td {padding: .5rem;}
+  
+  & th {padding: .3rem 1.2rem;}
+}
+
+ul {
+  padding: .5rem;
+  background-color: #202020;
+
+  & li {
+    padding: .5rem;
+    list-style-type: square;
+    list-style-position: inside;
+  }
+}
