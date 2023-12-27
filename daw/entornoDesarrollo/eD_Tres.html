@@ -20,49 +20,408 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 3. - Diseño y realización de pruebas</h2>
-            
+            <p>Vamos a aprender cómo se usan las distintas técnicas para realizar casos de prueba. JUnit para poder elaborar pruebas unitarias para clases Java.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Planificación de pruebas</h3>
-          
+            <h3 class="subTitulo">3.1.- Planificación de pruebas</h3>
+            <p>Será necesario que se definan unas <b>precondiciones</b> y <b>poscondiciones</b>, saber los valores de entrada que tenemos que darle y conocer cómo reacciona el programa ante la entrada de estos valores. Observamos el comportamiento y si es el previsto por el sistema o no. Determinaremos si ha superado la prueba.</p>
+            <p>Una <b>precondición</b> es una condición determinada que debe cumplir un conjunto de parámetros. Fijar estas precondiciones nos ayuda a ver que hay casos que no son necesarios testear.</p>
+            <p>Una <b>poscondición</b> es una condición que cumplirá el valor devuelto. Las poscondiciones se prueban mediante <b>aserciones</b> que están incluidas dentro del código.</p>
+            <p>Una <b>aserción</b> es un predicado incluido en el código por parte del programador donde se asegura que siempre se va a cumplir en ese punto del programa.</p>
+            <pre>
+                <code>
+                    int numero=10;
+                    if ((numero % 2) ==0 {//numero es par}
+                    else {//numero es impar
+                    assert (total % 2 == 1);}
+                </code>
+            </pre>
+            <p>Dos tipos de técnicas, prueba <b>de caja blanca</b>, centrada en validar la estructura interna del programa, y <b>prueba de caja negra</b>, basada en los requitos funcionales sin fijarse en el funcionamiento interno del programa.</p>
+            <h4 class="apartado">3.1.1.- Pruebas de caja blanca</h4>
+            <p>Su funcionamiento se basa en un exhaustivo examen de los detalles <b>procedimentales del código</b>.</p>
+            <p>Acceso al código fuente y se analizan todas posibilidades de nuestro código.</p>
+            <p>Recorrer todos los posibles casos, es inviable.</p>
+            <pre>
+                <code>
+                    If (a<100 && b<10) {// código que modifique a o b}
+                </code>
+            </pre>
+            <p>Sí podemos analizar un conjunto de caminos independientes y crear los casos de pruebas que nos permitan probar dichos caminos.</p>
+            <ul>
+                <li>Se ejecutan por lo menos una vez todos los caminos de cada módulo</li>
+                <li>Todas las sentencias sean ejecutadas al menos una vez</li>
+                <li>Todas las decisiones lógicas se ejecuten al menos una vez en parte verdadera y otra en falsa</li>
+                <li>Todos los bucles sean ejecutados en sus límites</li>
+                <li>Se usen todas las estructuras de datos internas que aseguren su validez</li>
+            </ul>
+            <h4 class="apartado">3.1.2.- Pruebas de caja Negra</h4>
+            <p>Se conoce como prueba de comportamiento. Sobre la interfaz sin necesidad de conocer la estructura del programa ni cómo funciona. Lo que se busca es que demuestre que las <b>funciones del software</b> son operativas.</p>
+            <p>Solo podremos observar la entrada y salida. Los errores que buscamos:</p>
+            <ul>
+                <li>Errores de interfaz, en estructuras de datos o en las bases de datos externas</li>
+                <li>Funcionalidades erróneas en el inicio o la finalización del programa</li>
+            </ul>
+            <p>Algunas técnicas son:</p>
+            <ul>
+                <li>Clases de equivalencia</li>
+                <li>Análisis de valores límite</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Estrategias de pruebas de software. Automatización de pruebas</h3>
-          
+            <h3 class="subTitulo" id="subDos">3.2.- Estrategias de pruebas de software. Automatización de pruebas</h3>
+            <p>Podemos representar las estrategias de pruebas como una espiral:</p>
+            <ul>
+                <ul>En el vértice situaremos la <b>prueba de unidad</b>. Está centrada en la unidad más pequeña, el módulo, tal cual está el código fuente.</ul>
+                <ul>La siguiente es la <b>prueba de integración</b>. Construimos una estructura con los módulos probados en la prueba anterior. El diseño será el foco de atención.</ul>
+                <ul>Seguidamente, nos encontramos con la <b>prueba de validación</b>. Es la prueba que realizará el usuario en el entorno final de trabajo.</ul>
+                <ul>La última es la <b>prueba del sistema</b>. Se probará que cada elemento esté construido de forma eficaz y funcional. El software del sistema se prueba como un todo.</ul>
+            </ul>
+            <h4 class="apartado">3.2.1.- Prueba de unidad</h4>
+            <p>Vamos a comprobar cada módulo para eliminar cualquier tipo de error en la interfaz o en la lógica interna.</p>
+            <ul>
+                <li>La interfaz del módulo</li>
+                <li>La estructura de datos locales: comprobación de integridad</li>
+                <li>Las condiciones límite: comprobación de que funciona en los límites establecidos</li>
+                <li>Caminos independientes de la estructura de control, lo que implica asegurarse de que se ejecutan las sentencias al menos una validez</li>
+                <li>Todos los caminos de manejo de errores</li>
+            </ul>
+            <p>Herramientas usadas para estas pruebas son JUnit, CPPUnit, PHPUnit, entre otras.</p>
+            <h4 class="apartado">Pruebas unitarias con JUnit</h4>
+            <p>Cómo funciona un programa que realiza pruebas para verificar nuestro aplicativo. Utilizaremos <b>JUnit</b>, integrada en Eclipse</p>
+            <h4 class="apartado">Preparación y ejecución de las pruebas</h4>
+            <p>Tipos de métodos para realizar comprobaciones.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métodos</th>
+                        <th>Misión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertTrue(boolean expresión)</li>
+                                <li>assertTrue(String mensaje, boolean expression)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que la expresión se evalúe <i>true</i>. Si no es <i>true</i> y se incluye el <i>string</i>, al producirse error se lanzará el mensaje</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertFalse(Boolen expresión)</li>
+                                <li>assertFalse(String mensaje, Boolean expresión)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que la expresión se evalúe <i>false</i>. Si no es <i>false</i> y se incluye el <i>string</i>, al producirse error se lanzará el mensaje</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertEquals(valorEsperado, valorReal)</li>
+                                <li>assertEqueals(String mensaje, valorEsperado, valorReal)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que el valorEsperado sea igual al valorReal. Si no son iguales y se incluye el <i>string</i>, entonces se lanzará el <i>mensaje</i>. <i>ValorEsperado</i> y <i>ValorReal</i> pueden ser de diferentes tipos</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertNull(Object objeto)</li>
+                                <li>assertNull(String mensaje, Object objeto)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que el objeto sea <i>null</i>. Si no es <i>null</i> y se incluye el <i>string</i>, al producirse error se lanzará el mensaje</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertNotNull(Object objeto)</li>
+                                <li>assertNotNull(String mensaje, Object objeto)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que el objeto no sea <i>null</i>. Si no es <i>null</i> y se incluye el <i>string</i>, al producirse error se lanzará el mensaje</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertSame(Objet objetoEsperado, objetoReal)</li>
+                                <li>assertSame(String mensaje, Object objetoEsperado, Object objetoReal)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que objetoEsperado y objetoReal sean el mismo objeto. Si no son el mismo y se incluye el <i>string</i>, al producirse el error se lanzará el mensaje</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>assertNotSame(Object objetoEsperado, Object objetoReal)</li>
+                                <li>assertNotSame(String mensaje, Object objetoEsperado, Object objetoReal)</li>
+                            </ul>
+                        </td>
+                        <td>Comprueba que objetoEsperado y objetoReal no sean el mismo objeto. Si no son el mismo y se incluye el string, al producirse el error se lanzará el mensaje</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>fail()</li>
+                                <li>fail(String mensaje):</li>
+                            </ul>
+                        </td>
+                        <td>Hace que la prueba falle. Si se incluye un string, la prueba falla, lanzando el mensaje</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Tipos de anotaciones</h4>
+            <p>JUnit tiene disponibles unas anotaciones que permiten ejecutar el código antes y después de las pruebas:</p>
+            <ul>
+                <li><b>@Before:</b> si queremos que se inicie un método antes de que se ejecute cualquier método de prueba, usaremos esta anotación en dicho método. Puede haber varios con esta etiqueta</li>
+                <li><b>@After:</b> si colocamos esta etiqueta en el método, haremos que se ejecute después de cualquier tipo de prueba. Puede haber varios métodos con esta anotación</li>
+                <li><b>@BeforeClass:</b> solo podrá tener esta etiqueta un solo método, y se iniciará al principio de realizar las pruebas</li>
+                <li><b>@AfterClass:</b> solo podrá tener esta etiqueta un solo método, y se ejecutará una vez que se hayan finalizado todas las pruebas</li>
+            </ul>
+            <h4 class="apartado">Pruebas parametrizadas</h4>
+            <p>Para ejecutar una prueba varias veces pero con distintos valores:</p>
+            <ul>
+                <li>Añadir etiqueta @RunWith(Parameterized.class) a la clase de prueba. Con esta especificación indicamos que será usada para realizar varios tipos de prueba. Se declarará un parámetro para cada tipo de prueba, y un constructor tendrá tantos argumentos como parámetros.</li>
+                <li>Para devolver la lista de valores que testear, incluiremos en el método la etiqueta @Parameters</li>
+            </ul>
+            <h4 class="apartado">3.2.2.- Prueba de integración</h4>
+            <p>Se comprobará la interacción de los distintos módulos del programa. Se comprueba que funcionan al tener que hacerlo de forma conjunta.</p>
+            <ul>
+                <li><b>Integración no incremental o big bang:</b> Comprobación de cada módulo por separado y después se prueba de forma conjunta. Se detectan muchos errores y la corrección es difícil</li>
+                <li><b>Integración incremental:</b> En este caso, el programa se va creando y probando en pequeñas secciones, por lo que localizar los fallos es más sencillo. En esta integración podemos optar por dos estrategias:
+                <ul>
+                    <li><b>Ascendente:</b> Se comienza con los módulos más bajos del programa</li>
+                    <li><b>Descendente:</b> Se empieza por el módulo principal, descendiendo por la jerarquía de control</li>
+                </ul>
+                </li>
+            </ul>
+            <h4 class="apartado">3.2.3.- Prueba de validación</h4>
+            <p>Darán comienzo cuando:</p>
+            <ul>
+                <li>El software ya está ensamblando y se han detectado y corregido los errores</li>
+                <li>Las pruebas están realizadas de tal forma que las acciones ya son visibles para el usuario</li>
+                <li>Ya se cumple el documento especificado de requisitos de software</li>
+            </ul>
+            <p>Se llevarán a cabo de pruebas con la técnica de caja negra:</p>
+            <ul>
+                <li><b>Prueba alfa:</b> realizada por el cliente o usuario en el lugar de desarrollo. Usará el programa bajo la observación del desarrollador, que irá registrando los errores</li>
+                <li><b>Pruebas beta:</b> realizada por los usuarios finales en su lugar de trabajo sin la presencia del desarrollador. En este caso, será el usuario el que registre los errores y se los comunique al desarrollador para que realice las modificaciones correspondientes y cree una nueva versión del producto</li>
+            </ul>
+            <h4 class="apartado">3.2.4- Prueba del sistema</h4>
+            <p>Conformada por varias pruebas que tendrán como misión ejercitar en profundidad el software.</p>
+            <ul>
+                <li><b>Prueba de recuperación:</b> se fuerza el fallo del software y se comprueba que la recuperación del sistema se realiza correctamente</li>
+                <li><b>Prueba de seguridad:</b> se comprueba que el sistema esté protegido frente a acciones ilegales y se examina los mecanismos de control</li>
+                <li><b>Prueba de resistencia(stress):</b> Se lleva el sistema al límite de los recursos, sometiéndolo a cargas masivas. El objetivo es comprobar los extremos del sistema</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Pruebas de código: cobertura, valores límite y clases de equivalencia</h3>
-          
+            <h3 class="subTitulo" id="subTres">3.3.- Pruebas de código: cobertura, valores límite y clases de equivalencia</h3>
+            <p>Las pruebas de código consisten en la ejecución del programa para localizar errores. Se comienza para su ejecución con varias entradas y una serie de condiciones de ejecución, y observamos y registramos los resultados para compararlos con los resultados que esperamos. Comprobaremos si el resultado es el esperado o no y por qué.</p>
+            <h4 class="apartado">3.3.1.- Prueba del camino básico</h4>
+            <p>Es una técnica de caja blanca, permite obtener la medida de la complejidad de nuestro sistema. Se usa para la definición de un conjunto de caminos de ejecución. Utilizaremos la técnica de representación de <b>grafo de flujo</b>.</p>
+            <p>Cada círculo va a representar una o más sentencias, sin bifurcaciones, en pseudocódigo o código fuente. Se numerarán cada símbolo y los finales de las estructuras. Cada círculo se llamará <i>nodo</i>.</p>
+            <p>Las flechas se llaman <i>aristas</i> o <i>enlaces</i> y representan el flujo de control. Terminarán en un nodo, aunque este no tenga ninguna sentencia procedimental.</p>
+            <p>Las <i>regiones</i> son áreas que estarán delimitadas por aristas y nodos.</p>
+            <p>El <i>nodo predicado</i> contendrá una condición y su principal característica es que salen dos aristas dependiendo de esa condición.</p>
+            <ul>
+                <li>En este nodo, tenemos un conjunto de sentencias de inicialización de variables.</li>
+                <li>Tenemos un nodo decisión. Si C es distinta de 10, iremos al nodo(3), pero si no, iremos al nodo (9), sacaremos por pantalla las variables par e impar y finalizaremos el programa</li>
+                <li>Si se cumple que C, ejecutamos las sentencias secuenciales (3) y (4)</li>
+                <li>Nos encontramos con otro nodo predicado. Si no se cumple que <i>n</i> sea par, incrementamos la variable impar (6). Se se cumple, incrementamos la variable par (7)</li>
+                <li>Finalmente, volveremos al nodo predicado (2) para comprobar la condición</li>
+            </ul>
+            <p>Podemos realizar las pruebas en diferentes representaciones de código (pseudocódigo, diagramas de flujo).</p>
+            <h4 class="apartado">Complejidad ciclomática</h4>
+            <p>Nos proporciona una medida cuantitativa de la complejidad lógica de un programa. Establecerá el número de casos de prueba que deberán ejecutarse para que las sentencias sean ejecutadas al menos una vez. Se podrá calcular:</p>
+            <ul>
+                <li>V(G)= número de regiones del grafo</li>
+                <li>V(G)= aristas - nodos + 2</li>
+                <li>V(G)= nodos predicado + 1</li>
+            </ul>
+            <p>Valores de referencia:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Complejidad ciclomática</th>
+                        <th>Evaluación del riesgo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Entre 1 y 10</td>
+                        <td>Programas o métodos sencillos, sin mucho riesgo</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 11 y 20</td>
+                        <td>Programas o métodos más complejos, riesgo moderado</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 21 y 50</td>
+                        <td>Programas o métodos complejos, alto riesgo</td>
+                    </tr>
+                    <tr>
+                        <td>Mayor que 50</td>
+                        <td>Programas o métodos no testeables, muy alto riesgo</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Determina cuál es la cota inferior del número de pruebas que tenemos que realizar para probar, como mínimo, todos los caminos existentes pasando, al menos, una vez por cada nodo y una vez por cada arista del grafo.</p>
+            <h4 class="apartado">Obtención de los casos de prueba</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Camino</th>
+                        <th>Caso de prueba</th>
+                        <th>Resultado esperado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Escoger algún valor de C tal que NO se cumpla la condición C<>10 <br> C=10</td>
+                        <td>Visualizar el número de pares y de impares</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Escoger algún valor de C tal que Sí se cumpla la condición C<>10 <br> Escoger algún valor de N tal que NO se cumpla la condición N%2=0 <br> C=1, N=5</td>
+                        <td>Contar números impares</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Escoger algún valor de C tal que Sí se cumpla la condición C<>10 <br> Escoger algún valor de N tal que Sí se cumpla la condición N%2=0 <br> C=2, N=4</td>
+                        <td>Contar números pares</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.3.2.- Partición o clases de equivalencia. Casos de prueba</h4>
+            <p>La partición equivalente es un método de prueba de caja negra que divide los valores de los campos de entrada de un programa en clases de equivalencia.</p>
+            <p>Examinaremos cada condición de entrada para poder identificar estas clases de equivalencia y lo dividiremos en dos o más grupos.</p>
+            <p>Dos tipos de clases de equivalencia:</p>
+            <ul>
+                <li><b>Clases válidas:</b> valores de entrada válidos</li>
+                <li><b>Clases no válidas:</b> valores de entrada no válidos</li>
+            </ul>
+            <p>Nuestro objetivo es encontrar un conjunto de entradas válidas, probarlo en el módulo que queremos testear y obtener una serie de salidas para tratar de comprobar o detectar si se ha encontrado un error.</p>
+            <p>Este tipo de pruebas, asumimos riesgos, porque solo estamos probando con un conjunto de valores que damos por sentado que van a ser los representativos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de entrada</th>
+                        <th>Nº de clases válidas</th>
+                        <th>Nº de clases inválidas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rando de valores [10...20]</td>
+                        <td>1: valor en rango [15]</td>
+                        <td>2: valor por debajo del rango y valor por encima del rango (8 y 30)</td>
+                    </tr>
+                    <tr>
+                        <td>Conjunto de valores {1,3,5,7}</td>
+                        <td>1: valor de conjunto {3}</td>
+                        <td>2: valor fuera del conjunto, tanto por arriba como por abajo (= y 10)</td>
+                    </tr>
+                    <tr>
+                        <td>Condición booleana: "debe ser una letra"</td>
+                        <td>1: valor evaluado como cierto('T')</td>
+                        <td>2: valor evaluado como falso ($)</td>
+                    </tr>
+                    <tr>
+                        <td>Conjunto de valores admitidos {valor1, valor2, valor3}</td>
+                        <td>1: tantos valores como los admitidos {valor1, valor2, valor3}</td>
+                        <td>2: valor no admitido {valor4}</td>
+                    </tr>
+                    <tr>
+                        <td>Clases menores. Dos rangos 8 < valor < 15; 100 <= valor <= 200;</td>
+                        <td colspan="2">Se divide en distintas subclases que se manejan exactamente igual que los puntos mencionados arriba (una para 8 < valor < 15 y otra para 100 <= valor <= 200)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">3.3.3.- Análisis de valores límite. Casos de prueba</h4>
+            <p>Vamos a extender las pruebas a un análisis de valores límite. Se basa en la hipótesis de que suelen ocurrir más errores en los valores extremos de los campos de entrada. No solo estará centrado en las condiciones de entrada, sino que se definen también las clases de salida.</p>
+            <ul>
+                <li>Si una condición de entrada especifica un <b>rango de valores</b>, deberemos concretar casos de prueba para los límites del rango y para los valores justo por encima y por debajo. Ejemplo: para un rango de valores enteros que estén comprendidos entre 5 y 15, tenemos que escribir casos de prueba para 5, 15, 4 y 16</li>
+                <li>Si especifica <b>número de valores</b>, similar al anterior</li>
+                <li>Para la condición de salida, aplicaremos la regla 1</li>
+                <li>Usar también para la condición de salida la regla 2. Tanto en esta regla como en la anterior no se generarán valores que estén fuera del rango</li>
+                <li>Si la estructura interna posee límites preestablecidos, nos aseguraremos de diseñar casos de prueba que ejerciten la estructura de datos en sus límites, primer y último elemento</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Pruebas funcionales, pruebas estructurales y pruebas de regresión</h3>
-          
-            <div class="menuOpcional">
-                <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
+            <h3 class="subTitulo" id="subCuatro">3.4.- Pruebas funcionales, pruebas estructurales y pruebas de regresión</h3>
+            <p>Las pruebas funcionales se definen a partir de las características que están descritas en la documentación y su compatibilidad con el sistema.</p>
+            <p>Son pruebas de caja negra porque valoramos el comportamiento externo del sistema.</p>
+            <p>Un ejemplo es una prueba unitaria o una prueba de interfaz.</p>
+            <p>Las pruebas estructurales son pruebas que nos indican si las diferentes estrategias de pruebas de software se han llevado a cabo correctamente. Si encajan, podemos decir que la arquitectura construida de software es correcta.</p>
+            <p>Las pruebas de regresión consisten en volver a probar una parte de sistema o un componente determinado tras haber sido modificado. El objetivo de descubrir cualquier fallo introducido o que no hayamos cubierto debido a esos cambios.</p>
+            <p>Estas pruebas se realizan sobre componentes ya probados.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Herramientas de depuración de código</h3>
-          
-            <div class="menuOpcional">
-                <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
+            <h3 class="subTitulo" id="subCinco">3.5.- Herramientas de depuración de código</h3>
+            <p>Las herramientas <b><i>linter</i></b>. Estas herramientas nos ayudan a detectar código confuso o incompatible, errores de programación del análisis sintáctico que realiza nuestro compilador.</p>
+            <p>Herramientas que nos detectan fallos, como un uso incorrecto de variables, condiciones o bucles mal formulados o cálculos erróneos.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Calidad del software</h3>
+            <h3 class="subTitulo" id="subCinco">3.6.- Calidad del software</h3>
+            <h4 class="apartado">3.6.1.- Normas y certificaciones</h4>
+            <p>La <b>norma ISO/IEC 25000</b>, conocida como SQuaRE, crea un conjunto de reglas comunes para evaluar la calidad del producto de software.</p>
+            <h4 class="apartado">Familia de normas ISO/IEC 25000</h4>
+            <ul>
+                <li>ISO/IEC 2500n. División de Gestión de Calidad</li>
+                <li>ISO/IEC 2501n. División de Modelo de Calidad</li>
+                <li>ISO/IEC 2502n. División de Medición de Calidad</li>
+                <li>ISO/IEC 25030n. División de Requisitos de Calidad</li>
+                <li>ISO/IEC 25040n. División de Evaluación de Calidad</li>
+                <li>ISO/IEC 25050-25099. Estándares de extensión SQuaRE</li>
+            </ul>
+            <h4 class="apartado">3.6.2.- Medidas de calidad del software</h4>
+            <p>Maurice Halstead desarrolla un conjunto de normas y métricas que se sustentan en el cálculo de palabras clave y variables del código.</p>
+            <p>Esta métrica está basada en contar los operadores y operandos que hay en un programa:</p>
+            <ul>
+                <li>n1: número de operadores únicos que aparecen en un programa</li>
+                <li>n2: número de operandos únicos que aparecen en un programa</li>
+                <li>N1: número total de ocurrencias de operadores</li>
+                <li>N2: número total de ocurrencias de operandos</li>
+            </ul>
+            <p>Podemos realizar diferentes cálculos en nuestro código:</p>
+            <ul>
+                <li>Longitud: N = N<sub>1</sub> + N<sub>2</sub>. Es la medida del tamaño del programa. Cuanto mayor sea N, más complejo es el programa y mayor esfuerzo hay que dedicar al mantenimiento. Esta medida nos detalla mejor el tamaño de nuestro código que el simple conteo de líneas de código</li>
+                <li>Volumen: N * log<sub>2</sub>(n), donde n = n<sub>1</sub> + n<sub>2</sub>. Si, tenemos dos programas con la misma longitud (N), pero uno de ellos tiene mayor número de operandos y operadores únicos, será más difícil de entender y mantener. Tendrá mayor volumen</li>
+                <li>Dificultad: D = ((n<sub>1</sub> * N<sub>2</sub>)/(n<sub>2</sub> * 2)). La dificultad es directamente proporcional al número de operadores únicos de un programa. Si los mismos operandos se utilizan varias veces dentro del programa, será más propenso a tener errores</li>
+                <li>Esfuerzo: E = V * D. El esfuerzo por entender un programa o mantenerlo es proporcional al volumen del programa y a su nivel de dificultad</li>
+                <li>Nivel: L = 1/D. El nivel de un programa es inversamente proporcional a su dificultad. Un programa de bajo nivel es más propenso a tener errores que uno de alto nivel</li>
+            </ul>
+            <pre>
+                <code>
+                    if (N > 1) {
+                        A = B * N;
+                        System.out.println(“El resultado es: “ + A);
+                        }
+                        n1 = 8 (if, (), >, {}, =, *, system.out.println, +)
+                        n2 = 4 (N, 1, A, B)
+                        n = n1 + n2 = 12
+                        N1 = 9 (if, (), >, {}, =, *, system.out.println, (), +)
+                        N2 = 6 (N, 1, A, B, N, A)
+                        N = N1 + N2 = 15
+                        V = N * log2(n) = 15 * log2(12) = 53,77
+                        D = (n1 * N2) / (n2 * 2) = (8 * 6) / (4 * 2) = 6
+                        E = V * D = 54,77 * 6 = 328,62
+                        L = 1 / D = 1 / 6 = 0,16
+                </code>
+            </pre>
           
             <div class="menuOpcional">
                 <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
