@@ -14,21 +14,101 @@
     <body>
         <header>
             <div class="navtop">
-                <a href="../entornoDesarrollo/indice_entornoDesarrollo.html">Entorno de Desarrollo</a>
+                <a href="../dAw.html">Entorno de Desarrollo</a>
                 <a href="../../index.html">Principal</a>
             </div>
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 4. - Documentación y optimización</h2>
-            
+            <p>Refactorización y porqué es necesario refactorizar. Trataremos el control de versiones y para qué se utiliza en la creacción de proyectos de software. Usaremos herramientas cliente y servidor y aprenderemos a documentar las clases Java usando Javadoc.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Refactorización. Concepto. Limitaciones. Patrones de refacción más usuales</h3>
+            <h3 class="subTitulo">4.1.- Refactorización. Concepto. Limitaciones. Patrones de refacción más usuales</h3>
+            <div class="nota">La refactorización nos va a permitir optimizar un código que se ha escrito previamente, realizando cambios en la escritura interna sin que afecten al comportamiento final del producto.</div>
+            <p>La refactorización tiene como objetivo limpiar el código para que se entienda mejor y se pueda modificar de forma más fácil, lo que nos va a permitir una mejor lectura y compresión de lo que se realiza. Esta modificación no alterará su ejecución ni los resultados.</p>
+            <h4 class="apartado">4.1.1.- Cuándo refactorizar. Bad smells</h4>
+            <p>La refactorización la deberemos ir haciendo a medida que desarrollamos el software. Mario G. Piattini y Félix Óscar García analizaron los síntomas que indican la necesidad de refactorizar. Los <b>bad smells</b> (malos olores), pequeños indicios que indican que el sistema no funciona como es debido. Los síntomas:</p>
+            <ul>
+                <li><b>Código duplicado:</b> Esta será la principal razón para realizar la refactorización. Si encontramos algún código repetido, deberemos unificarlo.</li>
+                <li><b>Métodos muy largos:</b> Los métodos largos normalmente pueden estar compuestos de métodos más pequeños, por los que deberemos dividirlos para que, además, puedan reutilizarse.</li>
+                <li><b>Clases muy grandes:</b> Si una clase es grande, tendrá muchas responsabilidades al tener demasiados métodos y atributos. Por ello, deberemos crear clases más pequeñas y que estén bien delimitadas.</li>
+                <li><b>Lista de parámetros extensa:</b> Las funciones deben tener el mínimo de parámetros posible o, del contrario, tendremos un problema de encapsulación de datos. Si un método requiere de muchos parámetros, deberemos crear una clase objeto con esa cantidad de datos.</li>
+                <li><b>Cambio divergente:</b> Una clase se puede modificar por diferentes motivos. Estos no tienen por qué estar relacionados y cabe la posibilidad de poder eliminar o dividir dicha clase en el caso, de que esté realizando demasiadas tareas.</li>
+                <li><b>Cirugía a tiro pistola:</b> Cambios adicionales realizados después de modificar una clase para compatibilizar el cambio.</li>
+                <li><b>Envidia de funcionalidad:</b> Ocurre cuando un método usa más elementos de otra clase que de la suya propia. Se resolverá pasando ese método a la clase que usa más.</li>
+                <li><b>Clase de solo datos:</b> Clase que solo tiene atributos y métodos de acceso. No debería ser lo habitual.</li>
+                <li><b>Legado rechazado:</b> Subclases que usan características de superclase, lo que puede inducir a un error en la jerarquía de clases.</li>
+            </ul>
+            <p>El proceso de refactorización posee algunas ventajas, como la sencillez de mantenimiento en el diseño del sistema y el incremento de la facilidad en la lectura y en el código fuente.</p>
+            <p>Las bases de datos y las interfaces son áreas conflictivas para la refactorización. El cambio de base de datos tendría como consecuencia la migración de la estructura y de los datos.</p>
+            <h4 class="apartado">4.1.2.- Refactorización en Eclipse</h4>
+            <p>Con el IDE Eclipse, podemos refactorizar nuestro código.</p>
+            <h4 class="apartado">Métodos y herramientas de refactorización</h4>
+            <p>Mediante el uso de distintas herramientas plantearemos elementos para refactorizar y estas nos mostrarán las posibles soluciones, en las que podremos observar el resultado antes y después de la refactorización. También se les llama <b>patrones de refactorización o catálogos de refactorización</b>.</p>
+            <p>Los elementos más comunes:</p>
+            <ul>
+                <li><b>Rename:</b> Cambia el nombre de cualquier identificador de Java. Es de las opciones más utilizadas y, una vez ejecutada, se modifican las referencias a ese identificador.</li>
+                <li><b>Move:</b> Se mueve la clase de un paquete a otro, se moverá el archivo .java y se cambiarán todas las referencias.</li>
+                <li><b>Extract Interface:</b> Nos va a permitir escoger los métodos de una clase para crear una interface. Una interfaz es una plantilla que define los métodos, pero no los desarrolla. Serán las clases de la interfaz la encargada de desarrollarlos.</li>
+                <li><b>Extract Superclass:</b> Permite extraer una superclase. Si ya utilizaba una, la extraída será la nueva superclase. Se podrán seleccionar los métodos y atributos que van a formar parte de la nueva superclase.</li>
+                <li><b>Pull Up:</b> Permite pasar un método de una subclase (o clase hija) a una superclase.</li>
+                <li><b>Pull Down:</b> Permite pasar un método de una superclase a una clase hija o subclase.</li>
+                <li><b>Extract Constant:</b> Convierte en una constante un número o una cadena. Se mostrará el estado antes y después de refactorizar. El objetivo es modificar el valor del literal en un único lugar.</li>
+                <li><b>Extract Local Variable:</b> Se asigna una expresión a una variable local. La misma expresión a otro método no se modifica.</li>
+                <li><b>Convert Local Variable to Field:</b> Convierte una variable local en un atributo privado de la clase. Tras la refactorización, todos los usos de la variable local se sustituyen por el atributo.</li>
+                <li><b>Extract Method:</b> Convierte un bloque de código en un método. No debe llevar llaves abiertas. Este patrón es muy útil cuandodetectamos bad smells en métodos muy largos o en bloques de código que se repiten.</li>
+                <li><b>Change Method Signatura:</b> Permite cambiar la firma de un método, el nombre y los parámetros que tiene.</li>
+                <li><b>Inline:</b> Nos ajusta una referencia a una variable o método con la línea en la que se utiliza pra conseguir así una única línea de código.</li>
+                <li><b>Member Type to Top Level:</b> Permite convertir una clase anidada en una clase de nivel superior con su propio archivo de Java.</li>
+                <li><b>Convert Anonymous Class to Nested:</b> Permite convertir una clse anónima a una clase anidada de la clase que la contiene. Una clase anónima se caracteriza por:
+                <ul>
+                    <li>Utilizar la palabra <i>new</i> seguida de la definición entre llaves</li>
+                    <li>Usar la palabra <i>new</i> seguida del nombre de la clase que hereda (sin extends) y la definición de la clase entre llaves</li>
+                    <li>Utilizar la palabra <i>new</i> seguida del nombre de la interfaz (sin implements) y la definición de la clase anónima entre llaves</li>
+                </ul>
+                </li>
+            </ul>
+            <p>Los aspectos más importantes:</p>
+            <ul>
+                <li>Se reestructura el código sin que haya cambios significativos en él</li>
+                <li>Los IDE (como Eclipse) soportan la refactorización. El IDE conoce las relaciones entre los métodos y las clases, permitiendo hacer cambios</li>
+                <li>Antes de realizar una refactorización, hay que definir correctamente los casos de prueba</li>
+            </ul>
+            <h4 class="apartado">4.1.3.- Refactorización y pruebas</h4>
+            <p>Para poder realizar la factorización, es muy importante contar con una buena colección de casos de prueba que nos validen nuestro sistema:</p>
+            <ul>
+                <li>Es recomendable que sean casos de prueba automáticos</li>
+                <li>Reportar los casos de fallo y errores que se encuentren</li>
+                <li>Deben poder ser ejecutados de forma independiente</li>
+            </ul>
+            <p>Lo primero es ejecutar las pruebas para comprobar que despuén de refactorizar el sistema no haya cambiado y tengamos los mismos resultados. Después habria que analizar los cambios que se quieren aplicar y aplicarlos.</p>
+            <p>Hay que destacar que optimizar el código no es refactorizar. Ambos modifican el código sin cambiar su funcionalidad, pero optimizar suele implicar introducir dificultad al código.</p>
+            <h4 class="apartado">Importancia de las pruebas a la hora de refactorizar</h4>
+            <p>Las pruebas unitarias juegan un papel muy importante para el desarrollo del software.</p> 
+            <ul>
+                <li>Nos previenen de las pruebas de regresión (recordemos que son pruebas que consisten en volver sobre el código cuando se hayan realizado cambios). Unas pruebas robustas en los primeros estados nos ayudan a reducir el tiempo en detección de errores</li>
+                <li>Facilitan refactorizar. Las pruebas unitarias nos dan seguridad suficiente para poder refactorizar y eliminar el riesgo de errores en el código</li>
+                <li>Mejoran cómo está diseñada la implementación. Si el código es complejo de probar, indica que hay que refactorizar.</li>
+            </ul>
+            <h4 class="apartado">Ventajas de refactorizar</h4>
+            <ul>
+                <li>Facilita la comprensión de nuestro código, sobre todo a aquellos programadores que se incorporaron al proceso posteriormente. Si el código fuente es complejo, su lectura reduce la productividad en el análisis de este</li>
+                <li>Favorece la detección de errores debido a que es más fácil de compredender y mejorar su robustez</li>
+                <li>Provoca mayor rapidez en la programación</li>
+                <li>Al reducir la complejidad del código, la calidad se ve incrementada durante el proceso</li>
+            </ul>
+            <p>Las zonas más conflictivas son las interfaces y las bases de datos:</p>
+            <ul>
+                <li>El aplicativo suelen estar fuertemente cohesionado con el sitema de la base de datos, por lo que una migración de esta última implica cambios estructurales y de datos</li>
+                <li>El cambio de interfaz no tiene que conllevar problemas siempre y cuando se tenga acceso al código fuente. Si no, la refactorización sería problemática</li>
+            </ul>
+            <h4 class="apartado">4.1.4.- Patrones de diseño</h4>
+            <!-- pag 116 -->
           
             <!--*********************************************************************-->
             <h3 class="subTitulo" id="subDos">Control de versiones. Estructura de las herramientas de control de versiones</h3>
           
             <div class="menuOpcional">
-                <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
+                <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
@@ -36,7 +116,7 @@
             <h3 class="subTitulo" id="subTres">Documentación. Uso de comentarios. Alternativas</h3>
           
             <div class="menuOpcional">
-                <a href="../entornoDesarrollo/indice_entornoDesarrollo.html"><div class="botonO">Índice</div></a>
+                <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>

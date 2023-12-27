@@ -28,7 +28,7 @@
   --azulClaro: #EBF5FB;
   /* Tamaños FUENTES */
   --fuenteTamañoEncabezados: clamp(14px, 3vw, 22px);
-  --fuenteTamañoGeneral: clamp(12, 2vw, 18px);
+  --fuenteTamañoGeneral: clamp(12px, 2vw, 18px);
   --fuenteTamañoSecundario: clamp(10px, 1.5vw, 16px);
   /* FUENTES */
   --specialSaphery: 'Smooch', cursive;
