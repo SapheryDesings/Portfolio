@@ -102,19 +102,165 @@
                 <li>El cambio de interfaz no tiene que conllevar problemas siempre y cuando se tenga acceso al código fuente. Si no, la refactorización sería problemática</li>
             </ul>
             <h4 class="apartado">4.1.4.- Patrones de diseño</h4>
-            <!-- pag 116 -->
-          
+            <p>Un patrón de es una solución que se puede replicar en distintos desarrollos de software.</p>
+            <p>Estos patrones explican todos los problemas que se encuentran en el diseño y se debate cuál es la mejor solución.</p>
+            <p>Podemos identificar las clases del diseño, cómo interactúan entre ellas y la distribución de la carga de trabajo. La estructura de un patrón:</p>
+            <ul>
+                <li>Nombre: descripción resumida del problema y las posibles soluciones.</li>
+                <li>El problema: describimos el problema detalladamente teniendo en cuenta:
+                    <ul>
+                        <li>Los requisitos a la hora de hacer el aplicativo</li>
+                        <li>Las restricciones</li>
+                        <li>Qué tipo de propiedades y características debe tener la solución</li>
+                    </ul>
+                </li>
+                <li>La solución: no describe una solución implementada como tal, sino que esuna plantilla que rellenar en situaciones concretas. Nos proporciona una solución abstracta y general.</li>
+                <li>Consecuencias: ventajas e inconvenientes.</li>
+            </ul>
+            <p>Tipos de patrones:</p>
+            <ul>
+                <li><b>Patrones estructurales:</b> nos detallan cómo se van a relacionar unos objetos con otros. Por ejemplo, el patrón <i>adapter</i> nos permite comunicar dos clases con interfaces diferentes a través de un objeto intermedio</li>
+                <li><b>Patrones de comportamiento:</b>  nos permiten detallar las responsabilidades entre los objetos. Un ejemplo sería el patrón <i>iterator</i> nos permite movernos por elementos de forma secuencial sin necesidad de entrar en su implementación.</li>
+                <li><b>Patrones creacionales:</b> ayudan a la creación de nuevos objetos sin necesidad de entrar en la implementación del resto del aplicativo, como es el caso del patrón <i>singleton</i>, que delimita una a una el número de las instancias de una clase y concede un acceso global a todo nuestro sistema</li>
+            </ul>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Control de versiones. Estructura de las herramientas de control de versiones</h3>
-          
+            <h3 class="subTitulo" id="subDos">4.2.- Control de versiones. Estructura de las herramientas de control de versiones</h3>
+            <p>El control de versiones implica la cantidad de poder recordar todos los cambios que se han realizado tanto en la estructura de directoreios como en el contenido de los archivos. Muy <b>útil para recuperar carpetas, archivos</b> o algún proyecto en un momento dado del desarrollo. Es necesario sber qué cambios se hacen, quién los hace y cuándo se realizan.</p>
+            <p><b>Términos útiles</b> del control de versiones:</p>
+            <ul>
+                <li><b>Repositorio:</b> Lugar donde se almacenan los datos y los cambios realizados</li>
+                <li><b>Revisión o versión:</b> Una revisión es una versión concreta de los datos almacenados. La última versión se identifica como la cabeza o <b>HEAD</b></li>
+                <li><B>Etiquetar o rotular (tag):</B> Las etiquetas se crean para localizar o recuperar en cualquer momento una versión concreta del desarrollo</li>
+                <li><b>Tronco (trunk):</b> Línea principal del desarrollo del proyecto</li>
+                <li><b>Rama o ramificar (branch):</b> Copias de carpetas, archivos o proyectos. Se pueden crear ramas para la creación de nuevas funcionalidades o comprobación de errores</li>
+                <li><b>Desplegar (checkout):</b> Copia del proyecto, archivos y carpetas en el repositorio del equipo local</li>
+                <li><b>Confirmar (commit o check-in):</b> Se realiza cuando se confirman los cambios realizados en el local para integrarlos al repositorio</li>
+                <li><b>Exportación (export):</b> Es similar al <i>checkout</i>, pero no se vincula la copia con el repositorio</li>
+                <li><b>Importación (import):</b> Subida de carpetas y archivos al repositorio</li>
+                <li><b>Actualizar (update):</b> Se realiza cuando se desea integrar los cambios realizados en el repositrorio de la copia del trabajo local</li>
+                <li><b>Fusión (merge):</b> Se unen combios realizados sobre uno o varios archivos en una única revisión. Se suele realizar cuando existen varias ramas y es necesario unir los cambios realizados</li>
+                <li><b>Conflicto:</b> Suele ocurrir cuando un usuario hace un checkout de un archivo y otro usuario no actualiza y realiza cambios sobre el mismo archivo. Cuando envía los cambios realizados, existe un conflicto entre ambos archivos, por lo que se deberán realizar los cambios o elegir uno de ellos</li>
+                <li><b>Resolver conflicto:</b> Actuación del usuario para atender varios conflictos</li>
+            </ul>
+            <p>Para empezar habrá que crear primero una copia local con checkout, realizar las modificaciones y por último, subir las modificaciones con commit. Si ya está vinculada la copia, habrá que hacer update para que se haga sobre la última versión.</p>
+            <h4 class="apartado">4.2.1.- Repositorio</h4>
+            <p>Es fundamental el uso de una herramienta multiplataforma de código abierto que garantice el control de versiones. Usará una base de datos central llamada repositorio que contendrá archivos cuyas versiones e historias son controladas. Este repositorio actuará como servidor de archivos y recordará cada cambio realizado.</p>
+            <p>Es especialmente imortante cuando un proyecto lo realizan varias personas, será básico llevar un control y un orden. Tendrá que verse como un árbol con su tronco <b>(trunk)</b>, que será la línea principal; sus ramas <b>(branches)</b>, las cuales añaden nuevas funciones o corrigen errores; y sus etiquetas <b>(tags)</b>, que marcan situaciones importantes o versiones acabadas.</p>
+            <p>La estructura:</p>
+            <ul>
+                <li><b>Trunk:</b> se guardan las carpetas del proyecto. Aquí estará la versión básica, la línea principal</li>
+                <li><b>Tags:</b> copia del proyecto, carpeta o archivo para obtener una versión que no se modifique. Serán copias del tronco y son útiles para crear versiones ya finalizadas</li>
+                <li><b>Branches:</b> desarrolla versiones que serán publicadas. Es una copia del tronco que será modificada para conseguir un producto final distinto al original. Serán modificaciones de versiones cerradas</li>
+            </ul>
+            <h4 class="apartado">4.2.2.- Tipos de herramientas de control de versiones</h4>
+            <ul>
+                <li><b>GIT:</b> es una herramienta de código libre que está diseñada tanto para pequeños proyecto como para proyectos de gran envergadura. <br>
+                <b>Ramificación y fusión:</b> una de las características que distingue a este control de versiones es su modelo de ramificación. GIT te permite trabajar múltiples ramas que pueden ser independientes entre sí y:
+                    <ul>
+                        <li>Hacer cambios de contexto sin conflictos. Podemos crear una rama para probar un determinado código. Podemos volver a donde bifurcamos esa rama y, si funciona, parchear.</li>
+                        <li>Establecer líneas de código que se basan en roles. Podemos tener una rama donde solamente ese código irá a producción y otra rama donde se realizarán pruebas.</li>
+                        <li>Realizar una división del trabajo basada en funciones. Cada programador estará trabajando en una funcionalidad del aplicativo. Una vez finalizada, se eliminará esta rama y se fusionará al proyecto principal.</li>
+                    </ul>
+                </li>
+                <li>Subversión en Eclipse</li>
+            </ul>
+            <h4 class="apartado">Operaciones con SVN Eclipse</h4>
+            <p>A la hora de realizar las operaciones con Eclipse, veremos que podremos realizar las mismas operaciones que con cualquier otro cliente.</p>
+            <p>Si queremos obtener una <b>copia</b> del trabajo, pulsaremos sobre <b>Check Out</b>, almacenará la copia en la carpeta actual. <b>Check Out As</b>, la almacenará en la carpeta que elijamos. El historial de revisiones pulsaremos sobre <b>Show History</b>.</p>
+            <p>En Java si se realiza algún cambio, aparecerá un símbolo ">" en los elementos asociados.</p>
+            <p>Para poder ver los cambios, accederemos a la pestaña <b>Synchronize</b> de la barra de botones o también desde la perspectiva <b>Team Synchronizing</b>.</p>
+            <p>Podremos hacer update, validar o ver los conflictos. Si hay <b>cambios salientes</b>, aparece una flecha negra hacia fuera; si aparece el signo "+" es que el archivo es nuevo. Lo que habría que hacer es validar este archivo.</p>
+            <h4 class="apartado">Solución de conflictos</h4>
+            <p>Un conflicto se producirá cuando dos usuarios modifiquen el mismo archivo del repositorio y las mismas líneas del archivo. Uno confirmará los cambios y el otro lo confirma a continuación, momento en que el servidor detectará la existencia de un conflicto, ya que se requiere validar los cambios en una copia que no ha sido actualizada con la versión del repositorio, que fue validada por el primer usuario.</p>
+            <p>Será necesario hacer <b>Mark as Merged</b>. Si no se hace, Subversive sigue creyendo que hay conflicto, por lo que no dejará validar.</p>
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Documentación. Uso de comentarios. Alternativas</h3>
-          
+            <h3 class="subTitulo" id="subTres">4.3.- Documentación. Uso de comentarios. Alternativas</h3>
+            <p>La documentación es el texto escrito que acompaña a los proyectos. Es un requisito importante en un proyecto comercial, ya que el cliente querrá que se documenten las distintas fases del proyecto.</p>
+            <p>Tipos de documentación:</p>
+            <ul>
+                <li><b>Documentación de las especificaciones:</b> sirve para comprobar que tanto las ideas del desarrollador como las del cliente son las mismas, ya que, de lo contrario, el proyecto no será aceptable. Esta documentación deberá contener:
+                    <ul>
+                        <li><b>Introducción:</b> se explican los fines y objetivos del software</li>
+                        <li><b>Descripción de la información:</b> descripción detallada, incluyendo hardware y software</li>
+                        <li><b>Descripción funcional:</b> detalla cada función del sistema</li>
+                        <li><b>Descripción del comportamiento:</b> explica cómo se comporta del software ante acciones externas e internas</li>
+                        <li><b>Criterios de valización:</b> documento sobre el límite de rendimiento, los tipos de pruebas, la respuesta esperada del software y las consideraciones especiales</li>
+                    </ul>
+                </li>
+                <li><b>Documentación del diseño:</b> en este documento se describe toda la estructura interna del programa, formas de implementación, contenido de clases, métodos, objetos, etc.</li>
+                <li><b>Documentación del código fuente:</b> durante el desarrollo del proyecto se debe ir comentando en el código fuente cada parte, para tener una mayor claridad de lo que se quiere conseguir en cada sección.</li>
+                <li><b>Documentación de usuario final:</b> documentación que se entrega al cliente en la que se describe cómo usar las aplicaciones del proyecto.</li>
+            </ul>
+            <h4 class="apartado">Documentación del código fuente</h4>
+            <p>La documentación del código es fundamental para actualización y reparación de errores. Debe describir lo que se está haciendo y por qué.</p>
+            <ul>
+                <li>Todos los programas poseen errores y es cuestión de tiempo que se detecten</li>
+                <li>Todos los programas sufren modificaciones a lo largo de su vida</li>
+            </ul>
+            <p>Es necesario que el código esté bien documentado para localice los cambios que quiere realizar.</p>
+            <p>Habrá que explicar lo que realiza una clase o un método y por qué y para qué lo hace.</p>
+            <p>Para documentar existen muchas herramientas, PHPDoc, PHPDocumentor, Javadoc o JSDoc.</p>
+            <h4 class="apartado">4.3.1.- Uso de Javadoc en Eclipse</h4>
+            <p>Javadoc es una herramienta de Java que sirve para extraer y generar documentación básica para el programador a partir del código fuente en formato HTML. Tendremos que escribir los comentarios, y el código y la documentación se encontrarán dentro del mismo fichero. Tipos de comentarios:</p>
+            <ul>
+                <li><b>Comentarios de línea:</b> comienzan con los caracteres "//" y terminan en la misma línea</li>
+                <li><b>Comentarios de bloque:</b> comienzan con "/*" y terminan con "*/". Pueden contener varias líneas</li>
+                <li><b>Comentarios de documentación Javadoc:</b> se colocan entre delimitadores "/**...*/", podrán agrupar varias líneas y cada línea irá precedida por un "*". Deberá colocarse antes de la declaración de una clase, un campo, un método o un conductor. Podrá contener etiquetas HTML y los comentarios están formados por una descripción seguida de un bloque de tags</li>
+            </ul>
+            <h4 class="apartado">Uso de etiquetas de documentación</h4>
+            <p>Las etiquetas de Javadoc van precedidas por "@" y las más utilizadas son:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@author</td>
+                        <td>Autor de la clase. Solo para clases</td>
+                    </tr>
+                    <tr>
+                        <td>@version</td>
+                        <td>Versión de la clase. Solo para clases</td>
+                    </tr>
+                    <tr>
+                        <td>@see</td>
+                        <td>Referencia a otra clase</td>
+                    </tr>
+                    <tr>
+                        <td>@param</td>
+                        <td>Descrpción del parámetro. Una etiqueta por cada parámetro</td>
+                    </tr>
+                    <tr>
+                        <td>@return</td>
+                        <td>Descripción de los que devuelve. Solo si no es void</td>
+                    </tr>
+                    <tr>
+                        <td>@throws</td>
+                        <td>Descripción de la excepción que puede propagar. Habrá una etiqueta throws por cada tipo de excepción</td>
+                    </tr>
+                    <tr>
+                        <td>@since</td>
+                        <td>Número de versión del producto</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Generar la documentación</h4>
+            <p>Casi todos los entornos de desarrollo incluyen un botón para poder configurar Javadoc.</p>
+            <ul>
+                <li>En Javadoc Command se indicará dónde se encuentra el fichero ejecutable de Javadoc, el javadoc.exe. Pulsamos en Configure para buscarlo dentro de la carpeta workspace</li>
+                <li>En los cuadros inferiores elegiremos el proyecto y las clases que documentar</li>
+                <li>Elegimos la privacidad de los elementos: con Private se documentarán todos los miembros públicos, privados y protegidos</li>
+                <li>Para finalizar, se indica la carpeta de destino en la que se almacenará el código <HTML></HTML></li>
+                <li>Pulsar en Next, en la siguiente ventana poner el título del documento HTML que se genera y elegir las opciones para la generación de las páginas HTML. Como mínimo, se seleccionarán la barra de navegación y el índice.</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>

@@ -20,21 +20,139 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 6. - Elaboración de diagramas de clases</h2>
-            
+            <p>Estudiaremos los conceptos básicos de la metodología orientada a objetos: los diagramas de clases. Una representación gráfica y estática de la estructura general de un sistema, mostrando cada una de las clases y sus relaciones representadas en forma de bloques.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Objetos</h3>
-          
+            <h3 class="subTitulo">6.1.- Objetos</h3>
+            <p>Un objeto es la instancia de una clase. Esta constituido por un conjunto de atributos (valores), métodos (acciones y reacciones a mensajes) e identidad propia (que lo distingue de los demás objetos). Una clase es un conjunto de objetos con estructura y comportamiento comunes.</p>
+            <p>Las propiedades de los objetos son claves. Los principios del modelo OO (orientados a objetos) son:</p>
+            <ul>
+                <li><b>Abstracción:</b> características esenciales de un objeto de tal forma que lo distingue de los demás objetos. Indican qué trabajo va a realizar ese objeto y cómo se comunica con los demás sin necesidad de mostrar cómo se implementan dichas características</li>
+                <li><b>Encapsulación:</b> conjunto de elementos que pertenecen a la misma entidad y al mismo nivel de abstracción. Gracias a esto , permite una mayor cohesión de sus componentes y separa la parte interna inaccesible para otros objetos de la externa, que sí será accesible. Dicho de otra forma, oculta los métodos y atributos a otros objetos, pasando a ser privados</li>
+                <li><b>Modularidad:</b> es la capacidad de un sistema o aplicación para dividirse en pequeños móduclos independientes</li>
+                <li><b>Jerarquía o herencia:</b> propiedad que permite que algunas clases tengan propiedades y características de una clase superior. La clase principal se llama clase padre o <b>superclase</b>. La nueva clase se denominará clase hija o <b>subclase</b>, que heredará todos los métodos y atributos de la superclase. Cada subclase estará formada con objetos más especializados.</li>
+                <li><b>Polimorfismo:</b> cuando dos instancias u objetos pertenecientes a distintas clases pueden responder a la llamada a métodos del mismo nombre, cada uno de ellos con distinto comportamiento encapsulado. Ambos responden a una interfaz común (marcada a través del mecanismo de la herencia)</li>
+                <li><b>Tipificación:</b> definición precisa de un objeto de forma que objetos de diferentes tipos no se pueden intercambiar</li>
+                <li><b>Concurrencia:</b> propiedad de un objeto que está activo respecto de otro que no lo está</li>
+                <li><b>Persistencia:</b> propiedad de un objeto en virtud de la cual su existencia transciende en el tiempo y/o el espacio</li>
+            </ul>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Diagramas de clases</h3>
-          
+            <h3 class="subTitulo" id="subDos">6.2.- Diagramas de clases</h3>
+            <p>Un diagrama de clases es una representación gráfica y estática de la estructura general de un sistema, mostrando cada una de las clases y sus interacciones representadas en forma de bloques.</p>
+            <ul>
+                <li><b>Clases:</b> atributos, métodos y visibilidad</li>
+                <li><b>Relaciones:</b> asociación, herencia, agregación, composición y dependencia</li>
+            </ul>
+            <h4 class="apartado">6.2.1.- Clases</h4>
+            <p>Son la unidad básica que contendrá toda la información referente a un objeto. Una clase de UML podemos representarla con un rectángulo dividido en tres partes:</p>
+            <ul>
+                <li><b>Parte superior:</b> nombre de la clase</li>
+                <li><b>Parte central:</b> atributos, que caracterizan la clase (private, protected, package o public)</li>
+                <li><b>Parte inferior:</b> métodos u operaciones, forma de interactuar del objeto con el entorno (según visibilidad: private, protected, package o public)</li>
+            </ul>
+            <p>Al representar la clase, podemos obviar señalar los atributos y métodos. La visibilidad de los métodos debe ser por defecto public, y la de los atributos, private.</p>
+            <h4 class="apartado">Atributos y métodos</h4>
+            <p>Los atributos representan las propiedades de la clase, mientras que los métodos son las implementaciones de un determinado servicio de la clase que muestra un comportamiento común.</p>
+            <p>Indicaremos también su visibilidad con el entorno, estando relacionada con el encapsulamiento. Tipos:</p>
+            <ul>
+                <li><b>Public:</b> se puede acceder al miembro de la clase desde cualquier sitio. Se representa con el signo "+"</li>
+                <li><b>Private:</b> solo se puede acceder al miembro de la clase desde la propia clase. Se representa con signo "-"</li>
+                <li><b>Protected:</b> solo se puede acceder a los miembros de la clase desde la misma clase o desde subclases (clases derivadas). Se representa con"#"</li>
+                <li><b>Package:</b> los miembros de las clases serán visibles dentro del mismo paquete. Se representa con la tilde "~"</li>
+            </ul>
+            <h4 class="apartado">6.2.2.- Relaciones</h4>
+            <p>Los objetos estarán vinculados entre sí, estos vínculos se describen a través de asociaciones al igual que los objetos se describen mediante clases.</p>
+            <p>Estas relaciones poseen un nombre y una cardinalidad llamada multiplicidad, que representa el número de instancias de una clase que se relaciona con las instancias de otra clase. Es similar a la utilizada en el modelo entidad/relación.</p>
+            <p>En cada extremo será posible indicar la multiplicidad mínima y máxima para indicar el intervalo de valores al que tendrá que pertenecer siempre la multiplicidad.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Notación</th>
+                        <th>Multiplicidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0..1</td>
+                        <td>Cero o una vez</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Una y solo una vez</td>
+                    </tr>
+                    <tr>
+                        <td>0..*</td>
+                        <td>De cero a varias veces</td>
+                    </tr>
+                    <tr>
+                        <td>1..*</td>
+                        <td>De una a varias veces</td>
+                    </tr>
+                    <tr>
+                        <td>M..N</td>
+                        <td>Entre M y N veces</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="apartado">Asociación</h4>
+            <p>Podrá ser <b>unidireccional</b> o <b>bidireccional</b>, dependiendo de si una conoce la existencia de la otra o no. Cada clase cuenta con un rol, que se indica en la parte superior o inferior de la línea que conecta a ambas clases, este vínculo también tendrá un nombre, representado con una línea que conecta a ambas clases.</p>
+            <p>Una asociación <b>bidirecional</b> se puede recorrer en ambos sentidos entre las dos claes. En la asociación <b>unidireccional</b>, la clase destino no sabrá de la existencia de la clase origen, y la clase origen contendrá un objeto o varios de la clase destino.</p>
+            <p>Dependiendo de la multiplicidad, podemos pasar de un objeto de una clase a uno o varios de la otra. A este proceso se le llama <b>navegabilidad</b>. En la asociación unidireccional, la navegabilidad es solo en un sentido, desde el origen al destino, pero no al contrario.</p>
+            <p>Algunas clases pueden asociarse consigo mismas, creando así una <b>asociación reflexiva</b>. Estas asociaciones unen entre sí instancias de una misma clase.</p>
+            <h4 class="apartado">Clase asociación</h4>
+            <p>Hay asociaciones entre clases que podrán tener información necesaria para dicha relación, por lo que se creará una clase llamada clase asociación. Recibirá el estatus de clase y las instancias serán elementos de la asociación, así como podrán vincularse con otras clases.</p>
+            <h4 class="apartado">Herencia (generalización y especialización)</h4>
+            <p>Podremos organizar las clases de forma jerárquica y, gracias a la herencia, seremos capaces de compartir atributos y operaciones comunes con las demás clases a través de una superclase. Las demás clases se conocen como subclases. La subclase hereda los atributos y métodos de la otra. La superclase generaliza a las subclases y las subclases especializan a la superclase.</p>
+            <p>Para representar esta asociación se usará una -> , donde el extremo de la flecha apunta a la superclase.</p>
+            <h4 class="apartado">Composición</h4>
+            <p>La asociación de composición consiste en que un objeto puede estar compuesto por otros objetos. Existirán dos formas: asociación fuerte, conocida como <b>composición</b>, asociación débil, conocida como <b>agregación</b>.</p>
+            <p>En la asociación fuerte, los objetos están constituidos por componentes y la supresión del objeto comporta la supresión de los componentes. La cardinalidad será de uno a varios.</p>
+            <p>Se representa con una línea con un rombo lleno.</p>
+            <h4 class="apartado">Agregación</h4>
+            <p>Es la composición débil, en la cual los componentes pueden ser compartidos por varios compuestos y la destrucción de uno de ellos no implica la eliminación del resto. Se suele dar con más frecuencia que la composición.</p>
+            <p>Su representación es una línea con un rombo vacío.</p>
+            <p>Características de la relación:</p>
+            <ul>
+                <li>La clase impresora usa a la clase documento</li>
+                <li>La clase impresora depende de documento</li>
+                <li>Dada la dependencia, todo cambio en documento podrá afectar a impresora</li>
+                <li>La impresora conoce la existencia de documento, pero al revés no</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Herramientas para el diseño de diagramas</h3>
-          
+            <h3 class="subTitulo" id="subTres">6.3.- Herramientas para el diseño de diagramas</h3>
+            <h4 class="apartado">6.3.1.- Papyrus para Eclipse</h4>
+            <p>Es una herramienta de modelado UML de código abierto e incluye soporte para todos los diagramas UML. Características:</p>
+            <ul>
+                <li>De código abierto basado en el entorno Eclipse</li>
+                <li>Proporciona un entorno integrado para el usuario para editar cualquier tipo de modelo EFM (metamodelos)</li>
+                <li>Proporciona editores de diagramas para lenguajes como UML2 Y SysML</li>
+                <li>Tiene un soporte de perfil de usuario</li>
+                <li>En términos generales, tiene formas de personalización muy potentes que pueden ser definidas por el usuario</li>
+            </ul>
+            <p>Se distinguirán cuatro paneles principales:</p>
+            <ul>
+                <li><b>Panel principal:</b> es donde colocaremos nuestros elementos del diagrama que queramos modelar</li>
+                <li><b>Panel del proyecto:</b> referencia a la estructura de nuestro proyecto principal</li>
+                <li><b>Panel de propiedades:</b> en este panel daremos valores a las propiedades de nuestros elementos del diagrama</li>
+                <li><b>Panel de nodes y edges:</b> en la parte de nodes, podemos elegir el tipo de elemento de nuestro diagrama. En un diagrama de clases, podemos elegir crear una clase interfaz, o un paquete. En la parte de edges elegiremos qué tipo de relación tendrán nuestros elementos. En un diagrama de casos de uso, tendremos relaciones de include o de extend.</li>
+            </ul>
+            <h4 class="apartado">Creación de diagramas de clase</h4>
+            <p>A la hora de crear una clase en UML, podemos dividirla en cuatro partes principales:</p>
+            <ul>
+                <li>Nombre de la clase</li>
+                <li>Atributos de la clase que ya hemos comentado que pueden ser públicos, privados, protegidos o package</li>
+                <li>Métodos de la clase exactamente igual que los atributos</li>
+                <li>Nested classifiers: limita la visibilidad del clasificador definido en la clase o interfaz al alcance del namespace para poder encapsular la información</li>
+            </ul>
+            <p>Dentro del panel de propiedades, podemos encontrar los tipos de modificadores:</p>
+            <ul>
+                <li><b>Is Abstract:</b> indica si la clase es abstracta</li>
+                <li><b>Is Active:</b> indica si la clase es activa. Para que lo sea, debe poseer objetos activos, que realicen uno o más procesos. Si no realizan ninguna actividad, serán objetos pasivos</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
