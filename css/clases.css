@@ -7,9 +7,7 @@
   list-style-type: none;
   text-decoration: none;
 }
-
-/* CALSES GLOBALES _______________________*/
-
+/* VARIABLES ____________________________*/
 :root {
   /*Principal -> Colores tarjetas*/
   --cyanIlumina: #03A9F4;
@@ -42,18 +40,24 @@
 */
 
 
-
-.main--Principal, .main--Indice {
+/* ESTRUCTRUA GENERAL ________________________*/
+/**************************************************
+  Para los archivos index - daw - dev y proyectos
+  Proporciona estructura, header y navegación común
+**************************************************/
+/* CONTENEDOR PRINCIPAL _________________________*/
+.main--Principal { 
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-
-  /*background-color: var(--azulPrincipal);*/
   color: var(--blancoTipologia);
   font-family: 'Montserrat', sans-serif;
-  font-size: large;
+
+  & a {
+    color: var(--blancoTipologia)
+  }
 }
 
 .main--Principal::before {
@@ -66,7 +70,8 @@
   background: linear-gradient(to top, #4481eb, #04befe 75%);
 }
 
-header {
+/* CABECERA __________________________________*/
+header { 
   width: 80%;
   display: flex;
   flex-flow: row;
@@ -77,7 +82,7 @@ header {
   font-style: italic;
   font-weight: bold;
 
-  & .navegacion {
+  & .navegacion { /* NAVEGACIÓN ______________*/
       display: flex;
       flex-direction: row;
       gap: .5rem;
@@ -96,87 +101,18 @@ header {
   }
 }
 
-/* Barra superior - Indices y apuntes, se incluye botón hacia principal y nombre asignatura */
-.navtop { 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 1rem 10%;
-  font-family: 'Titan One', cursive;
-  font-weight: 100;
-  background-color: var(--azulPrincipal);
-  color: white;
-}
- .navtop a { color: white;}
+/* DAW ______________________________________________*/
+/*****************************************************
 
-.temaIndice, .articuloApuntes {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1rem;
-}
-
-.main--Principal a, .main--Indice a{
-  color: var(--blancoTipologia)
-}
-
-/* Botón para ir hacia arriba en la página */
-.btnArriba {
-  width: 120px;
-  margin: 1rem 0;
-  padding: .3rem 1.5rem;
-  border: 3px solid rgba(52, 152, 219, .5 );
-  text-align: center;
-}
-
-  .btnArriba:hover {
-    border: 3px solid rgb(52, 152, 219);
-    background-color: rgba(52, 152, 219, .3);
-  }
-/* ______________________________________ */
-
-/* CLASES VISTA PRINCIPAL ________________*/
-
-/* ENCABEZADOS ___________________*/
-.main--Principal :is(h1, h2, h3, h4, h5, h6) {
-  font-family: 'Titan One', cursive;
-  font-weight: 100;
-}
-
-.main--Principal :is(h1, h2) {margin-bottom: 2rem;} 
-.main--Principal :is(h3, h4) {margin-bottom: 1rem;} 
-.main--Principal :is(h5, h6) {margin-bottom: .5rem;} 
-
-.main--Principal h1 { font-size: 3rem;}
-.main--Principal h2 { font-size: 2.5rem;}
-.main--Principal h3 { font-size: 2rem;}
-
-/*    Presentacion - Titulo principal SapheryDesings */
-.presentacion {
-  font-family: 'Smooch', cursive;
-  font-size: 8rem;
-  text-align: center;
-}
-
-/*       Titulos - Son los titulos de la tres secciones daw, proyectos y devAcademy*/
-.tituloSeccion {
-  margin: 1rem 0;
-  font-family: 'Titan One', cursive;
-  font-weight: 100;
-}
-
-.daw {
+*****************************************************/
+.contenedorDaw {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   gap: 1rem;
-  padding: .5rem 1rem;
+  justify-content: center;
 }
 
-/*        Card - Prototipo de tarjeta */
+/* CARD DAW _______________________________________*/
 .card {
   display: flex;
   flex-flow: column nowrap;
@@ -188,8 +124,12 @@ header {
   border-radius: 1rem;
 
   & .cardTitulo {
+    font-family: 'Titan One', cursive;
+    font-size: 1.5rem;
     text-align: center;
     padding: .5rem;
+
+    & h3 {font-weight: 100;}
   }
 
   & .cardTema {
@@ -203,46 +143,46 @@ header {
     transition: 1s;
   }
 }
+/* FIN DAW __________________________________________*/
 
-/* ______________________________________ */
+/* APUNTES __________________________________________*/
+/*****************************************************
 
-/* CLASES VISTA INDICE ___________________*/
-.temaIndice {
-  width: 80%;
-  margin-bottom: 2rem;
+*****************************************************/
 
-  & span {
-    padding: 1rem;
-    font-weight: bold;
-    background-color: var(--azulPapuntes);
-  }
-  
-  & ul {
-    border: 5px dashed rgba(255, 255, 255, 0.1);
-  
-    & li {
-      border-bottom: 5px dashed rgba(255, 255, 255, 0.1);
-
-      & a {
-        display: block;
-        padding: 1rem 2rem;
-      }
-
-    }
-
-    & li:last-child {
-      border: none;
-    }
-    
-    & li:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  }
+/* ENCABEZADOS ___________________*//*
+*** DEPURAR TECNICA PARA VISTA APUNTES ***
+.main--Principal :is(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
 }
 
-/* ______________________________________ */
+.main--Principal :is(h1, h2) {margin-bottom: 2rem;} 
+.main--Principal :is(h3, h4) {margin-bottom: 1rem;} 
+.main--Principal :is(h5, h6) {margin-bottom: .5rem;} 
 
-/* CLASES VISTA APUNTES __________________*/
+.main--Principal h1 { font-size: 3rem;}
+.main--Principal h2 { font-size: 2.5rem;}
+.main--Principal h3 { font-size: 2rem;}
+/* FIN ENCABEZADOS __________________________________*/
+
+/* ERROR -> SON LA NAVEGACIOIN DE LA VISTA APUNTES */
+/* ELIMINAR CUANDO SE DEPURE LA VISTA APUNTES */
+.navtop { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 10%;
+  font-family: 'Titan One', cursive;
+  font-weight: 100;
+  background-color: var(--azulPrincipal);
+  color: white;
+}
+ .navtop a { color: white;}
+/***************************************************/
+
 /* Contenedor principal de la vista apuntes */
 .contenedorApuntes { 
   width: clamp( 200px, 95vw , 1024px);
@@ -377,21 +317,4 @@ pre {
   color: var(--blancoTipologia);
   border: 5px solid var(--azulPapuntes);
 }
-
-
-/***********************************************/
-@media screen and (max-width: 1280px){ }
-@media screen and (max-width: 1024px){ }
-@media screen and (max-width: 800px){ }
-@media screen and (max-width: 480px){ 
-  /* VISTA APUNTES */
-  table {
-    margin: 1rem auto;
-  }
-  .tituloTema { 
-    border: none;
-    padding-left: .1rem;
-  }
-} /* ESTUDIAR VW Y CALC - MENOS DIVISIONES MEDIAQ*/
-
-/* ______________________________________ */
+/* FIN APUNTES ________________________________________*/
