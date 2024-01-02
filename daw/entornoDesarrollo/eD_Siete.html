@@ -20,37 +20,338 @@
         </header>
         <div class="contenedorApuntes">
             <h2 class="tituloTema" id="subUno">Tema 7. - Elaboración de diagramas de comportamiento</h2>
-            
+            <p>Cómo modelar lo que sucede en un sistema de software por meido de diagramas de comportamiento.</p>
             <!--*********************************************************************-->
-            <h3 class="subTitulo">Tipo. Campo de aplicación</h3>
-            
+            <h3 class="subTitulo">7.1.- Tipo. Campo de aplicación</h3>
+            <p>Los diagramas de comportamiento nos permiten modelar la información que hemos manejado anteriormente con los diagramas de clase. Dentro podemos encontrar los casos de uso, actividad, estado e interacción. Los diagramas de interacción incluyen el diagrama de secuencia, de comunicación, de tiempos y de vista global de interacción.</p>
+            <p>Los diagramas de comportamiento mostrarán el comportamiento de un sistema.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Diagrama</th>
+                        <th>Resumen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diagrama de casos de uso</td>
+                        <td>Describe el comportamiento del sistema desde el punto de vista de un usuario que interactúa con él</td>
+                    </tr>
+                    <tr>
+                        <td>Diagrama de actividad</td>
+                        <td>Parecido a diagramas de flujo, muestra pasos, puntos de decisión y bifurcaciones</td>
+                    </tr>
+                    <tr>
+                        <td>Diagrama de estado</td>
+                        <td>Muestra estados de un objeto y transiciones de un estado a otro</td>
+                    </tr>
+                    <tr>
+                        <td>Diagrama de secuencia</td>
+                        <td>Muestra interacción de unos objetos con otros</td>
+                    </tr>
+                    <tr>
+                        <td>Diagrama de comunicación</td>
+                        <td>Interacciones entre elementos en tiempo de ejecución</td>
+                    </tr>
+                    <tr>
+                        <td>Diagrama de tiempos</td>
+                        <td>Define comportamiento de objetos en una escala de tiempo</td>
+                    </tr>
+                    <tr>
+                        <td>Diagrama de vista global de interacción</td>
+                        <td>Cooperación entre otros diagramas de interacción</td>
+                    </tr>
+                </tbody>
+            </table>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subDos">Diagramas de casos de uso. Actores, escenario, relación de comunicación</h3>
-          
+            <h3 class="subTitulo" id="subDos">7.2.- Diagramas de casos de uso. Actores, escenario, relación de comunicación</h3>
+            <p>Los casos de uso van a modelar el sitema desde el punto de vista del usuario. Vamos a poder obtener los requisitos de software en la fase de análisis de un proyecto. Objetivos:</p>
+            <ul>
+                <li>Definir los requesitos funcionales y operativos del sistema, diseñando un escenario que nos haga más fácil describir cómo se usará el sistema</li>
+                <li>Proporcionar una descripción clara de cómo el usuario interactúa con el sistema, y viceversa</li>
+                <li>Facilitar una base para la validación de las pruebas</li>
+            </ul>
+            <p>Se usará un lenguaje sencillo y deberá describir todas las formas de utilizar el sistema, por lo que define todo el comportamiento de este.</p>
+            <p>Podemos crear una representación visual de los casos de uso llamada <b>diagrama de casos de uso</b>.</p>
+            <h4 class="apartado">7.2.1.- Elementos del diagrama de casos de uso</h4>
+            <p>Los <b>componentes:</b></p>
+            <ul>
+                <li><b>Actores:</b> llamamos actor a cualquier agente que interactúa con el sistema y es externo a él. El actor se representa con un monigote y, en este tipo de diagramas, no se representa la interactuación de estos</li>
+                <li><b>Casos de uso:</b> representa una unidad funcional del sistema que realizará una orden de algún agente externo. Será iniciado por un actor y otros actores podrán participar de él. Se representan con un óvalo o eclipse y una descripción textual</li>
+                <li><b>Relaciones:</b> existen varios tipos. La más común es una relación bidireccional entre actores y casos de uso representada con una línea continua</li>
+                <li>También podemos tener un rectángulo que delimite el <b>sistema</b>.</li>
+            </ul>
+            <p>Serán iniciados por actores que pueden solicitar o modificar información del sistema. El nombre debe coincidir con el objetivo del actor principal, que será el que normalmente comience el caso de uso.</p>
+            <h4 class="apartado">7.2.2.- Identificar a actores</h4>
+            <p>Los actores son unidades externas que van a interactuar con el sistema. Normalmente son personas, pero pueden ser otros sistemas o incluso dispositivos. Hay que conocer la información de cada elemento para saber qué y quién interactúa con el sistema y qué rol tendrá cuando se interactúe con él.</p>
+            <ul>
+                <li>Serán siempre externos al sistema</li>
+                <li>Van a interactuar directamente con el sistema</li>
+                <li>Representan roles de personas o elementos que desempeñan en relación con el sistema</li>
+                <li>Necesitan un nombre que describa la función que desempeñan</li>
+                <li>Una misma persona o elemento puede desempeñar vario roles como actores distintos</li>
+            </ul>
+            <h4 class="apartado">7.2.3.- Identificar casos de uso</h4>
+            <p>Para identificarlos, será necesario entender el funcionamiento del sistema y lo que quiere hacer. Para ello tendremos que buscar los actores que participan y saber cómo lo usarán.</p>
+            <p>Para documentar los casos de uso, podremos hacerlo a través de una plantilla que nos describa lo que hace el actor y lo que ocurre cuando se interactúa con dicho sistema. Ejemplo de plantilla:</p>
+            <ul>
+                <li><b>Nombre</b> del caso de uso</li>
+                <li><b>ID</b> del caso de uso</li>
+                <li><b>Pequeña descripción</b> de lo que se espera del caso de uso</li>
+                <li><b>Actores implicados</b> existen pricipales y secundarios. Los primeros activan el sistema, y los segundos usan el caso de uso una vez iniciado</li>
+                <li><b>Precondiciones</b> serán las condiciones que se deberán cumplir antes de que empiece el caso de uso</li>
+                <li><b>Curso normal</b> pasos del caso de uso para que finalice correctamente</li>
+                <li><b>Poscondiciones</b> las condiciones que se deberán cumplir cuando finalice el caso de uso</li>
+                <li><b>Alternativas</b> errores o excepciones</li>
+            </ul>
+            <h4 class="apartado">7.2.4.- Relaciones en un diagrama de casos de uso</h4>
+            <p>Tipos de relaciones:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Relación</th>
+                        <th>Función</th>
+                        <th>Notación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Asociación</td>
+                        <td>Línea de comunicación entre actor y caso de uso</td>
+                        <td>--------------</td>
+                    </tr>
+                    <tr>
+                        <td>Extensión << extend >></td>
+                        <td>Indica el comportamiento de un caso de uso que se puede extender a otro</td>
+                        <td>--------------></td>
+                    </tr>
+                    <tr>
+                        <td>Generalización de casos de uso</td>
+                        <td>Generalización entre clases. El caso de uso hijo hereda el comportamiento y significado del padre</td>
+                        <td>--------------></td>
+                    </tr>
+                    <tr>
+                        <td>Inclusión << iclude >> o << uses >></td>
+                        <td>Permite que un caso de uso base incluya el comportamiento de otro caso de uso</td>
+                        <td>--------------></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>El funcionamiento de cada relación, vamos a especificar el funcionamiento de cada una:</p>
+            <ul>
+                <li><b>Include:</b> Incorpora explícitamente el comportamiento de otro en algún lugar de su secuencia. La relación de inclusión sirve para enriquecer un caso de uso con otro y compartir una funcionalidad común entre varios casos de uso</li>
+                <li><b>Extend:</b> Se usará cuando un caso de uso extiende la funcionalidad de otro caso de uso. Extenderá la funcionalidad del caso de uso añadiendo algunos pasos. El caso de uso extendido no sabe nada del caso de uso que lo extiende, no será indispensable que ocurra y si lo hace, ofrece un valor extra al objetivo original del caso de uso base</li>
+                <li><b>Generalización:</b> se usa cuando se posee uno o más casos de uso que son especificaciones de un caso de uso más general</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subTres">Diagramas de interacción</h3>
-          
+            <h3 class="subTitulo" id="subTres">7.3.- Diagramas de interacción</h3>
+            <h4 class="aparado">7.3.1.- Diagramas de secuencia. Línea de vida de un objeto, activación, envío de mensajes</h4>
+            <p>Nos mostrará gráficamente los eventos que fluyen de los actores del sistema. Para realizarlos partimos de los casos de uso, tendrá dos dimensiones: vertical que representa el tiempo, y la horizontal que representa los roles de la interacción.</p>
+            <p>Cada objeto será representado por un rectángulo en la parte superior del diagrama y cada uno tendrá una línea vertical llamada línea de vida, que describe la interacción a lo largo del tiempo. Cada línea vertical tendrá flechas horzontales que mostrarán la interacción y enciama habrá un mensaje. Nos indicará el orden en que van ocurriendo los eventos. Puede ir acompañada de una descripción del curso normal de eventos del caso de uso.</p>
+            <p>Los <b>elementos principales</b> serán:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Función</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marco</td>
+                        <td>Da borde visual al diagrama de secuencia. A la izquierda del marco se escribe la etiqueta <b>sd</b> seguida de un nombre</td>
+                    </tr>
+                    <tr>
+                        <td>Línea de vida</td>
+                        <td>Representa a un participante durante la interacción</td>
+                    </tr>
+                    <tr>
+                        <td>Actor</td>
+                        <td>Representa el papel desempeñado por un usuario</td>
+                    </tr>
+                    <tr>
+                        <td>Mensaje</td>
+                        <td>Mensaje síncrono (queda a la espera de respuesta antes de seguir con su actividad). <br> Mensaje asíncrono (sigue su actividad independientemente, sin esperar a la respuesta). <br>
+                        Mensaje de retorno</td>
+                    </tr>
+                    <tr>
+                        <td>Activación</td>
+                        <td>Opcionales. Representa el tiempo durante el cual se ejecuta una función. Se suele poner cuando está activo un método</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Los mensajes representan la comunicación entre participantes y se dibujarán con una flecha que irá dirigida desde el que los envía hasta el que los ejecuta.Tendrán nombre, con parémetros o no.</p>
+            <ul>
+                <li><b>Mensaje síncrono:</b> cuando se envía a un objeto, no se recibe el control hasta que el objeto receptor ha finalizado la ejecución</li>
+                <li><b>Mensaje asíncrono:</b> continúa con su trabajo después de ser enviado, no espera a que el receptor finalice la ejecución del mensaje. La podemos ver en sistemas multihilos donde se producen procesos concurrentes</li>
+                <li><b>Mensaje de retorno:</b> representa un mensaje de confirmación. Su uso es opcional</li>
+            </ul>
+            <p>Hemos visto solo eventos que fluyen desde el cliente hacia el sistema. En la dimensión horizontal, solo se incluían esos dos roles. Trabajamos con un sistema con varias clases y varios objetos que se comunican con otros, se representarán en la dimensión horizontal.</p>
+            <h4 class="apartado">Creación y destrucción de objetos</h4>
+            <p>La creación se representa mediante un mensaje que termina en el objeto que será creado. Este mensaje puede llevar la identificación << create >>.</p>
+            <p>La destrucción finalizará la línea de vida del objeto y se representa mediante una "X" grande en su línea de vida. El mensaje puede llevar la identificación << destroy >>.</p>
+            <p>La <b>autodelegación</b> o <b>mensaje reflexivo</b> es un mensaje que un objeto se envía a sí mismo. La flecha del mensaje de vuelta regresa a la misma línea de vida.</p>
+            <h4 class="apartado">Alternativas y bucles</h4>
+            <p>Podemos introducir extensiones para dar soporte a bucles y alternativas, <b>fragmentos combinados</b>, los hay de varios tipos, entre ellos, las alternativas y los bucles. Se pueden representar mediante un marco o caja los eventos que se repiten. Podemos modelar varias alternativas:</p>
+            <ul>
+                <li>Usando operador <b>opt</b> seguido de una condición. Si esa condición se cumple, el contenido se ejecuta</li>
+                <li>Usando operador <b>alt</b> seguido de varias condiciones y al final la palabra clave else. Se dividirá en varias zonas según las condiciones que haya. La parte else se ejecutará si no se ejecuta ninguna condición</li>
+                <li>El bucle lo representamos con el operador <b>loop</b> seguido de una condición. Encerrado en el marco se ejecutará siempre que dicha condición se cumpla</li>
+            </ul>
+            <p>Un médico solicita al sistema los datos médicos de un paciente:</p>
+            <ul>
+                <li>Si la solicitud es correcta, el sistema devolverá esos datos</li>
+                <li>Si no, el sistema arrojará un error</li>
+            </ul>
+            <h4 class="apartado">7.3.2.- Diagramas de comunicación. Objetos, Mensajes</h4>
+            <p>Cada objeto se representa con una caja, las relaciones entre los objetos con líneas y los mensajes con flechas que indican la dirección. Muestra los objetos junto con los mensajes que se envían entre ellos. Se representará la misma información que en el diagrama de secuencia.</p>
+            <p>La diferencia se centra en el contexto y la organización general de los objetos que envían y reciben mensajes. Como los objetos y sus relaciones, los mensajes que se envían entre sí.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Función</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Objetos o roles</td>
+                        <td>Se representan con un rectángulo que contiene el nombre y la clase del objeto en el siguiente formato objeto:Clase</td>
+                    </tr>
+                    <tr>
+                        <td>Enlaces</td>
+                        <td>Líneas del grafo que conectan ambos objetos. Se podrán mostrar muchos mensajes en un mismo enlace, pero cada uno con un número de secuencia único</td>
+                    </tr>
+                    <tr>
+                        <td>Mensajes</td>
+                        <td>Se representan mediante una flecha dirigida con un nombre y un número de secuencia</td>
+                    </tr>
+                    <tr>
+                        <td>Número de secuencia</td>
+                        <td>Indica el orden de un mensaje dentro de la iteración (repetición). Comenzará con el 1 y se incrementará conforme se envíen mensajes</td>
+                    </tr>
+                    <tr>
+                        <td>Iteración</td>
+                        <td>Se representa colocando un "*" después del número de secuencia y una condición encerrada entre corchetes</td>
+                    </tr>
+                    <tr>
+                        <td>Alternativa</td>
+                        <td>Se indican con condiciones entre corchetes. Los caminos alternativos tendrán el mismo número de secuencia, seguido del número de subsecuencia</td>
+                    </tr>
+                    <tr>
+                        <td>Anidamiento</td>
+                        <td>Se puede mostrar el anidamiento de mensajes con números de secuencia y subsecuencia</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Para numerar los mensajes, se pueden usar varios esquemas:</p>
+            <ul>
+                <li><b>Numeración simple:</b> comienza en 1 y se incrementa una unidad, y no hay nivel de anidamiento</li>
+                <li><b>Numeración decimal:</b> tiene varios subíndices para indicar anidamiento de operaciones</li>
+            </ul>
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
                 <a href="#subUno"><div class="botonO">Arriba</div></a>
             </div>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCuatro">Diagramas de estados. Estados, eventos, señales, transiciones</h3>
-          
-            <div class="menuOpcional">
-                <a href="../dAw.html"><div class="botonO">Índice</div></a>
-                <a href="../../index.html"><div class="botonO">Principal</div></a>
-                <a href="#subUno"><div class="botonO">Arriba</div></a>
-            </div>
+            <h3 class="subTitulo" id="subCuatro">7.4.- Diagramas de estados. Estados, eventos, señales, transiciones</h3>
+            <p>En UML podemos realizar un modelado basado en eventos creando diagramas de estado. Indican cómo evolucionan el sistema a través de las transiciones de un estado a otro.</p>
+            <p>Suelen incluir información adicional acerca de cómo se ha realizado la transición de un estado a otro.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estado</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Espera</td>
+                        <td>El microondas espera la entrada del usuario</td>
+                    </tr>
+                    <tr>
+                        <td>Potencia completa</td>
+                        <td>La potencia se marca a 600 grados</td>
+                    </tr>
+                    <tr>
+                        <td>Establecer tiempo</td>
+                        <td>Tiempo establecido por el usuario</td>
+                    </tr>
+                    <tr>
+                        <td>En preparación</td>
+                        <td>Muestra por pantalla que todo es correcto para empezar a calentar</td>
+                    </tr>
+                    <tr>
+                        <td>Funcionando</td>
+                        <td>El microondas empieza a calentar</td>
+                    </tr>
+                    <tr>
+                        <td>Terminar</td>
+                        <td>Finaliza la acción de calentar del microondas</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Acción</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Potencia completa</td>
+                        <td>El usuario acciona el botón de potencia completa</td>
+                    </tr>
+                    <tr>
+                        <td>Temporizador</td>
+                        <td>El usuario acciona uno de los botones del temporizador</td>
+                    </tr>
+                    <tr>
+                        <td>Puerta cerrada</td>
+                        <td>La puerta del microondas está cerrada</td>
+                    </tr>
+                    <tr>
+                        <td>Inicializar</td>
+                        <td>El usuario acciona el botón iniciar</td>
+                    </tr>
+                    <tr>
+                        <td>Finalizar</td>
+                        <td>El usuario acciona el botón parar</td>
+                    </tr>
+                </tbody>
+            </table>
             <!--*********************************************************************-->
-            <h3 class="subTitulo" id="subCinco">Diagramas de actividades. Actividades, transiciones, decisiones y combinaciones</h3>
-          
+            <h3 class="subTitulo" id="subCinco">7.5.- Diagramas de actividades. Actividades, transiciones, decisiones y combinaciones</h3>
+            <p>Nos ayudan a modelar el flujo de control de las distintas actividades. Es un conjunto de líneas y nodos y muestra cómo va pasando el control de unas clases a otras, colaborando para conseguir un fin determinado. Elementos:</p>
+            <ul>
+                <li>Estados de actividad</li>
+                <li>Estados de acción</li>
+                <li>Transiciones</li>
+                <li>Bifurcaciones</li>
+            </ul>
+            <h4 class="apartado">7.5.1.- Estados de activación y de acción</h4>
+            <p>Un estado de acción se representa a través de un rectángulo. Podemos tener dos tipos de acciones:</p>
+            <ul>
+                <li>Acciones simples</li>
+                <li>Acciones compuestas por una expresión</li>
+            </ul>
+            <p>Un estado de actividad también se representa mediante un rectángulo y se puede descomponer en más subactividades. Dichos estados puden ser interrumpidos y tardar en completarse. Podemos encontrar acciones adiciones, como de entrada (entry) o de salida (exit).</p>
+            <h4 class="apartado">7.5.2.- Transiciones</h4>
+            <p>Muestran el paso de un estado a otro tanto de una actividad como de una acción. El flujo de control debe empezar y terminar, por los que indicamos con dos disparadores de inicio y fin.</p>
+            <h4 class="apartado">7.5.3.- Bifurcaciones y caminos</h4>
+            <p>El flujo de control no suele ser secuencial, sino que puede presentar varios caminos. Utilizaremos como símbolo el rombo para las bifurcaciones. En cada transición de salida, se indicará una expresión booleana que se evaluará cada vez que se llegue a la bifurcación.</p>
+            <p>Las expresiones deben ser excluyentes y se deben visualizar todos los casos posibles.</p>
+            <p>Puede que las tareas sean concurrentes y que se tengan que dividir o unir.</p>
+            <h4 class="apartado">7.5.4.- Calles</h4>
+            <p>Cuando se representan varios tipos de diagramas de actividades de diferentes organizaciones o departamentos, podemos modelarlos en diferentes calles. Cada calle tiene su propio nombre y grupo.</p>
+
             <div class="menuOpcional">
                 <a href="../dAw.html"><div class="botonO">Índice</div></a>
                 <a href="../../index.html"><div class="botonO">Principal</div></a>
